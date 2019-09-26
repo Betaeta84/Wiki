@@ -86,11 +86,9 @@ If you have better ideas for how to do this, or disagree raise an issue.
 
 # Stuttering
 
-Rasters sometimes stutter. This is cause by the M2 controller being able to execute all the commands in it's very small buffer before it can get new commands. There's an absolute speed at which data can be sent. And this is nearly always enough that controller takes longer to execute them than receive them. This is sometimes not true for rasters. Especially when the typical of the pixels is 1. The command required to do 1 pixel is `DBa` and when it's doing a lot of these pixels and the laser head is going fast enough it can constantly run out of commands. Before MeerK40t information feedback what was happening was not clear. But, when it bottoms out of the buffer the device stutters and sending a BUSY signal for a second. Even though clearly the buffer in the program has enough data to send.
+Rasters sometimes stutter. This is cause by the M2 controller being able to execute all the commands in its very small buffer before it can get new commands. There's an absolute speed at which data can be sent. And this is nearly always enough that controller takes longer to execute them than receive them. This is sometimes not true for rasters. Especially when the typical draw size of the pixels is 1. The command required to do 1 pixel is `DBa` the command to do 15 is `DBo` (and takes 15 times longer) and when it's doing a lot of these pixels and the laser head is going fast enough it can constantly run out of commands. Before MeerK40t information feedback what was happening was not clear. But, when it bottoms out of the buffer the device stutters and sending a BUSY signal for a second. Even though clearly the buffer in the program has enough data to send.
 
 This may be sort of scary for some people as this sudden busy signal in the data is not caused by the sending of packets. And *could* have resulted in K40 Whisperer losing a packet prior to version 0.33 and completely destroying a rendering. But this was due to a protocol bug was fixed after I pointed it out in an email to Scorch.
 
 These are actually fine and will cause no major issue, but may harm overall speed. You could ironically slow down the rastering speed and the commands will take longer to execute and so it can refill its buffer before this bottoms out. But, these were only scary due to a bug, they are accounted for and corrected in the M2 firmware.
-
-
 
