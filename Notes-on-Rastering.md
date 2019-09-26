@@ -76,3 +76,9 @@ If you want to scale that up to 1500 pixels with image editor software, you can.
 Yes. I'm restricting the user to making some deliberate choices that will keep and maintain the best results.
 
 I spent quite a while doing image to Lhymicro-gl coding and this gives the best results. But, it might be really annoying if you try to scale up the image and it only scales up that stupid rectangle I put around the image. (9/26/19). Mea culpa.
+
+PPI rastering lets you basically end up with good results out of the box. See the Good/Fast Result section.
+
+---
+
+If you have better ideas for how to do this, or disagree raise an issue.
