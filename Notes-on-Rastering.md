@@ -92,3 +92,6 @@ This may be sort of scary for some people as this sudden busy signal in the data
 
 These are actually fine and will cause no major issue, but may harm overall speed. You could ironically slow down the rastering speed and the commands will take longer to execute and so it can refill its buffer before this bottoms out. But, these were only scary due to a bug, they are accounted for and corrected in the M2 firmware.
 
+# Scan Lines
+
+If you use raster-step/scangap alone to scale up an image in addition to decreasing in overall darkness (since each additional rasterstep you can also get scanlines in deeper rasters. Since the scanlines are farther apart, the laser cuts are farther apart and there's room to create laser cuts that do not overlap. 
