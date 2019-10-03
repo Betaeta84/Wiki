@@ -6,7 +6,7 @@ The idea behind PPI is that you do a bresenham like error carry algorithm. Usual
 >      You laser that mil of distance (that dot, that pixel)
 >      Subtract 1000 from pulse_value.
 
-That’s basically the entire algorithm. It could be added to Whisperer in pretty short order too. When PPI is 1000 every 1 gets the laser. When it’s something like 200 every 5th dot gets the laser. Etc. Basically it’s a carry forward value there. The real trick though is PPI is pulses per inch. The stock controller uses 1 mil of distance as its native unit. So when you set the PPI to 200 so 20% power, and draw. It will 200 * 1000 over that inch, which is 200000, which means that the inch will get 200 laser pulses. That’s exactly the definition of PPI. Pulses per inch. QED.
+That’s basically the entire algorithm. It could be added to Whisperer in pretty short order too. When PPI is 1000 every 1 gets the laser. When it’s something like 200 every 5th dot gets the laser. Etc. Basically it’s a carry forward value there. The real trick though is PPI is pulses per inch. The stock controller uses 1 mil of distance as its native unit. So when you set the PPI to 200 so 20% power, and draw. It will do 200 (ppi) * 1000 (mils/inch) over that inch, which is 200000, which means that the inch will get 200 laser pulses. That’s exactly the definition of PPI. Pulses per inch. QED.
 
 It’s kinda a game changer, but I also have a number of other advantages. And I’m totally all for hackable software. I want folks to be able to figure out how it works and write their own stuff for it.
 
