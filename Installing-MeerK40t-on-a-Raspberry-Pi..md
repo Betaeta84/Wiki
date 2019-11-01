@@ -1,6 +1,6 @@
 With regard to issue #84 ( https://github.com/meerk40t/meerk40t/issues/84 )
 
-6 steps to running MeerK40t on the Raspberry Pi.
+6 steps to running MeerK40t on the Raspberry Pi (OS Buster+).
 
 1. Make sure you have python supporting the latest version of wxPython.
 2. Downloads the master branch of meerk40t.
