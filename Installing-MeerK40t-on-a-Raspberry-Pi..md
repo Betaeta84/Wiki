@@ -1,9 +1,19 @@
 With regard to issue #84 ( https://github.com/meerk40t/meerk40t/issues/84 )
 
-I'm installing MeerK40t in a way to see if it loads in Raspberry. 
+6 steps to running MeerK40t on the Raspberry Pi.
 
-``pip install wxPython --no_cache_dir``
+1. Make sure you have python supporting the latest version of wxPython.
+2. Downloads the master branch of meerk40t.
+3. Unzips the master.zip
+4. Enters the meerk40t-master directory.
+5. install requirements.
+6. runs MeerK40t
 
-It will run out of memory without `--no_cache_dir` option.
+The commands for these steps are as follows done in the home directory (~):
 
--- This is as far as I am currently. 
+1. ``sudo apt-get install python3-wxgtk4.0``
+2. ``wget http://github.com/meerk40t/meerk40t/archive/master.zip``
+3. ``unzip master.zip``
+4. ``cd meerk40t-master/``
+5. ``pip3 install -r requirements.txt``
+6. ``python3 MeerK40t``
