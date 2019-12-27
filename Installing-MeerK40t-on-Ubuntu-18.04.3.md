@@ -1,5 +1,6 @@
 This is a work in progress.
 Instructions from December 2019.
+Trying a bunch of stuff on a clean install to see what works, even if it's lost in the woods nonsense.
 
 * wget http://github.com/meerk40t/meerk40t/archive/master.zip
 * unzip master.zip
@@ -31,5 +32,9 @@ sudo apt-get install python3-setuptools
 > Still not working. Trying random thing. I got this working before.
 
 * sudo apt-get install python3-*
+
+wxPython install giant block of red: buildtools.builder.BuildError: Error running configure
+
+sudo apt-get install libgstreamer-plugins-base1.0-dev
 
 
