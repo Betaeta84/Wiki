@@ -13,29 +13,26 @@ It didn't.
 ---
 
 
-Errors that might occur:
+ModuleNotFoundError: No module named 'wx'
 ---
-
-> ModuleNotFoundError: No module named 'wx'
 
 We install wxPython with pip.
 
 * wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7-cp36-cp36m-linux_x86_64.whl
 * sudo pip install wxPython-4.0.7-cp36-cp36m-linux_x86_64.whl
 
-Errors that might occur:
+sudo: pip: command not found
 ---
-This might fail saying pip isn't a thing.
 
 You need pip.
 
 * wget https://bootstrap.pypa.io/get-pip.py
 * sudo python3 get-pip.py
 
-Errors that might occur:
+ModuleNotFoundError: No module named 'distutils.util'
 ---
 
-> ModuleNotFoundError: No module named 'distutils.util'
+You need setuptools
 
 * sudo apt-get install python3-setuptools
 
