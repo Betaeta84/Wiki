@@ -36,12 +36,8 @@ You need setuptools
 
 * sudo apt-get install python3-setuptools
 
-Other commands I tried that might not be for the best:
+
+ModuleNotFoundError: No module named 'usb'
 ---
- 
-Some other random things I tried.
 
-> Still not working. Trying random thing. I got this working before.
-
-* sudo apt-get install python3-*
-
+sudo pip install pyusb
