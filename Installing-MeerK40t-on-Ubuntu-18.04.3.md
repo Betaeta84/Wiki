@@ -7,17 +7,24 @@ Trying a bunch of stuff on a clean install to see what works, even if it's lost 
 * cd meerk40t-master
 * python3 MeerK40t.py
 
+Should load up out of the box.
+
+It didn't.
+---
+
+
 Errors that might occur:
+---
 
 > ModuleNotFoundError: No module named 'wx'
 
 We install wxPython with pip.
 
-```
-sudo pip install -U \
-      -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7-cp36-cp36m-linux_x86_64.whl \
-      wxPython
-```
+* wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7-cp36-cp36m-linux_x86_64.whl
+* sudo pip install wxPython-4.0.7-cp36-cp36m-linux_x86_64.whl
+
+Errors that might occur:
+---
 This might fail saying pip isn't a thing.
 
 You need pip.
@@ -25,16 +32,19 @@ You need pip.
 * wget https://bootstrap.pypa.io/get-pip.py
 * sudo python3 get-pip.py
 
+Errors that might occur:
+---
+
 > ModuleNotFoundError: No module named 'distutils.util'
 
-sudo apt-get install python3-setuptools
+* sudo apt-get install python3-setuptools
+
+Other commands I tried that might not be for the best:
+---
+ 
+Some other random things I tried.
 
 > Still not working. Trying random thing. I got this working before.
 
 * sudo apt-get install python3-*
-
-wxPython install giant block of red: buildtools.builder.BuildError: Error running configure
-
-sudo apt-get install libgstreamer-plugins-base1.0-dev
-
 
