@@ -36,6 +36,12 @@ You need setuptools
 
 * sudo apt-get install python3-setuptools
 
+E: Unable to fetch some archives, maybe run apt-get update or...?
+---
+
+Run apt-get update.
+
+* sudo apt-get update
 
 ModuleNotFoundError: No module named 'usb'
 ---
