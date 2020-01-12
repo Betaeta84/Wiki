@@ -1,3 +1,5 @@
+This is done with the proper requirements installed wxPython and pyusb. And running the latest version of Python 3.
+
 Using pyinstaller
 
 * pip install pyinstaller
