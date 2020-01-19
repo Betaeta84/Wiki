@@ -1,5 +1,7 @@
 The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits of MeerK40t run and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and also not need each other to exist.
 
+See discussion: [#107](https://github.com/meerk40t/meerk40t/issues/107)
+
 # Modules
 The core in MeerK40t is a Module. These are registered with:
 
