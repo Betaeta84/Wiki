@@ -1,4 +1,4 @@
-The board is hooks the CH341A usb communications chip in parallel port mode to the LHY730318 chip running a MCS-51 instruction sets using an 8051 processor.
+The board is hooks the CH341A usb communications chip in parallel port (EPP19) mode to the LHY730318 chip running a MCS-51 instruction sets using an 8051 processor. 
 
 It is believed all the usb communications deal directly with the CH341A and the data is merely sent to the processor to perform the microcontroller actions.
 
@@ -6,12 +6,13 @@ The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough 
 
 
 --- 
-
+```
 Bit7~Bit0<==>D7-D0 
  * Bit8<==>ERR#    Bit9<==>PEMP    Bit10<==>INT#    Bit11<==>SLCT    Bit13<==>WAIT#    Bit14<==>DATAS#/READ#    Bit15<==>ADDRS#/ADDR/ALE
- * The pins below can only be used in output mode:
- * Bit16<==>RESET#    Bit17<==>WRITE#    Bit18<==>SCL    Bit29<==>SDA
-
+ The pins below can only be used in output mode:
+ Bit16<==>RESET#    Bit17<==>WRITE#    Bit18<==>SCL    Bit29<==>SDA
+```
+```
 BOOL CH34xSetOutput( ULONG	iEnable, ULONG iSetDirOut, ULONG iSetDataOut)
 {
 	ULONG mLength;
@@ -33,7 +34,9 @@ BOOL CH34xSetOutput( ULONG	iEnable, ULONG iSetDirOut, ULONG iSetDataOut)
 	}
 	return( false);
 }
+```
 
+```
 #define		CH341A_CMD_SET_OUTPUT	0xA1		// Set Para Output
 #define		CH341A_CMD_IO_ADDR		0xA2		//MEM Addr write/read
 #define		CH341A_CMD_PRINT_OUT	0xA3		// Print output
@@ -62,3 +65,5 @@ BOOL CH34xSetOutput( ULONG	iEnable, ULONG iSetDirOut, ULONG iSetDataOut)
 #define		StateBitWRITE			0x00020000	
 #define		StateBitSCL			0x00400000	
 #define		StateBitSDA			0x00800000	
+```
+
