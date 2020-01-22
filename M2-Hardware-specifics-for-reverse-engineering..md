@@ -1,3 +1,23 @@
+
+# K40 Nano Board Operations
+
+The K40 board consists of two core chips a CH341A that does the communications and is put directly in PARALLEL mode for EPP 1.9, and the LHY730318 chip that does the code processing. Communication wise the K40 uses a USB at idVendor=0x1a86, and idProduct=0x5512, reading at address 0x82 and writes at address 0x2.
+
+The data is written data typically in 2 packets of 34 bytes of data. An 0xA6 packet send command followed by 0x00 and the data, which is ended with 0x00 and the CRC code.
+
+The CRC is onewire CRC coded data across the payload, bytes[2-32).
+
+A packet may also consist of just 0xA0 (`HELLO` or mCh341_PARA_CMD_STS). When this happens the read will return six bytes of data. The second byte (Byte #1) contains the EPP pins of the data. 
+
+* 206: `OK`. Everything is fine, we're ready.
+* 238: `BUSY`. Cannot accept a packet just now.
+* 207: `CRC_ERROR`. The CRC of that packet was wrong, and it was not processed.
+* 236: `TASK_COMPLETE`. The 'F' command was sent and the stuff the K40 was doing has finished.
+* 239: `POWER`. The board is just booting up or shutting off and doesn't have enough power.
+* 204: `UNKNOWN_ERROR`. This can be produced by sending `FNSENSE` to the machine.
+
+# Hardware
+
 The USB connector on the board is hooked the CH341A or CH341B communications chip configured in parallel port (EPP19) mode. The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 chip; running a MCS-51 instruction sets using an 8051 processor. 
 
 It is believed all the usb communications deal directly with the CH341A/B and the data is merely sent to the processor to perform the microcontroller actions.
