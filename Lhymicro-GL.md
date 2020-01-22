@@ -9,12 +9,15 @@ There are primarily two different modes for the Nano board: default and compact 
 
 
 ## Default Mode
-In default, we can set the speed, laser operation, and direction flags. We cannot unset the speed without a clear (unless there's an unknown command to clear speeds). All commands and states trigger at the end of of a block, this is in default, usually the command `N`. The final flagged state and magnitudes are executed. The X magnitude and Y magnitude are independent of each other and combine values at execution.
 
-Note that in default mode, the last flagged direction gets the magnitude so `RzzzzL` assigns the 1024 mils (4 * 256) of distance to the `L` command (Top / -Y direction). Setting the laser `D` in default can leave the laser on without the head moving. Sending `IDS1P` will simply turn the laser on. Sending `IUS1P` will turn the laser off. The default state for the laser is off so `I@S1P` will also reset the states and turn the laser off, and clear the other states, like direction, speed, raster step. The commands in default are executed with `N`. It is best to execute anything remaining in a command state before switching modes or doing something that might object be weird if some left over magnitude is somewhere. Different directions also combine and trigger as a block, so `RzzTzzN` is a diagonal move. All moves in default-mode are performed at full speed.
+In default, we can set the speed, laser operation, and direction flags. We cannot unset the speed without a calling `I`, which will kill any processes currently going on. All commands and states trigger at the end of of a block, this in default mode this is, usually the command `N`. The final flagged state and magnitudes are executed. The X magnitude and Y magnitude are independent of each other. Magnitudes in either direction are added together. 
+
+Note that in default mode, the last flagged direction gets the magnitude so `RzzzzL` assigns the 1021 mils (4 * 255) of distance to the `L` command (Top / -Y direction). Setting the laser `D` in default can leave the laser on without the head moving. Sending `IDS1P` will simply turn the laser on. Sending `IUS1P` will turn the laser off. The default state for the laser is off so `I@S1P` will also reset the states and turn the laser off, and clear the other states, like direction, speed, raster step. The commands in default are executed with `N`. It is best to execute anything remaining in a command state before switching modes or doing something that might object be weird if some left over magnitude is somewhere. Different directions also combine and trigger as a block, so `RzzTzzN` is a diagonal move. All moves in default-mode are performed at full speed.
 
 ## Compact
-Switching to compact mode uses `S1E`. Switching into and out of this mode can be used to reset the lasers states (it will always be turned off). Compact mode will always utilize the speed value and step values set with `V` and `G`. Within compact the permitted commands are `D`,`U`,`L`,`R`,`T`,`B`,`M`,`F`,`@` anything else will likely cause the mode to stop and often can result in non-understood behaviors. When you exiting compact mode with `S1E` we usually end with a mode exit command (`F` or `@`) and that command will be relevant only after doing command `SE` in default mode the `N` command exits the mode and `SE` sends the commands. If we ended compact with a `F` command, then the state will become locked until the queue finishes and querying the device returns a `TASK_COMPLETE` signal. If we send a `@` command then we are reset and must set our desired modes again. These changes only apply after calling `SE`. Since these are taken together we usually end a mode with `@NSE` or `FNSE`. Simply exiting compact mode requires an `N` command. This will allow you to change the value of G or V (step and velocity), but you cannot unset a `C` which will override the `G` and changes the behaviors. So if we are expecting to use a different speed, or are unsure, we should just reset or finish.
+Switching to compact mode uses `S1E`. Switching into and out of this mode can be used to reset the lasers states (it will always be turned off). Compact mode will always utilize the speed value and step values set with `V` and `G`. Within compact, the permitted commands are `D`,`U`,`L`,`R`,`T`,`B`,`M`,`F`,`@` anything else will likely cause the mode to stop and often can result in non-understood behaviors. When exiting compact mode with `SE` we usually end with a mode exit command (`F` or `@`) and that command will be relevant only after doing command `SE` in default mode the `N` command exits the mode and `SE` sends the commands. If we ended compact with a `F` command, then the state will become should be considered locked until the queue finishes and querying the device returns a `STATUS_FINISH` signal. If we send a `@` command then we reset our speeds and other modes and must set our desired modes again. These changes only apply after calling `SE`. Since these are taken together we usually end a mode with `@NSE` or `FNSE`. Simply exiting compact mode requires an `N` command. This will allow you to change the value of G or V (step and velocity), but you cannot unset a `C` which will override the `G` and changes the behaviors, and could put you in 1/12th speed mode. So if we are expecting to use a different speed, or are unsure, we should just reset or finish.
+
+Do note, however that if we reset, the machine may be doing things still and we cannot know whether or not these are finished, so the use of commands with `I` or `P` would be restricted. 
 
 Within compact mode, every command is executed as soon as it's sent. So D turns the laser on. Rzz moves +Y zz (512 mils) immediately. To perform a diagonal, the M command is added (in default_mode `M` does the same as no command, causing the momentum to be assigned to the default `R` (+Y) and executed). In compact, diagonal M is the in the last x direction set and last y direction set. So `RRLTB` is LB and goes (+x,-y). It is customary to assign these values just before `S1E` initialing the compact made. So usually we enter compact mode with `NRBS1E` this sets the initial states to RB.
 
@@ -22,13 +25,14 @@ Within compact mode, every command is executed as soon as it's sent. So D turns 
 
 While we can set the values within the compact mode block, this is problematic with regards to the `G` command, with raster-step harmonic motions. When we set our modes, The harmonic motion `G` trigger on sign change within compact mode. So, if we change modes within the compact block, it can trigger a harmonic step. So these mode changes are done outside compact blocks initially.
 
-The `G` setting operates only within compact mode and triggers a step between 0-63 mills, which is set during default mode. It can be set again without harm. But, the `C` setting causes `G` to become void and there's no way to unset C without calling reset `@`. The `G` parameter triggers when we switch directional modes. So if we're going `B` (+X) and trigger a `T` command (-X). The step is triggered. If we gave a magnitude during this step, the distance applied to the step, and it is performed diagonally like an M command with that particular distance. If we wish to just make the given step set by the `G` we should always change direction flags without a distance. Also during the steps the laser state is always set to off. It has an implicit `U` command. The harmonic motion usually requires us to go B(somedistance)TD(somedistance)BD(somedistance)... this will cause us to go +X, then the switch to `T` from state `B` will cause a step, moving us in the currently set Y direction (`R` or `L`). Let's say the Y direction is R(+Y) and step distance is 10 `G010`), the state switch from 'B' to 'T' will step us +Y by 10 and turning off the laser. Then we turn the laser back on 'D' and go the somedistance -X (`T`) back. Then state change from `T` to `B` will move +Y by 10 again and turn the laser off, we turn it back on and repeat. This will cause the K40 to have parallel horizontal lines 10 mils apart.
+The `G` setting operates only within compact mode and triggers a step between 0-63 mils, which is set during default mode. It can be set again without harm. But, the `C` setting causes `G` to become void and there's no way to unset `C` without calling reset `@` or `I`. The `G` parameter triggers when we switch directional modes. So if we're going `B` (+X) and trigger a `T` command (-X). The step is triggered. If we gave a magnitude during this step, the distance applied to the step, and it is performed diagonally like an M command with that particular distance. If we wish to just make the given step set by the `G` we should always change direction flags without a distance. Also during the steps the laser state is always set to off. It has an implicit `U` command. The harmonic motion usually requires us to go B(somedistance)TD(somedistance)BD(somedistance)... this will cause us to go +X, then the switch to `T` from state `B` will cause a step, moving us in the currently set Y direction (`R` or `L`). Let's say the Y direction is R(+Y) and step distance is 10 `G010`), the state switch from 'B' to 'T' will step us +Y by 10 and turning off the laser. Then we turn the laser back on 'D' and go the somedistance -X (`T`) back. Then state change from `T` to `B` will move +Y by 10 again and turn the laser off, we turn it back on and repeat. This will cause the K40 to have parallel horizontal lines 10 mils apart.
 
-The step is the same in each direction, so if we do an `L` or `R` commands to change the vertical we will invoke the step operations (moving in the X direction, and turning off the laser) when we change the Y-direction currently set in `G` mode. This means we should be careful to set all the desired modes before entering the `S1E` Compact mode as we cannot change them with impunity within compact mode while steps are set. If `C` is set, the value of `G` is ignored and the direction state changes. 
+The step is the same in each direction, so if we do an `L` or `R` commands to change the vertical we will invoke the step operations (moving in the X direction, and turning off the laser) when we change the Y-direction currently set in `G` mode. This means we should be careful to set all the desired modes before entering the `S1E` because in compact mode as we cannot change them with impunity while steps are set. If `C` is set, the value of `G` is ignored and the direction state changes. 
 
 
 ### Distance Magnitude
-The distance magnitude can be a 3 digit number below 256, `|`, with `z` being a slightly special case of being +256 rather than +26 (`a`=1, `b`=2, etc). 
+
+The distance magnitude can be a 3 digit number below 256, `|`, with `z` being a slightly special case of being +255 rather than +26 (`a`=1, `b`=2, etc).  The `|` value is equal to the value of y however it has the special property of making 'z' equal its functional ascii value: 26
 * a, 1
 * b, 2
 * c, 3
@@ -54,36 +58,16 @@ The distance magnitude can be a 3 digit number below 256, `|`, with `z` being a 
 * w, 23
 * x, 24
 * y, 25
-* |a, 26
-* |b, 27
-* |c, 28
-* |d, 29
-* |e, 30
-* |f, 31
-* |g, 32
-* |h, 33
-* |i, 34
-* |j, 35
-* |k, 36
-* |l, 37
-* |m, 38
-* |n, 39
-* |o, 40
-* |p, 41
-* |q, 42
-* |r, 43
-* |s, 44
-* |t, 45
-* |u, 46
-* |v, 47
-* |w, 48
-* |x, 49
-* |y, 50
+* |, 25
 * |z, 51
 * [000-255], value
 * z, 255
+* `, 0
+* {, 28
+* }, 30
+* ~, 31  
 
-Note, these values are all added up, so you can slap anything together and it'll just be added to the magnitude, usually this is something like "zzzzzzzzzzzz" and a remainder like "|g". I'm not sure why they even use the | character, literally the | adds 25 but so does y. I should check whether | alone counts as a value.
+Note, these values are all added up, so you can slap anything together and it'll just be added to the magnitude, usually this is something like "zzzzzzzzzzzz" and a remainder like "|g". The only difference that matters is |z is 51 and there's no other 2 character string that can give exactly that value. The typical speed code production uses |<character> for values from 26-51.
 
 ## Commands
 
