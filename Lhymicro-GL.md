@@ -1,26 +1,7 @@
 
 # Documentation
 
-Contributions to this project in the future may require a certain amount of understanding of the formatting used. While the goal of this project is to make that understanding unneeded for the programmer or end user. Contributing to the core of the project or fixing a bug or misunderstanding or improving the code or porting it to another language, may require a more in depth understanding. I have documented the format here to the best of my understanding. 
-
-The API requires mapping the permitted states and giving the user commands to get access those states. The API here is crafted to approximate the allowed states. 
-
-# K40 Nano Board Operations
-
-The K40 board connects via a USB wire.  It has an idVendor=0x1a86, and idProduct=0x5512. The device reads at address 0x82 and writes at address 0x2.
-
-The written data is 34 bytes of data, 30 bytes of payload prepended with 0xA6 0x00 and postpended with 2 bytes 0x00 and the CRC code. 
-
-The CRC is onewire CRC coded data across bytes [2-32).
-
-A packet may also consist of just 0xA0 (`HELLO`). When this happens the read will return a particular response code.
-
-* 206: `OK`. Everything is fine, we're ready.
-* 238: `BUSY`. Cannot accept a packet just now.
-* 207: `CRC_ERROR`. The CRC of that packet was wrong, and it was not processed.
-* 236: `TASK_COMPLETE`. The 'F' command was sent and the stuff the K40 was doing has finished.
-* 239: `POWER`. The board is just booting up or shutting off and doesn't have enough power.
-* 204: `UNKNOWN_ERROR`. This can be produced by sending `FNSENSE` to the machine.
+Contributions to this project in the future may require a certain amount of understanding of the formatting used. I have documented the format here to the best of my understanding. 
 
 # LHYMICRO-GL Format
 
