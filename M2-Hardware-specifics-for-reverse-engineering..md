@@ -18,9 +18,9 @@ A packet may also consist of just 0xA0 (`HELLO` or mCh341_PARA_CMD_STS). When th
 
 # Hardware
 
-The USB connector on the board is hooked the CH341A or CH341B communications chip configured in parallel port (EPP19) mode. The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 chip; running a MCS-51 instruction sets using an 8051 processor. 
+The USB plug on the board is connected directly to the CH341A or CH341B communications chip (pins 9-12) configured in parallel port (EPP19) mode. The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 microcontroller; running a MCS-51 instruction sets using an 8051 processor. The small chip near the LHY730318 is a simple HC14 schmitt trigger. The Active port (which may or may not be populated with header pins) is from top to bottom: GND, Tx (micro pin 7), Rx (micro pin 5), and +5V (verified on recent M2:9 board from 2019).
 
-It is believed all the usb communications deal directly with the CH341A/B and the data is merely sent to the processor to perform the microcontroller actions.
+It is believed all the usb communications deal directly with the CH341A/B and the data is merely sent to the processor to perform the microcontroller's programmed actions.
 
 The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough to send 4.2667 packets of data. Which is why it properly bottoms out during a raster. If high in pixel changes and moving quite quickly. It can bottom out before it getting new data.
 
