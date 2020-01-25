@@ -87,3 +87,5 @@ BOOL CH34xSetOutput( ULONG	iEnable, ULONG iSetDirOut, ULONG iSetDataOut)
 #define		StateBitSDA			0x00800000	
 ```
 
+Good resource to understand the CH341 chip.
+https://www.onetransistor.eu/2017/09/ch341a-usb-i2c-programming.html
