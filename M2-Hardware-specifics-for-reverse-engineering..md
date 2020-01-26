@@ -92,6 +92,10 @@ https://www.onetransistor.eu/2017/09/ch341a-usb-i2c-programming.html
 
 # Packet Unknown Sniffed.
 
+Dimsum labs did some analysis, of their packet sniffed logs there are two exchanges that are unknown.
+
+https://github.com/dimsumlabs/lasercutter/tree/master/protocol
+```
 0000   80 fd c6 22 04 88 ff ff 53 03 02 07 01 00 2d 00   ..."....S.....-.
 0010   2a c8 89 58 00 00 00 00 f5 c2 0a 00 8d ff ff ff   *..X............
 0020   22 00 00 00 22 00 00 00 00 00 00 00 00 00 00 00   "..."...........
@@ -99,11 +103,12 @@ https://www.onetransistor.eu/2017/09/ch341a-usb-i2c-programming.html
 0040   a6 00 41 a4 86 67 f9 8a 78 f9 f1 79 7d 44 f6 34   ..A..g..x..y}D.4
 0050   13 0e a1 46 46 46 46 46 46 46 46 46 46 46 46 46   ...FFFFFFFFFFFFF
 0060   a6 25                                             .%
+```
 
-Some sent A, then command stuff. filling the packet with F then the CRC. But, this isn't lhymicro-gl. It's clearly bulk-out to the device though.
+The A6 at 0x40 means that this is sent via the EPP to the LHYchip. It still takes the zero, and send A followed by non-ascii. Filling the packet with F then the CRC. But, this isn't lhymicro-gl, since it clearly isn't ascii. It's clearly bulk-out to the device though. This likely makes the thing it said 'A' a4 86 67 f9 8a 78 f9 f1 79 7d 44 f6 34 13 0e a1 which after the A is 16 bytes.
 
 And again:
-
+```
 0000   c0 00 ee 26 04 88 ff ff 53 03 02 07 01 00 2d 00   ...&....S.....-.
 0010   29 c8 89 58 00 00 00 00 f9 6e 0d 00 8d ff ff ff   )..X.....n......
 0020   22 00 00 00 22 00 00 00 00 00 00 00 00 00 00 00   "..."...........
@@ -111,6 +116,6 @@ And again:
 0040   a6 00 41 4b 30 46 46 46 46 46 46 46 46 46 46 46   ..AK0FFFFFFFFFFF
 0050   46 46 46 46 46 46 46 46 46 46 46 46 46 46 46 46   FFFFFFFFFFFFFFFF
 0060   a6 a4                                             ..
+```
 
-Sent the "AK0" like it was a command the device would know.
-
+Sent the "AK0" like it was a command the device would know. Here K0 might be a command. Or it could be a different A command being executed on 4b 30.
