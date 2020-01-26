@@ -1,4 +1,4 @@
-The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits of MeerK40t run and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and also not need each other to exist.
+The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits of MeerK40t run and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
 
 See discussion: [#107](https://github.com/meerk40t/meerk40t/issues/107)
 
@@ -22,7 +22,6 @@ When kernel.shutdown() is called all registered modules have their `stop()` func
 kernel.boot(): Boot the scheduler and start sending signals.
 kernel.shutdown(): Stop the scheduler, shutdown all the modules, wait for the threads to die.
 kernel.elements: Stores the default LaserNode data all modules are expected to be working with.
-
 # Scheduler
 The Kernel runs a Scheduler to run particular tasks at particular times. Which will run various events at given intervals or particular times as needed. Modules can often forego their own threads and use the scheduler.
 
@@ -100,3 +99,24 @@ operations: Operations are functions that can be arbitrarily added to spoolers.
 The idea here would be a sort of spooler function that somebody might want to write.
 
 Notably these 'others' are a bit vague now and unlike the other things are not actually a part of the kernel, just ideas about the kernel.
+
+# Backends
+* Some of these will be added in 0.4.0
+* Most of these don't yet exist.
+
+There is a need for a modular backend to support multiple K40 devices in the same instance of MeerK40t but also, to support alternative backends even those made out of similar pieces. For example to connect through the LibUsb Method to the K40 device, we need to have a spooler, interpreted by a `LhymicroInterpreter`, and sent to a `LibUsb_CH341` pipe. However, if we wanted to support, Moshiboards, we'd have to connect our spooler to a `MoshiInterpreter` since the code generated is different, however, because Moshiboards also use the same CH341->Microcontroller setup as Lhystudio boards we could still use the same `LibUSB_CH341` pipe. However, what if we don't want to switch out our Windows drivers for LibUSB? But, rather use the `CH341DLL.dll` library to control our laser? In that case we'd connect our spooler to the `LhymicroInterpreter` and use the `Windll_CH341 pipe`. And what if we're not sure? Then we connect to the `Auto_CH341` pipe which automatically selects the driver that works.
+
+We can likewise could add interpreters that will write gcode commands, or pipes that save the data to a file, or anything else. The main point is these are the primary things we need to go from `LaserCommands` to Lasering.
+
+## Job
+A job is any set of generic commands to be carried out by the laser or system in general. These are generator functions which yield a series of LaserCommands and operators.
+
+## Spooler
+The spooler objects take a queue of jobs and processes them all in a thread. This converts, the Jobs in the spooler's queue into single actionable commands. These are then given to an interpreter for processing. The default spooler should be sufficent for 
+
+## Interpreter
+The interpreters accept the various LaserCommands and store states and create code from those commands in a language agnostic fashion. For the Stock Controller this is the `LhymicroInterpreter` which converts commands in to Lhymicro-GL code.
+
+## Pipe
+The pipes are destination agnostic data channels for bytes of data. For the Stock Controller this is the `LibUsb_CH341` pipe which sends the data to the CH341 via the LibUSB driver.  
+
