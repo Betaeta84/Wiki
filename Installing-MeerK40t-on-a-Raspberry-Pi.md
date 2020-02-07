@@ -1,6 +1,6 @@
 The easy way to run MeerK40t on the Raspberry Pi is to download a pre-compiled binary release for the Raspberry Pi. They are marked MeerK40t_Pi in the release area.
 
-Building MeerK40t is also possible; albeit time consuming. This is because a snapshot build of wxPython 4.1 is required (available at https://wxpython.org/Phoenix/snapshot-builds/ ). On a Pi 3 B+ this process will take about 24 hours. On an original Pi B+ it will take about 96 hours. Both need virtual memory to be temporarily increased to 1,024 MEG for the build process to complete successfully. To do so; edit /etc/dphys-swapfile by setting CONF_SWAPSIZE=1024 (typical default is  CONF_SWAPSIZE=100); then reboot.
+Building MeerK40t is also possible; albeit time consuming. This is because a snapshot build of wxPython 4.1 is required (available at https://wxpython.org/Phoenix/snapshot-builds/ ). On a Pi 3 B+ this process will take about 24 hours. On an original Pi B+ it will take about 96 hours. Both need swap space to be temporarily increased to 1,024 MEG for the build process to complete successfully. To do so; edit /etc/dphys-swapfile by setting CONF_SWAPSIZE=1024 (typical default is  CONF_SWAPSIZE=100); then reboot.
 
 Download the appropriate wxPython-4.1.tar.gz. (For example; at the time of this writing the current latest version is named wxPython-4.1.0a1.dev4561+9407f765.tar.gz)
 
