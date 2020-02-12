@@ -119,3 +119,8 @@ And again:
 ```
 
 Sent the "AK0" like it was a command the device would know. Here K0 might be a command. Or it could be a different A command being executed on 4b 30.
+
+
+# Stepper Motor Drivers
+
+The M2 Nano board is equipped with a pair of Allegro A4988 stepper motor driver chips. The chips are configured in 1/16th step mode by holding MS1, MS2, and MS3 high from a combined trace on the PCB. Both X and Y drivers share the same 0.70 Volt VREF trace on the circuit board; but the individual chips are connected to different value sense resistors. The X axis uses R360 (0.36 Ω) sense resistors, and Y axis R470 (0.47 Ω). That provides the X axis motor 0.33A per phase, and the Y axis motor 0.44A per phase.
