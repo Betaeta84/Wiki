@@ -132,7 +132,7 @@ Calling `S1P` triggers instant execution ignoring any commands that occur after 
 * `E`: Enters compact mode.
 * `S0`: Unknown. Seen in chinese software retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s)
 
-![nano-new](https://user-images.githubusercontent.com/3302478/50664116-de28be80-0f60-11e9-8e7d-ca4cf5c5f6ba.png)
+![nano](https://user-images.githubusercontent.com/3302478/75086288-62346180-54e7-11ea-92df-6642bcb3e2df.png)
 
 # Speed Codes
 
