@@ -2,7 +2,6 @@
 
 MeerK40t is the Hackable Laser Software for the Stock K40.
 
-
 ## Running MeerK40t
 
 ### Requirements
@@ -111,7 +110,17 @@ You can contribute, even if you can't code. Raising issues and suggesting ideas 
 
 If you wish to help translate, you may need to regenerate the messages.po file:
 
-[Regenerating the message.po file](github.com/meerk40t/meerk40t/wiki/Regenerating-the-message.po-file)
+* [Regenerating the message.po file](github.com/meerk40t/meerk40t/wiki/Regenerating-the-message.po-file)
+
+If you wish to write a module either for public consumption or for private use:
+
+* See the [Kernel API System](https://github.com/meerk40t/meerk40t/wiki/Kernel-API-System) Documentation.
+
+If you wish to write GUIs for your modules, you may need to add icons.
+
+* [Adding Icons to MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Adding-Icons-to-a-MeerK40t-Module)
+
+* [UI and UX Design Guide](https://github.com/meerk40t/meerk40t/wiki/UI-and-UX-Design-Guide)
 
 ## SVG Namespace
 
