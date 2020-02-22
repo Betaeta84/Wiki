@@ -5,7 +5,7 @@ Contributions to this project in the future may require a certain amount of unde
 
 # LHYMICRO-GL Format
 
-Unlike command rich formats like Gcode, lhymicro-gl is developed specifically for lasers and is maximally basic for that. All commands in the format do only one of 10 things.
+Unlike command rich formats like Gcode, lhymicro-gl is developed specifically for lasers and is maximally basic for that. All commands in the format do only one of 12 things.
 
 * Changes the on-state of the laser
 * Changes the direction-state of the x-axis stepper motor chip
@@ -17,6 +17,8 @@ Unlike command rich formats like Gcode, lhymicro-gl is developed specifically fo
 * Executes the current command state
 * Change the state of whether the programmed tick rate is sent to the stepper motor chips.
 * Resets the board
+* Pause device
+* Home device
 
 The commands used can be completed in a single command routine. Which is on an 8051 chip (see [Hardware](https://github.com/meerk40t/meerk40t/wiki/Lhystudios-Boards-Hardware-specifics)) is 12 ticks long, on a 22 mhz processor. And ends up being fast enough to raster at 400mm/s on a 40 year old processor.
 
@@ -108,45 +110,47 @@ Note, these values are all added up, so you can slap anything together and it'll
 
 ## Commands
 
-Calling `S1P` triggers instant execution ignoring any commands that occur after that. This kind of suffix is usually used for one-off commands like move right `IR<distance>S1P` After the `P`, rest of commands in the packet don't matter unless there is another P. Whenever there are two P commands in the same packet the device rehomes. Unless the second `P` command was flushed out with an `I` command. `IPP` will rehome the device, but `PIP` will not. If the `P` commands are in different packets they won't cause a rehome. `S2P` works like `S1P` but unlocks the rail so that it move more freely. And while this can be done as a single trigger like `IRzzzNS2P` it will release the rail and cause it to jump back with the tension losing registration. Doing `IRzzzS2P` will break the `Rzzz` command.
+Calling `S1P` triggers instant execution ignoring any commands that occur after that. This maybe because the P command causes the system to pause. This kind of suffix is usually used for one-off commands like move right `IR<distance>S1P` After the `P`, rest of commands in the packet don't matter unless there is another P. Whenever there are two P commands in the same packet the device rehomes. Unless the second `P` command was flushed out with an `I` command. `IPP` will rehome the device, but `PIP` will not. If the `P` commands are in different packets they won't cause a rehome. `S2P` works like `S1P` but unlocks the rail so that it move more freely. This can be done as a single trigger like `IRzzzNS2P` it will release the rail and cause it to jump back with the tension losing registration. Doing `IRzzzS2P` will break the `Rzzz` command and fail to execute.
 
-* `I`: Initialize. Set the machine to initial state. Deletes the buffer. Any commands currently in the stack are deleted. This includes all commands preceding the I within the same packet. This does not necessarily reset modes. Turning the laser on with IDS1P then sending any additional I commands does not turn the laser off.
-* `R`,`L`: +Y, -Y direction flags. Set the direction flags for execution of the directional magnitude.
-* `B`,`T`: +X, -X direction flags. Set the direction flags for execution of the directional magnitude.
+* `I`: Initialize. Set the machine to initial state. Deletes the buffer. Any commands currently in the stack are deleted. This includes all commands preceding the I within the same packet. This is executed out of sequence. This does not necessarily reset modes set on other chips. Turning the laser on with IDS1P then sending any additional I commands does not turn the laser off.
+* `P`: Pause. Triggers a machine pause. If in compact mode and doing stuff a `PN` packet will pause the machine, a second such packet will resume the machine.
+* `R`,`L`: +Y, -Y direction flags. Set the direction flags for execution of the directional magnitude. This is set on the Y stepper motor chip. Suppresses X stepper chip.
+* `B`,`T`: +X, -X direction flags. Set the direction flags for execution of the directional magnitude. This is set on the X stepper motor chip. Suppresses Y stepper chip.
 * `M`: In compact mode, performs a 45° move in the direction of the last set direction flags. (Does nothing in default, R (+Y) gets the magnitude, doing `L<distance>T<distance>N` in default will do an angle in that mode)
-* `D`,`U`: Laser On and Laser Off. Can be done in default or compact. Leaving or entering compact mode turns the laser off. When a step is invoked within compact, the laser is also disabled.
-* `C`,`G`: Cut, Raster_Step. Can be set in default mode (in any order at any point in default), but C overrides the G value and prevents any steps from happening.
-* `V`: Speedcode. Differs a bit by controller board, making some EGV files generally less compatible with each other as they are board dependent.
-* `@`: Resets modes. Set all the set modes to the default values. Behaves strangely in default mode. Usually this is invoked while in compact mode, calling `@` which resets, then `N` which exits compact mode, then `SE` which sends the resets.
-* `F`: Finishes. Behaves strangely in default. In compact, requires we exit `N` then call `SE` to take effect. Then the device waits until all tasks are complete then signals the `STATUS_FINISHED` status.
-* `N`: Executes in default mode, in compact mode, causes the mode to end. We can then issue rapid moves and return to compact mode with `S1E`. We could override the speed `V` or `G` value, but cannot unset the `C` without a reset, and an additional `C` can modify the speed setting going to 1/12th speed mode.
+* `D`,`U`: Laser On and Laser Off. Can be done in default or compact. Leaving or entering compact mode turns the laser off. When a G-raster step is invoked within compact, the laser is also disabled.
+* `C`: Cut. Can be set in default mode (in any order at any point in default), but C overrides the G value, a second C value causes the speed to be cut to 1/12th the typical value. Likely by using the command ticks rather than the ticks from the crystal.
+* `G`: Raster_Step. Can be set in default mode. A single set G value sets the step amount for both directions. Two set G values eg, `G000G003` sets different step values for the other transitions.
+* `V`: Speedcode. Differs by controller board, making some EGV files and commands not compatible since they differ with the board used. See Speedcode breakdown for specific. This is a long bunch of numbers that set several different things.
+* `@`: Resets modes. Set all the set modes to the default values. Behaves strangely in default mode. Usually this is invoked while in compact mode, calling `@` which resets, then `N` which exits compact mode, then `SE` which sends the resets. The reset is issued in sequence so more commands can easily follow, setting new values and returning to compact mode. Since there's no way to tell where the system is in execution, you cannot follow this up with any `I` commands since that could destroy a expected set of commands. For this reason the final exit is usually finish which does eventually signal if the queue is empty with a PEMP flag.
+* `F`: Finishes. In compact, requires we exit `N` then call `SE` to take effect. Then the device waits until all tasks are complete then signals a status with PEMP flag set, meaning the queue is empty this is usually 236.
+* `N`: Executes in default mode, in compact mode, causes the mode to end. We can then issue rapid moves and return to compact mode with `S1E`. Without a reset, we could exit compact mode but without clearing the speed `V` or `G` or `C` values, thing could go weird.
 * `S1E`: Triggers Compact Mode.
 * `S1P`: Executes command, ignores rest of packet. Locks rail.
-* `S2P`: works like S1P but does not lock the rail.
+* `S2P`: Works like S1P but does not lock the rail.
 * `PP`: If within the same packet, causes the device to rehome and all states are defaulted.
 * `S2E`: Goes weird, but sometimes returns the device just to the left (might be rehomed device with an unlocked rail).
 * `E`: Enters compact mode.
-* `S0`: Unknown. Seen in retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s) 
-* `P`: Pause. Triggers a machine pause. If in compact mode and doing stuff a `PN` packet will pause the machine, a second such packet will resume the machine.
+* `S0`: Unknown. Seen in chinese software retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s)
 
 ![nano-new](https://user-images.githubusercontent.com/3302478/50664116-de28be80-0f60-11e9-8e7d-ca4cf5c5f6ba.png)
 
 # Speed Codes
 
-The units in the LHYMICRO-GL speed code have particular bands/gears which use slightly different equations. The accuracy of these values is also unknown. They are emulated from the chinese software but there are many errors in that software. Doing real-world physical timing the device speed would be the only way to prove the values. However, as is, these equations can be used to convert between values and speeds.
+The units in the LHYMICRO-GL speed code have particular acceleration values that tend to give slightly different equations. Doing real-world physical timing the device speed finds the stated code values are 8.9% slower than the requested code. However, as is, these equations can be used to convert between values and speeds.
 
-In suffix C notation the values are scaled by a factor of 1/12th and sometimes the initial value changes. The gear value changes the initial tick value. The formatting of the speed code is `CV<speedcode>1C` where the appended C may or may not be present.
+In suffix C notation the values are scaled down by a factor of 1/12th and sometimes the initial value changes. The typical formatting of the speed codes is `CV<speedcode>1C` where the appended C may or may not be present. Stepped down speeds only use acceleration value of 1.
 
-The K40 Laser is controlled with a pair of stepper motors. Stepper motors work by moving 1 unit per tick. In this case the unit is 1/1000th of an inch. The speed a stepper motor travels is the result of the time between ticks. The smaller the time between ticks, the faster it moves. We are dealing with a 1000 dpi stepper motor, so, for example, to travel at 1 inch a second requires that the device tick at 1 kHz. This speed requires a delay 1 ms between ticks. The delay between ticks is controlled with a counter that counts the number of smaller ticks from the 21.1184 MHz processor until it reaches a threshold and sends the tick. This threshold is the fundamental unit of the speedcode.
+The K40 Laser is controlled with a pair of stepper motors. Stepper motors work by moving 1 unit per tick. In this case the unit is 1/1000th of an inch. The speed a stepper motor travels is the result of the time between ticks. The smaller the time between ticks, the faster it moves. We are dealing with a 1000 dpi stepper motor, so, for example, to travel at 1 inch a second requires that the device tick at 1 kHz. This speed requires a delay 1 ms between ticks. The delay between ticks is controlled with a counter that counts the number of smaller ticks from the 21.1184 MHz processor until it reaches a threshold and sends the tick. This is the fundamental unit of the speedcode.
 
-In the main speed code the value is subtracted from the maximum ticks of 65536. For the diagonal correction value the encoded value is multiplied by the Stepping and added to the count threshold. So when going diagonal it requires some number of additional ticks.
+In the value for the speed code the value is subtracted from the maximum ticks of 65536. Since the processor treats negative number the same as positive numbers in binary. This is likely just a negative 16 bit number. For the diagonal correction value the encoded value is multiplied by the stepping and added to the count threshold. When going diagonal we requires some number of additional ticks, since we are technically travelling a longer distance.
 
 ## Encoding
-The speed codes are in the form `CV<SpeedCode><Braking><Stepping><Diagonal Correction>C?` for boards M1, M2, B1, B2.
+The speed codes are in the form `CV<SpeedCode><Accel><Stepping><Diagonal Correction>C?` for boards M1, M2, B1, B2.
 
-Speed codes are in the form `CV<SpeedCode><Braking>` for boards A, B, M, as these later boards do not require diagonal corrections.
+Speed codes are in the form `CV<SpeedCode><Accel>` for boards A, B, M, as these later boards do not require diagonal corrections.
 
-The speed code values are encoded as a 16 bit number which broken up into two 3-digit ascii strings between 0-255. For a value of `36176`, we encode this as `141` for the high bits and `80` for the low bits. In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080`.
+The speed code values are encoded as a 16 bit number which is broken up into two 3-digit ascii strings between 0-255. For example to get a value of `36176`, we encode this as `141` for the high bits and `80` for the low bits. In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080`. Keep in mind this seems weird to convey a 5 digit number with 6 digits of bytes but keep in mind, the processor does no work itself. It's flipping switches and doesn't do fancy math like division. 
+---
 
 The stepping is a 3-digit ascii number between 0 and 128 which is used as a factor for the diagonal corrections.
 
