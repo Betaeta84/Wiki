@@ -150,7 +150,6 @@ The speed codes are in the form `CV<SpeedCode><Accel><Stepping><Diagonal Correct
 Speed codes are in the form `CV<SpeedCode><Accel>` for boards A, B, M, as these later boards do not require diagonal corrections.
 
 The speed code values are encoded as a 16 bit number which is broken up into two 3-digit ascii strings between 0-255. For example to get a value of `36176`, we encode this as `141` for the high bits and `80` for the low bits. In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080`. Keep in mind this seems weird to convey a 5 digit number with 6 digits of bytes but keep in mind, the processor does no work itself. It's flipping switches and doesn't do fancy math like division. 
----
 
 The stepping is a 3-digit ascii number between 0 and 128 which is used as a factor for the diagonal corrections.
 
@@ -195,9 +194,9 @@ and
 * 2 * 11 * 256
 * 2 * 12 * 256
 
-## Speeds for braking:
+## Speeds for accel:
 
-The typical breakdown of which accel/decel braking is used when depends on the speed requested. Some equations cannot logically denote some speeds. In some cases the value created will be negative. The Chinese software tended to bitshift the value anyway and put it in the higher-bit value as 1677???? as a negative 24 bit number. These are not actually accepted by the boards as correct values. Using some gearing at some speeds cause the device to be louder. The Chinese software used the following speeds to determine the correct braking to use. However, it is possible to use a different braking for many other valid speeds.
+The typical breakdown of which accel/decel braking is used when depends on the speed requested. Some equations cannot logically denote some speeds. In some cases the value created will be negative. The Chinese software has a bug where it bitshift the value anyway and put it in the higher-bit value as 1677???? as a negative 24 bit number. These are not actually accepted by the boards as correct values. Using some gearing at some speeds cause the device to be louder. The Chinese software used the following speeds to determine the correct braking to use. However, it is possible to use a different braking for many other valid speeds.
 
 * Non-Raster:
     * 1: [0 - 25.4]
@@ -212,7 +211,7 @@ The typical breakdown of which accel/decel braking is used when depends on the s
 
 It is known however, that the chinese software uses a different brake value for x-stepping rasters than for y-stepping rasters. A speed of 128 in normal rastering gets a value of 3, but in x-step rastering gets a value of 4.
 
-The optional suffix-C notation is seen when values fall below a given minimum, this minimum value changes between board utilized.
+The optional suffix-C notation is used when values fall below a given minimum, this minimum value changes between board utilized.
 * B2: [0 - 7)
 * M2: [0 - 7)
 
@@ -222,7 +221,7 @@ The M and M1 boards do not have suffix-C notation and simply go negative below a
 * M: [0 - 6)
 * M1: [0 - 6) or with raster [0 - 7)
 
-The values for A, B, and B1 have a slope of 2000 and that can properly denote low values correctly and does not appear to use the C notation. The minimum value permitted with those values is 30Hz which is stated in an FAQ by the Chinese manufacturer to be the minimum allowed speed about 0.76 mm/s.
+The values for A, B, and B1 have a slope of 2000 and that can properly denote low values correctly and does not appear to use the C notation. The minimum value permitted with those values is 30Hz which is stated in an FAQ by the Chinese manufacturer to be the minimum allowed speed about 0.76 mm/s. The relationship here is still unknown.
 
 ## Speedcode Values
 The speedcode value is converted into two 3-digit ascii strings, but the value itself is derived from using a T value in terms of millisecond delay, in the correct gearing for the correct board. See the `Examples` section for examples.
@@ -241,7 +240,7 @@ This diagonal correction is calculated with the equation `diagonal_correction = 
 
 If we want a speed of 0.5 inches a second, on an M2 board. That's is 12.7 mm/s which inside the first gear. So we are going to use the first gearing equation. We need 500 ticks a second, since we are moving 500 mils / second, so 0.5kHz gives us 2ms delay between ticks. Our use a T value is 2 ms so we plug that into the first gearing equation `5120 + 12120T` so `5120 + 12120 * 2`, `29360` which is subtracted from the max ticks of 65536 `65536 - 29360` meaning we should encode the value `36176`.
 
-In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080` we used braking of `1` so we'd encode `1` for that value.
+In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080` we used accel of `1` so we'd encode `1` for that value. With 1 set, it will not bother with accel/decel.
 
 Since M2 boards use horizontal corrections, we have to calculate that.
 
@@ -250,7 +249,7 @@ We're going at 12.7 ms/s that'll give us a step value of 13 encoded as '013' sin
 We need to calculate the value of the diagonal correction so use the equation `diagonal_correction = R * -m * period_in_ms / S` which is `0.4142 * 12120 * 2 / 13` or `772.32369...` which we'll call `772` which is 0x0304 in hex, 0x03 is 3 and 0x04 is 4 so this gets encoded as 003004 giving us a final speed code of:
 `CV1410801013003004`. 
 
-The value I used as the constant to calculate the horizontal correction is `sqrt(2) - 1` which is how much longer a diagonal is from a orthogonal. The chinese software uses an automatic amount in the chinese software uses a ratio of `0.261199033289`, this minimizes the error for series of different angles being cut and thus different mixtures of diagonal and orthogonal cuts.
+The value I used as the constant to calculate the horizontal correction here is `sqrt(2) - 1` which is how much longer a diagonal is from a orthogonal. The chinese software uses an automatic amount in the chinese software uses a ratio of `0.261199033289`, this minimizes the error for series of different angles being cut and thus different mixtures of diagonal and orthogonal cuts.
 
 ### Known Errors
 There are several known errors from the Chinese software which are duplicated and explained. The gaps in speed codes can be corrected by calling `validate_speed(mm_per_second, board, uses_raster_step=False)` with a proposed speed. This will return the nearest valid speed in mm_per_second for that particular Nano board, also since the negative values are what causes the error, a simple change is to make those values simply equal 0 rather than any negative value.
@@ -261,4 +260,4 @@ There are several known errors from the Chinese software which are duplicated an
 
 * M and M1 boards do not have suffix-C notation (or no examples are produced by the chinese software) and the value zeroes out at 5.0955mm/s. So speed below this are not permitted, without becoming negative (which aren't allowed).
 
-* The codes produced when using `G` harmonic movement at very low speeds where suffix-C notation would also be required are not permitted. As such, if the software needs to use the suffix-C slope, without the suffix, the code is in error. This will result in significantly faster speeds than are actually than are requested. Since it doesn't apply the suffix-c notion but gives values as if it had.
+* The codes produced when using `G` harmonic movement at very low speeds where suffix-C notation would be required are not permitted. As such, if the software needs to use the suffix-C notation, the chinese software would try to do this without the suffix, the code is in error. This will result in significantly faster speeds than are actually than are requested. Since it doesn't apply the suffix-C notion but gives values as if it had.
