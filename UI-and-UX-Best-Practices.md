@@ -1,0 +1,3 @@
+If you're designing an GUI window or module for MeerK40t you should keep design principles in mind.
+
+...
