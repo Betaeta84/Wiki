@@ -261,3 +261,29 @@ There are several known errors from the Chinese software which are duplicated an
 * M and M1 boards do not have suffix-C notation (or no examples are produced by the chinese software) and the value zeroes out at 5.0955mm/s. So speed below this are not permitted, without becoming negative (which aren't allowed).
 
 * The codes produced when using `G` harmonic movement at very low speeds where suffix-C notation would be required are not permitted. As such, if the software needs to use the suffix-C notation, the chinese software would try to do this without the suffix, the code is in error. This will result in significantly faster speeds than are actually than are requested. Since it doesn't apply the suffix-C notion but gives values as if it had.
+
+## MeerK40t specific characters.
+
+Some codes are included in MeerK40t but are not part of Lhymicro-GL
+
+These are:
+`\n`: carriage return means to pad the packet when you send it. Since it only processes complete packets.
+`-`: carryout wait sequence where you wait for the P_EMP flag from the system to say the codeblock is empty.
+`*`: abort. EVerything that sees this should flush their buffers, and do not process anything already located in their buffers.
+`&`: resume the controller.
+`!`: pause the controller.
+
+Several of these are used with regard to realtime commands which get promptly applied to the front of the buffer rather than the end. The reason for these is a paused controller can't resume if it doesn't process the data. Even an unpause command to the controller `PN` can't really work unless we are told that we should resume to read that code. So the resume code ends up being `PN&` and pause code is `PN!` which sends the PN to the controller but processes the & and ! as realtime commands to change its current state. The same is true for `*` which is used with `I` for emergency stop so `I*` sends the I to the controller but the * is processed to mean all the data already queued here should also be purged. 
+
+## EGV file format.
+The EGV file format contains lhymicro-gl but is not the code itself. The main block is Lhymicro-gl but the other elements are:
+
+`Document type : LHYMICRO-GL file`
+`File version: 1.0.01`
+`Copyright: <copyright name>`
+`Creator-Software: <software creating file>`
+
+`%<x>%<y>%<width>%<height>%`
+`<LHYMICRO-GL CODE>
+
+The header info there with the % stuff is the dimensions of the file. The location in X and Y matters since the code starts at that as a zero point. So you would issue a move command to that position and then start the code from there.
