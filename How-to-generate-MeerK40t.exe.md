@@ -23,3 +23,7 @@ Run pyinstaller again on the spec.
 * pyinstaller --noconsole --onefile MeerK40t.spec
 
 And test the .exe file for having the driver. Make sure the laser either works or it says `Usb Not Found` and does not say `No Driver`.
+
+## OpenCV support
+Pyinstaller is weird with OpenCV support the last known version to work and thus the recommended version is:
+* `pip install opencv-python-headless<3.4.9`
