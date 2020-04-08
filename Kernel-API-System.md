@@ -2,6 +2,15 @@ The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits o
 
 See discussion: [#107](https://github.com/meerk40t/meerk40t/issues/107)
 
+# Lifecycle
+In any useful API system the lifecycle of the objects is needed to utilize that system api. The Kernel API is the core element this has initialization `boot()` where the scheduler is started and `shutdown()` where all objects are shutdown and deregistered. Anything using a MeerK40t kernel should call `boot()` when the objects should start interacting and signals should start sending. And `shutdown()` should be called to ensure everything terminates correctly.
+
+* Boot: Start the scheduler, signals, etc
+* Config: Register the persistent settings object
+* Activate_Device: Set the device object active. (None permitted)
+* Shutdown: Shutdown the device, saving persistent settings, calling shutdown on all modules and waiting for all threads to stop.
+
+
 # Modules
 The core in MeerK40t is a Module. These are registered with:
 
@@ -22,6 +31,7 @@ When kernel.shutdown() is called all registered modules have their `stop()` func
 kernel.boot(): Boot the scheduler and start sending signals.
 kernel.shutdown(): Stop the scheduler, shutdown all the modules, wait for the threads to die.
 kernel.elements: Stores the default LaserNode data all modules are expected to be working with.
+
 # Scheduler
 The Kernel runs a Scheduler to run particular tasks at particular times. Which will run various events at given intervals or particular times as needed. Modules can often forego their own threads and use the scheduler.
 
@@ -78,7 +88,7 @@ Required saver functions are:
 
 save_types(): This is the generator which gives three values: str: Description, str: Extension, str: Mimetype.
 
-Unlike the loaders the second item is `Extension` and is intended to give 1 extension value, the one we should be be use.
+Unlike the loaders the second item is `Extension` and is intended to give 1 extension value, the one we should use.
 
 
 # Windows (Speculative) 
