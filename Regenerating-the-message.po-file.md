@@ -1,9 +1,13 @@
-Changes in gui, et al, will create new language strings and those new language strings will need translating. Generating a messages.po file is essential to this process.
+Changes in gui, et al, will create new language strings and those new language strings will need translating. Generating a messages.po file is essential to this process. We use pybabel for this process. 
 
-So as to not forget here's how I did that:
+`pip install Babel`
 
-http://svn.python.org/projects/python/trunk/Tools/i18n/pygettext.py
+Then:
 
-Got `pygettext.py` and ran python27 on `python pygettext.py *.py`
+`pybabel extract -o messages.po`
 
-Renamed .pot file to be .po, put it in the locale directory.
+Because I have a virtual environment I moved all the files to a directory and ran the script there, since it tried to do all the sub directories.
+
+---
+
+The messages file is stored in `/locale/` and inside that are `meerk40t.po` and `meerk40t.mo` files for the various languages.
