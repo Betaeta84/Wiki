@@ -16,6 +16,61 @@ A packet may also consist of just 0xA0 (`HELLO` or mCh341_PARA_CMD_STS). When th
 * 239: `POWER`. The board is just booting up or shutting off and doesn't have enough power.
 * 204: `UNKNOWN_ERROR`. This can be produced by sending `FNSENSE` to the machine.
 
+Update: Some experience with a lossy channel has lead to some revisiting of 207 as a CRC_ERROR the proper value is merely error. This happened while running the stock CH341 driver. So there are codes for 0,0 which may actually be LibUSB timeouts.
+
+```
+b'\x00iDaUhDaUhDaUiDaUhDaUiDaUhDaUiD\xb9'
+[0, 0, 0, 0, 0, 0]
+[255, 238, 0, 0, 0, 0]
+[255, 238, 0, 0, 0, 0]
+[255, 238, 0, 0, 0, 0]
+[255, 238, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+```
+
+The interesting thing here is that 207 happens after the 238 clears. So it's busy for a while, then it responds that there was an error. This ordering matters for some critical operations.
+
+With proper resending on 207 there were a number of errors that cropped up within a noisy channel. 
+
+Without resend a series of three rasters experienced:
+
+First Raster:
+```
+b'\x00UdD|kUdDdU|kDdUdD072UhDdUhDdUd\x9c'
+[0, 0, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+b'\x00DdUdDdUdD|wUdD064U|cDdUdDtUdDp\xbe'
+```
+
+Second Raster:
+```
+b'\x00DdUdDdUdDxUhDdU|cDdU072DdUhDdUQ'
+[0, 0, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+b'\x00hDdUdDdUhDdUdDdUhDdUdDdUhDdUhDE'
+```
+
+Third Raster
+```
+b'\x00UdDhUdDlUdDtUdD|kUdDdUdDtUdDxU*'
+[255, 207, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+b'\x00hDhUdDxUlD|cUdDlUdDhUdDtUdDhUd\xe9'
+...
+b'\x00080DdUdD|oUdDdUdD096U|wDdUdDtU\\'
+[255, 207, 0, 0, 0, 0]
+[255, 207, 0, 0, 0, 0]
+b'\x00dD|kUdDhUdDlUdDxUdDdUdDtUdDxUd\x81'
+```
+
+And the first raster came out without issue, the second raster came out without issue, and the third raster had notable deficits. Shifting registration to the left two times. The error struck while going in the B direction (both times). This is means the 207 packet in those final two cases *should* have been resent. But The first packet appears to have lost about 312mils of an inch and second missed packet lost 375mils. The first packet's distances are `d h d l d t d y k d d d t d x` = 152. And the second packets distances are `80 96 d d y o d d d y w d d t` = 312. These seem accurate but do not quite match the correct values. Maybe something I am not considering with the packet being extracted from the recognized values.
+
+However it is clear that dropping the packets on any 207 was a problem, never dropping the packet is also a problem. There is the notable difference that the status in the should be dropped packets is 0 (for the CH341 driver. But, pure 207 without any intermediate packets which may indicate that 207 means ERROR and in this case the error was the 0 packet. Whereas right after the send 207 means CRC error and the packet should be resent.
+
+
+
 # Hardware
 
 The USB plug on the board is connected directly to the CH341A or CH341B communications chip (pins 9-12) configured in parallel port (EPP19) mode. The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 microcontroller; running a MCS-51 instruction sets using an 8051 processor. The small chip near the LHY730318 is a simple HC14 schmitt trigger. The Active port (which may or may not be populated with header pins) is from top to bottom: GND, Tx (micro pin 7), Rx (micro pin 5), and +5V (verified on recent M2:9 board from 2019).
