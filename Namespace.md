@@ -6,7 +6,7 @@ This flags the SVG as being produced by Meek40t, and containing MeerK40t objects
 
 There are two primary MeerK40t specific objects: `operation` and `note`
 
-The file will contain text, images, paths, in pure svg. The SVG height and width will also be set to the bed size used so loading in other applications will give you a similar view.
+The file will contain `text`, `image`s, `path`s, in pure svg. The SVG height and width will also be set to the bed size used so loading in other applications will give you a similar view. Images will be embedded into the SVG this will happen for all images regardless how they were initially loaded.
 
 ---
 
