@@ -6,7 +6,7 @@ This flags the SVG as being produced by Meek40t, and containing MeerK40t objects
 
 There are two primary MeerK40t specific objects: `operation` and `note`
 
-The file will contain `text`, `image`s, `path`s, in pure svg. The SVG height and width will also be set to the bed size used so loading in other applications will give you a similar view. Images will be embedded into the SVG this will happen for all images regardless how they were initially loaded.
+The file will contain `text`, `image`, `path`, in pure svg. The SVG height and width will also be set to the bed size used so loading in other applications will give you a similar view. Images will be embedded into the SVG this will happen for all images regardless how they were initially loaded.
 
 ---
 
@@ -17,7 +17,7 @@ Operations merely define a laser operation. These will have the same properties 
 * acceleration="1", type of int, defines the custom acceleration value.
 * acceleration_custom="True", type of bool, defines whether the custom acceleration value is used.
 * advanced="True", type of bool, defines whether this particular operation opens advanced properties.
-* color="#000000", type of Color (see `svgelements` Color class), defines the color of the operation.
+* color="#000000", type of Color (see `svgelements` Color class), defines the color of the operation. Since this is svg color, it will permit anything valid for SVG color classes.
 * dot_length="1", type of int, defines the length dots should tend to pattern into if they can be patterned.
 * dot_length_custom="True", type of bool, defines whether custom dot_length is used.
 * dratio="0.261", type of float, defines the diagonal ratio value used by MeerK40t.
