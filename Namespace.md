@@ -59,6 +59,16 @@ Operations merely define a laser operation. These will have the same properties 
 * show="True", type of bool, defines whether objects of this property should show in the scene.
 * speed="200.0", type of float, defines the speed in mm/s
 
+
+### Operation Example
+
+`<operation acceleration="1" acceleration_custom="True" advanced="True" color="#000000" dot_length="1"`
+               `dot_length_custom="True" dratio="0.261" dratio_custom="True" emphasized="False" group_pulses="True"`
+               `highlighted="False" operation="Raster" output="True" overscan="20" passes="1" passes_custom="True"`
+               `power="1000.0" raster_direction="0" raster_preference_bottom="0" raster_preference_left="0"`
+               `raster_preference_right="0" raster_preference_top="0" raster_step="2" raster_swing="True"`
+               `selected="False" show="True" speed="200.0"/>`
+
 ---
 
 ## Note
