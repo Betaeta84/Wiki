@@ -4,7 +4,7 @@ Changes in gui, et al, will create new language strings and those new language s
 
 Then:
 
-`pybabel extract -o messages.po`
+`pybabel extract . -o messages.po`
 
 Because I have a virtual environment I moved all the files to a directory and ran the script there, since it tried to do all the sub directories.
 
