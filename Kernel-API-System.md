@@ -1,6 +1,76 @@
 The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits of MeerK40t run and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
 
-See discussion: [#107](https://github.com/meerk40t/meerk40t/issues/107)
+Some of this is speculative and not actively how it works due to legacy code.
+
+# Registration
+Objects are registered in the kernel. And all objects attempt to call sub_register(kernel) to register additional elements, as a static call on the class. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information.
+
+Any interface using the kernel should register at least one object which it turn would register the rest of the tree. The directories in the registration are based on the type of object they are. Pipes should be registered in `pipe` and interpreters in `interpreter`, modules in `module`.
+
+# Devices
+A device is a specific for a particular kind of laser or backend. These should always have a spooler, interpreters, controllers and sometimes emulators and pipes. These are registered in the Kernel under 'device'. These will most importantly store the preferences for that particular device.
+
+# Preferences
+A preferences is a class persistent settings and storage. The Kernel is a type of Preferences. Instances of devices are also types of preferences. These are derived from the kernel preference, when the device is loaded. You can also derive the preferences from a would-be device to check what they are, the kernel does this for the `autoboot` flag.
+
+Preferences are expected to be checked for existence prior to use. The `setting` command provides a setting_type, a key, and a default value. Once called `.'key'` is the preferred access method. For any preferences object where we need a preference, it is required to call the `setting()` for that information during initialization. If there is no persistence object backing the preference this will simply assign that setting to the default, but if there is one, we'll have the correct usage. The `flush` command should push the current settings to persistent storage. This is called, by default, during the device shutdown. However if a Preferences is not a device, it won't be shutdown and the settings will not flush().
+
+Some code like Camera and Keymap have their own derived Preferences objects without being associated with a device.
+
+# Scheduler
+A scheduler is functionality attached to devices which allows for jobs to be scheduled. It launches a thread in the kernel which which iterates through the different scheduled jobs, and running them when required.
+
+# Jobs
+Currently Modules are Jobs and call schedule() and unschedule() but this will largely be changed. Later so that modules that inherit from Job can be scheduled(). 
+
+# Signaler
+The signaler attaches to the Kernel and Devices. It schedules itself, and provides functionality for `listen()`, `unlisten()` and `signal()`. This allows non-duplicating signals to sent on a changes so other GUI elements know they should update, if they listened for a specific signal. The signaler does not force every message to be delivered, only the last message. And attaching a listener will get the last message for that signal if it exists. Using these for GUI fields will then give the last message sent even if the GUI window was launched after that signal ended.
+
+Devices will often delegate signals and listens to the kernel with a special prefix of the UID of the loaded kernel. You may then listen() the the signal on a particular device, and will not receive crosstalked information if multiple copies of that same device are instanced.
+
+# Channels
+The channels are an aspect of the Kernel and Devices. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for when the channel starts as well as a buffer which will be sent to any dialog when connecting to a particular channel. For example, the USB channel is opened with a buffer, so any watchers connecting, such as the USBConnect window will be provided that buffer, even if that data happened before the channel was opened.
+
+# Modules
+Modules are opened classes. They should be registered in the `module` directory in the kernel. These are opened and attached to devices. Sometimes they are registered in other specialty directories like `window` if they are GUI windows, and of little use otherwise. These are opened using the `open()` function on devices and kernels. If this module is already opened. The opened module is returned.
+
+---
+
+This should run on a pathed scheme where open(object, location) will open a particular object and assign it to that particular location. `open('window/CameraInterface', 'camera/0')` The camera/0 class will be given a derived device, with settings at this location.
+
+A device is not a thing but a place. / is the kernel, where as /1 is the first device or /camera is the camera root. /camera/0 is camera0. These open paths can be created on the fly. They have persistent settings via a preference instance and they have. These launch instances at /1/spooler and /1/pipe.
+
+We have settings. So a device object will contain bool, int, str, and floats. But, also things like spoolers, and pipes.
+
+kernel = Kernel()
+(default register, core functions: scheduler, signaler, elemental, channels)
+kernel.open('scheduler')
+kernel.open('signaler')
+kernel.open('elemental')
+
+kernel.register('device/Lhystudios', LhystudiosDevice)
+kernel.register('load/SVGLoader', SVGLoader)
+kernel.register('load/ImageLoader', ImageLoader)
+kernel.register('save/SVGWriter', SVGWriter)
+
+kernel.register('module/wxMeerK40t', wxMeerK40t)
+kernel.open('module/wxMeerK40t')
+
+place = kernel.derive('1')
+
+camera = kernel.derive('camera')
+camera0 = camera.derive('0')
+camera0.open('window/CameraInterface')
+
+place.open('device/Lhystudios')
+- Opening the Lhystudios device forces it to register locally .spooler and .pipe and .interpreter.
+place.open('module/channels')
+- Channels opened here gives it `channel_open()` and `watch_channel()` functions.
+place.open('module/signals')
+- Signals opened here will bind .signal() and .listen() and .unlisten() to the root signaler.
+
+
+
 
 # Lifecycle
 In any useful API system the lifecycle of the objects is needed to utilize that system api. The Kernel API is the core element this has initialization `boot()` where the scheduler is started and `shutdown()` where all objects are shutdown and deregistered. Anything using a MeerK40t kernel should call `boot()` when the objects should start interacting and signals should start sending. And `shutdown()` should be called to ensure everything terminates correctly.
