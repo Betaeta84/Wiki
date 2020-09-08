@@ -90,19 +90,19 @@ For more involved expert install instructions see the specific pages on installi
 
 Raspberry Pi: [Installing MeerK40t on a Raspberry Pi](https://github.com/meerk40t/meerk40t/wiki/Installing-MeerK40t-on-a-Raspberry-Pi)
 
-Ubuntu 19.04.3: [Installing MeerK40t on Ubuntu 18.04.3](github.com/meerk40t/meerk40t/wiki/Installing-MeerK40t-on-Ubuntu-18.04.3)
+Ubuntu 19.04.3: [Installing MeerK40t on Ubuntu 18.04.3](https://github.com/meerk40t/meerk40t/wiki/Installing-MeerK40t-on-Ubuntu-18.04.3)
 
-OSX: [Installing Running MeerK40t on OSX](github.com/meerk40t/meerk40t/wiki/Installing-Running-MeerK40t-on-OSX)
+OSX: [Installing Running MeerK40t on OSX](https://github.com/meerk40t/meerk40t/wiki/Installing-Running-MeerK40t-on-OSX)
 
 ## Detailed Documentation for the Stock Board.
 
 If you want detailed documentation for the stock board this is the place to be. The only place to be.
-[Understanding Lhymicro-GL](github.com/meerk40t/meerk40t/wiki/Lhymicro-GL)
+[Understanding Lhymicro-GL](https://github.com/meerk40t/meerk40t/wiki/Lhymicro-GL)
 
-[Lhystudios Boards Hardware specifics](github.com/meerk40t/meerk40t/wiki/Lhystudios-Boards-Hardware-specifics)
+[Lhystudios Boards Hardware specifics](https://github.com/meerk40t/meerk40t/wiki/Lhystudios-Boards-Hardware-specifics)
 
 This is also a place for research on the board:
-[Physical Speed Measurements](github.com/meerk40t/meerk40t/wiki/Physical-Speed-Measurements)
+[Physical Speed Measurements](https://github.com/meerk40t/meerk40t/wiki/Physical-Speed-Measurements)
 
 ## Help Wanted.
 
@@ -110,7 +110,7 @@ You can contribute, even if you can't code. Raising issues and suggesting ideas 
 
 If you wish to help translate, you may need to regenerate the messages.po file:
 
-* [Regenerating the message.po file](github.com/meerk40t/meerk40t/wiki/Regenerating-the-message.po-file)
+* [Regenerating the message.po file](https://github.com/meerk40t/meerk40t/wiki/Regenerating-the-message.po-file)
 
 If you wish to write a module either for public consumption or for private use:
 
