@@ -188,4 +188,4 @@ The EX+ and EX- pins can be connected to a transistor to control a hardware rela
 
 External control of the laser. Pulling the TL pin down will fire the laser. Beware; placing a load on the TL pin also has this effect. The TL pin is normally high, ~4.68 Volts on the tested board. 
 
-The TL pin can also be viewed as an output. When the laser is firing via USB control, or the test switch; the normally high TL pin goes low. It is even possible to read MeerK40t's PPI with a volt meter this way. Voltages between that measured high level, and about 0.10 Volts low for the 1,000 PPI full power setting.
+The TL pin can also be viewed as an output. When the laser is firing via USB control, or the test switch; the normally high TL pin goes low. While pulsed with MeerK40t's PPI feature, the voltages will read in-between the high measurement (~4.68 Volts), and about 0.10 Volts for the low at 1,000 PPI (full power setting). For example, roughly 2.4 Volts was measured at 500 PPI. 
