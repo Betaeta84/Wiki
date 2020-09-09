@@ -179,3 +179,11 @@ Sent the "AK0" like it was a command the device would know. Here K0 might be a c
 # Stepper Motor Drivers
 
 The M2 Nano board is equipped with a pair of Allegro A4988 stepper motor driver chips. The chips are configured in 1/16th step mode by holding MS1, MS2, and MS3 (A4988 pins 9, 10, 11) high from a combined trace on the PCB. Both X and Y axis drivers share the same 0.70 Volt REF input trace on the circuit board (routed to A4988 pins 17); but the individual chips are connected to different value sense resistors. The X axis uses R470 (0.47 Ω), and Y axis R360 (0.36 Ω) sense resistors. That drives the X axis motor at 0.44A per phase, and the Y axis motor 0.33A per phase.
+
+# EX+/- Peripherals Switch
+
+The EX+ and EX- pins can be connected to a transistor to control a hardware relay; there is very little current available. More conveniently, it can directly drive a solid-state relay (SSR). This can be used to turn on and off external devices automatically when the laser is running a job. The EX port is turned back off again about 8 seconds after the job completes. The SSR-40DA has been tested to work, and is an expensive plug and play solution. 
+
+# TL / GND Laser Control
+
+External control of the laser. Pulling the TL pin down will fire the laser. Beware; placing a load on the TL pin also has this effect. It can also be viewed as an output. When the laser is firing via USB control, the normally high (~4.68 Volts on my machine) TL pin goes low. It is even possible to read MeerK40t's PPI with a volt meter this way, as voltages between that high level, and about 0.10 Volts low for 1000 PPI setting. 
