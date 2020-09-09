@@ -186,4 +186,4 @@ The EX+ and EX- pins can be connected to a transistor to control a hardware rela
 
 # TL / GND Laser Control
 
-External control of the laser. Pulling the TL pin down will fire the laser. Beware; placing a load on the TL pin also has this effect. It can also be viewed as an output. When the laser is firing via USB control, the normally high (~4.68 Volts on my machine) TL pin goes low. It is even possible to read MeerK40t's PPI with a volt meter this way, as voltages between that high level, and about 0.10 Volts low for 1000 PPI setting. 
+External control of the laser. Pulling the TL pin down will fire the laser. Beware; placing a load on the TL pin also has this effect. It can also be viewed as an output. When the laser is firing via USB control, the normally high (~4.68 Volts on my machine) TL pin goes low. It is even possible to read MeerK40t's PPI with a volt meter this way, as voltages between that high level, and about 0.10 Volts low for the 1,000 PPI full power setting.
