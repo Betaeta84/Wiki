@@ -182,7 +182,7 @@ The M2 Nano board is equipped with a pair of Allegro A4988 stepper motor driver 
 
 # EX+/- Peripherals Switch
 
-The EX+ and EX- pins can be connected to a transistor to control a hardware relay; there is very little current available. More conveniently, it can directly drive a solid-state relay (SSR). This can be used to turn on and off external devices automatically when the laser is running a job. The EX port is turned back off again about 8 seconds after the job completes. The SSR-40DA has been tested to work, and is an inexpensive plug and play solution. 
+The EX+ and EX- pins can be connected to a transistor to control an electro-mechanical relay; there is very little current available. More conveniently, it can directly drive a solid-state relay (SSR). This can be used to turn on and off external devices automatically when the laser is running a job. The EX port is turned back off again about 8 seconds after the job completes. The SSR-40DA has been tested to work, and is an inexpensive plug and play solution. 
 
 # TL / GND Laser Control
 
