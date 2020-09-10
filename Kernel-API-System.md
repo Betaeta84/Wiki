@@ -19,11 +19,13 @@ The signaler schedules itself within the Scheduler, and provides functionality f
 Signals are context dependent.
 
 ## Channels
+
 The channels are an aspect of the Kernel. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for an initial watcher these can also be opened with a buffer which will be sent to any dialog when connecting to a particular channel. For example, the `usb` channel for the `LhystudiosDevice` is opened with a buffer, so any watchers connecting, such as the `USBConnect` window will be provided that buffer, even if that data happened before the channel was opened.
 
 Channels are context dependent.
 
 ## Kernel Registration
+
 Objects are registered in the kernel, not instances of the object but references to that object. All objects that are registered attempt to call static sub_register(kernel) to register additional elements that object may want added. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information and many things that are expected to be reusable such as devices, modules, and modifiers.
 
 * `window`: 
@@ -40,7 +42,7 @@ The directories in the registration are based on the type of object they are. Pi
 
 Contexts serve as to store persistent information. These are derived from the kernel preference, when the device is loaded. You can also derive the preferences from a would-be device to check what they are, the kernel does this for the `autoboot` flag.
 
-Preferences are expected to be checked for existence prior to use. The `setting` command provides a setting_type, a key, and a default value. Once called `.'key'` is the preferred access method. For any preferences object where we need a preference, it is required to call the `setting()` for that information during initialization. If there is no persistence object backing the preference this will simply assign that setting to the default, but if there is one, we'll have the correct usage. The `flush` command should push the current settings to persistent storage. This is called, by default, during the device shutdown. However if a Preferences is not a device, it won't be shutdown and the settings will not flush().
+Preferences are expected to be checked for existence prior to use. The `setting` command provides a setting_type, a key, and a default value. Once called `.key` is the preferred access method. For any preferences object where we need a preference, it is required to call the `setting()` for that information during initialization. If there is no persistence object backing the preference this will simply assign that setting to the default, but if there is one, we'll have the correct usage. The `flush` command should push the current settings to persistent storage. This is called, by default, during the device shutdown. However if a Preferences is not a device, it won't be shutdown and the settings will not flush().
 
 Some code like Camera and Keymap have their own derived Preferences objects without being associated with a device.
 
