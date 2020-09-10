@@ -1,35 +1,61 @@
-The Kernel API system started in MeerK40t 0.3.0, this is how the internal bits of MeerK40t run and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
+The Kernel/Context API system started in MeerK40t 0.3.0, and underwent a major revision on 0.7.0. This is how the internal bits of MeerK40t run, and hold together as a coherent system, and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
 
-Some of this is speculative and not actively how it works due to legacy code.
+# Kernel
 
-# Registration
-Objects are registered in the kernel. And all objects attempt to call sub_register(kernel) to register additional elements, as a static call on the class. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information.
+The Kernel serves as the central hub of communication between different objects within the system. These are mapped to particular contexts that have locations within the kernel. The contexts can have modules opened and modifiers applied to them. The kernel serves to store the location of registered objects, as well as providing a scheduler, signals, and channels to be used by the modules, modifiers, devices, and other objects.
 
-Any interface using the kernel should register at least one object which it turn would register the rest of the tree. The directories in the registration are based on the type of object they are. Pipes should be registered in `pipe` and interpreters in `interpreter`, modules in `module`.
+The Kernel stores a persistence object, thread interactions, contexts, a translation routine, a run_later operation, jobs for the scheduler, listeners for signals, channel information, and a list of devices.
 
-# Devices
-A device is a specific for a particular kind of laser or backend. These should always have a spooler, interpreters, controllers and sometimes emulators and pipes. These are registered in the Kernel under 'device'. These will most importantly store the preferences for that particular device.
+## Scheduler
 
-# Preferences
-A preferences is a class persistent settings and storage. The Kernel is a type of Preferences. Instances of devices are also types of preferences. These are derived from the kernel preference, when the device is loaded. You can also derive the preferences from a would-be device to check what they are, the kernel does this for the `autoboot` flag.
+The kernel scheduler is allows for jobs to be scheduled. It launches a thread in the kernel which which iterates through the different scheduled jobs, and running them when required. This thread is also used as during shutdown to terminate everything in a safe manner.
+
+### Jobs
+Jobs are either called within a context for add_job() or a module can extend the Job and call schedule() and unschedule().
+
+## Signaler
+The signaler schedules itself within the Scheduler, and provides functionality for `listen()`, `unlisten()` and `signal()`. This allows non-duplicating signals to sent, so other instances within the kernel ecosystem know they should update, if they listened for a specific signal. The signaler does not force every message to be delivered, only the last message. When a listener is attached initially, it will get the last message for that signal if it exists. Using these for GUI fields will then give the last message sent, even if the GUI window was launched after that signal was initially sent.
+
+Signals are context dependent.
+
+## Channels
+The channels are an aspect of the Kernel. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for an initial watcher these can also be opened with a buffer which will be sent to any dialog when connecting to a particular channel. For example, the `usb` channel for the `LhystudiosDevice` is opened with a buffer, so any watchers connecting, such as the `USBConnect` window will be provided that buffer, even if that data happened before the channel was opened.
+
+Channels are context dependent.
+
+## Kernel Registration
+Objects are registered in the kernel, not instances of the object but references to that object. All objects that are registered attempt to call static sub_register(kernel) to register additional elements that object may want added. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information and many things that are expected to be reusable such as devices, modules, and modifiers.
+
+* `window`: 
+* `modifier`
+* `module`
+* `control`
+* `load`
+* `save`
+* `static`
+
+The directories in the registration are based on the type of object they are. Pipes should be registered in `pipe` and interpreters in `interpreter`, modules in `module`, modifiers in `modify`. The same object can be registered multiple times if useful in different places. These registrations are a form of metasyntactic information. 
+
+## Preferences
+
+Contexts serve as to store persistent information. These are derived from the kernel preference, when the device is loaded. You can also derive the preferences from a would-be device to check what they are, the kernel does this for the `autoboot` flag.
 
 Preferences are expected to be checked for existence prior to use. The `setting` command provides a setting_type, a key, and a default value. Once called `.'key'` is the preferred access method. For any preferences object where we need a preference, it is required to call the `setting()` for that information during initialization. If there is no persistence object backing the preference this will simply assign that setting to the default, but if there is one, we'll have the correct usage. The `flush` command should push the current settings to persistent storage. This is called, by default, during the device shutdown. However if a Preferences is not a device, it won't be shutdown and the settings will not flush().
 
 Some code like Camera and Keymap have their own derived Preferences objects without being associated with a device.
 
-# Scheduler
-A scheduler is functionality attached to devices which allows for jobs to be scheduled. It launches a thread in the kernel which which iterates through the different scheduled jobs, and running them when required.
 
-# Jobs
-Currently Modules are Jobs and call schedule() and unschedule() but this will largely be changed. Later so that modules that inherit from Job can be scheduled(). 
+# Context
+Contexts serve as path relevant snapshots of the kernel. These are the primary interaction between the modules and the kernel. They permit getting other contexts of the kernel as well. This should serve as the primary interface code between the kernel and the modules. All contexts have delegated access to the kernel functions, several of these are path relative.
 
-# Signaler
-The signaler attaches to the Kernel and Devices. It schedules itself, and provides functionality for `listen()`, `unlisten()` and `signal()`. This allows non-duplicating signals to sent on a changes so other GUI elements know they should update, if they listened for a specific signal. The signaler does not force every message to be delivered, only the last message. And attaching a listener will get the last message for that signal if it exists. Using these for GUI fields will then give the last message sent even if the GUI window was launched after that signal ended.
+# Devices
+Devices are contexts with a device attached. All devices are expected to have a Spooler attached, and the context path should consist of an integer. Most contexts functions are path relative so opened number-contexts with attached devices should permit multiple independent devices. The only kernel signal is `active` and it signals the currently active device. Other devices will found in the `devices` dictionary on the kernel which will be a subset of the `contexts` dictionary.
 
-Devices will often delegate signals and listens to the kernel with a special prefix of the UID of the loaded kernel. You may then listen() the the signal on a particular device, and will not receive crosstalked information if multiple copies of that same device are instanced.
+# Window
+Within the wxPython GUI, windows, are expected to follow some conventions within wxMeerK40t. Namely the windows take three primary parameters context, path, and parent. The first two are common for all module, all windows extend Module. The context where the window is being opened, the path within that context where it is opened, and the window parent (or None for no parent). Windows are opened like other modules but are not stored in the modules folder during registration.
 
-# Channels
-The channels are an aspect of the Kernel and Devices. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for when the channel starts as well as a buffer which will be sent to any dialog when connecting to a particular channel. For example, the USB channel is opened with a buffer, so any watchers connecting, such as the USBConnect window will be provided that buffer, even if that data happened before the channel was opened.
+# Devices
+A device is a specific for a particular kind of laser or backend. These should always have a spooler, interpreters, controllers and sometimes emulators and pipes. These are registered in the Kernel under 'device'. When a device is attached other aspects of that device are attached as well. This creates a context for that particular device.
 
 # Modules
 Modules are opened classes. They should be registered in the `module` directory in the kernel. These are opened and attached to devices. Sometimes they are registered in other specialty directories like `window` if they are GUI windows, and of little use otherwise. These are opened using the `open()` function on devices and kernels. If this module is already opened. The opened module is returned.
