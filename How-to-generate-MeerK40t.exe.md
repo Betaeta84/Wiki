@@ -1,10 +1,7 @@
 
 ## Dependencies for MeerK40t must be installed.
 
-Pyinstaller is weird with OpenCV support the last known version to work and thus the recommended version is:
-* `pip install opencv-python-headless==3.4.9.33`
-
-Requires `wxPython`, `pyusb`, `ezdxf`, and `Pillow`. While it often will run without these, it will lack particular capabilities if they are absent.
+Requires `wxPython`, `pyusb`, `ezdxf`, and `Pillow`. While it often will run without these, it will lack particular capabilities if they are absent. Should include `opencv-python-headless` for camera support, this is, strictly speaking, not required of a build.
 
 ## Installing pyinstaller.
 
@@ -14,7 +11,7 @@ Using pyinstaller
 
 * pip install pyinstaller
 
-Circa 4/2020 this should be pyinstaller 3.6
+Circa 9/2020 this should be pyinstaller 4.0
 
 Download the icon:
 * https://github.com/meerk40t/gui-files-meerk40t/blob/master/meerk40t.ico
@@ -39,7 +36,9 @@ Edit MeerK40t.spec and replace the three lines giving binaries, datas, hiddenimp
 
 Language support. Language support needs to added starting with the first languages that provide solid translations.
 
-```a.datas += [('locale\\it\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\it\\LC_MESSAGES\\meerk40t.mo', 'DATA')]```
+```python
+a.datas += [('locale\\it\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\it\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
+```
 
 # Pyinstaller on the spec.
 
@@ -88,8 +87,10 @@ a = Analysis(['MeerK40t.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
-a.datas += [('locale\\fr\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\fr\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
+a.datas += [('locale\\es\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\es\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
 a.datas += [('locale\\it\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\it\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
+a.datas += [('locale\\de\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\de\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
+a.datas += [('locale\\zh\\LC_MESSAGES\\meerk40t.mo', 'C:\\Users\\Tat\\PycharmProjects\\meerk40t\\locale\\zh\\LC_MESSAGES\\meerk40t.mo', 'DATA')]
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
@@ -106,4 +107,5 @@ exe = EXE(pyz,
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False , icon='meerk40t.ico')
+
 ```
