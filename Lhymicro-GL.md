@@ -118,19 +118,19 @@ Calling `S1P` triggers instant execution ignoring any commands that occur after 
 * `B`,`T`: +X, -X direction flags. Set the direction flags for execution of the directional magnitude. This is set on the X stepper motor chip. Suppresses Y stepper chip.
 * `M`: In compact mode, performs a 45° move in the direction of the last set direction flags. (Does nothing in default, R (+Y) gets the magnitude, doing `L<distance>T<distance>N` in default will do an angle in that mode)
 * `D`,`U`: Laser On and Laser Off. Can be done in default or compact. Leaving or entering compact mode turns the laser off. When a G-raster step is invoked within compact, the laser is also disabled.
-* `C`: Cut. Can be set in default mode (in any order at any point in default), but C overrides the G value, a second C value causes the speed to be cut to 1/12th the typical value. Likely by using the command ticks rather than the ticks from the crystal.
+* `C`: Cut. Can be set in default mode (in any order at any point in default), but C overrides the G value, a  C value right after the V code causes the speed to be cut to 1/12th the typical value. Likely by using the command ticks rather than the ticks from the crystal. Without C set, all orthogonal movements are diagonal movements and the laser cannot be turned on.
 * `G`: Raster_Step. Can be set in default mode. A single set G value sets the step amount for both directions. Two set G values eg, `G000G003` sets different step values for the other transitions.
 * `V`: Speedcode. Differs by controller board, making some EGV files and commands not compatible since they differ with the board used. See Speedcode breakdown for specific. This is a long bunch of numbers that set several different things.
 * `@`: Resets modes. Set all the set modes to the default values. Behaves strangely in default mode. Usually this is invoked while in compact mode, calling `@` which resets, then `N` which exits compact mode, then `SE` which sends the resets. The reset is issued in sequence so more commands can easily follow, setting new values and returning to compact mode. Since there's no way to tell where the system is in execution, you cannot follow this up with any `I` commands since that could destroy a expected set of commands. For this reason the final exit is usually finish which does eventually signal if the queue is empty with a PEMP flag.
 * `F`: Finishes. In compact, requires we exit `N` then call `SE` to take effect. Then the device waits until all tasks are complete then signals a status with PEMP flag set, meaning the queue is empty this is usually 236.
 * `N`: Executes in default mode, in compact mode, causes the mode to end. We can then issue rapid moves and return to compact mode with `S1E`. Without a reset, we could exit compact mode but without clearing the speed `V` or `G` or `C` values, thing could go weird.
-* `S1E`: Triggers Compact Mode.
+* `S1`: Triggers Compact Mode.
 * `S1P`: Executes command, ignores rest of packet. Locks rail.
 * `S2P`: Works like S1P but does not lock the rail.
 * `PP`: If within the same packet, causes the device to rehome and all states are defaulted.
 * `S2E`: Goes weird, but sometimes returns the device just to the left (might be rehomed device with an unlocked rail).
-* `E`: Enters compact mode.
-* `S0`: Unknown. Seen in chinese software retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s)
+* `E`: Triggers F ability of compact mode. Without an E the F will not trigger. Without a second E after the F the mode will not engage. The F is held until the second E command.
+* `S0`: Unknown. Seen in chinese software retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s). Usually homes the device when attempted manually.
 
 ![nano](https://user-images.githubusercontent.com/3302478/75086288-62346180-54e7-11ea-92df-6642bcb3e2df.png)
 
