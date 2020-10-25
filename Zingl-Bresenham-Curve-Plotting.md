@@ -1,0 +1,7 @@
+One of the features of MeerK40t is Zingl-Bresenham Curve Plotting.
+
+The LIHUIYU series of boards are connected to two stepper motors, these can step one step in either direction, or trigger both at the same time. So everything in the K40 are made of positions at 1000dpi. Every movement is a step either orthogonality or diagonally, this means there are no actual curves only a series of very tiny steps in 1 of 8 possible directions. This is where the Zingl Plotter comes in. The Beauty of Bresenham's Algorithm ( http://members.chello.at/easyfilter/bresenham.html ) author, Zingl came up with a series of algorithms based on Bresenham's insights, which natively allows these curve plotting operations to be performed directly with the native shapes themselves. This means that there is no need to deal with more primitive or subdivided elements. If we have a large curve or small curve it will always have perfect precision because we can natively use the curves themselves.
+
+MeerK40t will draw pixel perfect curves (except for Arc which could be off). Which means if your design contains a Cubic Bezier curve, the program will draw it flawlessly.
+
+These are never subdivided into good-enough small line segments, and the curves are executed on the fly. And since no linearization is needed, the project internally stores everything as the curves they are, giving you access to high-level manipulations, and low-level extremely fast plotting.
