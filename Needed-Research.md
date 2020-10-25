@@ -1,0 +1,5 @@
+We need to have a materials database that can be scaled relative to speed. The idea is that if we have somebody's consistent settings for a wide variety of materials. Is it possible to that this can be linearly scaled and work for others. If you can run these settings for oak at 3mm thickness, and that's like 40% too weak for somebody else, can they just scale their speeds up by 40% and get a bunch of highly functional materials settings?
+
+How fast are rapid movements? How fast are most of the operations done on the M2 Nano. The time guesses currently suck, because the time for other required processes are not known, nor are the speeds of various jogs. How long does a raster really take? Does it scale with scanlines more readily?
+
+Basic research on the Lhymicro board. There's some stuff that just isn't known. How does the Chinese software react to a signal 207 error? Are the S0 commands worthwhile?
