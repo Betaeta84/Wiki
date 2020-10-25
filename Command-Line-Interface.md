@@ -1,5 +1,5 @@
 The MeerK40t CLI:
-
+```
 usage: MeerK40t.py [-h] [-z] [-c] [-a] [-p PATH] [-t TRANSFORM] [-o OUTPUT]
                    [-v] [-m] [-s [key=value]] [-H] [-O] [-b BATCH] [-S SPEED]
                    [-gs GRBL] [-gy] [-gx] [-ga ADJUST_X] [-gb ADJUST_Y] [-rs]
@@ -37,3 +37,4 @@ optional arguments:
   -gb ADJUST_Y, --adjust_y ADJUST_Y
                         adjust grbl home_y position
   -rs, --ruida          run ruida-emulator
+```
