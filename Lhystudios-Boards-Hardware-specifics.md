@@ -69,6 +69,16 @@ And the first raster came out without issue, the second raster came out without 
 
 However it is clear that dropping the packets on any 207 was a problem, never dropping the packet is also a problem. There is the notable difference that the status in the should be dropped packets is 0 (for the CH341 driver. But, pure 207 without any intermediate packets which may indicate that 207 means ERROR and in this case the error was the 0 packet. Whereas right after the send 207 means CRC error and the packet should be resent.
 
+## 204 Single Axis Sequence.
+
+The 204 is also seen in single axis testing.
+egv IV2240983G000G001BS0RERzzzvLzzzvRzzzvLzzzvFNSE-$
+* Will home
+* Run a quick back and forth single axis test.
+* Stop.
+* But, the exit code is 204 for ending the wait.
+* If you keep waiting this becomes 236
+* If you send IPP$ this will respond with a 207 state.
 
 
 # Hardware
