@@ -1,3 +1,8 @@
+# Rasterization
+
+MeerK40t includes a RasterBuilder. It uses a highly debuggable methodology to build rasters. This gives MeerK40t the ability to overscan, perform bottom-to-top right-to-left rasters, start from any corner, skip blank edge pixels, skip blank edge lines and makes the entire process extremely easy to troubleshoot or extend.
+
+
 # Scaling
 MeerK40t does not scale the images for you. The pixels correspond to at best resolution a 1 pixel to 1 mil conversion where each pixel is 1/1000th of an inch.
 
