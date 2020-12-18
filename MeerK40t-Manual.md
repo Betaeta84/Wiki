@@ -34,6 +34,18 @@ Device Specific settings and adjustments.
 
 ![Preferences](https://user-images.githubusercontent.com/3302478/102618603-f19ea700-40ef-11eb-8003-455b0eb569db.png)
 
+## Settings
+Program specific settings. Optional behaviors.
+
+![Settings](https://user-images.githubusercontent.com/3302478/102619747-c7e67f80-40f1-11eb-95f9-9a1ac155abcb.png)
+
+
+## RasterWizard
+Preprocessing raster settings for image preprocessing.
+
+![RasterWizard](https://user-images.githubusercontent.com/3302478/102619740-c61cbc00-40f1-11eb-9f7a-fd99e263d091.png)
+
+
 ## OperationsProperties
 Properties for the selected operation.
 
