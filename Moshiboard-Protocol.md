@@ -202,7 +202,7 @@ CH341WriteAttr(<Prologue>)
 CH341WriteData(Program)
 CH341WriteAttr(<Epilogue>)
 
-We can then wait for our checks to the system request for the current status to be 205 rather than 206 then we send the next data using the same methodology. We do not have to worry about any checks between packets. Programs come in two flavors Vector and Raster:
+We can then wait for our checks to the system request for the current status to be 205 rather than 207 then we send the next data using the same methodology. We do not have to worry about any checks between packets. Programs come in two flavors Vector and Raster:
 * Vector programs are vector speed, set position, moveXY, cutXY, etc. termination sequence.
 * Raster programs are raster speed, set position, moveX, cutX, moveY, cutY, etc. termination sequence.
 
