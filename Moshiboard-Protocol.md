@@ -82,6 +82,8 @@ In order to leave this mode it sends the termination sequence of 7 termination c
 
 The status mode will then read 205 as laser ready.
 
+# Coordinate Sytem.
+The coordinate system is absolute. All values relative to the set offset position. And are in mils/steps from offset-origin point. Negative values are permitted, however using them such that the offset + position is still negative appears to send the board to the positive value thereof.  These are stored in 16 bit little endian formatting.
 
 # Commands
 
@@ -151,6 +153,62 @@ All commands will be referenced by the first 4 bits. The remaining 4 bits fit a 
 
 Bitwise this implies our flags for our 4 data bytes are: Laser, X-Value, Unknown, Y-Value
 
-# Official
+## A7 Moshiboard Commands
+
+The A7 commands are WriteAddr commands these follow the same swizzling as the other commands and can just use any single form for every command.
+
+```
+| UNKNOWN  || 0 || 0x0? ||
+| Freemotor/Stop || 1 || 0x1? || Stops current work in progress. Unlocks the rail.
+| Epilogue || 1 || 0x2? || Sets the program to remain in 207 until next send is possible. 205.
+| UNKNOWN || 1 || 0x3? ||
+| UNKNOWN || 1 || 0x4? ||
+| UNKNOWN || 1 || 0x5? ||
+| Prologue || 1 || 0x6? || Sets the board to accept an A6 bunch of program code.
+| Laser? || 1 || 0x7? || Seen when hitting the laser button in Moshidraw, might toggle the laser.
+| UNKNOWN || 1 || 0x8? ||
+| UNKNOWN || 1 || 0x9? ||
+| UNKNOWN || 1 || 0xA? ||
+| UNKNOWN || 1 || 0xB? ||
+| UNKNOWN || 1 || 0xC? ||
+| UNKNOWN || 1 || 0xD? ||
+| READ || 1 || 0xE? || Read data mode. Seen during the read phase of boot.
+| UNKNOWN || 1 || 0xF? ||
+```
+
+## Vector Program
+
+The standard order for program is to start with Prologue, then send A6 commands. Then Epilogue and wait for the 205 signal. We start with Vector Speed which has two speeds within it, these are cut speed and normal speed. It is not clear if the normal speed is the rapid move speed but that seems likely. This would be something like `0x0a 0x13 0x27` 0A is the first form of the right data. 0x13 is 19 in decimal which is a speed of 20. 0x27 is 39 decimal which is a speed of 40 mm/s for "normal". Speed 0 is impossible. Since 0 gets 1 added and is a speed of 1mm/s. This is followed by the offset, for example `0x00 0x00 0x00 0x00 0x00 0x00 0x00` which is 0x00 the first command, SET_OFFSET, then the values are z = 0, x = 0, y = 0. Then we have a series of CUT_XY and MOVE_XY commands. We do not use the X or Y only forms those are purely for rasters. When finished we do a sequence of 7 terminal bytes for the terminal sequence.
+
+### Jogs
+
+Jogs are done in a vector program. These actually move the offset to the location and then move to 0,0 which is the current location. For example: `a61a13274000008a018a01ca00000000272f2f2f272727`
+
+```
+Vector Cut Speed: 20 (0x13) mm/s Normal Speed: 40 mm/s (0x27)
+Set Location unknown: 0, x: 394, y: 394 (0000,8a01,8a01) 
+move x: 0, y: 0 (0000,0000) 
+Termination. * 7
+```
+
+## Raster Program
+
+The standard raster program starts with a different speed command which takes only one speed which is in cm/s rather than mm/s. So we start with for, for example, `0x02 0x10` which is the first form of the raster speed code forms, and the value of 16 which is 160mm/s. We then set the position as usually, though this is really the current position. As we should have jogged to this position. All the motions done are either X or Y only. Both are this allows for y-rastering and x-rastering and the various steps in the correct directions. Finally when done we send terminal bytes. Send the A7 Prologue, and wait for it to finish.
+
+# Implementations
+
+To implement a Moshiboard Driver we need to connect to the CH341 and change the mode to EPP 1.9 with the control transfer. Everything we do is a program bookended with prologue and epilogue mode shifting commands. So to jog we send:
+CH341WriteAttr(<Prologue>)
+CH341WriteData(Program)
+CH341WriteAttr(<Epilogue>)
+
+We can then wait for our checks to the system request for the current status to be 205 rather than 206 then we send the next data using the same methodology. We do not have to worry about any checks between packets. Programs come in two flavors Vector and Raster:
+* Vector programs are vector speed, set position, moveXY, cutXY, etc. termination sequence.
+* Raster programs are raster speed, set position, moveX, cutX, moveY, cutY, etc. termination sequence.
+
+The swizzling isn't needed since we can just use the first form of all the commands we need. We don't need to read data from the board, or check the chip version. We can just put it in EPP1.9 check the status and start sending data. Only using A782 <prologue> and A7080 <epilogue> and small versions of the vector and raster programs to move around. The board maintains its known position. So it can just jog to the start location, perform these actions. Etc. That's enough to do all the work needed.
+
+
+# Links Official
 
 * [http://www.moshidraw.com/English/Product/software/ Moshidraw]
