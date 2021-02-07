@@ -1,5 +1,5 @@
 # Contributing to Meerk40t
-Meerk40t is open source, which means that you can contribute to improvements as a way of saying thank you for the benefits you gain from using this program. Obviously if you have Python programming skills improving the Meerk40t code is something that we would love your help with, but even if you don't have these technical skills you can still help by improving the documentation or translating the user interface into your own language or undertaking research experiments with your own K40 laser cutter. 
+Meerk40t is open source, which means that you can contribute to improvements as a way of saying thank you for the benefits you gain from using this program at no cost. Obviously if you have Python programming skills improving the Meerk40t code is something that we would love your help with, but even if you don't have these technical skills you can still help by improving the documentation or translating the user interface into your own language or undertaking research experiments with your own K40 laser cutter. 
 
 # Research needed
 In order to underpin future improvements to Meerk40t we need to gather data about K40s and how they are used.
