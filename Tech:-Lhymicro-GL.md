@@ -1,9 +1,6 @@
-
-# Documentation
+# LHYMICRO-GL Format
 
 Contributions to this project in the future may require a certain amount of understanding of the formatting used, and why it is implemented that way. I have documented the format here to the best of my understanding.
-
-# LHYMICRO-GL Format
 
 Unlike command rich formats like Gcode, lhymicro-gl is developed specifically for lasers and is maximally basic for that. All commands in the format do only one of 12 things.
 
