@@ -9,7 +9,7 @@ Meerk40t is a replacement for both the software supplied with the K40 and the K4
 If you want detailed documentation for the stock board this is the place to be. The only place to be.
 [Understanding Lhymicro-GL](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-GL)
 
-[Lhystudios Boards Hardware specifics](https://github.com/meerk40t/meerk40t/wiki/Lhystudios-Boards-Hardware-specifics)
+[Lhystudios Boards Hardware specifics](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhystudios-Hardware-specifics)
 
 This is also a place for research on the board:
 [Physical Speed Measurements](https://github.com/meerk40t/meerk40t/wiki/Physical-Speed-Measurements)
