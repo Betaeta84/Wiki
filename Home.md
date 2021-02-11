@@ -20,7 +20,7 @@ You can contribute, even if you can't code. Raising issues and suggesting ideas 
 
 If you wish to help translate, you may need to regenerate the messages.po file:
 
-* [Regenerating the message.po file](https://github.com/meerk40t/meerk40t/wiki/Regenerating-the-message.po-file)
+* [Regenerating the message.po file](https://github.com/meerk40t/meerk40t/wiki/Tech:-Foreign-Language-Translations)
 
 If you wish to write a module either for public consumption or for private use:
 
