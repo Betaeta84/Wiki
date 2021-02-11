@@ -28,9 +28,9 @@ If you wish to write a module either for public consumption or for private use:
 
 If you wish to write GUIs for your modules, you may need to add icons.
 
-* [Adding Icons to MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Adding-Icons-to-a-MeerK40t-Module)
+* [Adding Icons to MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Tech:-Adding-Icons-to-a-MeerK40t-Module)
 
-* [UI and UX Design Guide](https://github.com/meerk40t/meerk40t/wiki/UI-and-UX-Design-Guide)
+* [UI and UX Design Guide](https://github.com/meerk40t/meerk40t/wiki/Tech:-UI-and-UX-Design-Guide)
 
 ## SVG Namespace
 
