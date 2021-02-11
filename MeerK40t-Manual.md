@@ -147,27 +147,30 @@ Device Manager to control what devices load up. (Mostly don't mess with this). T
 CameraInterface for viewing camera and controlling various camera related aspects.
 
 ![Camera](https://user-images.githubusercontent.com/3302478/102618615-f7948800-40ef-11eb-950b-3ae6689bd383.png)
+
 Camera window contains a number of controls, as well as a camera selection menu when open (the Camera selection menu is in the menu bar on a Mac when the camera window is open and in the foreground). 
 
-A. Update Image Button
+A. Camera Selection Menu
+
+B. Update Image Button
 Sends current camera view to the bed background. This can be used after all initial setup steps have been completed. 
 
-B. Export Snapshot Button
+C. Export Snapshot Button
 Sends the current camera view as an image into MeerK40t's Elements. That can be added to an operation, or saved as an image inside .svg file by saving the resulting file with File->Save as.
 
-C. Correct Fisheye Checkbox
+D. Correct Fisheye Checkbox
 Will apply the matrix generated from the Detect Distortion/Calibration setup. 
 
-D. Correct Perspective Checkbox
+E. Correct Perspective Checkbox
 Crops and skews the camera view to fit the perspective handles. This also changes the aspect ratio to match the bed size set in MeerK40t's Preferences.
 
-E. Camera FPS Slider
+F. Camera FPS Slider
 Changes the frames per second from the camera that are shown in the Camera window. This can be useful on slower systems; especially if camera is also used to monitor a running laser job.
 
-F. Detect Distortions/Calibration Button
+G. Detect Distortions/Calibration Button
 Looks for a 6x9 grid to allow the openCV backend to do remove lens aberrations from the image. That allows the overhead camera to be more accurate; and the edges of the bed to appear straight instead of bowed out from the lens view. This can help significantly improve position accuracy at the extreme edges.
 
-G. Perspective Handles 
+H. Perspective Handles 
 Click and drag in the middle of the handle to move them. Use the mouse wheel to zoom in and out on the image, and hold down middle mouse button (wheel) to move around image. You may need to zoom or resize the window to see the perspective handles depending on resolution of the camera and computer display. 
 
 ## Keymap
