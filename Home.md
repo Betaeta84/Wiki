@@ -24,7 +24,7 @@ If you wish to help translate, you may need to regenerate the messages.po file:
 
 If you wish to write a module either for public consumption or for private use:
 
-* See the [Kernel API System](https://github.com/meerk40t/meerk40t/wiki/Kernel-API-System) Documentation.
+* See the [Kernel API System](https://github.com/meerk40t/meerk40t/wiki/Tech:-Kernel-API-System) Documentation.
 
 If you wish to write GUIs for your modules, you may need to add icons.
 
