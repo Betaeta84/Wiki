@@ -12,7 +12,7 @@ If you want detailed documentation for the stock board this is the place to be. 
 [Lhystudios Boards Hardware specifics](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhystudios-Hardware-specifics)
 
 This is also a place for research on the board:
-[Physical Speed Measurements](https://github.com/meerk40t/meerk40t/wiki/Physical-Speed-Measurements)
+[Physical Speed Measurements](https://github.com/meerk40t/meerk40t/wiki/Tech:-Physical-Speed-Measurements)
 
 ## Help Wanted.
 
