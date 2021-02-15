@@ -257,14 +257,14 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Reify User Changes:
 * Break Subpaths:
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
-* Remove (image): Removes the image from
-* Duplicate: Creates a duplicate 
-* Reset User Changes: Reverts back to the version of the file currently stored on disk.
-* Scale: Scale image 25%-600%
-* Rotate: -180˚ through 180˚
+* Remove (image): Removes the image from the current operation.
+* Duplicate: Creates a duplicate reference of the image in the same operation. 
+* Reset User Changes: Reverts back to the version of the image from the loaded file.
+* Scale: Scale image 25% to 600%.
+* Rotate: -180˚ through 180˚.
 * Reify User Changes: 
 * Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
-* Actualize Pixels: 
+* Actualize Pixels: Writes changes to the image element based on changes made so far in MeerK40t.
 * ZDepth Divide: Slices the image based on lightness; in bands light to dark. This can be used to perform Z-Depth laser cutting from depth map images.
 * Image: 
 * RasterWizard: Opens image in the RasterWizard for processing.
@@ -275,8 +275,8 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Step: Change in Y steps for each next line of laser raster.
 * Actualize Pizels: Writes changes based on previous manipulation.
 * ZDepth Divide: Divide image into multiples; each with a range of tone based on the number requested. Cutting these images in order results in a Z-Depth Raster.
-* Image: 
-* RasterWizard: Open RasterWizard
+* Image: Sub-menu options for: Dither to 1 bit, Invert Image, Mirror Horizontal, Mirror Vertical, Rotate CW, Rotate CCW, and Save output.png
+* RasterWizard: Opens RasterWizard with currently selected image loaded.
 * Apply Raster Script: Apply Raster Script from defaults. 
 ![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
 * Remove: Remove the file from MeerK40t project.
