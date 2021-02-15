@@ -1,11 +1,12 @@
 1. Correct for camera fisheye. Use the 6x9 checkerboard image for printing, it can be printed at a reduced size: about 3"x5" works fine. Perform Distortion correction at all four corners, and bed center; be sure it accepted the checkerboard each time. Toggle the Correct Fisheye Checkbox to see the difference, and ensure all corners are have an adjustment applied. Then leave the Correct Fisheye Checkbox checked. This is necessarily.
 
 2. Get the bed size accurate. A couple ways around this: 
-* A. You used an object of set size. Say an A4 sheet of paper, and set that as your bed size, that would do it. 
-* B. Also you could just put something in the cutter larger than your bed size, and burn it to the size of the bed. Even Post-It notes can be used for this.
-* C. Terminal command rect 0 0 100% 100% will create a rectangle from point 0,0 to 100% width and 100% height of your set bed size. 
+* You used an object of set size. Say an A4 sheet of paper, and set that as your bed size, that would do it. 
+* Also you could just put something in the cutter larger than your bed size, and burn it to the size of the bed. 
+* Post-It notes in the four corners, and using Navigation to reach each corner; Laser Test switch to mark points.
+* Terminal command rect 0 0 100% 100% will create a rectangle from point 0,0 to 100% width and 100% height of your set bed size. 
 
-3. Mark or laser engrave specific marker locations for all four corners. Set perspective markers at the exact corners (limits), which would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective based on camera position. For this to function properly, one needs to have a fine tuned bed size already. Check the Correct Perspective Checkbox.
+3. Mark, or laser engrave specific marker locations for all four corners extremes. Set perspective markers at the exact corners (limits), which would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective based on camera position. For this to function properly, one needs to have a fine tuned bed size already. Check the Correct Perspective Checkbox.
 
 This would correct most of the snag points which is largely; that the bed size must match the physical size between the perspective points, which is notably kind of mysterious.
 
