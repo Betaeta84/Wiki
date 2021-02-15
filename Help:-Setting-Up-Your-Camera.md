@@ -1,4 +1,12 @@
-1. Correct for camera fisheye. Use the 6x9 checkerboard image for printing, it can be printed at a reduced size: about 3"x5" works fine. Perform Distortion correction at all four corners, and bed center; be sure it accepted the checkerboard each time. Toggle the Correct Fisheye Checkbox to see the difference, and ensure all corners are have an adjustment applied. Then leave the Correct Fisheye Checkbox checked. This is necessarily.
+Camera Placement: 
+Typically one chooses a camera with a slightly wider field of view than needed to ensure full coverage for job setup, or laser monitoring (or both). The same camera can be used for both functions if one is willing to sacrifice quality of one or the other. Ideally the camera is mounted in the lid of the machine; but this requires the lid be open, and stay open in a reliable position for camera setup. That same open position would be required during each object placement job setup when using the camera. 
+
+If mounting the camera inside the lid, it is possible to start with an aim that allows viewing of the laser job while running. Then; open the lid slowly to find a position where the camera looks straight down. A kickstand or reliable stopper for the lid can be employed to make this a repeatable operation. The more accurate this repeatability is; the more precise camera placement can be in MeerK40t. 
+
+Furthermore, tools like a yard stick or a bubble level can be employed (stuck inside the cover), to ensure the same alignment time after time. Precision results will require a attention to detail during the one-time setup steps.
+
+One-time Setup:
+1. Correct for camera fisheye. Use the 6x9 checkerboard image, printed out; it can be printed at a reduced size: about 3"x5" works fine. Perform Distortion correction successfully at all four corners at least once, and bed center; be sure it accepted the checkerboard each time. Try rotating it or moving it around slightly if it does not accept a reading. Toggle the Correct Fisheye Checkbox to see the difference; and ensure all corners are have an adjustment applied. Then leave the Correct Fisheye Checkbox checked. This is necessarily.
 
 2. Get the bed size accurate. A couple ways around this: 
 * You used an object of set size. Say an A4 sheet of paper, and set that as your bed size, that would do it. 
@@ -6,15 +14,11 @@
 * Post-It notes in the four corners, and using Navigation to reach each corner; Laser Test switch to mark points.
 * Terminal command rect 0 0 100% 100% will create a rectangle from point 0,0 to 100% width and 100% height of your set bed size. 
 
-3. Mark, or laser engrave specific marker locations for all four corners extremes. Set perspective markers at the exact corners (limits), which would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective based on camera position. For this to function properly, one needs to have a fine tuned bed size already. Check the Correct Perspective Checkbox.
+3. Mark (a Sharpie might help), or laser engrave specific marker locations for all four corners extremes. Set perspective markers in the CameraInterface window at the exact corners (limits), which would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective based on camera position. For this to function properly, one needs to have a fine tuned bed size already. Check the Correct Perspective Checkbox.
 
-This would correct most of the snag points which is largely; that the bed size must match the physical size between the perspective points, which is notably kind of mysterious.
-
-Camera Placement: Mounting, aiming, 
-Ensure Camera View is Reproducible: Use kickstand, spirit level, lid stop, 
+That the bed size preference must match the physical (usable cutting area) size, and also the perspective points; which is notably kind of mysterious.
 
 Questions about Camera Support:
-
 > Locally connected USB OTG UVC compliant type camera? Examples of known to work?
 
 Also, webcam rtsp and http connections work.
