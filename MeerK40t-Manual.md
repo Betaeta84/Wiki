@@ -239,10 +239,10 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Duplicate Operation: Creates a new operation of the same type at the bottom of the operations section of the tree. This new operations has references to all the same objects; but can contain discreet settings from the operation it was duplicated from. It will run in the order it is placed in the tree. 
 * Passes: Duplicates references to all objects in the operations according to number of passes. The extra objects will run in the same order by default. 
 ![engrave-element-menu](https://user-images.githubusercontent.com/3302478/107894287-15118280-6ee4-11eb-8c9f-227e538d03d2.png)
-* Remove: path#####:
-* Remove # objects:
-* Clone Reference:
-* Duplicate:
+* Remove: path#####: Removes references to the selected path in that particular operation. It remains in Elements and Files.
+* Remove # objects (when objects are references more than once): Removes both references from the operation; but also from the Elements list in the tree. It remains in the Files portion of the tree.
+* Clone Reference: Creates a cloned reference of the object. The number of cloned objects are places in the operation; but only a single copy remains in the Elements and File of the tree.
+* Duplicate: Creates a duplicate of the object. The number of duplicated objects are places in the operation as well as Elements; as such, each is a discreet object that can be moved around freely. The File maintains only a single entry for the original.
 ![elements-menu](https://user-images.githubusercontent.com/3302478/107894288-1642af80-6ee4-11eb-9efb-d96a0ac03bc7.png)
 * Clear All:
 * Reverse Layer Order:
