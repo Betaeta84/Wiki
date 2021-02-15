@@ -223,8 +223,8 @@ Set Other/Blue/Red Classify: Uses the standard Red color for cut, Blue color for
 Set Basic Classification: Uses a rainbow of colors for discreet operations which run in a specified order. Along with Black/Any other color classing as Raster engrave. 
 Add Operation: Adds a new unclassed operation to the bottom of the list of operations in the tree. Double clicking it will default classify as Engrave, and allow setting the operation type, color, settings, etc. If untouched, it remains a Unclassified (Unknown operation classification), and unused.
 ![Image-Op-Menu](https://user-images.githubusercontent.com/3302478/107894282-12af2880-6ee4-11eb-97ba-3370d05e70c1.png)
-Execute Job: Open the Job window with only the chosen Image operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
-Clear All: Clear all of the image entries in the operation. They will remain in the Elements and Files entries of the tree.
+Execute Job: Opens the Job window with only the chosen Image operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
+Clear All: Clears all of the image entries in the selected operation. They will remain in the Elements and Files entries of the tree.
 Remove Image(Operation): Removes the currently selected Image operation from the tree. Images classified inside remain in Elements and Files entries in the tree.
 Convert Operation: Coverts the selected image operation into a different type; Raster, Cut, or Engrave. Images aren't 
 Duplicate Operation: Makes a copy of the Image operation in the tree. The items contained remain linked; as a single reference of the same image element. The new duplicated Image operation will show up at the bottom of the list of operations in the tree, and can contain settings different than the operation it was cloned from.
@@ -232,12 +232,12 @@ Passes: Adds selected number of extra references to the image inside selected op
 Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
 Make Raster Image: Makes a single image by combining all images in the selected operation. The individual images remain separated in the Elements and Files.
 ![engrave-operation-menu](https://user-images.githubusercontent.com/3302478/107894284-13e05580-6ee4-11eb-8cb0-1054956746d7.png)
-Execute Job:
-Clear All:
-Remove (Operation):
-Convert Operation:
-Duplicate Operation:
-Passes:
+Execute Job: Opens the Job window with only the chosen Engrave or Cut operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
+Clear All: Clears all of the Engrave or Cut entries in the selected operation. They will remain in the Elements and Files entries of the tree.
+Remove (Operation): Removes the Engrave or Cut operation.
+Convert Operation: Converts the operation to Raster, Cut, or Engrave.
+Duplicate Operation: Creates a new operation of the same type at the bottom of the operations section of the tree. This new operations has references to all the same objects; but can contain discreet settings from the operation it was duplicated from. It will run in the order it is placed in the tree. 
+Passes: Duplicates references to all objects in the operations according to number of passes. The extra objects will run in the same order by default. 
 ![engrave-element-menu](https://user-images.githubusercontent.com/3302478/107894287-15118280-6ee4-11eb-8c9f-227e538d03d2.png)
 Remove: path#####:
 Clone Reference:
