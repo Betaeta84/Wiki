@@ -258,7 +258,7 @@ Break Subpaths:
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
 Remove (image):
 Duplicate:
-Reset User Changes:
+Reset User Changes: Reverts back to the version of the file currently stored on disk.
 Scale:
 Rotate:
 Reify User Changes:
@@ -269,14 +269,14 @@ Image:
 RasterWizard:
 Apply Raster Script:
 ![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
-Remove (image):
-Duplicate:
-Step:
-Actualize Pizels:
-ZDepth Divide:
-Image:
-RasterWizard:
-Apply Raster Script:
+Remove (image): Removes image from
+Duplicate: Creates distinct copies of the image which can be manipulated individually. 
+Step: Change in Y steps for each next line of laser raster.
+Actualize Pizels: Writes changes based on previous manipulation.
+ZDepth Divide: Divide image into multiples; each with a range of tone based on the number requested. Cutting these images in order results in a Z-Depth Raster.
+Image: 
+RasterWizard: Open RasterWizard
+Apply Raster Script: Apply Raster Script from defaults. 
 ![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
-Remove:
-Reload:
+Remove: Remove the file from MeerK40t project.
+Reload: Reload the file from disk. 
