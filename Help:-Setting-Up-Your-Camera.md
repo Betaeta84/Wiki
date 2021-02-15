@@ -5,9 +5,9 @@
      B. Also you could just put something in the cutter larger than your bed size, and burn it to the size of the bed. 
      C. Terminal command rect 0 0 100% 100% will create a rectangle from point 0,0 to 100% width and 100% height of your set bed size. 
 
-3. Mark or laser engrave specific marker locations. Put your perspective markers at the exact corners, you would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective. One NEEDS to have a fine tuned bed size.
+3. Mark or laser engrave specific marker locations. Put your perspective markers at the exact corners, you would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective. For this to function properly, one needs to have a fine tuned bed size.
 
-This would correct most of the snag points which I feel is largely the bed size must match the physical size between the perspective points, which is notably kind of mysterious.
+This would correct most of the snag points which is largely; that the bed size must match the physical size between the perspective points, which is notably kind of mysterious.
 
 Questions about Camera Support:
 
