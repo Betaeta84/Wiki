@@ -216,12 +216,12 @@ Adjustments. I don't think any of this stuff does anything anymore.
 # Tree Menu Items.
 
 ![operation-menu](https://user-images.githubusercontent.com/3302478/107894279-10e56500-6ee4-11eb-9a67-153a5f35e1f3.png)
-Clear All:
-Reverse Layer Order:
-Refresh Classification:
-Set Other/Blue/Red Classify:
-Set Basic Classificaiton:
-Add Operation:
+Clear All: Removes all Image, Raster, Cut and Engrave operations from the list. The items will remain in Elements, as well as File.
+Reverse Layer Order: Will reorder the Operations in the tree; to effectively run the job backwards.
+Refresh Classification: 
+Set Other/Blue/Red Classify: Uses the standard Red color for cut, Blue color for Engrave, and Black/Any other colors for Raster engrave. 
+Set Basic Classification: Uses a rainbow of colors for discreet operations which run in a specified order. Along with Black/Any other color classing as Raster engrave. 
+Add Operation: Adds a new unclassed operation to the bottom of the list of operations in the tree. Double clicking it will default classify as Engrave, and allow setting the operation type, color, settings, etc. If untouched, it remains a Unclassified (Unknown operation classification), and unused.
 ![Image-Op-Menu](https://user-images.githubusercontent.com/3302478/107894282-12af2880-6ee4-11eb-97ba-3370d05e70c1.png)
 Execute Job:
 Clear All:
