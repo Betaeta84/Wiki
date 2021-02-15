@@ -244,18 +244,17 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Clone Reference: Creates a cloned reference of the object. The number of cloned objects are places in the operation; but only a single copy remains in the Elements and File of the tree.
 * Duplicate: Creates a duplicate of the object. The number of duplicated objects are places in the operation as well as Elements; as such, each is a discreet object that can be moved around freely. The File maintains only a single entry for the original.
 ![elements-menu](https://user-images.githubusercontent.com/3302478/107894288-1642af80-6ee4-11eb-9efb-d96a0ac03bc7.png)
-* Clear All:
-* Reverse Layer Order:
-* Reclassify Operations:
+* Clear All: Clears all elements from the list. Also clears those elements from any operations they may be linked to.
+* Reverse Layer Order: Reverses the order of all elements in the list.
+* Reclassify Operations: 
 * Reset User Changes:
 ![element-specific](https://user-images.githubusercontent.com/3302478/107894291-1773dc80-6ee4-11eb-8462-615e96441b2d.png)
-* Remove path#####:
-* Duplicate:
-* Reset User Changes:
-* Scale:
-* Rotate:
+* Remove path#####: Removes the selected element from both the element list, as well as any operations it might be linked to.
+* Duplicate: Creates a duplicate of the element in both Elements and Operations. The newly created element can be moved independently from the original. 
+* Scale: Scales the individual element in the range from 25% through 600%.
+* Rotate: Rotates the individual element -180˚ to 180˚.
 * Reify User Changes:
-* Break Subpaths:
+* Break Subpaths: Breaks 
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
 * Remove (image): Removes the image from the current operation.
 * Duplicate: Creates a duplicate reference of the image in the same operation. 
