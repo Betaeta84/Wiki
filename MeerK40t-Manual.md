@@ -216,67 +216,68 @@ Adjustments. I don't think any of this stuff does anything anymore.
 # Tree Menu Items.
 
 ![operation-menu](https://user-images.githubusercontent.com/3302478/107894279-10e56500-6ee4-11eb-9a67-153a5f35e1f3.png)
-Clear All: Removes all Image, Raster, Cut and Engrave operations from the list. The items will remain in Elements, as well as File.
-Reverse Layer Order: Will reorder the Operations in the tree; to effectively run the job backwards.
-Refresh Classification: 
-Set Other/Blue/Red Classify: Uses the standard Red color for cut, Blue color for Engrave, and Black/Any other colors for Raster engrave. 
-Set Basic Classification: Uses a rainbow of colors for discreet operations which run in a specified order. Along with Black/Any other color classing as Raster engrave. 
-Add Operation: Adds a new unclassed operation to the bottom of the list of operations in the tree. Double clicking it will default classify as Engrave, and allow setting the operation type, color, settings, etc. If untouched, it remains a Unclassified (Unknown operation classification), and unused.
+* Clear All: Removes all Image, Raster, Cut and Engrave operations from the list. The items will remain in Elements, as well as File.
+* Reverse Layer Order: Will reorder the Operations in the tree; to effectively run the job backwards.
+* Refresh Classification: 
+* Set Other/Blue/Red Classify: Uses the standard Red color for cut, Blue color for Engrave, and Black/Any other colors for Raster engrave. 
+* Set Basic Classification: Uses a rainbow of colors for discreet operations which run in a specified order. Along with Black/Any other color classing as Raster engrave. 
+* Add Operation: Adds a new unclassed operation to the bottom of the list of operations in the tree. Double clicking it will default classify as Engrave, and allow setting the operation type, color, settings, etc. If untouched, it remains a Unclassified (Unknown operation classification), and unused.
 ![Image-Op-Menu](https://user-images.githubusercontent.com/3302478/107894282-12af2880-6ee4-11eb-97ba-3370d05e70c1.png)
-Execute Job: Opens the Job window with only the chosen Image operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
-Clear All: Clears all of the image entries in the selected operation. They will remain in the Elements and Files entries of the tree.
-Remove Image(Operation): Removes the currently selected Image operation from the tree. Images classified inside remain in Elements and Files entries in the tree.
-Convert Operation: Coverts the selected image operation into a different type; Raster, Cut, or Engrave. Images aren't 
-Duplicate Operation: Makes a copy of the Image operation in the tree. The items contained remain linked; as a single reference of the same image element. The new duplicated Image operation will show up at the bottom of the list of operations in the tree, and can contain settings different than the operation it was cloned from.
-Passes: Adds selected number of extra references to the image inside selected operation.
-Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
-Make Raster Image: Makes a single image by combining all images in the selected operation. The individual images remain separated in the Elements and Files.
+* Execute Job: Opens the Job window with only the chosen Image operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
+* Clear All: Clears all of the image entries in the selected operation. They will remain in the Elements and Files entries of the tree.
+* Remove Image(Operation): Removes the currently selected Image operation from the tree. Images classified inside remain in Elements and Files entries in the tree.
+* Convert Operation: Coverts the selected image operation into a different type; Raster, Cut, or Engrave. Images aren't 
+* Duplicate Operation: Makes a copy of the Image operation in the tree. The items contained remain linked; as a single reference of the same image element. The new duplicated Image operation will show up at the bottom of the list of operations in the tree, and can contain settings different than the operation it was cloned from.
+* Passes: Adds selected number of extra references to the image inside selected operation.
+* Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
+* Make Raster Image: Makes a single image by combining all images in the selected operation. The individual images remain separated in the Elements and Files.
 ![engrave-operation-menu](https://user-images.githubusercontent.com/3302478/107894284-13e05580-6ee4-11eb-8cb0-1054956746d7.png)
-Execute Job: Opens the Job window with only the chosen Engrave or Cut operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
-Clear All: Clears all of the Engrave or Cut entries in the selected operation. They will remain in the Elements and Files entries of the tree.
-Remove (Operation): Removes the Engrave or Cut operation.
-Convert Operation: Converts the operation to Raster, Cut, or Engrave.
-Duplicate Operation: Creates a new operation of the same type at the bottom of the operations section of the tree. This new operations has references to all the same objects; but can contain discreet settings from the operation it was duplicated from. It will run in the order it is placed in the tree. 
-Passes: Duplicates references to all objects in the operations according to number of passes. The extra objects will run in the same order by default. 
+* Execute Job: Opens the Job window with only the chosen Engrave or Cut operation loaded; along with any pre and post actions selected in the Job window already. Other operations are excluded from this laser job; even if they remain enabled in the tree.
+* Clear All: Clears all of the Engrave or Cut entries in the selected operation. They will remain in the Elements and Files entries of the tree.
+* Remove (Operation): Removes the Engrave or Cut operation.
+* Convert Operation: Converts the operation to Raster, Cut, or Engrave.
+* Duplicate Operation: Creates a new operation of the same type at the bottom of the operations section of the tree. This new operations has references to all the same objects; but can contain discreet settings from the operation it was duplicated from. It will run in the order it is placed in the tree. 
+* Passes: Duplicates references to all objects in the operations according to number of passes. The extra objects will run in the same order by default. 
 ![engrave-element-menu](https://user-images.githubusercontent.com/3302478/107894287-15118280-6ee4-11eb-8c9f-227e538d03d2.png)
-Remove: path#####:
-Clone Reference:
-Duplicate:
+* Remove: path#####:
+* Remove # objects:
+* Clone Reference:
+* Duplicate:
 ![elements-menu](https://user-images.githubusercontent.com/3302478/107894288-1642af80-6ee4-11eb-9efb-d96a0ac03bc7.png)
-Clear All:
-Reverse Layer Order:
-Reclassify Operations:
-Reset User Changes:
+* Clear All:
+* Reverse Layer Order:
+* Reclassify Operations:
+* Reset User Changes:
 ![element-specific](https://user-images.githubusercontent.com/3302478/107894291-1773dc80-6ee4-11eb-8462-615e96441b2d.png)
-Remove path#####:
-Duplicate:
-Reset User Changes:
-Scale:
-Rotate:
-Reify User Changes:
-Break Subpaths:
+* Remove path#####:
+* Duplicate:
+* Reset User Changes:
+* Scale:
+* Rotate:
+* Reify User Changes:
+* Break Subpaths:
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
-Remove (image):
-Duplicate:
-Reset User Changes: Reverts back to the version of the file currently stored on disk.
-Scale:
-Rotate:
-Reify User Changes:
-Step:
-Actualize Pizels:
-ZDepth Divide:
-Image:
-RasterWizard:
-Apply Raster Script:
+* Remove (image):
+* Duplicate:
+* Reset User Changes: Reverts back to the version of the file currently stored on disk.
+* Scale:
+* Rotate:
+* Reify User Changes:
+* Step:
+* Actualize Pizels:
+* ZDepth Divide:
+* Image:
+* RasterWizard:
+* Apply Raster Script:
 ![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
-Remove (image): Removes image from
-Duplicate: Creates distinct copies of the image which can be manipulated individually. 
-Step: Change in Y steps for each next line of laser raster.
-Actualize Pizels: Writes changes based on previous manipulation.
-ZDepth Divide: Divide image into multiples; each with a range of tone based on the number requested. Cutting these images in order results in a Z-Depth Raster.
-Image: 
-RasterWizard: Open RasterWizard
-Apply Raster Script: Apply Raster Script from defaults. 
+* Remove (image): Removes image from
+* Duplicate: Creates distinct copies of the image which can be manipulated individually. 
+* Step: Change in Y steps for each next line of laser raster.
+* Actualize Pizels: Writes changes based on previous manipulation.
+* ZDepth Divide: Divide image into multiples; each with a range of tone based on the number requested. Cutting these images in order results in a Z-Depth Raster.
+* Image: 
+* RasterWizard: Open RasterWizard
+* Apply Raster Script: Apply Raster Script from defaults. 
 ![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
-Remove: Remove the file from MeerK40t project.
-Reload: Reload the file from disk. 
+* Remove: Remove the file from MeerK40t project.
+* Reload: Reload the file from disk. 
