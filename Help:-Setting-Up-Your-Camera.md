@@ -1,3 +1,16 @@
+1. Correct for camera fisheye. Use the 6x9 chessboard image for printing, it can be printed at a reduced size. About 3"x5" works well; and do fisheye correction at all four corners, and bed center. Toggle the Correct Fisheye Checkbox to see the difference, and ensure all corners are adjusted properly. Then leave the Correct Fisheye Checkboxed checked. This is necessarily.
+
+2. Get the bed size accurate. A couple ways around this: 
+     A. You used an object of set size. Say an A4 sheet of paper and said that was your bed size, that would do it. 
+     B. Also you could just put something in the cutter larger than your bed size, and burn it to the size of the bed. 
+     C. Terminal command rect 0 0 100% 100% will create a rectangle from point 0,0 to 100% width and 100% height of your set bed size. 
+
+3. Mark or laser engrave specific marker locations. Put your perspective markers at the exact corners, you would match up corrected size vs. expected size. Those markers placed are there to solve correctly for the perspective. **But, one NEEDS to have a fine tuned bed size.**
+
+This would correct most of the snag points which I feel is largely the bed size must match the physical size between the perspective points, which is notably kind of mysterious.
+
+Questions about Camera Support:
+
 > Locally connected USB OTG UVC compliant type camera? Examples of known to work?
 
 Also, webcam rtsp and http connections work.
