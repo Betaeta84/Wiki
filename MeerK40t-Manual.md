@@ -257,18 +257,18 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Reify User Changes:
 * Break Subpaths:
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
-* Remove (image):
-* Duplicate:
+* Remove (image): Removes the image from
+* Duplicate: Creates a duplicate 
 * Reset User Changes: Reverts back to the version of the file currently stored on disk.
-* Scale:
-* Rotate:
-* Reify User Changes:
-* Step:
-* Actualize Pizels:
-* ZDepth Divide:
-* Image:
-* RasterWizard:
-* Apply Raster Script:
+* Scale: Scale image 25%-600%
+* Rotate: -180˚ through 180˚
+* Reify User Changes: 
+* Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
+* Actualize Pixels: 
+* ZDepth Divide: Slices the image based on lightness; in bands light to dark. This can be used to perform Z-Depth laser cutting from depth map images.
+* Image: 
+* RasterWizard: Opens image in the RasterWizard for processing.
+* Apply Raster Script: Applies a pre-set RasterWizard script to the image.
 ![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
 * Remove (image): Removes image from
 * Duplicate: Creates distinct copies of the image which can be manipulated individually. 
