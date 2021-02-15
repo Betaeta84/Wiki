@@ -144,7 +144,7 @@ Device Manager to control what devices load up. (Mostly don't mess with this). T
 
 ## Camera
 
-CameraInterface window for viewing camera feed, and controlling various camera related aspects. The interface has a number of primary functions. Fisheye distortion correction, which is used to straighten edges rounded by camera lens aberrations. Send frame as background to the scene, or image in elements. The frame to background works, but without the fisheye correction this isn't wildly helpful. Also, this function will require the bed size be set accurately, as well as perspective (cut area) be adjusted and cropped.
+CameraInterface window is for viewing k40 camera feed, and controlling various camera related aspects. The interface has a number of primary functions. Fisheye distortion correction, which is used to straighten edges rounded by camera lens aberrations. Send frame as background to the scene, or an image in elements. The frame to background works, but without the fisheye correction this isn't wildly helpful. Also, this function will require the bed size be set accurately, as well as perspective (cut area) be adjusted/cropped.
 
 ![Camera](https://user-images.githubusercontent.com/3302478/102618615-f7948800-40ef-11eb-950b-3ae6689bd383.png)
 
