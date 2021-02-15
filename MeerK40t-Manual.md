@@ -144,7 +144,7 @@ Device Manager to control what devices load up. (Mostly don't mess with this). T
 
 ## Camera
 
-CameraInterface for viewing camera and controlling various camera related aspects.
+CameraInterface window for viewing camera feed, and controlling various camera related aspects. The interface has a number of primary functions. Fisheye distortion correction, which is used to straighten edges rounded by camera lens aberrations. Send frame as background to the scene, or image in elements. The frame to background works, but without the fisheye correction this isn't wildly helpful. Also, this function will require the bed size be set accurately, as well as perspective (cut area) be adjusted and cropped.
 
 ![Camera](https://user-images.githubusercontent.com/3302478/102618615-f7948800-40ef-11eb-950b-3ae6689bd383.png)
 
@@ -211,18 +211,3 @@ Alignment Ally is intended to help with the process of aligning the laser. It ha
 Adjustments. I don't think any of this stuff does anything anymore.
 
 ![Adjustments](https://user-images.githubusercontent.com/3302478/102618641-01b68680-40f0-11eb-86cc-619e4550313f.png)
-
-
-# Tree Menu Items.
-
-There are several menu items in the tree that are object specific. 
-
-![operation-menu](https://user-images.githubusercontent.com/3302478/107894279-10e56500-6ee4-11eb-9a67-153a5f35e1f3.png)
-![Image-Op-Menu](https://user-images.githubusercontent.com/3302478/107894282-12af2880-6ee4-11eb-97ba-3370d05e70c1.png)
-![engrave-operation-menu](https://user-images.githubusercontent.com/3302478/107894284-13e05580-6ee4-11eb-8cb0-1054956746d7.png)
-![engrave-element-menu](https://user-images.githubusercontent.com/3302478/107894287-15118280-6ee4-11eb-8c9f-227e538d03d2.png)
-![elements-menu](https://user-images.githubusercontent.com/3302478/107894288-1642af80-6ee4-11eb-9efb-d96a0ac03bc7.png)
-![element-specific](https://user-images.githubusercontent.com/3302478/107894291-1773dc80-6ee4-11eb-8462-615e96441b2d.png)
-![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
-![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
-![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
