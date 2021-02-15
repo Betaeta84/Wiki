@@ -216,11 +216,67 @@ Adjustments. I don't think any of this stuff does anything anymore.
 # Tree Menu Items.
 
 ![operation-menu](https://user-images.githubusercontent.com/3302478/107894279-10e56500-6ee4-11eb-9a67-153a5f35e1f3.png)
+Clear All:
+Reverse Layer Order:
+Refresh Classification:
+Set Other/Blue/Red Classify:
+Set Basic Classificaiton:
+Add Operation:
 ![Image-Op-Menu](https://user-images.githubusercontent.com/3302478/107894282-12af2880-6ee4-11eb-97ba-3370d05e70c1.png)
+Execute Job:
+Clear All:
+Remove Image(Operation):
+Convert Operation:
+Duplicate Operation:
+Passes:
+Step:
+Make Raster Image:
 ![engrave-operation-menu](https://user-images.githubusercontent.com/3302478/107894284-13e05580-6ee4-11eb-8cb0-1054956746d7.png)
+Execute Job:
+Clear All:
+Remove (Operation):
+Convert Operation:
+Duplicate Operation:
+Passes:
 ![engrave-element-menu](https://user-images.githubusercontent.com/3302478/107894287-15118280-6ee4-11eb-8c9f-227e538d03d2.png)
+Remove: path#####:
+Clone Reference:
+Duplicate:
 ![elements-menu](https://user-images.githubusercontent.com/3302478/107894288-1642af80-6ee4-11eb-9efb-d96a0ac03bc7.png)
+Clear All:
+Reverse Layer Order:
+Reclassify Operations:
+Reset User Changes:
 ![element-specific](https://user-images.githubusercontent.com/3302478/107894291-1773dc80-6ee4-11eb-8462-615e96441b2d.png)
+Remove path#####:
+Duplicate:
+Reset User Changes:
+Scale:
+Rotate:
+Reify User Changes:
+Break Subpaths:
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
+Remove (image):
+Duplicate:
+Reset User Changes:
+Scale:
+Rotate:
+Reify User Changes:
+Step:
+Actualize Pizels:
+ZDepth Divide:
+Image:
+RasterWizard:
+Apply Raster Script:
 ![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
+Remove (image):
+Duplicate:
+Step:
+Actualize Pizels:
+ZDepth Divide:
+Image:
+RasterWizard:
+Apply Raster Script:
 ![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
+Remove:
+Reload:
