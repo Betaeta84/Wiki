@@ -254,7 +254,7 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Scale: Scales the individual element in the range from 25% through 600%.
 * Rotate: Rotates the individual element -180˚ to 180˚.
 * Reify User Changes:
-* Break Subpaths: Breaks 
+* Break Subpaths: Breaks vector into subpaths. Not all vectors objects have subpaths.
 ![image-specific](https://user-images.githubusercontent.com/3302478/107894294-1b076380-6ee4-11eb-87d2-560b797cda40.png)
 * Remove (image): Removes the image from the current operation.
 * Duplicate: Creates a duplicate reference of the image in the same operation. 
@@ -265,7 +265,7 @@ Adjustments. I don't think any of this stuff does anything anymore.
 * Step: Sets the number of steps in Y for each horizontal cuttings pass of the laser head (raster). A higher number will run faster by rastering less lines. 
 * Actualize Pixels: Writes changes to the image element based on changes made so far in MeerK40t.
 * ZDepth Divide: Slices the image based on lightness; in bands light to dark. This can be used to perform Z-Depth laser cutting from depth map images.
-* Image: 
+* Image: Sub-menu options for: Dither to 1 bit, Invert Image, Mirror Horizontal, Mirror Vertical, Rotate CW, Rotate CCW, and Save output.png
 * RasterWizard: Opens image in the RasterWizard for processing.
 * Apply Raster Script: Applies a pre-set RasterWizard script to the image.
 ![image-specific-post](https://user-images.githubusercontent.com/3302478/107894296-1d69bd80-6ee4-11eb-9ff2-127fb603ab0e.png)
