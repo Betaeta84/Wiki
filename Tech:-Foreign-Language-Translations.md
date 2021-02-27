@@ -19,3 +19,10 @@ Then:
 `pybabel extract . -o messages.po`
 
 Because I have a virtual environment I moved all the files to a directory and ran the script there, since it tried to do all the sub directories.
+
+## Updating the meerk40t.po file
+
+If your meerk40t.po is old you can use pybabel to update it:
+
+For Chinese (zh, use the correct locale) this would be:
+`pybabel update -l zh -i messages.po -o meerk40t.po`
