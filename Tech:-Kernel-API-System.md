@@ -4,7 +4,7 @@ The Kernel stores a persistence object, thread interactions, contexts, a transla
 
 # History
 
-The Kernel/Context API system started in MeerK40t 0.3.0, and underwent several major revision on 0.7.0. This is how the internal bits of MeerK40t run, and hold together as a coherent system, and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
+The Kernel/Context API system started in MeerK40t 0.3.0, and underwent several major revision on 0.7.0.
 
 # Plugins
 
@@ -20,18 +20,47 @@ meerk40t.plugins = Example = example.main:plugin
 And the `plugin()` function:
 
 ```python 
-def plugin(kernel):
-    @kernel.console_command('example', help="Says Hello World.")
-    def example_cmd(command, channel, _, args=tuple(), **kwargs):
-        channel(_('Hello World'))
+def plugin(kernel, lifecycle):
+    if lifecycle == 'register':
+        """
+        Register our changes to meerk40t. These should modify the registered values within meerk40t or install different
+        modules and modifiers to be used in meerk40t.
+        """
+
+        @kernel.console_command('example', help="Says Hello World.")
+        def example_cmd(command, channel, _, args=tuple(), **kwargs):
+            channel(_('Hello World'))
+    elif lifecycle == 'boot':
+        """
+        Do some persistent actions or start modules and modifiers. Register any scheduled tasks or threads that need
+        to be running for our plugin to work. 
+        """
+        pass
+    elif lifecycle == 'ready':
+        """
+        Start process running. Sometimes not all modules and modifiers will be ready as they are processed in order
+        during boot. If your thread or work depends on other parts of the system being fully established they should 
+        work here.
+        """
+        pass
+    elif lifecycle == 'mainloop':
+        """
+        This is the start of the gui and will capture the default thread as gui thread. If we are writing a new gui
+        system and we need this thread to do our work. It should be captured here. This is the main work of the program. 
+        """
+        pass
+    elif lifecycle == 'shutdown':
+        """
+        Meerk40t's closing down, our plugin should adjust accordingly. All registered meerk40t processes will be stopped
+        any plugin processes should also be stopped so the program can close correctly.
+        """
+        pass
 ```
 
-The code in the bootstrapping calls plugin() with the kernel for all `meerk40t.plugins` which allows them to register themselves and alter the code as needed. In the example, we use the `kernel.console_command` to register a command called "example" which calls the channel with "Hello World" when installed with pip. The pure python version of MeerK40t will find and execute this plugin, this will add a command that sends "Hello World" to the channel when called. The `_` function is for translation purposes.
+The code in the kernel calls plugin() with different lifecycle events for all `meerk40t.plugins` which allows them to register themselves and alter the code as needed. In the example, we use the `kernel.console_command` to register a command called "example" which calls the channel with "Hello World" during the `register` lifecycle. These plugins will be found when installed with `pip`. The pure python version of MeerK40t will find and execute this plugin, this will add a command that sends "Hello World" to the channel when called. The `_` function is for translation purposes.
 
 # Kernel
-
-The Kernel serves as the central hub of communication between different objects within the system. These are mapped to particular contexts that have locations within the kernel. The contexts can have modules opened and modifiers applied to them. The kernel serves to store the location of registered objects. It also provides access to:
-
+* Registered: A main dictionary of various keys to functions, data, modules, console commands etc. 
 * Contexts: Locations within the kernel space at specific paths. For example, the camera add-on stores camera settings in `camera/0` through `camera/5` and these settings are independent of each other.
 * Modifiers: Modifiers provide functionality for a particular context. The assumption is modifiers will alter the context or provide a link to the main code. For example `Spooler` provides .spooler at the given context as place to send cutcode. Modifiers also get called `boot()` when the kernel boots at start-up. These are always called the name of the modifier itself. So `modifier/Spooler` is opened as `modifier/Spooler`
 * Modules: Modules are assumed to be allow many copies of the same class. These are opened at the context and stored in the `.opened` dictionary. These are given a name which can be dynamically assigned. They are not expected to change the context at which they are opened. 
@@ -40,7 +69,13 @@ The Kernel serves as the central hub of communication between different objects 
 * Signals: Signals are a different dataflow metric within the kernel. However, unlike Channels if a signal is called many times very rapidly it will result in a single trigger of the signal. You are not guaranteed to see every packet, you only get to see the last everything listening is notified on an update to a particular signal. 
 * Threads: Threads are registered in the kernel and executed like most all multi-threaded operations. These are tracked and viewed with the `thread` channel for diagnostic purposes. And are required to complete for kernel shutdown.
 * Scheduler: The scheduler is a thread which provides `Job` instances these can occur a number of times over a given duration. A scheduled job will skip run cycles if the job takes longer than the interval to complete. Refreshing guis and signals are processed through scheduled jobs.
-* Timers: Timers are user set internal commands that execute repeatedly. 
+* Timers: Timers are user set internal commands that execute repeatedly.
+* Plugins: Plugins are registered either directly in the main as would be done during compiling into an .exe or .dmg file, or are utilized through `pip` to allow manipulations of the meerk40t systems.
+
+
+## Kernel Registration
+
+Objects are registered in the kernel, not instances of the object but references to that object. All objects that are registered attempt to call static sub_register(kernel) to register additional elements that object may want added. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information and many things that are expected to be reusable such as devices, modules, and modifiers.
 
 ## Scheduler
 
@@ -59,10 +94,6 @@ Signals are context dependent.
 The channels are an aspect of the Kernel. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for an initial watcher these can also be opened with a buffer which will be sent to any dialog when connecting to a particular channel. For example, the `usb` channel for the `LhystudiosDevice` is opened with a buffer, so any watchers connecting, such as the `USBConnect` window will be provided that buffer, even if that data happened before the channel was opened.
 
 Channels are context dependent.
-
-## Kernel Registration
-
-Objects are registered in the kernel, not instances of the object but references to that object. All objects that are registered attempt to call static sub_register(kernel) to register additional elements that object may want added. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information and many things that are expected to be reusable such as devices, modules, and modifiers.
 
 ## Preferences
 
