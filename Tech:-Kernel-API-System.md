@@ -1,3 +1,9 @@
+The Kernel serves as the central hub of communication between different objects within the system. These are mapped to particular contexts that have locations within the kernel. The contexts can have modules opened and modifiers applied to them. The kernel serves to store the location of registered objects, as well as providing a scheduler, signals, channels, and a command console to be used by the modules, modifiers, devices, plugins, and other objects.
+
+The Kernel stores a persistence object, thread interactions, contexts, a translation routine, a run_later operation, jobs for the scheduler, listeners for signals, channels of dataflow, a list of devices, registered commands, plugins, a central dictionary of registered objects.
+
+# History
+
 The Kernel/Context API system started in MeerK40t 0.3.0, and underwent several major revision on 0.7.0. This is how the internal bits of MeerK40t run, and hold together as a coherent system, and how you can write your own code for MeerK40t either for personal use or general consumption. The Kernel is the glue that holds these parts together so they can operate together quickly and modularly.
 
 # Plugins
