@@ -130,6 +130,12 @@ The arguments are required arguments in the function. These will be defined with
 ## <options>
 The options are optional arguments provided with either a `-` prefix of a single letter or `--` prefix for the entire option name.
 
+## data_type
+This is the matching data_type that triggered to call this command
+
+## data
+This is the data passed to this command from the preceding command.
+
 ## args
 The args function provides a tuple of string objects that were parsed, but not used. If no `output_type` is defined for the given function all remaining arguments are passed to this console function.
 
