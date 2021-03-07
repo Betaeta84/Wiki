@@ -1,11 +1,187 @@
 # Console Commands
 
-Start in version 0.6.0 there are a series of console commands which are accessed in a variety of ways:
+Starting in version 0.6.0 there are a series of console commands which are accessed in a variety of ways:
 * Terminal inside MeerK40t accepts console commands.
 * Batch files accepted with the -b command in the command line.
 * Keymap keys run commands which are by default console commands.
 
+In 0.7.0 this is greatly expanded.
+
 ## Commands
+
+## Help in 0.7.0
+Currently (3/7/21) the following commands are listed when requesting "help" in 0.7.0
+```
+help
+--- Base Commands ---
+abort           Abort Job
+acceleration    Set Interpreter Acceleration [1-4]
+alias           alias <alias> <console commands[;console command]*>
+bind            bind <key> <console command>
+camera\d*       camera commands and modifiers.
+camwin          camwin <index>: Open camera window at index
+cd              change directory
+channel         channel [(open|close|save) <channel_name>]
+circle          circle <x> <y> <r> or circle <r>
+classify        classify elements into operations
+clipboard       clipboard
+consoleserver   starts a console_server on port 23 (telnet)
+context         context
+control         control [<executive>]
+cut             group current elements into operation type
+declassify      declassify selected elements
+device          device [<value>]
+dir             list directory
+down            cmd <amount>
+egv             Lhystudios Engrave Code Sender. egv <lhymicro-gl>
+egv_export      Lhystudios Engrave Buffer Export. egv_export <egv_file>
+egv_import      Lhystudios Engrave Buffer Import. egv_import <egv_file>
+element         element, selected elements
+element(\d+,?)+ element0,3,4,5: elements 0, 3, 4, 5
+element*        element*, all elements
+elements        list all elements in console
+element~        element~, all non-selected elements
+ellipse         ellipse <cx> <cy> <rx> <ry>
+embroider       embroider <angle> <distance>
+end             end <commmand>
+engrave         group current elements into operation type
+fill            fill <svg color>
+flush           flush
+grblserver      activate the grblserver.
+grid            grid <columns> <rows> <x_distance> <y_distance>
+halftone        image halftone <diameter> <scale> <angle>
+hold            Hold Controller
+home            home the laser
+image           image <operation>
+imageop         group current elements into operation type
+left            cmd <amount>
+line            adds line to scene
+load            load file
+lock            lock the rail
+loop            loop <command>
+ls              list directory
+matrix          matrix <sx> <kx> <sy> <ky> <tx> <ty>
+modifier        modifier [(open|close) <module_name>]
+module          module [(open|close) <module_name>]
+move            move <x> <y>: move to position.
+move_absolute   move <x> <y>: move to position.
+move_relative   move_relative <dx> <dy>
+note            note <note>
+operation       operation: selected operations.
+operation(\d+,?)+ operation0,2: operation #0 and #2
+operation*      operation*: all operations
+operation.*     operation: selected operations
+operations      operations: list operations
+operation~      operation~: non selected operations.
+optimize        optimize <type>
+outline         outline the current selected elements
+path            path <svg path>
+pause           realtime pause/resume of the machine
+plan            plan<?> <command>
+polygon         polygon (<point>, <point>)*
+polyline        polyline (<point>, <point>)*
+power           Set Interpreter Power
+pulse           pulse <time>: Pulse the laser in place.
+quit            quits meerk40t shutting down all processes
+raster          group current elements into operation type
+rect            adds rectangle to scene
+refresh         wxMeerK40 refresh
+register        register
+reify           reify affine transformations
+reset           reset affine transformations
+resize          resize <x-pos> <y-pos> <width> <height>
+resume          Resume Controller
+right           cmd <amount>
+rotaryscale     Rotary Scale selected elements
+rotaryview      Rotary View of Scene
+rotate          rotate <angle>
+ruidaserver     activate the ruidaserver.
+scale           scale <scale> [<scale-y>]?
+schedule        show scheduled events
+set             set [<key> <value>]
+shutdown        quits meerk40t shutting down all processes
+speed           Set Speed in Interpreter.
+start           Start Pipe to Controller
+stroke          stroke <svg color>
+stroke-width    stroke-width <length>
+text            text <text>
+theme           Theming information and assignments
+thread          show threads
+timer.*         timer<?> <duration> <iterations>
+trace_hull      trace the convex hull of current elements
+trace_quick     quick trace the bounding box of current elements
+translate       translate <tx> <ty>
+tree            access and alter tree elements
+unlock          unlock the rail
+up              cmd <amount>
+usb_connect     Connect USB
+usb_disconnect  Disconnect USB
+webhelp         Launch a registered webhelp page
+window          wxMeerK40 window information
+--- camera Commands ---
+background      set background image
+export          export camera image
+fisheye         fisheye (capture|reset)
+perspective     perspective (set <#> <value>|reset)
+start           Start Camera.
+stop            Stop Camera
+--- clipboard Commands ---
+clear           clipboard clear
+contents        clipboard contents
+copy            clipboard copy
+cut             clipboard cut
+list            clipboard list
+paste           clipboard paste
+--- elements Commands ---
+circle          circle <x> <y> <r> or circle <r>
+classify        classify elements into operations
+clipboard       clipboard
+copy            duplicate elements
+cut             group current elements into operation type
+declassify      declassify selected elements
+delete          delete elements
+ellipse         ellipse <cx> <cy> <rx> <ry>
+engrave         group current elements into operation type
+fill            fill <svg color>
+grid            grid <columns> <rows> <x_distance> <y_distance>
+imageop         group current elements into operation type
+line            adds line to scene
+matrix          matrix <sx> <kx> <sy> <ky> <tx> <ty>
+merge           merge elements
+outline         outline the current selected elements
+polygon         polygon (<point>, <point>)*
+polyline        polyline (<point>, <point>)*
+raster          group current elements into operation type
+rect            adds rectangle to scene
+reify           reify affine transformations
+reset           reset affine transformations
+resize          resize <x-pos> <y-pos> <width> <height>
+rotate          rotate <angle>
+scale           scale <scale> [<scale-y>]?
+select          Set these values as the selection.
+select+         Add the input to the selection
+select-         Remove the input data from the selection
+select^         Toggle the input data in the selection
+step            step <raster-step-size>
+stroke          stroke <svg color>
+stroke-width    stroke-width <length>
+subpath         break elements
+text            text <text>
+translate       translate <tx> <ty>
+--- ops Commands ---
+copy            duplicate elements
+delete          delete elements
+plan            plan<?> <command>
+select          Set these values as the selection.
+select+         Add the input to the selection
+select-         Remove the input data from the selection
+select^         Toggle the input data in the selection
+step            step <raster-step-size>
+--- tree Commands ---
+list            view tree
+move            <node> move <destination>, eg ... move 1:0
+sub             sub <#>. Tree Context
+```
 
 ### Jogs
 
