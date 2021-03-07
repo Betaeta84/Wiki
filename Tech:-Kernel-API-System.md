@@ -137,17 +137,14 @@ def plugin(kernel, lifecycle):
 
 The code in the kernel calls plugin() with different lifecycle events for all `meerk40t.plugins` which allows them to register themselves and alter the code as needed. In the example, we use the `kernel.console_command` to register a command called "example" which calls the channel with "Hello World" during the `register` lifecycle. These plugins will be found when installed with `pip`. The pure python version of MeerK40t will find and execute this plugin, this will add a command that sends "Hello World" to the channel when called. The `_` function is for translation purposes.
 
-
-***
-
 # MeerK40t Specific API
 
-## Windows
-
-The GUI used registers windows in `window/<window-name>` in the kernel and these can be loaded up like any module. The kernel doesn't need any additional information here. These are loaded by calling open() with the given module or by calling the `window` command in console.
+Often it may be essential to extend MeerK40t in a more specific fashion. Add in a new window, provide a new filetype, edit the tree menu options, or add a function to the system menubar, or define webhelp.
 
 ## Loaders
-kernel.add_loader()
+Loaders are part of the elements.py code. They register filetypes to be loaded and stored in the elements tree.
+
+`kernel.add_loader()`
 
 Loaders are required to have a few functions:
 `load_types()`: This is a generator which gives three values: str: Description, tuple: Extensions, str: Mimetype.
@@ -159,7 +156,9 @@ This is intended to give the description of what this loads, the extensions thos
 Loaders are expected to append the data of that file path to the kernel.elements value.
 
 ## Savers
-kernel.add_saver()
+Savers are part of the elements.py code. They register filetypes to be exported and saved to disk.
+
+`kernel.add_saver()`
 
 Required saver functions are:
 
@@ -170,3 +169,7 @@ Unlike the loaders the second item is `Extension` and is intended to give 1 exte
 ## Backends
 
 Backend devices are registered in `device/<device-name>` this is expected to be referenced in any autobooting device location. (Any context starting with a number).
+
+## Windows
+
+The GUI used registers windows in `window/<window-name>` in the kernel and these can be loaded up like any module. Windows in MeerK40t are `modules`. The kernel doesn't need any additional information here. These are loaded by calling open() with the given module or by calling the `window` command in console, which is registered in the `wxmeerk40t.py` app code. This command cannot be used in purely CLI mode.
