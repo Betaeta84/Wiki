@@ -21,7 +21,7 @@ Console commands within the API are registered with several decorators. Here's a
             return
 ```
 
-# context.console_command
+# @.console_command
 The decorator is being used to register the console command. This can be done *anywhere* in registration code.
 
 ## command
@@ -34,7 +34,9 @@ Hidden prevents this command from showing up in help.
 Help is the quick help message of this particular command.
 
 
-# context.console_argument
+***
+
+# @.console_argument
 
 Registers required operands for the command, these must exist. If they do not the command is called with them set to `None`.
 
@@ -67,7 +69,11 @@ The help data will provide the quick command explanation located in help. The ex
 ## default
 The default is the value to be used if no value is given.
 
-# context.command_option
+
+***
+
+
+# @.command_option
 Provides optional 
 
 For example this option for path 
@@ -84,6 +90,30 @@ The default is the value to be used if no value is given.
 
 # Console Function
 The console function is the function being decorated
+
+```python
+        @kernel.console_option('path', 'p', type=context.get_context, default=context.active, help="Context Path at which to open the window")
+        @kernel.console_argument('subcommand',  type=str, help="open <window>")
+        @kernel.console_argument('window', type=str, help="window to apply subcommand to")
+        @kernel.console_command("window", help="wxMeerK40 window information")
+        def window(channel, _, subcommand=None, window=None, path=None, args=(), **kwargs):
+                ...
+```
+
+Here we see how the preceding option, argument, argument, and command inform the function we call and what parameter it takes. `subcommand` and `window` are registered arguments. But, we also accept a `--path` or `-p` value for the option. Which is a type of context.get_context namely a path given our current context. With a default value of the active context.
+
+This creates a help which reads:
+```
+help window
+	window <subcommand:str> <window:str>
+	(None) -> window -> (None)
+	Argument: str 'subcommand':
+		open <window>
+	Argument: str 'window':
+		window to apply subcommand to
+	Option: get_context ('--path', '-p'):
+		Context Path at which to open the window
+```
 
 ## command
 The command is either a string or tuple of strings (if this is reserving more than one namespace) which is the command that will be typed to trigger this command.
