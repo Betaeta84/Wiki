@@ -39,7 +39,7 @@ OR (more explicitly)
 
 terminal command: "python3 -m pip install --upgrade numpy scipy six wheel altgraph pyparsing ezdxf pyusb opencv-python-headless pillow wxpython meerk40t[all]"
 
-To launch MeerK40t ### terminal command: "meerk40t"
+To launch MeerK40t terminal command: "meerk40t"
 
 
 ### Advanced:
