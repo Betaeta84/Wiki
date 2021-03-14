@@ -8,7 +8,8 @@ Python >= 3.6 is required. To check if a version of Python 3 already installed, 
 
 After install, the new python command will contain the version you installed. So if you installed Python version 3.9.2, the command is "python3.9 -m pip list" and the like.
 ### Requirements
-libjpeg is required to install Pillow. 
+libjpeg is required to install Pillow.
+
 libusb is required to use pyusb.
 
 ## MacPorts
