@@ -27,6 +27,9 @@ Download source with terminal command: "curl --remote-name http://www.ijg.org/fi
 
 ### LibUSB
 https://github.com/libusb/libusb
+
+To build; "cd" into cloned repo and issue terminal command: "./autogen.sh && ./bootstrap.sh && make && sudo make install"
+
 # Install MeerK40t and Requirements available from pip
 Once a version of Python 3, Command Line Tools, libjpeg, and libusb are installed; pip can be used to install the rest of the requirements, as well as MeerK40t itself. From the list below; ezdxf is an optional install which enables DXF file support. OpenCV (opencv-python-headless) is also optional, and only necessary for camera support. Without wxPython, a CLI only version of MeerK40t can still function (no GUI).
 
