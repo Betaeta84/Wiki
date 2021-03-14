@@ -18,10 +18,13 @@ sudo port install libjpeg libusb
 brew install libjpeg libusb
 ## Or; Manually Compile or Install Requirements
 ### LibJpeg
-LibJpeg can be downloaded as a macOS install package from http://ethan.tira-thompson.com/Mac_OS_X_Ports.html 
+http://ethan.tira-thompson.com/Mac_OS_X_Ports.html LibJpeg has been made available as a macOS install package. 
 [libjpeg Package Download](http://ethan.tira-thompson.com/Mac_OS_X_Ports_files/libjpeg%20%28universal%29.dmg)
+
 OR
+
 Download source with terminal command: "curl --remote-name http://www.ijg.org/files/jpegsrc.v9c.tar.gz"
+
 ### LibUSB
 https://github.com/libusb/libusb
 # Install MeerK40t and Requirements with pip
