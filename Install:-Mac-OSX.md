@@ -1,6 +1,5 @@
 # Download
-Regular Mac binary builds are published with releases as .dmg files with a standard Mac native application. https://github.com/meerk40t/meerk40t/releases 
-More adventurous users are welcome to clone the repo.      
+Regular Mac binary builds are published with releases as .dmg files containing a standard Mac native application. Find the latest version in the [Releases](https://github.com/meerk40t/meerk40t/releases) section. More adventurous users are welcome to clone the repo.      
 
 # Build
 MeerK40t requires Python >= 3.6 required. Check to see if you have a version already installed with terminal command "python3 -V". Otherwise: download and install https://www.python.org/downloads/mac-osx/
