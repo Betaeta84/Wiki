@@ -15,6 +15,7 @@ After install, the new python command will contain the version you installed. So
 
 libjpeg is required for Pillow. 
 Website: http://ethan.tira-thompson.com/Mac_OS_X_Ports.html 
+
 Direct .pkg Download: http://ethan.tira-thompson.com/Mac_OS_X_Ports_files/libjpeg%20%28universal%29.dmg
 OR
 curl --remote-name http://www.ijg.org/files/jpegsrc.v9c.tar.gz
