@@ -2,7 +2,7 @@
 Regular Mac binary builds are published with releases as .dmg files containing a standard Mac native application. Find the latest version in the [Releases](https://github.com/meerk40t/meerk40t/releases) section. More adventurous users are welcome to clone the repo.      
 
 # Build
-MeerK40t requires macOS Command Line Tools to be installed. Those can be installed with terminal command "xcode-select --install", or with a package downloaded from https://developer.apple.com/ 
+MeerK40t requires macOS Command Line Tools to be installed. Those can be installed with terminal command "xcode-select --install" then "sudo xcodebuild -license"; or with a package downloaded from https://developer.apple.com/ 
 
 Python >= 3.6 is required. To check if a version of Python 3 already installed, use the terminal command "python3 -V". Otherwise: download from https://www.python.org/downloads/mac-osx/ and install. 
 
