@@ -2,12 +2,14 @@
 Regular Mac binary builds are published with releases as .dmg files containing a standard Mac native application. Find the latest version in the [Releases](https://github.com/meerk40t/meerk40t/releases) section. More adventurous users are welcome to clone the repo.      
 
 # Build
-MeerK40t requires Python >= 3.6 required. Check to see if you have a version already installed with terminal command "python3 -V". Otherwise: download and install https://www.python.org/downloads/mac-osx/
+MeerK40t requires macOS Command Line Tools to be installed. Those can be installed with terminal command "xcode-select --install", or with a package downloaded from https://developer.apple.com/ 
 
-After install, the new python command will contain the version you installed. So if you install Python version 3.9, the command is "python3.9 -m pip list" and the like.
+Python >= 3.6 is required. To check if a version of Python 3 already installed, use the terminal command "python3 -V". Otherwise: download from https://www.python.org/downloads/mac-osx/ and install. 
+
+After install, the new python command will contain the version you installed. So if you installed Python version 3.9.2, the command is "python3.9 -m pip list" and the like.
 ### Requirements
 libjpeg is required to install Pillow. 
-libusb is required for pyusb.
+libusb is required to use pyusb.
 
 ## MacPorts
 sudo port install libjpeg libusb
