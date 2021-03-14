@@ -7,7 +7,7 @@ MeerK40t requires macOS Command Line Tools to be installed. Those can be install
 Python >= 3.6 is required. To check if a version of Python 3 already installed, use the terminal command "python3 -V". Otherwise: download from https://www.python.org/downloads/mac-osx/ and install. 
 
 After install, the new python command will contain the version you installed. So if you installed Python version 3.9.2, the command is "python3.9 -m pip list" and the like.
-### Requirements
+### Non-pip Requirements
 libjpeg is required to install Pillow.
 
 libusb is required to use pyusb.
@@ -27,13 +27,18 @@ Download source with terminal command: "curl --remote-name http://www.ijg.org/fi
 
 ### LibUSB
 https://github.com/libusb/libusb
-# Install MeerK40t and Requirements with pip
-With a version of Python 3, Command Line Tools, libjpeg, and libusb installed; pip can be used to install the rest of the requirements as well as MeerK40t
+# Install MeerK40t and Requirements available from pip
+Once a version of Python 3, Command Line Tools, libjpeg, and libusb are installed; pip can be used to install the rest of the requirements, as well as MeerK40t itself. From the list below; ezdxf is an optional install which enables DXF file support. OpenCV (opencv-python-headless) is also optional, and only necessary for camera support. Without wxPython, a CLI only version of MeerK40t can still function (no GUI).
+
 terminal command: "python3 -m pip install --upgrade meerk40t[all]"
 
 OR (more explicitly)
 
 terminal command: "python3 -m pip install --upgrade numpy scipy six wheel altgraph pyparsing ezdxf pyusb opencv-python-headless pillow wxpython meerk40t[all]"
+
+To launch MeerK40t ###terminal command: "meerk40t"
+
+
 ### Advanced:
 openssl from github is required if you want to compile python yourself: https://github.com/openssl/openssl Python compile may require ./configure --enable_framework for some use cases on MacOS.
 
