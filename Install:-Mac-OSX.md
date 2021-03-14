@@ -28,7 +28,7 @@ openssl from github is required if you want to compile python yourself: https://
 
 On macOS 11+ Big Sur; numpy and wxPython would need to be installed from source as well. 
 
-Legacy Support:
+### Legacy Support:
 
 MeerK40t has been compiled as far back as Mac OS X 10.8 but it is not regularly requested or tested.
 
