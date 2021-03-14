@@ -18,13 +18,19 @@ sudo port install libjpeg libusb
 brew install libjpeg libusb
 ## Or; Manually Compile or Install Requirements
 ### LibJpeg
-Website: http://ethan.tira-thompson.com/Mac_OS_X_Ports.html 
-Direct .pkg Download: http://ethan.tira-thompson.com/Mac_OS_X_Ports_files/libjpeg%20%28universal%29.dmg
+LibJpeg can be downloaded as a macOS install package from http://ethan.tira-thompson.com/Mac_OS_X_Ports.html 
+[libjpeg Package Download](http://ethan.tira-thompson.com/Mac_OS_X_Ports_files/libjpeg%20%28universal%29.dmg)
 OR
-curl --remote-name http://www.ijg.org/files/jpegsrc.v9c.tar.gz
+Download source with terminal command: "curl --remote-name http://www.ijg.org/files/jpegsrc.v9c.tar.gz"
 ### LibUSB
 https://github.com/libusb/libusb
+# Install MeerK40t and Requirements with pip
+With a version of Python 3, Command Line Tools, libjpeg, and libusb installed; pip can be used to install the rest of the requirements as well as MeerK40t
+terminal command: "python3 -m pip install --upgrade meerk40t[all]"
 
+OR (more explicitly)
+
+terminal command: "python3 -m pip install --upgrade numpy scipy six wheel altgraph pyparsing ezdxf pyusb opencv-python-headless pillow wxpython meerk40t[all]"
 ### Advanced:
 openssl from github is required if you want to compile python yourself: https://github.com/openssl/openssl Python compile may require ./configure --enable_framework for some use cases on MacOS.
 
