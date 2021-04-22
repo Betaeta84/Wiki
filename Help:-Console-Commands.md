@@ -434,8 +434,8 @@ operation* delete                  - select all operations and delete them
 element* delete                    - select all elements and delete them
 cut -c #ff0000 -s 20 mm/s          - create a new operation, speed 20mm/s, color set to red.
 rect 0 0 100 100 stroke #ff0000    - create a rect element, stroke=red to prepare for cut op.
-declassify                         - clear any existing classification
-classify                           - reclassify elements, matching color of elements to color of op
+element* declassify                - clear any existing classification
+element* classify                  - reclassify elements, matching color of elements to color of op
 ellipse 100 100 20 25 rotate 45 fill #000000 stroke #ff0000   - create a modify an ellipse
 ```
 
