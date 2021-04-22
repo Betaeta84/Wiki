@@ -7,6 +7,7 @@ Starting in version 0.6.0 there are a series of console commands which are acces
 
 In 0.7.0 this is greatly expanded.
 
+
 ## Commands
 
 ## Help in 0.7.0
@@ -425,6 +426,18 @@ The grblserver works similarly and pretends to be a grbl device on port 23. Your
 Refresh refreshes the scene in case it needs to do that. The screen should refresh for most operations but sometimes it doesn't and quick method of forcing that is thusly provided.
 
 * `refresh`
+
+### Examples
+
+```
+operation* delete                  - select all operations and delete them
+element* delete                    - select all elements and delete them
+cut -c #ff0000 -s 20 mm/s          - create a new operation, speed 20mm/s, color set to red.
+rect 0 0 100 100 stroke #ff0000    - create a rect element, stroke=red to prepare for cut op.
+declassify                         - clear any existing classification
+classify                           - reclassify elements, matching color of elements to color of op
+ellipse 100 100 20 25 rotate 45 fill #000000 stroke #ff0000   - create a modify an ellipse
+```
 
 ### Help Wanted
 
