@@ -89,7 +89,7 @@ It is believed all the usb communications deal directly with the CH341A/B and th
 
 The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough to send 4.2667 packets of data. Which is why it properly bottoms out during a raster. If high in pixel changes and moving quite quickly. It can bottom out before it getting new data.
 
-...
+```
 LHY Chip Pin Connections:
 Pin 1 - HC-14, 13
 Pin 2 - A4988 X axis, 19
@@ -138,7 +138,7 @@ Pin 41 - HC-14, 6 ?
 Pin 42 - HC-14, 3
 Pin 43 - HC-14, 9
 Pin 44 - HC-14, 11
-...
+```
 
 --- 
 ```
