@@ -12,17 +12,17 @@ def plugin(kernel, lifecycle):
 
 This would then be run by `plan command --op example` and that would add the plan command to the stuff being prepared for the spooler.
 
-#Authoring a Console Command
+# Authoring a Console Command
 todo
 
-#Authoring a Tree Menu Option
+# Authoring a Tree Menu Option
 todo
 
-#Authoring a Webhelp
+# Authoring a Webhelp
 todo
 
-#Authoring a Window
+# Authoring a Window
 todo
 
-#Authoring a RasterWizard script.
+# Authoring a RasterWizard script.
 todo
