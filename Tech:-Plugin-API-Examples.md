@@ -6,7 +6,7 @@ def plugin(kernel, lifecycle):
             yield COMMAND_WAIT_FINISH
             def print_hello():
                 print("Hello World.")
-            yield COMMAND_FUNCTION, print_hello()
+            yield COMMAND_FUNCTION, print_hello
         kernel.register('plan/example', example)
 ```
 
