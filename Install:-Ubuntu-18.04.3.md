@@ -47,3 +47,12 @@ ModuleNotFoundError: No module named 'usb'
 ---
 
 sudo pip install pyusb
+
+Connection to USB failed
+---
+
+* sudo su
+* cd /etc/udev/rules.d
+* touch 90-K40.laser.CH341.rules
+* echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1a86\", ATTRS{idProduct}==\"5512\", MODE=\"0666\"" >> 90-K40.laser.CH341.rules
+* reboot
