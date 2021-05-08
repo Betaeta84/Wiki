@@ -48,7 +48,7 @@ ModuleNotFoundError: No module named 'usb'
 
 sudo pip install pyusb
 
-Connection to USB failed
+K40 devices were found but they were rejected.
 ---
 
 * sudo su
