@@ -1,6 +1,10 @@
+For saving files MeerK40t uses an extended version of SVG 1,1.
+
+The SVG 1.1 specification
+
 # Namespace Declaration
 
-`<svg> attribute: xmlns:meerk40t="https://github.com/meerk40t/meerk40t/wiki/Namespace"`
+`<svg> attribute: xmlns:meerk40t="https://github.com/meerk40t/meerk40t/wiki/Tech:-SVG-Namespace"`
 
 This flags the SVG as being produced by Meek40t, and containing MeerK40t objects.
 
