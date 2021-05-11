@@ -5,7 +5,7 @@ MeerK40t is the extendable laser software for the Stock K40. We hope that you fi
 Meerk40t is a replacement for both the software supplied with the K40 and the K40 Whisperer software.
 
 ## Manual
-See the Manual: [MeerK40t Manual](https://github.com/meerk40t/meerk40t/wiki/MeerK40t-Manual)
+See the Manual: [MeerK40t Manual](https://github.com/meerk40t/meerk40t/wiki/Doc:-MeerK40t-Manual)
 
 ## Help Wanted
 
