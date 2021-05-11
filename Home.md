@@ -39,4 +39,4 @@ This is also a place for research on the board:
 
 ## SVG Namespace
 
-For saving files MeerK40t uses a modified form of SVG, the [Namespace specification is here.](https://github.com/meerk40t/meerk40t/wiki/Namespace)
+For saving files MeerK40t uses a modified form of SVG, the [Namespace specification is here.](https://github.com/meerk40t/meerk40t/wiki/Tech:-SVG-Namespace)
