@@ -1,13 +1,13 @@
 # Welcome to the MeerK40t Wiki!
 MeerK40t is the extendable laser software for the Stock K40. We hope that you find this **free** software useful, and hopefully not to difficult to learn to use (though we know there is scope for improvement in both the software's usability and the documentation - and we hope that you may be willing to help out with these).
 
-## Manual
-See the Manual: [MeerK40t Manual](https://github.com/meerk40t/meerk40t/wiki/MeerK40t-Manual)
-
 ## Overview
 Meerk40t is a replacement for both the software supplied with the K40 and the K40 Whisperer software.
 
-## Help Wanted.
+## Manual
+See the Manual: [MeerK40t Manual](https://github.com/meerk40t/meerk40t/wiki/MeerK40t-Manual)
+
+## Help Wanted
 
 @Sophist points out that whilst @taterize (David Olsen - the author) is doing a great job in creating this useful tool, there is always more work to do than he can handle alone. So, if you benefit from using this **free** software, please, please show your appreciation by contributing something back and helping him out. 
 
