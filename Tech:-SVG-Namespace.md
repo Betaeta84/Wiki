@@ -4,7 +4,7 @@ The SVG 1.1 specification can be found [here](https://www.w3.org/TR/SVG11/).
 
 # Namespace Declaration
 
-`<svg> attribute: xmlns:meerk40t="https://github.com/meerk40t/meerk40t/wiki/Tech:-SVG-Namespace"`
+`<svg> attribute: xmlns:meerk40t="https://github.com/meerk40t/meerk40t/Namespace"`
 
 This flags the SVG as being produced by Meek40t, and containing MeerK40t objects.
 
