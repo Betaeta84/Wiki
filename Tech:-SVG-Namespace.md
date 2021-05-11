@@ -1,6 +1,6 @@
 For saving files MeerK40t uses an extended version of SVG 1,1.
 
-The SVG 1.1 specification
+The SVG 1.1 specification can be found [here](https://www.w3.org/TR/SVG11/).
 
 # Namespace Declaration
 
