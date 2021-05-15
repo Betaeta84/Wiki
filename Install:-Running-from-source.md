@@ -6,6 +6,8 @@ a. Install prerequisite software
 b. Download the MeerK40t source
 c. Set up a shortcut to run it.
 
+If you use these instructions to run MeerK40t from source and find that they are incomplete or wrong, please help the next person who will try to use them by updating them (using the Edit Button top right) using your own experiences, or raise an [issue](https://github.com/meerk40t/meerk40t/issues/new/choose) describing your difficulties so someone else can fix it
+
 ### Essential Prerequisites
 * `Python`: MeerK40t will (apparently) run using Python2 however the latest version of Python3 is recommended. 
 * Python's `pip`: pip is the Python package manager and will be used to install other packages you need.
