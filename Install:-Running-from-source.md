@@ -2,9 +2,9 @@ If you want to use MeerK40t to drive your K40 Laser on one of the standard suppo
 
 If you want to run MeerK40t on a different platform or you want to develop a plugin or you want to assist with the development of MeerK40t itself, then you will need to run MeerK40t from source, and will need to:
 
-a. Install prerequisite software
-b. Download the MeerK40t source
-c. Set up a shortcut to run it.
+1. Install prerequisite software
+2. Download the MeerK40t source
+3. Set up a shortcut to run it.
 
 If you use these instructions to run MeerK40t from source and find that they are incomplete or wrong, please help the next person who will try to use them by updating them (using the Edit Button top right) using your own experiences, or raise an [issue](https://github.com/meerk40t/meerk40t/issues/new/choose) describing your difficulties so someone else can fix it
 
