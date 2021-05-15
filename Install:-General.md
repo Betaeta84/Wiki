@@ -1,5 +1,7 @@
 ## Running MeerK40t
 
+You can run MeerK40t either from a self contained executable (for Windows 32-bit or 64-bit, MacOS, OSX, Linux, Raspberry Pi 32-bit or 64-bit) or you can run from the Python source code (perhaps on other platforms if the drivers are available).
+
 ### Requirements
 * `wxPython`: wxPython for linux and OSX should be above 4.1 for full scene functionality. If you wish to use the command line interface, using the --no_gui flag, does not require `wxPython`
 * `pyusb`: pyusb is used for LibUSB in windows, linux, and OSX. If using the Windows CH341 driver, `pyusb` can be omitted. Doing so will simply fail the LibUSB driver and use the CH341 driver.
