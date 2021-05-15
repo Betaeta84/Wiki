@@ -20,7 +20,7 @@ If you use these instructions to run MeerK40t from source and find that they are
 Even if you do not intend to use the functionality of the above packages, we still recommend that you install them. The majority of users will run MeerK40t with these packages installed, and if you omit them then (in our opinion) you may be more likely to hit a bug.
 
 ### Optional Prerequisites
-* `OpenCV`: OpenCV is required for the CameraInterface. `pip install opencv-python-headless`
+* `OpenCV`: OpenCV is required for the CameraInterface. Install it after the essential prerequisites using `pip install opencv-python-headless`
 
 MeerK40t has a modular API, and modules can be added that require additional external dependencies to provide functionality that may be useful in specific circumstances but not broadly applicable. These modules and their optional requirements will not be included in the executable images, but can be added as needed.
 
