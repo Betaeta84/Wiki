@@ -30,17 +30,17 @@ If you are writing a module for MeerK40t you should feel free to include externa
 
 2. PIP should come pre-installed with Python 2.7.9+ and Python 3.4+. Check whether it is installed by running `pip help`. If it is not installed, then install PIP as follows:
 
-* Windows - Download `get-pip.py` from [pypa.io](https://bootstrap.pypa.io/get-pip.py) and run it from an **administrator** command prompt with `python getpip.py`.
-* Linux - Debian, Ubuntu and related distributions which use `apt` - `sudo apt install python3-pip`
+   * Windows - Download `get-pip.py` from [pypa.io](https://bootstrap.pypa.io/get-pip.py) and run it from an **administrator** command prompt with `python getpip.py`.
+   * Linux - Debian, Ubuntu and related distributions which use `apt` - `sudo apt install python3-pip`
 
-Make sure that you have the latest version of pip by running `pip3 install --upgrade pip` from an administrator command prompt.
+   Make sure that you have the latest version of pip by running `pip3 install --upgrade pip` from an administrator command prompt.
 
 3. Set up a virtual environment for MeerK40t.
 
 4. Install Python's setup tools with:
 
-* Windows - 
-* Linux - Debian, Ubuntu and related distributions which use `apt` - `sudo apt install python3-setuptools`
+   * Windows - 
+   * Linux - Debian, Ubuntu and related distributions which use `apt` - `sudo apt install python3-setuptools`
 
 4. Install wxpython with `pip3 install wxPython` from an administrator/sudo command prompt.
 
