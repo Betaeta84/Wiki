@@ -2,10 +2,16 @@ Central to the ability of controlling the K40 laser and making it burn appropria
 
 This wiki page gives an overview of the Lhmicro-GL and associated protocols (like USB) - more information can be found on the [Edutech.ch wiki](https://edutechwiki.unige.ch/en/Lhystudios_M2_Nano).
 
+### Contents
+* [Lhmicro-GL](#lhmicro-gl)
+* [USB transmissions](#usb-transmissions)
+
 ## Lhmicro-GL
 
 ### Fundamentals
-Unlike command rich formats like gCode, the Lhymicro-GL was developed specifically for lasers and is maximally basic for that. All commands in the format do one of only 12 things:
+Unlike command rich formats like gCode, the Lhymicro-GL was developed specifically for lasers and is maximally basic for that, typically using single letters to denote an operation.
+ 
+All commands in the Lhmicro-GL protocol do one of only 12 things:
 
 1. Turn the laser ON or OFF
 1. Changes the direction of the x-axis stepper motor
@@ -71,39 +77,18 @@ The step is the same in each flagged direction, so if we do an `L` or `R` comman
 ### Distance Magnitude
 The distance magnitude can be a 3 digit number 255 and below, a lowercase letter, or a few different symbol which kinda qualify as letters and aren't found in the original Chinese software. The letter `z` is a special case being equal to +255 unless it is directly preceded by `|`. So all `|` commands are worth 25 which is equal to the value of `y`. However, when `|` is just before a `z` the `z` is 26 units rather than 255. Which combined with the `|` gives a distance of 51. The only other way to hit this number would be something like `~t` however that doesn't appear in the original software. The original software use `|` for all values from 26 to 51.
 
-* a, 1
-* b, 2
-* c, 3
-* d, 4
-* e, 5
-* f, 6
-* g, 7
-* h, 8
-* i, 9
-* j, 10
-* k, 11
-* l, 12
-* m, 13
-* n, 14
-* o, 15
-* p, 16
-* q, 17
-* r, 18
-* s, 19
-* t, 20
-* u, 21
-* v, 22
-* w, 23
-* x, 24
-* y, 25
-* |, 25
-* |z, 51
-* [000-255], value
-* z, 255
-* `, 0
-* {, 28
-* }, 30
-* ~, 31
+|Letter|Distance||Letter|Distance||Letter|Distance||Letter|Distance|
+|-|-|-|-|-|-|-|-|-|-|-|
+|a|1||j|10||s|19||\|z|51
+|b|2||k|11||t|20||[000-255]|value
+|c|3||l|12||u|21||`|0
+|d|4||m|13||v|22||{|28
+|e|5||n|14||w|23||}|30
+|f|6||o|15||x|24||~|31
+|g|7||p|16||y|25|
+|h|8||q|17||z|255|
+|i|9||r|18||\||25|
+
 
 Note, these values are all added up, so you can slap anything together and it'll just be added to the magnitude, usually this is something like "zzzzzzzzzzzz" and a remainder like "|g". The only difference that matters is `|z` is 51 since the `|` causes the 255 power of `z` to be 26. But this only applies for the character immediately after the `|` for the next character, so `|az` is 25+1+255 and `|za` is 25+26+1. So if you send the word 'laser' it adds up to 55. And will go a distance of 55 mils.
 
@@ -133,7 +118,7 @@ Calling `S1P` triggers instant execution ignoring any commands that occur after 
 ![nano](https://user-images.githubusercontent.com/3302478/75086288-62346180-54e7-11ea-92df-6642bcb3e2df.png)
 
 ### Speed Codes
-The units in the LHYMICRO-GL speed code have particular acceleration values that tend to give slightly different equations. Doing real-world physical timing the device speed finds the stated code values are 8.9% slower than the requested code. However, as is, these equations can be used to convert between values and speeds.
+The units in the Lhmicro-GL speed code have particular acceleration values that tend to give slightly different equations. Doing real-world physical timing the device speed finds the stated code values are 8.9% slower than the requested code. However, as is, these equations can be used to convert between values and speeds.
 
 In suffix C notation the values are scaled down by a factor of 1/12th and sometimes the initial value changes. The typical formatting of the speed codes is `CV<speedcode>1C` where the appended C may or may not be present. Stepped down speeds only use acceleration value of 1.
 
@@ -142,43 +127,40 @@ The K40 Laser is controlled with a pair of stepper motors. Stepper motors work b
 In the value for the speed code the value is subtracted from the maximum ticks of 65536. Since the processor treats negative number the same as positive numbers in binary. This is likely just a negative 16 bit number. For the diagonal correction value the encoded value is multiplied by the stepping and added to the count threshold. When going diagonal we requires some number of additional ticks, since we are technically travelling a longer distance.
 
 #### Encoding
-The speed codes are in the form `CV<SpeedCode><Accel><Stepping><Diagonal Correction>C?` for boards M1, M2, B1, B2.
+* For M1, M2, B1 & B2 boards, speed codes are in the form `CV<SpeedCode><Accel><Stepping><Diagonal Correction>C?`.
+* for M, A & B boards, speed codes are in the form `CV<SpeedCode><Accel>` (as these later boards do not require diagonal corrections).
 
-Speed codes are in the form `CV<SpeedCode><Accel>` for boards A, B, M, as these later boards do not require diagonal corrections.
+The *speed code* value is encoded as a 16 bit number which is broken up into two 3-digit ascii strings between 0-255. For example, a speed value of `36176` is `0x8D50` in hexadecimal - `0x8D` is `141` and `0x50` is `80`, so we encode this as `141` for the high bits and `80` for the low bits - so the resulting speed code is `141080`. It may seem weird to convey a 5 digit number encoded as 6 ASCII bytes, but keep in mind the processor does no work itself - it is flipping switches and with this encoding it doesn't need to do any time consuming mathematical calculations. 
 
-The speed code values are encoded as a 16 bit number which is broken up into two 3-digit ascii strings between 0-255. For example to get a value of `36176`, we encode this as `141` for the high bits and `80` for the low bits. In hex, `36174` equals 0x8D50 and 0x8D is 141 and 0x50 is 80 So the resulting speed code is `141080`. Keep in mind this seems weird to convey a 5 digit number with 6 digits of bytes but keep in mind, the processor does no work itself. It's flipping switches and doesn't do fancy math like division. 
+The *stepping* value is a 3-digit ascii number between 0 and 128 which is used as a factor for the diagonal corrections.
 
-The stepping is a 3-digit ascii number between 0 and 128 which is used as a factor for the diagonal corrections.
-
-The diagonal correction values are encoded just as the 16 bit number of the speed code is encoded (two 3-digit ascii numbers, denoting a 16 bit value). It denotes an added delay amount that is appended to the orthogonal delay amount, when the device moves diagonally. 
+The *diagonal correction* value is encoded in the same way as the speed code (two 3-digit ascii numbers, denoting a 16 bit value) and denotes an added delay amount that is appended to the orthogonal delay amount, when the device moves diagonally. 
 
 #### Speed Equations
+The gearing equations for calculating the millisecond delay between ticks (T) depends upon the version of the control board (hence needing to set this in the preferences): 
 
-The calculated gearing equations where T is the millisecond delay between ticks:
-When encoded they are sent as `65536 - V` 
+Once encoded they are then sent as `65536 - V`. 
 
-* A, B, B1
-    1. 784 + 2000T
-    2. 784 + 2000T
-    3. 896 + 2000T
-    4. 1024 + 2000T
-* B2: 
-    * C: 784 + 2020T
-    1. 784 + 24240T
-    2. 784 + 24240T
-    3. 896 + 24240T
-    4. 1024 + 24240T
-* M, M1
-    1. 5120 + 12120T
-    2. 5120 + 12120T
-    3. 5632 + 12120T
-    4. 6144 + 12120T
-* M2: 
-    * C: 8 + 1010T
-    1. 5120 + 12120T
-    2. 5120 + 12120T
-    3. 5632 + 12120T
-    4. 6144 + 12120T
+|Board||Formula|
+|-|-|-|
+|A, B, B1|1|784 + 2000T
+||2|784 + 2000T
+||3|896 + 2000T
+||4|1024 + 2000T
+|B2|C|784 + 2020T
+||1|784 + 24240T
+||2|784 + 24240T
+||3|896 + 24240T
+||4|1024 + 24240T
+|M, M1|1|5120 + 12120T
+||2|5120 + 12120T
+||3|5632 + 12120T
+||4|6144 + 12120T
+|M2|C|8 + 1010T
+||1|5120 + 12120T
+||2|5120 + 12120T
+||3|5632 + 12120T
+||4|6144 + 12120T
 
 The initial values fall into concrete patterns:
 * 2 * 8 * 7 * 7
