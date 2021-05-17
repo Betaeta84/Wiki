@@ -15,13 +15,13 @@ The purpose of the beginners Wiki pages are to help you with the very basics you
 
 The Beginners' Wiki Pages are as follows:
 
-* Step 1: Hints on preparing your K40 laser
-* Step 2: Installing MeerK40t and connecting it to your K40
-* Step 3: Understanding the UI and navigating around MeerK40t
-* Step 4: Loading an SVG file to burn
-* Step 5: Setting up the burn operations
-* Step 6: Aligning your material on the laser
-* Step 7: Executing your first burn
-* Step 8: Getting more detailed help
+* [Step 1: Hints on preparing your K40 laser](https://github.com/meerk40t/meerk40t/wiki/Beginners:-1.-Preparing-your-K40-laser)
+* [Step 2: Installing MeerK40t and connecting it to your K40]()
+* [Step 3: Understanding the UI and navigating around MeerK40t]()
+* [Step 4: Loading an SVG file to burn]()
+* [Step 5: Setting up the burn operations]()
+* [Step 6: Aligning your material on the laser]()
+* [Step 7: Executing your first burn]()
+* [Step 8: Getting more detailed help]()
 
-Good luck. Click [here]]() to go to step 1.
+Good luck. Click [here]](https://github.com/meerk40t/meerk40t/wiki/Beginners:-1.-Preparing-your-K40-laser) to go to step 1.
