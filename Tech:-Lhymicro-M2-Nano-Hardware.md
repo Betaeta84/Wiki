@@ -4,7 +4,7 @@ For information about how to control the M2-Nano (i.e. its g-code etc.) please s
 
 ## Contents
 
-* [Chips & interconnections](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#chips--interconnections)
+* [Chips & interconnections](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#chips--interconnections)
 * [Stepper Motor Drivers](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#stepper-motor-drivers)
 * [EX+/- Peripherals Switch](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#ex--peripherals-switch)
 * [TL Laser Control](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#tl-laser-control)
