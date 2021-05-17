@@ -1,8 +1,6 @@
 
 # K40 Nano Board Operations
 
-The K40 board consists of two core chips a CH341A that does the communications and is put directly in PARALLEL mode for EPP 1.9, and the LHY730318 chip that does the code processing. Communication wise the K40 uses a USB at idVendor=0x1a86, and idProduct=0x5512, reading at address 0x82 and writes at address 0x2.
-
 The data is written data typically in 2 packets of 34 bytes of data. An 0xA6 packet send command followed by 0x00 and the data, which is ended with 0x00 and the CRC code.
 
 The CRC is onewire CRC coded data across the payload, bytes[2-32).
@@ -81,130 +79,6 @@ egv IV2240983G000G001BS0RERzzzvLzzzvRzzzvLzzzvFNSE-$
 * If you send IPP$ this will respond with a 207 state.
 
 
-# Hardware
-
-The USB plug on the board is connected directly to the CH341A or CH341B communications chip (pins 9-12) configured in parallel port (EPP19) mode. The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 microcontroller; running a MCS-51 instruction sets using an 8051 processor. The small chip near the LHY730318 is a simple HC14 schmitt trigger. The Active port (which may or may not be populated with header pins) is from top to bottom: GND, Tx (micro pin 7), Rx (micro pin 5), and +5V (verified on recent M2:9 board from 2019).
-
-It is believed all the usb communications deal directly with the CH341A/B and the data is merely sent to the processor to perform the microcontroller's programmed actions.
-
-The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough to send 4.2667 packets of data. Which is why it properly bottoms out during a raster. If high in pixel changes and moving quite quickly. It can bottom out before it getting new data.
-
-```
-LHY Chip Pin Connections:
-Pin 1 - HC-14, 13
-Pin 2 - A4988 X axis, 19
-Pin 3 - A4988 y axis, 19
-Pin 4 - A4988 x/y axis, 12++
-Pin 5 - ACTIVE Port Rx
-Pin 6 - Ex+
-Pin 7 - ACTIVE Port Tx
-Pin 8 - CH341, 4, DS#
-Pin 9 - CH341, 6, PEMP
-Pin 10 - CH341, 27, WT#
-Pin 11 - CH341, 5, ERR#
-
-Pin 12 - 
-Pin 13 - 
-Pin 14 -
-Pin 15 - 
-Pin 16 - GND
-Pin 17 - 
-Pin 18 - 
-Pin 19 - 
-Pin 20 - 
-Pin 21 - 
-Pin 22 - 3.9k resistor -> CH341, 1, ACT#
-
-Pin 23 - CH341, 8, SLCT
-Pin 24 - CH341, 1, RST#
-Pin 25 - CH341, 25, WR#
-Pin 26 - CH341, 7, INT#
-Pin 27 - 
-Pin 28 - 
-Pin 29 - 
-Pin 30 - CH341, 22, D7
-Pin 31 - CH341, 21, D6
-Pin 32 - CH341, 20, D5
-Pin 33 - CH341, 19, D4
-
-Pin 34 - CH341, 18, D3
-Pin 35 - CH341, 17, D2
-Pin 36 - CH341, 16, D1
-Pin 37 - CH341, 15, D0
-Pin 38 - VDD
-Pin 39 - 10k resistor -> W1A (Laser?)
-Pin 40 - HC-14, 2
-Pin 41 - HC-14, 6 ?
-Pin 42 - HC-14, 3
-Pin 43 - HC-14, 9
-Pin 44 - HC-14, 11
-```
-
---- 
-```
-Bit7~Bit0<==>D7-D0 
- * Bit8<==>ERR#    Bit9<==>PEMP    Bit10<==>INT#    Bit11<==>SLCT    Bit13<==>WAIT#    Bit14<==>DATAS#/READ#    Bit15<==>ADDRS#/ADDR/ALE
- The pins below can only be used in output mode:
- Bit16<==>RESET#    Bit17<==>WRITE#    Bit18<==>SCL    Bit29<==>SDA
-```
-```
-BOOL CH34xSetOutput( ULONG	iEnable, ULONG iSetDirOut, ULONG iSetDataOut)
-{
-	ULONG mLength;
-	UCHAR mBuffer[32];
-	mBuffer[0] = CH341A_CMD_SET_OUTPUT;
-	mBuffer[1] = 0x6A;
-	mBuffer[2] = (UCHAR)( iEnable & 0x1F );
-	mBuffer[3] = (UCHAR)( iSetDataOut >> 8 & 0xEF );
-	mBuffer[4] = (UCHAR)( iSetDirOut >> 8 & 0xEF | 0x10 );
-	mBuffer[5] = (UCHAR)( iSetDataOut & 0xFF );
-	mBuffer[6] = (UCHAR)( iSetDirOut & 0xFF );
-	mBuffer[7] = (UCHAR)( iSetDataOut >> 16 & 0x0F );
-	mBuffer[8] = 0;
-	mBuffer[9] = 0;
-	mBuffer[10] = 0;
-	mLength = 11;
-	if ( CH34xWriteData(  mBuffer, &mLength ) ) {  //Write Data 
-		if ( mLength >= 8 ) return( true);
-	}
-	return( false);
-}
-```
-
-```
-#define		CH341A_CMD_SET_OUTPUT	0xA1		// Set Para Output
-#define		CH341A_CMD_IO_ADDR		0xA2		//MEM Addr write/read
-#define		CH341A_CMD_PRINT_OUT	0xA3		// Print output
-#define		CH341A_CMD_PWM_OUT		0xA4		// PWM Out Command
-#define		CH341A_CMD_SHORT_PKT	0xA5		//short package
-#define		CH341A_CMD_SPI_STREAM	0xA8		//SPI Interface Command
-//#define		mCH341A_CMD_SIO_STREAM	0xA9		
-#define		CH341A_CMD_I2C_STREAM	0xAA		// I2C Interface Command
-#define		CH341A_CMD_UIO_STREAM	0xAB		// UIO Interface Command
-#define		CH341A_CMD_PIO_STREAM	0xAE		// PIO Interface Command
-
-#define		CH341_PARA_MODE_EPP	0x00		
-#define		CH341_PARA_MODE_EPP17	0x00		
-#define		CH341_PARA_MODE_EPP19	0x01		
-#define		CH341_PARA_MODE_MEM	0x02		
-#define		CH341_PARA_MODE_ECP	0x03	
-
-#define		StateBitERR			0x00000100	
-#define		StateBitPEMP			0x00000200
-#define		StateBitINT			0x00000400	
-#define		StateBitSLCT			0x00000800	
-#define		StateBitWAIT			0x00002000
-#define		StateBitDATAS			0x00004000	
-#define		StateBitADDRS			0x00008000	
-#define		StateBitRESET			0x00010000	
-#define		StateBitWRITE			0x00020000	
-#define		StateBitSCL			0x00400000	
-#define		StateBitSDA			0x00800000	
-```
-
-Good resource to understand the CH341 chip.
-https://www.onetransistor.eu/2017/09/ch341a-usb-i2c-programming.html
-
 # Packet Unknown Sniffed.
 
 Dimsum labs did some analysis, of their packet sniffed logs there are two exchanges that are unknown.
@@ -234,18 +108,3 @@ And again:
 ```
 
 Sent the "AK0" like it was a command the device would know. Here K0 might be a command. Or it could be a different A command being executed on 4b 30.
-
-
-# Stepper Motor Drivers
-
-The M2 Nano board is equipped with a pair of Allegro A4988 stepper motor driver chips. The chips are configured in 1/16th step mode by holding MS1, MS2, and MS3 (A4988 pins 9, 10, 11) high from a combined trace on the PCB. Both X and Y axis drivers share the same 0.70 Volt REF input trace on the circuit board (routed to A4988 pins 17); but the individual chips are connected to different value sense resistors. The X axis uses R470 (0.47 Ω), and Y axis R360 (0.36 Ω) sense resistors. That drives the X axis motor at 0.44A per phase, and the Y axis motor 0.33A per phase.
-
-# EX+/- Peripherals Switch
-
-The EX+ and EX- pins can be connected to a transistor to control an electro-mechanical relay; there is very little current available. More conveniently, it can directly drive a solid-state relay (SSR). This can be used to turn on and off external devices automatically when the laser is running a job. The EX port is turned back off again about 8 seconds after the job completes. The SSR-40DA has been tested to work, and is an inexpensive plug and play solution. 
-
-# TL / GND Laser Control
-
-External control of the laser. Pulling the TL pin down will fire the laser. Beware; placing a load on the TL pin also has this effect. The TL pin is normally high, ~4.68 Volts on the tested board. 
-
-The TL pin can also be viewed as an output. When the laser is firing via USB control, or the test switch; the normally high TL pin goes low. While pulsed with MeerK40t's PPI feature, the voltages will read in-between the high measurement (~4.68 Volts), and about 0.10 Volts for the low at 1,000 PPI (full power setting). For example, roughly 2.4 Volts was measured at 500 PPI. 
