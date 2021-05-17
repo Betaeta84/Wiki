@@ -10,19 +10,24 @@ We cannot provide the answers to all the issues here - but we do want to give yo
 ### Electrical Safety
 The build quality of K40s can be extremely variable. So before you plug your K40 into the mains here are a few pointers that you need to check:
 
-1. Laser voltages - the CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart. And the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.
+#### Laser voltages
+The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart - and the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. ***Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.***
 
-2. People report that the wiring inside the K40 can be poorly connected - I certainly found several wires not properly tightened when I received mine. So before plugging it in, follow all the wires and ensure that all the terminals are securely tightened.
+#### Wiring connections
+People report that the wiring inside the K40 can be poorly connected - I certainly found several wires not properly tightened when I received mine. So before plugging it in, follow all the wires and ensure that all the terminals are securely tightened.
 
-3. Earthing - it is **essential** that your K40 is earthed properly - both to avoid accidental electrocution if the metal chassis accidentally becomes connected to the mains or laser voltages, but also because the lifetime of your laser can be shortened considerably if it is not earthed properly.
+#### Earthing
+It is **essential** that your K40 is earthed properly - both to avoid accidental electrocution if the metal chassis accidentally becomes connected to the mains or laser voltages, but also because the lifetime of your laser can be shortened considerably if it is not earthed properly.
 
 If you are using the K40 in a country where every plug has a properly grounded earth pin, that is usually quite sufficient as a basis - but if not (and if you have any doubts, get an electrician to check it) then you need to install an earth spike close to your K40 and connect it to the earth connection on the rear.
 
 And you should check that the earth connection on the rear has not been insulated from the chassis by paint - unscrew it, scrape off the paint around the hole and screw it back again.
 
-4. Please check the high voltage wires to the laser tube carefully - ours were fine, but many people have reported poor quality connections.
+#### High voltage connections
+Please check the high voltage wires to the laser tube carefully - ours were fine, but many people have reported poor quality connections.
 
-5. Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great - in order not to shorten the life of your laser you need to keep the current below xx mA. If, however, you have a version which only has a digital power display (theoretically in %), then you should consider getting and fitting a 30mA analogue current meter ASAP - those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube.
+#### Analogue current meter
+Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great - in order not to shorten the life of your laser you need to keep the current below xx mA. If, however, you have a version which only has a digital power display (theoretically in %), then you should consider getting and fitting a 30mA analogue current meter ASAP - those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube.
 
 (I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
@@ -101,7 +106,7 @@ TODO: Summary of options / advice / links on where / how to buy / make the best 
 *MeerK40t has the ability to install a camera in the lid of your K40. Someone who has done this and who has the experience needs to write this section.*
 
 ## Charring
-Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material - and a thin sheen of water seems to have little effect on the laser strength but does massively reduce charring and/or flames.
+Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material. A thin sheen of water seems to have little effect on the laser strength but does massively reduce charring and/or flames.
 
 ## Next page
 We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Beginners:-2.-Installing-MeerK40t).
