@@ -4,14 +4,16 @@ For information about how to control the M2-Nano (i.e. its g-code etc.) please s
 
 ## Contents
 
-* [M2-Nano Information flow](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#m2-nano-information-flow)
+* [M2-Nano Information flow](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#m2-nano-chips--interconnections)
 * [Stepper Motor Drivers](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#stepper-motor-drivers)
 * [EX+/- Peripherals Switch](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#ex--peripherals-switch)
 * [TL Laser Control](https://github.com/meerk40t/meerk40t/wiki/Tech%3A-Lhymicro-M2-Nano-Hardware#tl-laser-control)
 * [Scott Marshall's Observations](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#scott-marshalls-observations)
 * [CH341A EEPROM dump](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#ch341a-eeprom-dump)
 
-# M2-Nano Information flow
+# M2-Nano chips & interconnections
+The K40 board consists of two core chips a CH341A that does the communications and is put directly in PARALLEL mode for EPP 1.9, and the LHY730318 chip that does the code processing. Communication wise the K40 uses a USB at idVendor=0x1a86, and idProduct=0x5512, reading at address 0x82 and writes at address 0x2.
+
 The USB plug on the board is connected directly to a [CH341A or CH341B communications chip](https://github.com/boseji/CH341-Store/raw/master/CH341_EN.pdf) (pins 9-12) configured in parallel port (EPP19) mode.
 The CH341A/B chip's parallel port is connected to pins 30-37 of the 44 pin LHY730318 microcontroller, running a MCS-51 instruction set using an 8051 processor. 
 It is believed all the USB communications deal directly with the CH341A/B and the data is merely sent to the processor to perform the microcontroller's programmed actions.
