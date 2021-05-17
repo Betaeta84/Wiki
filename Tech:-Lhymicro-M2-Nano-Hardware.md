@@ -8,8 +8,8 @@ For information about how to control the M2-Nano (i.e. its g-code etc.) please s
 * [Stepper Motor Drivers](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#stepper-motor-drivers)
 * [EX+/- Peripherals Switch](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#ex--peripherals-switch)
 * [TL Laser Control](https://github.com/meerk40t/meerk40t/wiki/Tech;-Lhymicro-M2-Nano-Hardware#tl-laser-control)
-* [Scott Marshall's Observations](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#scott-marshalls-observations)
-* [CH341A EEPROM dump](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#ch341a-eeprom-dump)
+* [Scott Marshall's Observations](#scott-marshalls-observations)
+* [CH341A EEPROM dump](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-M2-Nano-Hardware#k40s-ch341a-eeprom-dump)
 
 # Chips & interconnections
 The K40 board consists of two core chips a CH341A that does the communications and is put directly in PARALLEL mode for EPP 1.9, and the LHY730318 chip that does the code processing. Communication wise the K40 uses a USB at idVendor=0x1a86, and idProduct=0x5512, reading at address 0x82 and writes at address 0x2.
