@@ -21,53 +21,31 @@ The small chip near the LHY730318 is a simple HC14 Schmitt-Trigger. The Active p
 The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough to send 4.2667 packets of data. Which is why it properly bottoms out during a raster. If high in pixel changes and moving quite quickly. It can bottom out before it getting new data.
 
 #### LHY Chip Pin Connections
-* Pin 1 - HC-14, 13
-* Pin 2 - A4988 X axis, 19
-* Pin 3 - A4988 y axis, 19
-* Pin 4 - A4988 x/y axis, 12++
-* Pin 5 - ACTIVE Port Rx
-* Pin 6 - Ex+
-* Pin 7 - ACTIVE Port Tx
-* Pin 8 - CH341, 4, DS#
-* Pin 9 - CH341, 6, PEMP
-* Pin 10 - CH341, 27, WT#
-* Pin 11 - CH341, 5, ERR#
-
-* Pin 12 - 
-* Pin 13 - 
-* Pin 14 -
-* Pin 15 - 
-* Pin 16 - GND
-* Pin 17 - 
-* Pin 18 - 
-* Pin 19 - 
-* Pin 20 - 
-* Pin 21 - 
-* Pin 22 - 3.9k resistor -> CH341, 1, ACT#
-
-* Pin 23 - CH341, 8, SLCT
-* Pin 24 - CH341, 1, RST#
-* Pin 25 - CH341, 25, WR#
-* Pin 26 - CH341, 7, INT#
-* Pin 27 - 
-* Pin 28 - 
-* Pin 29 - 
-* Pin 30 - CH341, 22, D7
-* Pin 31 - CH341, 21, D6
-* Pin 32 - CH341, 20, D5
-* Pin 33 - CH341, 19, D4
-
-* Pin 34 - CH341, 18, D3
-* Pin 35 - CH341, 17, D2
-* Pin 36 - CH341, 16, D1
-* Pin 37 - CH341, 15, D0
-* Pin 38 - VDD
-* Pin 39 - 10k resistor -> W1A (Laser?)
-* Pin 40 - HC-14, 2
-* Pin 41 - HC-14, 6 ?
-* Pin 42 - HC-14, 3
-* Pin 43 - HC-14, 9
-* Pin 44 - HC-14, 11
+|Pin|Description||Pin|Description|
+|---|---|-|---|---|
+|1|HC-14, 13||23|CH341, 8, SLCT
+|2|A4988 X axis, 19||24|CH341, 1, RST#
+|3|A4988 y axis, 19||25|CH341, 25, WR#
+|4|A4988 x/y axis, 12++||26|CH341, 7, INT#
+|5|ACTIVE Port Rx||27|-|
+|6|Ex+||28|-
+|7|ACTIVE Port Tx||29|-
+|8|CH341, 4, DS#||30|CH341, 22, D7
+|9|CH341, 6, PEMP||31|CH341, 21, D6
+|10|CH341, 27, WT#||32|CH341, 20, D5
+|11|CH341, 5, ERR#||33|CH341, 19, D4
+||
+|12|-||34|CH341, 18, D3
+|13|-||35|CH341, 17, D2
+|14|-||36|CH341, 16, D1
+|15|-||37|CH341, 15, D0
+|16|GND||38|VDD
+|17|-||39|10k resistor -> W1A (Laser?)
+|18|-||40|HC-14, 2
+|19|-||41|HC-14, 6 ?
+|20|-||42|HC-14, 3
+|21|-||43|HC-14, 9
+|22|3.9k resistor -> CH341, 1, ACT#||44|HC-14, 11
 
 #### Bit allocation
 * Bit7-Bit0<==>D7-D0 
