@@ -1,3 +1,5 @@
+Note: This Wiki page is provided for historical note and does not appear relevant for MeerK40t technicalities.
+
 Moshiboards were a popular type of laser controller circa 2013. These ran a proprietary bit of software called Moshidraw which required an orange SafeNet MicroDog dongle to run. 
 
 # USB Protocol
