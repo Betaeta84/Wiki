@@ -1,8 +1,6 @@
+MeerK40t uses an internal interim language for spooling and interpreting laser commands, sitting between SVG and the M2-Nano low-level commands.
 
-Laser Commands are intended as a middle language of commands for spooling and interpreting.
-
-NOTE: Never use the integer value, only the command name. The integer values are
-permitted to change.
+NOTE: Never use the integer value, only the command name. The integer values are permitted to change.
 
 Some naming implications:
 
