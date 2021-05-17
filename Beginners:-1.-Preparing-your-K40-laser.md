@@ -82,13 +82,6 @@ d. The 3rd mirror (clipped into the head itself) is typically not adjustable.
 
 e. The lens in the bottom of the head is typically not adjustable.
 
-## Dealing with smoke
-The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
-
-You should consider installing air assist and / or smoke assist, and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
-
-TODO: Summary of options / advice / links on where / how to buy / make the best air/smoke assist. 
-
 ## Focus
 On the stock K40 there is a specific distance below the laser head where the laser is finely focussed into a tiny dot. Higher or lower than that distance, the spot will be bigger and less concentrated.
 
@@ -96,13 +89,21 @@ The height of the bed that your material sits on will obviously need to be lower
 
 Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a variable height bed to achieve the same thing.
 
-## Camera
+## Dealing with smoke
+The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
+
+You should consider installing air assist and / or smoke assist, and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
+
+TODO: Summary of options / advice / links on where / how to buy / make the best air/smoke assist. 
+
+## Other potential enhancements
+### Camera
 *MeerK40t has the ability to install a camera in the lid of your K40. Someone who has done this and who has the experience needs to write this section.*
 
 ## Charring
 Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material - and a thin sheen of water seems to have little effect on the laser strength but does massively reduce charring and/or flames.
 
-# Next page
+## Next page
 We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Beginners:-2.-Installing-MeerK40t).
 
 If you want to return to the [Beginners Index](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index) click [here](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index).
