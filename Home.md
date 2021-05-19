@@ -11,12 +11,13 @@ See the Manual: [MeerK40t Manual](https://github.com/meerk40t/meerk40t/wiki/Doc:
 
 @Sophist points out that whilst @taterize (David Olsen - the author) is doing a great job in creating this useful tool, there is always more work to do than he can handle alone. So, if you benefit from using this **free** software, please, please show your appreciation by contributing something back and helping him out. 
 
-If you are worried that you will be unable to contribute because you can't write Python code, then let me reassure you that there are many other ways you can contribute. Updating and enhancing these Wiki pages to pass on your experiences to others, or (if your primary language is not English) translating the application strings into other languages are also contributions. Raising Github issues when things don't work as you think they should and suggesting ideas for other improvements also help things along. And finally testing out new functionality on your machine and helping with research into the capabilities / speeds etc. of the controller board are also a great help.
+If you are worried that you will be unable to contribute because you can't write Python code, then let me reassure you that there are many other ways you can contribute:
+* Updating and enhancing these Wiki pages to pass on your experiences to others
+* Translating the application strings into other languages (please only do this for languages you are fluent in)
+* Raising Github issues when things don't work as you think they should or suggesting ideas for other improvements
+* Testing out new beta functionality on your machine or helping research the capabilities / speeds etc. of the controller board
 
-### Translation
-If you wish to help translate, you may need to regenerate the messages.po file:
-
-* [Regenerating the message.po file](https://github.com/meerk40t/meerk40t/wiki/Tech:-Foreign-Language-Translations)
+See [Tech: Help Wanted](https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted) for more details.
 
 ### Coding
 If you wish to write a module either for public consumption or for private use:
