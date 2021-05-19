@@ -33,6 +33,11 @@ MeerK40t uses a special set of [Zingl-Bresham curve-plotting algorithms](https:/
 #### Choice of Drivers
 The MeerK40t driver interface uses either the LibUsb driver or the CH341DLL default windows driver. This means that MeerK40t can run alongside other laser software that uses either of these drivers.
 
+#### Command Line
+MeerK40t has a comprehensive [command line interface](/meerk40t/meerk40t/wiki/Help:-Command-Line-Interface). If you want to integrate your K40 into an automated workflow or just prefer to use the command line, you should be able to execute most projects without using the GUI.
+
+MeerK40t also has an internal command line where more advanced functionality can be executed than available through the GUI.
+
 ## Documentation
 Our aim is to have a comprehensive set of documentation covering:
 * [Beginners](/meerk40t/meerk40t/wiki/Beginners:-0.-Index) - Help to set up your hardware, install MeerK40t and achieve your first burn
