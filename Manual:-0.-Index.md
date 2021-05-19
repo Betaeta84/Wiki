@@ -1,3 +1,6 @@
+**NOTE:** This page needs to be split into a large number of much smaller hierarchically-structured indexed sub-pages.
+
+
 # Overview
 MeerK40t is laser cutting software. It is intended to control a laser and provide cutting and control capabilities for lasers. Currently only Lhystudios devices are supported. This is the M2 Nano and previous revisions in the same board line. These are ubiquitous with regard to the K40 laser cutters.
 
