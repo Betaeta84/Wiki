@@ -1,12 +1,7 @@
-##### User Wiki Index
-* [Home](https://github.com/meerk40t/meerk40t/wiki)
-###### Documentation
-* [Features](https://github.com/meerk40t/meerk40t/wiki/Doc:-MeerK40t-Features)
-* [Manual](https://github.com/meerk40t/meerk40t/wiki/Doc:-MeerK40t-Manual)
-###### Help
-* [Command Line Interface](https://github.com/meerk40t/meerk40t/wiki/Help:-Command-Line-Interface)
-* [Console Commands](https://github.com/meerk40t/meerk40t/wiki/Help:-Console-Commands)
-* [How Meerk40t does Rastering](https://github.com/meerk40t/meerk40t/wiki/Help:-How-Meerk40t-does-Rastering)
-* [Inkscape: Optimising your SVGs](https://github.com/meerk40t/meerk40t/wiki/Help:-Inkscape:-Optimising-your-SVGs)
-* [Raster Wizard and Raster Scripts](https://github.com/meerk40t/meerk40t/wiki/Help:-Raster-Wizard-and-Raster-Scripts)
-* [Setting Up Your Camera](https://github.com/meerk40t/meerk40t/wiki/Help:-Setting-Up-Your-Camera)
+This Wiki has several "sections":
+
+* [Beginners](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-So-you-now-have-a-K40-laser...) - help getting started with MeerK40t
+* [Manual](https://github.com/meerk40t/meerk40t/wiki/Doc:-MeerK40t-Manual) - comprehensive, ultra-detailed documentation (well eventually maybe)
+* [Help]() - adhoc help with how some parts of MeerK40t work
+* [Install](https://github.com/meerk40t/meerk40t/wiki/Install:-General) - detailed installation instructions for different operating systems
+* [Tech]() - a braindump area of detailed technical background about hardware or how MeerK40t works under the covers
