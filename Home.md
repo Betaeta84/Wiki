@@ -1,4 +1,4 @@
-# Welcome to the MeerK40t Wiki!
+# Welcome to MeerK40t!
 MeerK40t is the extendable laser software for the Stock K40. We hope that you find this **free** software useful, and hopefully not to difficult to learn to use (though we know there is scope for improvement in both the software's usability and the documentation - and we hope that you may be willing to help out with these).
 
 ## Overview
@@ -13,6 +13,8 @@ MeerK40t supports 4 types of burn operation:
 * Vector cuts / vector engraving - essentially the same, with the laser following the vector path, and differing only on the strength of the burn
 * Vector raster - burning all points inside a (closed) vector path
 * Image raster - burn a raster image using pixels
+
+MeerK40t aims to fully support the SVG 1.1 standard (including specific extensions for the major editors where that makes sense).
 
 #### Power Control
 With a K40, you can set the power of the laser when it is on from the front panel, but the controller board is only able to turn the laser on and off.
