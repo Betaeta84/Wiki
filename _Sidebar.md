@@ -1,5 +1,5 @@
-#### [Introduction](./)
-#### [Beginners Help](./Beginners:-0.-Index)
+### [Introduction](./)
+### [Beginners Help](./Beginners:-0.-Index)
 1. [Preparing your K40 laser](./Beginners:-1.-Preparing-your-K40-laser)
 2. [Installing MeerK40t](./Beginners:-2.-Installing-MeerK40t)
 3. [Understanding the User Interface](./Beginners:-3.-The-User-Interface)
