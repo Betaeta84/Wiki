@@ -283,3 +283,7 @@ Adjustments. I don't think any of this stuff does anything anymore.
 ![file-menu](https://user-images.githubusercontent.com/3302478/107894298-1e9aea80-6ee4-11eb-93b1-779bcdb38aa5.png)
 * Remove: Remove the file from MeerK40t project.
 * Reload: Reload the file from disk. 
+
+---
+### Authors
+The MeerK40t team is grateful for the help from @tatarize in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
