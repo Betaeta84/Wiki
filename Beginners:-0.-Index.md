@@ -25,3 +25,6 @@ The Beginners' Wiki Pages are as follows:
 * [Step 8: Getting more help](./Beginners:-8.-Getting-more-help)
 
 Good luck. Click [here]](./Beginners:-1.-Preparing-your-K40-laser) to go to step 1.
+---
+### Authors
+The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
