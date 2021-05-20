@@ -442,3 +442,8 @@ ellipse 100 100 20 25 rotate 45 fill #000000 stroke #ff0000   - create a modify 
 ### Help Wanted
 
 If there's something you can't do, or something you may need to make accessible to binds, batches, or console raise an issue. Also if you'd have some nice and useful commands and helpful binds, raise an issue for that as well.
+
+
+---
+### Authors
+The MeerK40t team is grateful for the help from @... in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
