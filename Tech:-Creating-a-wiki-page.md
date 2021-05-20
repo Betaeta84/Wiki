@@ -16,7 +16,7 @@ Rule 4: Please use inline links to other pages. i.e. "[Click here](./)" rather t
 
 Rule 5: Please add your own userid to the list of authors that should be at the bottom of each Wiki page (or add it if it doesn't already exist). The standard text is:
 
-> # Authors
+> ### Authors
 > The MeerK40t team is grateful for the help from @xxxxx, @xxxxx and @xxxx in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃 
 
 ### Authors
