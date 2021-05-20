@@ -446,4 +446,4 @@ If there's something you can't do, or something you may need to make accessible 
 
 ---
 ### Authors
-The MeerK40t team is grateful for the help from @... in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
+The MeerK40t team is grateful for the help from @tatarize in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
