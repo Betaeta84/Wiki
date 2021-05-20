@@ -11,4 +11,5 @@
 ### [Manual](./Doc:-0.-Index)
 ### Ad-hoc help
 ### Installation Guides
-### Technical information for developers
+### Technical information
+(for developers)
