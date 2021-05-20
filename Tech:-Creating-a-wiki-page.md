@@ -12,10 +12,12 @@ Rule 2: **Please do not delete any existing content without checking with the pr
 
 Rule 3: Please try to follow the Wiki page naming conventions in order to help keep the page list in some sort of sequence. Additionally, if you need to, please add a link to your new page to any higher-level index pages or the sidebar etc. to make your new page visible to users.
 
-Rule 4: Please add your own userid to the list of authors that should be at the bottom of each Wiki page (or add it if it doesn't already exist). The standard text is:
+Rule 4: Please use inline links to other pages. i.e. "[Click here](./)" rather than "Click here: (https://...)". URLs to other wiki pages should look like this: `./Tech:-Creating-a-wiki-page`
 
-> ---
+Rule 5: Please add your own userid to the list of authors that should be at the bottom of each Wiki page (or add it if it doesn't already exist). The standard text is:
+
+> # Authors
 > The MeerK40t team is grateful for the help from @xxxxx, @xxxxx and @xxxx in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃 
 
----
+### Authors
 The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
