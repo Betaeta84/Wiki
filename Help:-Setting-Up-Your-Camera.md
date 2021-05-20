@@ -127,7 +127,8 @@ No. Calibrate refers to adjusting the fisheye correction whereas align means act
 Yes. You can use a standard sized object and set your bed size to the size of that object. Then set the corners to that object. Or if you want your entire bed working and in view. You would place post it notes in your corners. Then add tiny circles or a full rectangle to outline your bed. In console these commands would be `circle 100% 0% 1mm` to make a circle at the upper right hand corner. Then go ahead and cut that in a postit note. Or `move 100% 0%` would take you to the same corner and just hit your test button with a post-it note in that corner. Then mark each of your corners with perspective markers. Then you'll have it correctly lined up. 
 
 > If the answers to these questions are put on a "Help" page it would -help- a LOT...
+You have obviously found it because here you are reading it. 😃 
 
-Hm. I suppose.
-
-https://github.com/meerk40t/meerk40t/wiki/HELP:-Setting-Up-Your-Camera.
+---
+### Authors
+The MeerK40t team is grateful for the help from @tatarize and @joerlane in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
