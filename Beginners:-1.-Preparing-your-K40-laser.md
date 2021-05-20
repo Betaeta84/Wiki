@@ -126,6 +126,7 @@ Not so much an enhancement, but this seems to be a suitable place to mention tha
 We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Beginners:-2.-Installing-MeerK40t).
 
 If you want to return to the [Beginners Index](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index) click [here](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index).
+
 ---
 ### Authors
 The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
