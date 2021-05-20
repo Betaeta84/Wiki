@@ -1,5 +1,3 @@
-This page has kindly been created by @Sophist based on his own experiences. We hope that it helps you to get started with MeerK40t, however everyone's experiences will be different, so if after having read it and then used MeerK40t you think that it could be improved, please come back here to edit the page and make it even better. In particular links to pages giving more detail on the many issues raised on this page need to be added.
-
 ## Contents
 
 ## Safety matters
@@ -112,3 +110,6 @@ Not so much an enhancement, but this seems to be a suitable place to mention tha
 We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Beginners:-2.-Installing-MeerK40t).
 
 If you want to return to the [Beginners Index](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index) click [here](https://github.com/meerk40t/meerk40t/wiki/Beginners:-0.-Index).
+---
+### Authors
+The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
