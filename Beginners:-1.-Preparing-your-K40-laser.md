@@ -1,11 +1,6 @@
 ## Contents
 * [Safety matters](#safety-matters)
   * [Electrical Safety](#electrical-safety)
-    * [Laser voltages](#laser-voltages)
-    * [Wiring connections](#wiring-connections)
-    * [Earthing](#earthing)
-    * [High voltage connections](#high-voltage-connections)
-    * [Analogue current meter](#analogue-current-meter)
   * [Fumes](#fumes)
   * [Cooling](#cooling)
   * [Protecting your eyes](#protecting-your-eyes)
