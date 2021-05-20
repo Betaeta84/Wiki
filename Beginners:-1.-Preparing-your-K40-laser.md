@@ -1,4 +1,25 @@
 ## Contents
+* [Safety matters](#safety-matters)
+  * [Electrical Safety](#electrical-safety)
+    * [Laser voltages](#laser-voltages)
+    * [Wiring connections](#wiring-connections)
+    * [Earthing](#earthing)
+    * [High voltage connections](#high-voltage-connections)
+    * [Analogue current meter](#analogue-current-meter)
+  * [Fumes](#fumes)
+  * [Cooling](#cooling)
+  * [Protecting your eyes](#protecting-your-eyes)
+  * [Risk of fire](#risk-of-fire)
+* [Burn quality](#burn-quality)
+  * [Mirror/lens cleanliness](#mirror-lens-cleanliness)
+  * [Laser and Mirror alignment](#laser-and-mirror-alignment)
+  * [Focus](#focus)
+* [Enhancements](#enhancements)
+  * [Replacement bed](#replacement-bed)
+  * [Smoke assist](#smoke-assist)
+  * [Air assist](#air-assist)
+  * [Camera](#camera)
+* [Charring](#charring)
 
 ## Safety matters
 Once you have physically unpacked your K40, it may be tempting to plug it straight into the mains and get lasering - but for a raft of reasons this is not advisable, and can even be dangerous or even deadly.
@@ -63,7 +84,7 @@ The light as it exits from your laser is a very narrow and very, very straight b
 4. Focus
 5. Smoke
 
-### Mirror / lens cleanliness
+### Mirror/lens cleanliness
 When your K40 arrives, and before you align the mirrors you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
 
 The smoke from your burns can make them become dirty again quite quickly - cleaning them needs to be a fairly regular activity.
