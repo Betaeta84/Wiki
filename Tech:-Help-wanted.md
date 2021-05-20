@@ -12,6 +12,8 @@ For the time being, these Wiki pages are the place for MeerK40ts documentation -
 
 Wiki pages are written in [Github flavoured MarkDown](https://github.github.com/gfm/) which is **very** easy to learn.
 
+Some guidelines for editing wiki pages are provided [here](./Tech:-Creating-a-wiki-page) - please read these before you make any edits.
+
 ## Language Translations
 MeerK40t is written by an English speaking developer (as a Brit I say that loosely because it is North American English rather than English English) so the default UI is in English. But the code has been written so that all the English words can be replaced by their French / Spanish / Italian / etc. 
 equivalents, providing that all the translations are provided in a language file.
