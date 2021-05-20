@@ -100,3 +100,7 @@ These are actually fine and will cause no major issue, but may harm overall spee
 # Scan Lines
 
 If you use raster-step/scangap alone to scale up an image in addition to decreasing in overall darkness (since each additional rasterstep you can also get scanlines in deeper rasters. Since the scanlines are farther apart, the laser cuts are farther apart and there's room to create laser cuts that do not overlap. 
+
+---
+### Authors
+The MeerK40t team is grateful for the help from @tatarize in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
