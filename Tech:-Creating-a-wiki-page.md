@@ -14,6 +14,8 @@ Rule 3: Please try to follow the Wiki page naming conventions in order to help k
 
 Rule 4: Please use inline links to other pages. i.e. "[Click here](./)" rather than "Click here: (https://...)". URLs to other wiki pages should look like this: `./Tech:-Creating-a-wiki-page`
 
+Rule 5: If you decide to change the title of the page, then that will also immediately change the URL of the page, and any links to the page will no longer work. Please do your best to find and update all the links. If you come across a broken link yourself, please take the time to fix it.
+
 Rule 5: Please add your own userid to the list of authors that should be at the bottom of each Wiki page (or add it if it doesn't already exist). The standard text is:
 
 > ### Authors
