@@ -1,5 +1,5 @@
-#### [Introduction](/meerk40t/meerk40t/wiki)
-#### [Beginners Help](./Beginners:-0.-So-you-now-have-a-K40-laser...)
-* [Setting up your K40](/meerk40t/meerk40t/wiki/Beginners:-0.-So-you-now-have-a-K40-laser...)
+#### [Introduction](./)
+#### [Beginners Help](./Beginners:-0.-Index)
+* [Preparing your K40](./Beginners:-1.-Preparing-your-K40-laser)
 * [Installing Meerkat](/meerk40t/meerk40t/wiki/Beginners:-1.-Installing-MeerK40t)
 * [The User Interface](/meerk40t/meerk40t/wiki/Beginners:-2.-The-User-Interface)
