@@ -1,3 +1,4 @@
+This is a stub page. If you can give us some of your time, please update this with your own experiences.
 # Raster Wizard and Raster Scripts
 The Raster Wizard is the window that you use to convert an image file into a laser engraving Image operation.
 
@@ -21,3 +22,7 @@ When you start the raster wizard from a right-click, or within the raster wizard
 ## Xin
 ## Newsy
 ## Simple
+
+---
+### Authors
+The MeerK40t team is grateful for the help from @Sophist in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
