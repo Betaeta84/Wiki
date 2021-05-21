@@ -94,11 +94,9 @@ The laser head moves in both X- and Y-directions - and there are two stepper mot
 For positional accuracy and to prevent the belts slipping on the stepper-motor cogs, the belts needs to be reasonable tight. Certainly when I (@Sophist-UK) received my K40, the belts were way too loose and needed tightening. In theory this can be done with a reasonably long Philips screwdriver, but if you have any difficulties, you may need to remove the gantry entirely from the case to achieve this. For this reason, tightening these belts should be done **before** laser alignment as if you have already aligned your laser, you will need to redo it after removing and replacing the gantry because it is highly unlikely that it will be in **exactly** the same position when you have replaced it.
 
 The three belts and their adjustment access are as follows:
-| Belt | Location | Adjustment point |
-|-|-|-|
-| Y-belt 1 | On the left side of the gantry | Hole in the back of the K40 case below the laser compartment |
-| Y-belt 2 | On the right side of the gantry | Hole in the back of the K40 case below the laser compartment |
-| X-belt | Under the X-axis bar | Turn off the machine and leave it to discharge. Open both the main and electronics lids. Move the X-bar so that it is opposite the hole between the two compartments. You should be able to see the adjustment screw. |
+* Y-belt 1: On the left side of the gantry. Adjusted through a hole in the back of the K40 case below the laser compartment.
+* Y-belt 2: On the right side of the gantry. Adjusted through a hole in the back of the K40 case below the laser compartment.
+* X-belt: Under the X-axis bar. Turn off the machine and leave it to discharge. Open both the main and electronics lids. Move the X-bar so that it is opposite the hole between the two compartments. You should be able to see the adjustment screw. |
 
 You should tighten the belts so that they thrum when plucked. If in doubt a little more taught is better than too loose.
 
