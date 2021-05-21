@@ -41,7 +41,7 @@ And you should check that the earth connection on the rear has not been insulate
 Please check the high voltage wires to the laser tube carefully - ours were fine, but many people have reported poor quality connections.
 
 #### Analogue current meter
-Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great - in order not to shorten the life of your laser you need to keep the current below xx mA. If, however, you have a version which only has a digital power display (theoretically in %), then you should consider getting and fitting a 30mA analogue current meter ASAP - those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube.
+Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. In order not to shorten the life of your laser you need to keep the current below xx mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
 
 (I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
@@ -67,7 +67,6 @@ Some people add a protecting microswitch to the laser compartment lid, but perso
 But please, please, get some laser safety specs (suitable for CO2 lasers) and wear them when you are lasering.
 
 ### Risk of fire
-
 TODO
 
 ## Burn quality
@@ -103,23 +102,50 @@ d. The 3rd mirror (clipped into the head itself) is typically not adjustable.
 
 e. The lens in the bottom of the head is typically not adjustable.
 
-## Focus
+### Lens orientation
+The K40 lens is flat on one side and convex on the other, and the direction that it is fitted inside the laser head **is** important - **it needs to be curved side upwards**.
+
+### Focus
+Whilst the laser beam is a narrow parallel beam of light (i.e. it stays the same width as it travels away from the laser), it is not small enough to burn material really effectively. So the K40 has a lens at the bottom of the head (held in with a screw on circular retaining plate) to focus the laser beam to an even smaller dot.
+
 On the stock K40 there is a specific distance below the laser head where the laser is finely focussed into a tiny dot. Higher or lower than that distance, the spot will be bigger and less concentrated.
 
-The height of the bed that your material sits on will obviously need to be lower than that distance by the thickness of the material you are working with - and if you use different materials that might vary.
+The height of the bed that your material sits on will obviously need to be lower than that distance by the thickness of the material you are working with - and if you use different materials of varying thickness, then the height of the bed needs to vary to match.
+
+To call the bed that comes with the K40 "useless" would be being kind. It is a fixed height bed (👎 for being fixed height) with a rectangular opening (👎 for this being much, much, much smaller than the laser area, 👎 for being able to drop materials through the hole), one side of which is a spring loaded clamp (👎 for the clamp being useless).
+
+TODO: Picture of stock bed here.
 
 Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a variable height bed to achieve the same thing.
 
-## Dealing with smoke
+I never bothered even to try using it, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
+
+You can also use a choice of beds. A solid bed is not generally considered a good choice because there is no gap below the bottom of the material and you can get charring when you cut through. Alternatives are grill (pre-shaped fine grating), knife (multiple parallel vertical bars) and pin (multiple vertical pins) to support the material - the lower the contact area, the smaller the chance of . Which one is best for you will depend on the materials you are going to use and how flexible they are - the more floppy, the more support you need.
+
+### Smoke
 The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
 
 You should consider installing air assist and / or smoke assist, and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
 
 TODO: Summary of options / advice / links on where / how to buy / make the best air/smoke assist. 
 
+### Reflection charring
+When you are cutting, once you have cut through the laser beam can reflect off the bed surface (grill, knife, etc.) back onto the underside of the material and char in those areas that are resting on the grill.
+
+I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
+
+## Other issues
+### Holes in the bottom of the K40 case
+I discovered after the event that there is a largeish hole in the bottom of the K40, and when you have burned through your material the laser can carry on down and through the hole and char the surface of the table that your laser is sitting on. I riveted an air grill across this hole.
+
+### Casters
+My K40 came with casters - which is IMO a pretty dumb thing to do with a piece of equipment like this that you really don't want rolling off the edge of the table it is sitting on. So the first thing I did was replace them with M10 furniture feet from my local DIY superstore.
+
 ## Other potential enhancements
 ### Camera
-*MeerK40t has the ability to install a camera in the lid of your K40. Someone who has done this and who has the experience needs to write this section.*
+MeerK40t has the ability to use a camera installed in the lid of your K40 to help you position material in the right place to cut. 
+
+TODO: Someone who has done this and who has the experience needs to write this section.
 
 ## Charring
 Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material. A thin sheen of water seems to have little effect on the laser strength but does massively reduce charring and/or flames.
