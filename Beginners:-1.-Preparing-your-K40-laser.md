@@ -13,7 +13,7 @@
   * [Smoke](#smoke)
   * [Reflection charring](#reflection-charring)
 * [Enhancements](#enhancements)
-  * [Replacement bed](#replacement-bed)
+  * [Variable height bed](#variable-height-bed)
   * [Smoke assist](#smoke-assist)
   * [Air assist](#air-assist)
   * [Camera](#camera)
@@ -124,7 +124,7 @@ Some people have come up with elaborate means of varying the focal distance by m
 ### Smoke
 The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
 
-You should consider installing air assist and / or smoke assist, and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
+You should consider installing [smoke assist and / or air assist](#smoke-and-air-assist), and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
 
 TODO: Summary of options / advice / links on where / how to buy / make the best air/smoke assist. 
 
@@ -144,6 +144,13 @@ I discovered after the event that there is a largeish hole in the bottom of the 
 
 ### Casters
 My K40 came with casters - which is IMO a pretty dumb thing to do with a piece of equipment like this that you really don't want rolling off the edge of the table it is sitting on. So the first thing I did was replace them with M10 furniture feet from my local DIY superstore.
+
+### Smoke and Air Assist
+Smoke assist is a small air jet blowing air at the focal point of the laser to blow away smoke and help the laser beam to hit the material cleanly without smoke either reducing the power or blurring and widening the laser spot size.
+
+Air assist is similar but broader jet of air designed to blow smoke away from the lens and mirrors towards the extraction vent, and reduce smoke staining on the material.
+
+TODO: Add further examples and links.
 
 ### Camera
 MeerK40t has the ability to use a camera installed in the lid of your K40 to help you position material in the right place to cut. 
