@@ -89,6 +89,8 @@ The idea is that regardless of where the laser head of your K40 goes to on the b
 
 TODO: Research and add a link to the best instructions on the internet on aligning the laser / mirrors.
 
+If you are a visual learner, here is a video on youtube: [The Short K40 Laser Alignment Video](https://youtu.be/6Bcgo-CoBAs)
+
 In essence the steps are as follows:
 
 a. Put tape on the 1st mirror near the business end of the laser and adjust the laser position so that (very short) bursts of the beam (on very low power) hit the mirror approximately in the centre.
