@@ -38,6 +38,8 @@ The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite 
 #### Wiring connections
 People report that the wiring inside the K40 can be poorly connected - I certainly found several wires not properly tightened when I received mine. So before plugging it in, follow all the wires and ensure that all the terminals are securely tightened.
 
+Don't forget to check the wiring in the fan unit for proper connections.
+
 #### Earthing
 It is **essential** that your K40 is earthed properly - both to avoid accidental electrocution if the metal chassis accidentally becomes connected to the mains or laser voltages, but also because the lifetime of your laser can be shortened considerably if it is not earthed properly.
 
@@ -51,7 +53,9 @@ Please check the high voltage wires to the laser tube carefully - ours were fine
 ### Fumes
 The toxicity of the fumes from your K40 will depend on the material you are lasering, but some materials can be really quite toxic, whilst others are just unpleasant. There are few, if any, materials you can laser completely safely and pleasantly without having a means of extracting the fumes to where they can dissipate without you breathing them in.
 
-The supplied extractor fan is generally considered to be inadequate - and because it is fitted to the back of the laser, it creates positive pressure in the exhaust pipe to the outside and any leaks in that pipe will result in fumes entering your workroom. We added a second in-line fan at the far end of the exhaust tube to create negative pressure in the tube and prevent this.
+The supplied extractor fan is generally considered to be inadequate - and because it is fitted to the back of the laser, it creates positive pressure in the exhaust pipe to the outside and any leaks in that pipe will result in fumes entering your workroom. We added a second in-line fan at the far end of the exhaust tube to create negative pressure in the tube and prevent this, and used window/door gap insulating foam tape to fill the largeish gap between the standard fan and the case.
+
+The supplied plastic fume vent is generally considered to be somewhere between utterly useless. Considering an aluminium expanding one is only a few euros/dollars, it is not expensive to use something better.
 
 ### Cooling
 Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is **essential** that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), and because water expands when it freezes you need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
