@@ -8,7 +8,10 @@
 * [Burn quality](#burn-quality)
   * [Mirror/lens cleanliness](#mirror-lens-cleanliness)
   * [Laser and Mirror alignment](#laser-and-mirror-alignment)
+  * [Lens orientation](#lens-orientation)
   * [Focus](#focus)
+  * [Smoke](#smoke)
+  * [Reflection charring](#reflection charring)
 * [Enhancements](#enhancements)
   * [Replacement bed](#replacement-bed)
   * [Smoke assist](#smoke-assist)
@@ -134,14 +137,13 @@ When you are cutting, once you have cut through the laser beam can reflect off t
 
 I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
 
-## Other issues
+## Enhancements
 ### Holes in the bottom of the K40 case
 I discovered after the event that there is a largeish hole in the bottom of the K40, and when you have burned through your material the laser can carry on down and through the hole and char the surface of the table that your laser is sitting on. I riveted an air grill across this hole.
 
 ### Casters
 My K40 came with casters - which is IMO a pretty dumb thing to do with a piece of equipment like this that you really don't want rolling off the edge of the table it is sitting on. So the first thing I did was replace them with M10 furniture feet from my local DIY superstore.
 
-## Other potential enhancements
 ### Camera
 MeerK40t has the ability to use a camera installed in the lid of your K40 to help you position material in the right place to cut. 
 
@@ -157,4 +159,4 @@ If you want to return to the [Beginners Index](https://github.com/meerk40t/meerk
 
 ---
 ### Authors
-The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
+The MeerK40t team is grateful for the help from @Sophist-UK and @tiger12506 in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
