@@ -8,11 +8,6 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 
 ## Contents
 * [Safety matters](#safety-matters)
-  * [Electrical Safety](#electrical-safety)
-  * [Fumes](#fumes)
-  * [Cooling](#cooling)
-  * [Protecting your eyes](#protecting-your-eyes)
-  * [Risk of fire](#risk-of-fire)
 * [Burn quality](#burn-quality)
   * [Mirror/lens cleanliness](#mirror-lens-cleanliness)
   * [Belt tension](#belt-tension)
@@ -34,6 +29,12 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 The build quality of K40s can be extremely variable, and some of the common issues with a newly unpacked K40 can be dangerous or even deadly.
 
 We cannot provide the answers to all the issues here - but we do want to give you at least a heads up on the things you need to do to stop your K40 from electrocuting you, burning out your eyes, damaging itself or just disappointing you with very poor results.
+
+1. [Electrical Safety](#electrical-safety)
+2. [Fumes](#fumes)
+3. [Cooling](#cooling)
+4. [Protecting your eyes](#protecting-your-eyes)
+5. [Risk of fire](#risk-of-fire)
 
 ### Electrical Safety
 #### Laser voltages
