@@ -10,6 +10,6 @@
 8. [Getting more help](./Beginners:-8.-Getting-more-help)
 ### [Manual](./Doc:-0.-Index)
 ### Ad-hoc help
-### Installation Guides
+### [Installation Guides](../Install:-General)
 ### Technical information
 (for developers)
