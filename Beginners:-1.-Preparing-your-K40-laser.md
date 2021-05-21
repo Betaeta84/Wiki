@@ -1,3 +1,7 @@
+Once you have physically unpacked your K40, it may be tempting to plug it straight into the mains and get lasering - but for a raft of reasons this is not advisable.
+
+As you can see from the list below, the K40 does not exactly arrive ready for immediate use - and the level of technical skill needed to get it properly ready is non-trivial.
+
 ## Contents
 * [Safety matters](#safety-matters)
   * [Electrical Safety](#electrical-safety)
@@ -17,18 +21,17 @@
   * [Variable height bed](#variable-height-bed)
   * [Holes in the bottom of the K40 case](#holes-in-the-bottom-of-the-k40-case)
   * [Casters](#casters)
+  * [Analogue current meter](#analogue-current-meter)
   * [Smoke and air assist](#smoke-and-air-assist)
   * [Camera](#camera)
 * [Charring](#charring)
 
 ## Safety matters
-Once you have physically unpacked your K40, it may be tempting to plug it straight into the mains and get lasering - but for a raft of reasons this is not advisable, and can even be dangerous or even deadly.
+The build quality of K40s can be extremely variable, and some of the common issues with a newly unpacked K40 can be dangerous or even deadly.
 
 We cannot provide the answers to all the issues here - but we do want to give you at least a heads up on the things you need to do to stop your K40 from electrocuting you, burning out your eyes, damaging itself or just disappointing you with very poor results.
 
 ### Electrical Safety
-The build quality of K40s can be extremely variable. So before you plug your K40 into the mains here are a few pointers that you need to check:
-
 #### Laser voltages
 The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart - and the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. ***Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.***
 
@@ -44,11 +47,6 @@ And you should check that the earth connection on the rear has not been insulate
 
 #### High voltage connections
 Please check the high voltage wires to the laser tube carefully - ours were fine, but many people have reported poor quality connections.
-
-#### Analogue current meter
-Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. In order not to shorten the life of your laser you need to keep the current below xx mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
-
-(I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
 ### Fumes
 The toxicity of the fumes from your K40 will depend on the material you are lasering, but some materials can be really quite toxic, whilst others are just unpleasant. There are few, if any, materials you can laser completely safely and pleasantly without having a means of extracting the fumes to where they can dissipate without you breathing them in.
@@ -158,6 +156,11 @@ I discovered after the event that there is a largeish hole in the bottom of the 
 
 ### Casters
 My K40 came with casters - which is IMO a pretty dumb thing to do with a piece of equipment like this that you really don't want rolling off the edge of the table it is sitting on. So the first thing I did was replace them with M10 furniture feet from my local DIY superstore.
+
+### Analogue current meter
+Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. In order not to shorten the life of your laser you need to keep the current below xx mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
+
+(I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
 ### Smoke and Air Assist
 Smoke assist is a small air jet blowing air at the focal point of the laser to blow away smoke and help the laser beam to hit the material cleanly without smoke either reducing the power or blurring and widening the laser spot size.
