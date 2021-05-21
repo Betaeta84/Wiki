@@ -9,20 +9,7 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 ## Contents
 * [Safety matters](#safety-matters)
 * [Burn quality](#burn-quality)
-  * [Mirror/lens cleanliness](#mirror-lens-cleanliness)
-  * [Belt tension](#belt-tension)
-  * [Laser and Mirror alignment](#laser-and-mirror-alignment)
-  * [Lens orientation](#lens-orientation)
-  * [Focus](#focus)
-  * [Smoke](#smoke)
-  * [Reflection charring](#reflection-charring)
 * [Enhancements](#enhancements)
-  * [Variable height bed](#variable-height-bed)
-  * [Holes in the bottom of the K40 case](#holes-in-the-bottom-of-the-k40-case)
-  * [Casters](#casters)
-  * [Analogue current meter](#analogue-current-meter)
-  * [Smoke and air assist](#smoke-and-air-assist)
-  * [Camera](#camera)
 * [Charring](#charring)
 
 ## Safety matters
@@ -84,11 +71,13 @@ TODO
 ## Burn quality
 The light as it exits from your laser is a very narrow and very, very straight beam of invisible light. It is reflected off 3 mirrors and goes through a lens to focus it before it hits the material in a tiny spot of concentrated light. There are quite a few things that can cause this to go awry:
 
-1. Mirror / lens cleanliness
-2. Laser / mirror alignment
-3. Lens orientation
-4. Focus
-5. Smoke
+1. [Mirror/lens cleanliness](#mirror-lens-cleanliness)
+2. [Belt tension](#belt-tension)
+3. [Laser and Mirror alignment](#laser-and-mirror-alignment)
+4. [Lens orientation](#lens-orientation)
+5. [Focus](#focus)
+6. [Smoke](#smoke)
+7. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
 When your K40 arrives, and before you align the mirrors you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
@@ -155,6 +144,15 @@ When you are cutting, once you have cut through the laser beam can reflect off t
 I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
 
 ## Enhancements
+If you have small solid pieces of material to cut, I suppose it is just about possible to use your K40 with just the addition of a cooling water reservoir, but most people decide to implement some of the following enhancements first.
+
+1. [Variable height bed](#variable-height-bed)
+2. [Holes in the bottom of the K40 case](#holes-in-the-bottom-of-the-k40-case)
+3. [Casters](#casters)
+4. [Analogue current meter](#analogue-current-meter)
+5. [Smoke and air assist](#smoke-and-air-assist)
+6. [Camera](#camera)
+
 ### Variable height bed
 I (@Sophist-UK) never bothered even to try using the standard bed, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
 
