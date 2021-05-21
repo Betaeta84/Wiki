@@ -7,6 +7,7 @@
   * [Risk of fire](#risk-of-fire)
 * [Burn quality](#burn-quality)
   * [Mirror/lens cleanliness](#mirror-lens-cleanliness)
+  * [Belt tension](#belt-tension)
   * [Laser and Mirror alignment](#laser-and-mirror-alignment)
   * [Lens orientation](#lens-orientation)
   * [Focus](#focus)
@@ -14,8 +15,9 @@
   * [Reflection charring](#reflection-charring)
 * [Enhancements](#enhancements)
   * [Variable height bed](#variable-height-bed)
-  * [Smoke assist](#smoke-assist)
-  * [Air assist](#air-assist)
+  * [Holes in the bottom of the K40 case](#holes-in-the-bottom-of-the-k40-case)
+  * [Casters](#casters)
+  * [Smoke and air assist](#smoke-and-air-assist)
   * [Camera](#camera)
 * [Charring](#charring)
 
@@ -85,6 +87,20 @@ The light as it exits from your laser is a very narrow and very, very straight b
 When your K40 arrives, and before you align the mirrors you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
 
 The smoke from your burns can make them become dirty again quite quickly - cleaning them needs to be a fairly regular activity.
+
+### Belt tension
+The laser head moves in both X- and Y-directions - and there are two stepper motors and 3 belts to achieve this.
+
+For positional accuracy and to prevent the belts slipping on the stepper-motor cogs, the belts needs to be reasonable tight. Certainly when I (@Sophist-UK) received my K40, the belts were way too loose and needed tightening. In theory this can be done with a reasonably long Philips screwdriver, but if you have any difficulties, you may need to remove the gantry entirely from the case to achieve this. For this reason, tightening these belts should be done **before** laser alignment as if you have already aligned your laser, you will need to redo it after removing and replacing the gantry because it is highly unlikely that it will be in **exactly** the same position when you have replaced it.
+
+The three belts and their adjustment access are as follows:
+| Belt | Location | Adjustment point |
+|-|-|-|
+| Y-belt 1 | On the left side of the gantry | Hole in the back of the K40 case below the laser compartment |
+| Y-belt 2 | On the right side of the gantry | Hole in the back of the K40 case below the laser compartment |
+| X-belt | Under the X-axis bar | Turn off the machine and leave it to discharge. Open both the main and electronics lids. Move the X-bar so that it is opposite the hole between the two compartments. You should be able to see the adjustment screw. |
+
+You should tighten the belts so that they thrum when plucked. If in doubt a little more taught is better than too loose.
 
 ### Laser and Mirror alignment
 The idea is that regardless of where the laser head of your K40 goes to on the bed, the laser light should enter the head in exactly the same position and angle - and to do this you need to have the laser itself and the three mirrors aligned. Once you understand the procedure it is actually not that difficult, but it is an essential part of your laser setup.
