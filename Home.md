@@ -2,7 +2,7 @@
 MeerK40t is the extendable laser software for the Stock K40. We hope that you find this **free** software useful, and hopefully not too difficult to learn to use (though we know there is scope for improvement in both the software's usability and the documentation - and we hope that you may be willing to help out with these).
 
 ## Overview
-Congratulations on finding MeerK40t. Perhaps you started with the software supplied with your K40, or perhaps you tried Whisperer first, or maybe knowledge of our existence is spreading and you can here first... Or perhaps you have heard about the industry leading Lightburn software which is the standard to aspire to, but which cannot drive the K40... but regardless of which welcome.
+Congratulations on finding MeerK40t. Perhaps you started with the software supplied with your K40, or perhaps you tried Whisperer first, or maybe knowledge of our existence is spreading and you came here first... Or perhaps you have heard about the industry leading Lightburn software which is the standard to aspire to, but which cannot drive the K40... but regardless of how you got here, a BIG welcome.
 
 Meerk40t is a replacement for both the software supplied with the K40 and the K40 Whisperer software. It is designed specifically to drive the popular K40 class of (chinese built) laser machines which have an Lhymicro controller board. If you have a different controller board thanks for dropping by.
 
@@ -22,28 +22,28 @@ With a K40, you can set the power of the laser when it is on from the front pane
 Fortunately the controller can turn the laser on and off very fast indeed. In fact it can do this 1,000x per inch (or c. 400 per cm) which is enough to turn it on and off a couple of times in the width of the laser beam itself!!
 
 MeerK40t uses this capability to vary the strength of the laser, either:
-* Constantly every 2nd or 3rd or ... every 1/1000 of an inch or
+* Constantly every 2nd or 3rd or ... 1/1000 of an inch or
 * For rasters, variably depending upon the grey-scale level of pixels
 
-Technical details of this [Pulse Modulation feature](https://github.com/meerk40t/meerk40t/wiki/Tech:-Raster-pulse-modulation-PPI) can be found [here](https://github.com/meerk40t/meerk40t/wiki/Tech:-Raster-pulse-modulation-PPI).
+Technical details of this [Pulse Modulation feature](./Tech:-Raster-pulse-modulation-PPI) can be found [here](./Tech:-Raster-pulse-modulation-PPI).
 
 #### Accuracy
-MeerK40t uses a special set of [Zingl-Bresham curve-plotting algorithms](https://github.com/meerk40t/meerk40t/wiki/Tech:-Zingl-Bresenham-Curve-Plotting) to perfectly plot shapes. If your SVG has elliptical-arcs or Bezier-curves, by calculating these as curves rather than approximating them with many short straight lines, they will be plotted perfectly to the nearest 1/1000".
+MeerK40t uses a special set of [Zingl-Bresham curve-plotting algorithms](./Tech:-Zingl-Bresenham-Curve-Plotting) to perfectly plot shapes. If your SVG has elliptical-arcs or Bezier-curves, by calculating these as curves rather than approximating them with many short straight lines, they will be plotted perfectly to the nearest 1/1000".
 
 #### Choice of Drivers
 The MeerK40t driver interface uses either the LibUsb driver or the CH341DLL default windows driver. This means that MeerK40t can run alongside other laser software that uses either of these drivers.
 
 #### Command Line
-MeerK40t has a comprehensive [command line interface](/meerk40t/meerk40t/wiki/Help:-Command-Line-Interface). If you want to integrate your K40 into an automated workflow or just prefer to use the command line, you should be able to execute most projects without using the GUI.
+MeerK40t has a comprehensive [command line interface](./Help:-Command-Line-Interface). If you want to integrate your K40 into an automated workflow or just prefer to use the command line, you should be able to execute most projects without using the GUI.
 
-MeerK40t also has an internal command line where more advanced functionality can be executed than available through the GUI.
+MeerK40t also has an internal [Console command line](./Help:-Console-Commands) where more advanced functionality can be executed than available through the GUI.
 
 ## Documentation
 Our aim is to have a comprehensive set of documentation covering:
-* [Beginners](/meerk40t/meerk40t/wiki/Beginners:-0.-Index) - Help to set up your hardware, install MeerK40t and achieve your first burn
-* [Detailed Manual](/meerk40t/meerk40t/wiki/Doc:-0.-Index) - A detailed hierarchically-structured set of indexed pages describing all the functionality of MeerK40t in detail.
+* [Beginners](./Beginners:-0.-Index) - Help to set up your hardware, install MeerK40t and achieve your first burn
+* [Detailed Manual](./Doc:-0.-Index) - A detailed hierarchically-structured set of indexed pages describing all the functionality of MeerK40t in detail.
 * [Further Help]() - Additional help on specialised areas
-* [Installation](https://github.com/meerk40t/meerk40t/wiki/Install:-General) - Detailed instructions on installing MeerK40t on most major platforms
+* [Installation](./Install:-General) - Detailed instructions on installing MeerK40t on most major platforms
 
 However we are still a long way from achieving this, so any help you can give in improving our documentation would be very welcome.
 
@@ -71,17 +71,14 @@ If you wish to write GUIs for your modules, you may need to add icons.
 
 ## Detailed Documentation for the Stock Board.
 
-If you want detailed documentation for the stock board this is the place to be. The only place to be.
-[Understanding Lhymicro-GL](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhymicro-GL)
+If you want detailed documentation for the stock board, then the research we have undertaken to understand the hardware can be found in this wiki.
 
-[Lhystudios Boards Hardware specifics](https://github.com/meerk40t/meerk40t/wiki/Tech:-Lhystudios-Hardware-specifics)
+There are specific pages for the [Lhymicro M2-Nano Hardware](./Tech:-Lhymicro-M2-Nano-Hardware) and the [Lhymicro Control Protocols](./Tech:-Lhymicro-Control-Protocols) used by software like MeerK40t to control the K40.
 
-This is also a place for research on the board:
-[Physical Speed Measurements](https://github.com/meerk40t/meerk40t/wiki/Tech:-Physical-Speed-Measurements)
+The Tech section of the Wiki also has other research on the K40 hardware, for example [Physical Speed Measurements](./Tech:-Physical-Speed-Measurements)
 
 ## SVG Namespace
-
-For saving files MeerK40t uses a modified form of SVG, the [Namespace specification is here.](https://github.com/meerk40t/meerk40t/wiki/Tech:-SVG-Namespace)
+For saving files MeerK40t uses a modified form of SVG, for which the [Namespace specification is here](./Tech:-SVG-Namespace).
 
 ---
 ### Authors
