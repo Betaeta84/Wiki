@@ -1,5 +1,5 @@
 # Welcome to MeerK40t!
-MeerK40t is the extendable laser software for the Stock K40. We hope that you find this **free** software useful, and hopefully not to difficult to learn to use (though we know there is scope for improvement in both the software's usability and the documentation - and we hope that you may be willing to help out with these).
+MeerK40t is the extendable laser software for the Stock K40. We hope that you find this **free** software useful, and hopefully not too difficult to learn to use (though we know there is scope for improvement in both the software's usability and the documentation - and we hope that you may be willing to help out with these).
 
 ## Overview
 Congratulations on finding MeerK40t. Perhaps you started with the software supplied with your K40, or perhaps you tried Whisperer first, or maybe knowledge of our existence is spreading and you can here first... Or perhaps you have heard about the industry leading Lightburn software which is the standard to aspire to, but which cannot drive the K40... but regardless of which welcome.
