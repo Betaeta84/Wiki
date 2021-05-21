@@ -13,3 +13,6 @@
 ### [Installation Guides](./Install:-General)
 ### Technical information
 (for developers)
+
+
+###### [Wiki change log](./_history)
