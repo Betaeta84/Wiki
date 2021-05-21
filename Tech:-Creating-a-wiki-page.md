@@ -12,7 +12,7 @@ Rule 2: **Please do not delete any existing content without checking with the pr
 
 Rule 3: Please try to follow the Wiki page naming conventions in order to help keep the page list in some sort of sequence. Additionally, if you need to, please add a link to your new page to any higher-level index pages or the sidebar etc. to make your new page visible to users.
 
-Rule 4: Please use inline links to other pages. i.e. "[Click here](./)" rather than "Click here: (https://...)". URLs to other wiki pages should look like this: `./Tech:-Creating-a-wiki-page`
+Rule 4: Please use inline links to other pages. i.e. "[Click here](./)" rather than "Click here: [https://...](./)". URLs to other wiki pages should look like this: `./Tech:-Creating-a-wiki-page`. URLs to headings in the current page should look like this: `#this-is-header`.
 
 Rule 5: If you decide to change the title of the page, then that will also immediately change the URL of the page, and any links to the page will no longer work, so please only make changes if you believe they are essential - and if you do change it, please do your best to find and update all the links to it. If you come across a broken link yourself, please take the time to fix it.
 
