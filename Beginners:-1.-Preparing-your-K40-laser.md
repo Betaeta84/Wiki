@@ -11,7 +11,7 @@
   * [Lens orientation](#lens-orientation)
   * [Focus](#focus)
   * [Smoke](#smoke)
-  * [Reflection charring](#reflection charring)
+  * [Reflection charring](#reflection-charring)
 * [Enhancements](#enhancements)
   * [Replacement bed](#replacement-bed)
   * [Smoke assist](#smoke-assist)
@@ -119,11 +119,7 @@ To call the bed that comes with the K40 "useless" would be being kind. It is a f
 
 TODO: Picture of stock bed here.
 
-Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a variable height bed to achieve the same thing.
-
-I never bothered even to try using it, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
-
-You can also use a choice of beds. A solid bed is not generally considered a good choice because there is no gap below the bottom of the material and you can get charring when you cut through. Alternatives are grill (pre-shaped fine grating), knife (multiple parallel vertical bars) and pin (multiple vertical pins) to support the material - the lower the contact area, the smaller the chance of . Which one is best for you will depend on the materials you are going to use and how flexible they are - the more floppy, the more support you need.
+Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a [variable height bed](#variable-height-bed) to achieve the same thing.
 
 ### Smoke
 The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
@@ -138,6 +134,11 @@ When you are cutting, once you have cut through the laser beam can reflect off t
 I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
 
 ## Enhancements
+### Variable height bed
+I (@Sophist-UK) never bothered even to try using the standard bed, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
+
+You can also use a choice of beds. A solid bed is not generally considered a good choice because there is no gap below the bottom of the material and you can get charring when you cut through. Alternatives are grill (pre-shaped fine grating), knife (multiple parallel vertical bars) and pin (multiple vertical pins) to support the material - the lower the contact area, the smaller the chance of . Which one is best for you will depend on the materials you are going to use and how flexible they are - the more floppy, the more support you need.
+
 ### Holes in the bottom of the K40 case
 I discovered after the event that there is a largeish hole in the bottom of the K40, and when you have burned through your material the laser can carry on down and through the hole and char the surface of the table that your laser is sitting on. I riveted an air grill across this hole.
 
