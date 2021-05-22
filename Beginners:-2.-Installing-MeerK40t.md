@@ -9,8 +9,20 @@ If you haven't already read the safety issues listed on the [Preparing you K40 L
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
 ## Contents
+* [Which version should I use](#which-version-should-i-use)
 * [Precompiled Binaries](#precompiled-binaries)
 * [Running from Python Source](#running-from-python-source)
+
+## Which version should I use
+At the time this paragraph was last updated, there were two branches of MeerK40t being release:
+* 0.6.x - the stable, production version of MeerK40t
+* 0.7.0.Bx - a beta version of the next major upgrade
+
+Users who are not MeerK40t experts, or who are running production burns where they want to minimise software related failures, should run the stable 0.6.x version of MeerK40t.
+
+Expert users who are prepared to put up with bugs, glitches etc. in order to test the new version and provide feedback, or who want to assist with code development, can run the 0.7.0.Bx beta versions of MeerK40t.
+
+You can also install both and switch between them - but the ability to save an SVG file in one version and open it successfully in the other is **not** guaranteed.
 
 ## Precompiled Binaries
 
