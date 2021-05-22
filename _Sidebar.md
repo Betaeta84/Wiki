@@ -18,6 +18,8 @@
 6. [Navigation](./Doc:-6.-Navigation)
 7. [Executing a burn](./Doc:-7.-Executing-a-burn)
 8. [Console Terminal](./Doc:-8.-Console-Terminal)
+9. [Command Line, no GUI](./Doc:-9.-Command-Line)
+
 ### Ad-hoc help
 ### Installation Guides
 * [Linux: Mint](./Install:-Linux-Mint)
