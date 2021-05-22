@@ -43,7 +43,7 @@ Our aim is to have a comprehensive set of documentation covering:
 * [Beginners](./Beginners:-0.-Index) - Help to set up your hardware, install MeerK40t and achieve your first burn
 * [Detailed Manual](./Doc:-0.-Index) - A detailed hierarchically-structured set of indexed pages describing all the functionality of MeerK40t in detail.
 * [Further Help]() - Additional help on specialised areas
-* [Installation](./Install:-General) - Detailed instructions on installing MeerK40t on most major platforms
+* [Installation](./Beginners:-2.-Installing-MeerK40t) - A page giving links to detailed instructions on installing MeerK40t on most major platforms
 
 However we are still a long way from achieving this, so any help you can give in improving our documentation would be very welcome.
 
