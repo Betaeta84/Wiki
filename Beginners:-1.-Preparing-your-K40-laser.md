@@ -21,7 +21,8 @@ We cannot provide the answers to all the issues here - but we do want to give yo
 2. [Fumes](#fumes)
 3. [Cooling](#cooling)
 4. [Protecting your eyes](#protecting-your-eyes)
-5. [Risk of fire](#risk-of-fire)
+5. [Lid laser cut-off]()
+6. [Risk of fire](#risk-of-fire)
 
 ### Electrical Safety
 #### Laser voltages
@@ -61,9 +62,16 @@ Finally, once you have your cooling water system working, you will need to tip y
 ### Protecting your eyes
 Depending on the strength of your burn and the material you are lasering, your burn will create a **bright** spot on the work. Even with the lid down and the "protective" window in the way, this bright spot can **still** damage your eyes. And this is **not** even the laser light itself, just light from the effect it is having on the material it is hitting. You certainly do NOT want to get the laser light itself shining into your eyes - even as a reflection - or to put your body parts in the way of the laser.
 
-Some people add a protecting microswitch to the laser compartment lid, but personally I have found this idea to be very limiting when e.g. you are trying to align the laser etc. 
+So please, please, get some laser safety specs (suitable for CO2 lasers) and wear them when you are lasering.
 
-But please, please, get some laser safety specs (suitable for CO2 lasers) and wear them when you are lasering.
+### Lid laser cut-off
+Some people add a protecting microswitch to the laser compartment lid, so that the laser is cut-off if you lift the lid, and that this is particularly pertinent if you have inquisitive children. Clearly if you cut off the laser mid-burn you may not be able to restart it at the appropriate point, and may instead have to start again from the beginning with new material. Personally I (@Sophist-UK) prefer not to have this switch for several reasons: 
+* I don't have children who might lift the lid
+* I often prop the lid slightly open so that the horizontal gap at the bottom assists with laminar airflow across the bed
+* Taking care for my eyesight, I often wish to lift the lid to see how the burn is progressing and check the quality
+* If I am trying to align material and e.g. want to make a short low-power burst burn with the test switch, it will be both inconvenient and more difficult to see where the laser hits if I have to lower the lid each time.
+
+However, I am careful and so far have not had any safety issues. For your own K40, the choice is yours to make.
 
 ### Risk of fire
 TODO
@@ -80,9 +88,11 @@ The light as it exits from your laser is a very narrow and very, very straight b
 7. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
-When your K40 arrives, and before you align the mirrors you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
+When your K40 arrives, and before you align the mirrors, you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
 
-The smoke from your burns can make them become dirty again quite quickly - cleaning them needs to be a fairly regular activity.
+I have seen reports on the internet that dirty lenses can result in the laser heating the mirrors and creating burn spots and even cracking/shattering them.
+
+The smoke from your burns can also make them become dirty again quite quickly - cleaning them needs to be a fairly regular activity, though this can be reduced by installing smoke/air assist.
 
 ### Belt tension
 The laser head moves in both X- and Y-directions - and there are two stepper motors and 3 belts to achieve this.
