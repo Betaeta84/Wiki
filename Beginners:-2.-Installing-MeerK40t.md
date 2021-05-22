@@ -46,7 +46,7 @@ TODO: As you can see, there is some duplication here. If you are willing to help
 ## Running from Python Source
 The pre-packaged executables above consist of a combined Python interpreter, any co-requisite Python packages and a snapshot of the MeerK40t source code.
 
-An alternative to installing and running an executable is to install Python, the co-requisite Python packages and a copy (snapshot or Git clone) of the MeerK40t source code.
+An alternative to installing and running an executable is to install separately Python, the co-requisite Python packages and a copy (snapshot or Git clone) of the MeerK40t source code.
 
 Why would you want to do this?
 * An executable is not available for your hardware architecture and operating system but a version of Python and all the co-requisite Python packages are available
