@@ -10,7 +10,13 @@
 8. [Getting more help](./Beginners:-8.-Getting-more-help)
 ### [Manual](./Doc:-0.-Index)
 ### Ad-hoc help
-### [Installation Guides](./Install:-General)
+### Installation Guides
+* [Linux: Mint](./Install:-Linux-Mint)
+* [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
+* [Linux: Ubuntu](./Install:-Ubuntu-Linux)
+* [Linux: Ubuntu 18.04.03](./Install:-Ubuntu-18.04.3)
+* [Mac OSX](./Install:-Mac-OSX)
+* [Windows](./Install:-Windows)
 ### Technical information
 (for developers)
 
