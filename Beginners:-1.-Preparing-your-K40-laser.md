@@ -161,7 +161,8 @@ If you have small solid pieces of material to cut, I suppose it is just about po
 3. [Casters](#casters)
 4. [Analogue current meter](#analogue-current-meter)
 5. [Smoke and air assist](#smoke-and-air-assist)
-6. [Camera](#camera)
+6. [Water flow indicator/meter](#water-flow-indicator-meter)
+7. [Camera](#camera)
 
 ### Variable height bed
 I (@Sophist-UK) never bothered even to try using the standard bed, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
@@ -185,6 +186,11 @@ Smoke assist is a small air jet blowing air at the focal point of the laser to b
 Air assist is similar but broader jet of air designed to blow smoke away from the lens and mirrors towards the extraction vent, and reduce smoke staining on the material.
 
 TODO: Add further examples and links.
+
+### Water flow indicator/meter
+Water flow is essential to cool the laser tube and prevent failure due to overheating. Whilst it is unlikely that the pump will fail, some people route the tubing through a mechanical and/or electronic flow meter (which can also have a temperature gauge integrated).
+
+TODO: Example pic.
 
 ### Camera
 MeerK40t has the ability to use a camera installed in the lid of your K40 to help you position material in the right place to cut. 
