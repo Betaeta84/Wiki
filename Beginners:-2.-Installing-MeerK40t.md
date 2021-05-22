@@ -8,7 +8,11 @@ If you haven't already read the safety issues listed on the [Preparing you K40 L
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
-### Precompiled Binaries
+## Contents
+* [Precompiled Binaries](#precompiled-binaries)
+* [Running from Python Source](#running-from-python-source)
+
+## Precompiled Binaries
 
 The precompiled binaries are available from https://github.com/meerk40t/meerk40t/releases
 
@@ -18,16 +22,28 @@ In most cases, it should be as simple as downloading the binaries and installing
 1. Precompiled Binaries do not have the translations for other locales/languages working very effectively. However at present there are no comprehensive translations available, so this may not be an issue. **But if you want to contribute** by working on [translations](./Tech:-Foreign-Language-Translations), this might change.
 
 ### Detailed Installation Instructions
-For more detailed install instructions see the specific pages on installing for your OS.
-* [Linux: Mint](./Install:-Linux-Mint)
-* [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
-* [Linux: Ubuntu](./Install:-Ubuntu-Linux)
-* [Linux: Ubuntu 18.04.03](./Install:-Ubuntu-18.04.3)
-* [Mac OSX](./Install:-Mac-OSX)
-* [Windows](./Install:-Windows)
+Detailed instructions are available for the following operating systems:
+* [ARM: Linux: Raspberry Pi](./Install:-Raspberry-Pi)
+* [Intel: Linux: Mint](./Install:-Linux-Mint)
+* [Intel: Linux: Ubuntu](./Install:-Ubuntu-Linux)
+* [Intel: Linux: Ubuntu 18.04.03](./Install:-Ubuntu-18.04.3)
+* [Intel: Mac OSX](./Install:-Mac-OSX)
+* [Intel: Windows](./Install:-Windows)
 
-Or:
-* [Running from Python source](./Install:-Running-from-source)
+TODO: As you can see, there is some duplication here. If you are willing to help, and can test these instructions, any de-duplication would be helpful.
+
+## Running from Python Source
+The pre-packaged executables above consist of a combined Python interpreter, any co-requisite Python packages and a snapshot of the MeerK40t source code.
+
+An alternative to installing and running an executable is to install Python, the co-requisite Python packages and a copy (snapshot or Git clone) of the MeerK40t source code.
+
+Why would you want to do this?
+* An executable is not available for your hardware architecture and operating system but a version of Python and all the co-requisite Python packages are available
+* You want to assist with the development of MeerK40t itself or of a plugin
+
+Doing this requires a bit of technical knowledge of Python and will be more difficult to support than a packaged executable.
+
+Please follow the [detailed installation instructions for running from Python source](./Install:-Running-from-source).
 
 ## Next page
 Now that you have installed MeerK40t, the next step in the Beginners' Tutorial is to [understand the MeerK40t user interface](./Beginners:-3.-The-User-Interface).
