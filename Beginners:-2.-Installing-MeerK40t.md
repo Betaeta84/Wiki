@@ -18,10 +18,6 @@ The precompiled binaries are available from https://github.com/meerk40t/meerk40t
 
 In most cases, it should be as simple as downloading the binaries and installing them using the normal facilities of your operating system.
 
-**Notes:**
-1. Precompiled Binaries do not have the translations for other locales/languages working very effectively. However at present there are no comprehensive translations available, so this may not be an issue. **But if you want to contribute** by working on [translations](./Tech:-Foreign-Language-Translations), this might change.
-
-### Detailed Installation Instructions
 Detailed instructions are available for the following operating systems:
 * [ARM: Linux: Raspberry Pi](./Install:-Raspberry-Pi)
 * [Intel: Linux: Mint](./Install:-Linux-Mint)
@@ -31,6 +27,9 @@ Detailed instructions are available for the following operating systems:
 * [Intel: Windows](./Install:-Windows)
 
 TODO: As you can see, there is some duplication here. If you are willing to help, and can test these instructions, any de-duplication would be helpful.
+
+**Notes:**
+1. Precompiled Binaries do not have the translations for other locales/languages working very effectively. However at present there are no comprehensive translations available, so this may not be an issue. **But if you want to contribute** by working on [translations](./Tech:-Foreign-Language-Translations), this might change.
 
 ## Running from Python Source
 The pre-packaged executables above consist of a combined Python interpreter, any co-requisite Python packages and a snapshot of the MeerK40t source code.
