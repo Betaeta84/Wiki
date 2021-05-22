@@ -8,7 +8,7 @@
 6. [Aligning your material](./Beginners:-6.-Aligning-your-material)
 7. [Executing a burn](./Beginners:-7.-Executing-a-burn)
 8. [Getting more help](./Beginners:-8.-Getting-more-help)
-### [Manual](./Doc:-0.-Index)
+### [Manual (v0.7.0)](./Doc:-0.-Index)
 ### Ad-hoc help
 ### Installation Guides
 * [Linux: Mint](./Install:-Linux-Mint)
