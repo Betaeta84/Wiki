@@ -8,7 +8,7 @@
 6. [Aligning your material](./Beginners:-6.-Aligning-your-material)
 7. [Executing a burn](./Beginners:-7.-Executing-a-burn)
 8. [Getting more help](./Beginners:-8.-Getting-more-help)
-### [Manual (v0.7.0)](./Doc:-0.-Index)
+### [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
 ###### to be written
 1. [The User Interface](./Doc:-1.-User-Interface)
 2. [Configuring your K40](./Doc:-2.-Configuring-your-K40)
