@@ -21,7 +21,7 @@ We cannot provide the answers to all the issues here - but we do want to give yo
 2. [Fumes](#fumes)
 3. [Cooling](#cooling)
 4. [Protecting your eyes](#protecting-your-eyes)
-5. [Lid laser cut-off](#laser-lid-cut-off)
+5. [Lid laser cut-off](#lid-laser-cut-off)
 6. [Risk of fire](#risk-of-fire)
 
 ### Electrical Safety
