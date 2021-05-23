@@ -15,6 +15,8 @@ Wiki pages are written in [Github flavoured MarkDown](https://github.github.com/
 
 Some guidelines for editing wiki pages are provided [here](./Tech:-Creating-a-wiki-page) - please read these before you make any edits.
 
+A [Wiki project page](/meerk40t/meerk40t/projects/5) now has a long list of TODO items for improvements to the Wiki - so if you have an hour or so to spare, please find one that takes your fancy and give it a go. 
+
 ## Language Translations
 MeerK40t is written by an English speaking developer (as a Brit I say that loosely because it is North American English rather than English English) so the default UI is in English. But the code has been written so that all the English words can be replaced by their French / Spanish / Italian / etc. 
 equivalents, providing that all the translations are provided in a language file.
