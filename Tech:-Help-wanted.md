@@ -4,6 +4,7 @@ There are many ways you can contribute to the success of MeerK40t:
 * [Language translations](#language-translations)
 * [Supporting other users](#supporting-other-users)
 * [Python code development](#python-code-development)
+* [Sponsorship](#sponsorship)
 
 ## Improving the Documentation
 For the time being, these Wiki pages are the place for MeerK40ts documentation - and at the time this paragraph was written these pages are relatively disorganised, very variable in terms of coverage, target audience (novice, intermediate, expert), level of detail, quality and structure.
@@ -35,3 +36,13 @@ Simples!! Full details can be found [here](/meerk40t/meerk40t/wiki/Tech:-Foreign
 ## Python Code Development
 * Enhancements to base MeerK40t code
 * Developing entirely new functionality / modules
+
+# Sponsorship
+If you are:
+
+1. using MeerK40t for commercial gain (and there is nothing wrong with that), and
+2. unable to give your time to any of the above activities
+
+then please consider [sponsoring @tatarize](/sponsors/tatarize) as a way of saying thank you to him for all his efforts. 
+
+This software is free to use and there are no licensing or legal terms which compel you to reward @tararize in this way, and the choice is yours to make freely - but it just seems ethical to share a small proportion of your profits with him when you benefit financially from his efforts.
