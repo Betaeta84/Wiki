@@ -58,6 +58,8 @@ If you are worried that you will be unable to contribute because you can't write
 
 See [Tech: Help Wanted](https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted) for more details.
 
+Finally, if you are using MeerK40t for commercial gain (and there is nothing wrong with that), then **if** you are unable to give something back by giving your time to any of the above activities, please consider [sponsoring @tatarize](/sponsors/tatarize) as a way of saying thank you to him for all his efforts. Note: This software is free to use and there are no licensing or legal terms which compel you to reward @tararize in this way, and the choice is yours to make freely - but it just seems ethical to share a small proportion of your profits with him when you benefit financially from his efforts.
+
 ### Coding
 If you wish to write a module either for public consumption or for private use:
 
