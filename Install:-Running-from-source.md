@@ -10,9 +10,9 @@ If you use these instructions to run MeerK40t from source and find that they are
 
 ### Essential Prerequisites
 * `Python`: MeerK40t will (apparently) run using Python2 however the latest version of Python3 is recommended. If you are running on a 64-bit operating system, you can use 32-bit or 64-bit Python, and 32-bit is recommended.
-* Python's `pip`: pip is the Python package manager and will be used to install other packages you need.
+* Python's `pip`: pip is the Python package manager and will be used to install other packages you need. pip is generally installed with newer versions of Python.
+* Python's `setuptools`: A pre-requisite for installing pyusb. setuptools is generally installed with newer versions of Python.
 * Python's `virtualenv`: We recommend that you create a Python virtual environment to run MeerK40t, in which case you will need this. 
-* Python's `setuptools`: A pre-requisite for installing pyusb
 * `wxPython`: MeerK40t uses wxPython to provide the GUI environment. If you **only** wish to use the command line interface using the --no_gui flag, then you do not require `wxPython`, however we expect only a **very** small number of expert users will want to do this. For full functionality, wxPython version >= 4.1 should be installed. 
 * `pyusb`: MeerK40t can use either of two sets of USB drivers. If you are running MeerK40t on Windows and have already installed the CH341 drivers (which come with the software provided with your K40), then you don't need pyusb. Otherwise pyusb is used on all platforms to provide the USB connectivity to your K40. If you want to run MeerK40t on a platform which does not have either CH341 or pyusb, then you are out of luck. If using the Windows CH341 driver, `pyusb` is optional - the LibUSB driver will be used if pyusb is installed, otherwise CH341 will be used.
 * `Pillow`: Pillow is a package that provide image loading, saving and manipulation. If you do not install Pillow, MeerK40t will not have access to **any** image functions and will only be able to handle SVG paths.
