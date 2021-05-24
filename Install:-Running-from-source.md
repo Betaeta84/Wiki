@@ -9,7 +9,7 @@ If you want to run MeerK40t on a different platform or you want to develop a plu
 If you use these instructions to run MeerK40t from source and find that they are incomplete or wrong, please help the next person who will try to use them by updating them (using the Edit Button top right) using your own experiences, or raise an [issue](https://github.com/meerk40t/meerk40t/issues/new/choose) describing your difficulties so someone else can fix it
 
 ### Essential Prerequisites
-* `Python`: MeerK40t will (apparently) run using Python2 however the latest version of Python3 is recommended. 
+* `Python`: MeerK40t will (apparently) run using Python2 however the latest version of Python3 is recommended. If you are running on a 64-bit operating system, you can use 32-bit or 64-bit Python, and 32-bit is recommended.
 * Python's `pip`: pip is the Python package manager and will be used to install other packages you need.
 * Python's `virtualenv`: We recommend that you create a Python virtual environment to run MeerK40t, in which case you will need this. 
 * Python's `setuptools`: A pre-requisite for installing pyusb
@@ -28,7 +28,7 @@ If you are writing a module for MeerK40t you should feel free to include externa
 
 ### Installing Essential Prerequisites
 
-1. Download the version for your O/S from the [Python web site](https://www.python.org/downloads/) and run the executable to install.
+1. Download the version of Python for your O/S from the [Python web site](https://www.python.org/downloads/) and run the executable to install.
 
 2. PIP should come pre-installed with Python 2.7.9+ and Python 3.4+. Check whether it is installed by running `pip help`. If it is not installed, then install PIP as follows:
 
@@ -37,26 +37,24 @@ If you are writing a module for MeerK40t you should feel free to include externa
 
    Make sure that you have the latest version of pip by running `pip3 install --upgrade pip` from an administrator command prompt.
 
-3. Set up a virtual environment for MeerK40t.
+3. If you need to (setuptools is installed by default in newer versions of Python), install Python's setup tools with:
 
-4. Install Python's setup tools with:
-
-   * Windows - 
+   * Windows - `pip install setuptools`
    * Linux - Debian, Ubuntu and related distributions which use `apt` - `sudo apt install python3-setuptools`
 
-4. Install wxpython with `pip3 install wxPython` from an administrator/sudo command prompt.
+4. Install VirtualEnv using `pip install virtualenv`. Then Set up a virtual environment for MeerK40t by changing to the directory into which you want to put your MeerK40t directory and running `virtualenv MeerK40t`. Then change to the MeerK40t directory and type `scripts\activate` to activate the Meerk40t virtual environment.
 
-5. Install pysub with `pip3 install pyusb` from an administrator/sudo command prompt.
+5. Install wxpython with `pip install wxPython` from an administrator/sudo command prompt.
 
-6. Install pillow with `pip3 install pillow` from an administrator/sudo command prompt.
+6. Install pysub with `pip install pyusb` from an administrator/sudo command prompt.
 
-### Running Python MeerK40t
+7. Install pillow with `pip install pillow` from an administrator/sudo command prompt.
 
-If you simply want to use MeerK40t running from source, we recommend that you download a release version (not a beta) of source from the [github release page](https://github.com/meerk40t/meerk40t/releases) and unpack it into the virtual environment you have just created.
+8. Download the source for the [MeerK40t release](https://github.com/meerk40t/meerk40t/releases) you want to run from Github. For normal usage we recommend that you use the latest production version, but you can run a beta release if you want to try that. Alternatively, you can download one of the Github repo branches (e.g. master) for a snapshot of the latest unreleased source code. Unpack this compressed source file into a subdirectory of your virtual environment.
 
-If you want to help develop MeerK40t itself, then create a local git clone from the GitHub repository so that you can keep the source code in-step with Github and can submit any changes yo develop back to Github. If you are going to develop changes to MeerK40t itself, we assume that you will be technical enough to know how to do this without detailed instructions from us.
+Note: If you are a developer you can also use Git to create a clone that can be used to switch code dynamically between branches. 
 
-To run MeerK40t use `python3 MeerK40t.py`
+9. Create a shortcut to run MeerK40t from source using the python executable in the Scripts directory and the meerk40t.py file in the root directory of the unpacked source code.
 
 ### Troubleshooting Install
 
