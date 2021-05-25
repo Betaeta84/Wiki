@@ -52,9 +52,12 @@ If you are writing a module for MeerK40t you should feel free to include externa
 
 8. Download the source for the [MeerK40t release](https://github.com/meerk40t/meerk40t/releases) you want to run from Github. For normal usage we recommend that you use the latest production version, but you can run a beta release if you want to try that. Alternatively, you can download one of the Github repo branches (e.g. master) for a snapshot of the latest unreleased source code. Unpack this compressed source file into a subdirectory of your virtual environment.
 
-Note: If you are a developer you can also use Git to create a clone that can be used to switch code dynamically between branches. 
+   Note: If you are a developer you can also use Git to create a clone that can be used to switch code dynamically between branches. 
 
 9. Create a shortcut to run MeerK40t from source using the python executable in the Scripts directory and the meerk40t.py file in the root directory of the unpacked source code.
+
+   * Windows - Create a shortcut as follows: Start-in: the Scripts directory of your virtual environment. Target: `pythonw.exe` followed by the full path/name of the meerk40t.py file in the root directory of the source you downloaded. Change icon: the meerk40t.ico file in the root directory of the source you downloaded.
+   * Linux - TODO
 
 ### Troubleshooting Install
 
