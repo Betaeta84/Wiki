@@ -229,7 +229,7 @@ When the M2Nano is installed in the K40, there is a slot through which you conne
 JST-2 male pin connector. Air Assist control.
 
 This is a low level output which goes high when a job is started, then drops back to low approximately 15 sec after the job is completed. 
-It requires an amplifier transistor to operate a relay coil. 
+It can be used to drive a solid state relay directly, or would require an amplifier transistor to operate a electromagnetic relay coil. 
 An “Arduino” Relay module could be used to control a solenoid valve, but external power would be needed to pull in the valve coil (fused 120vac could be used).
 
 * Pin#1 – EX-  GROUND – to be used as the return side of the output.
