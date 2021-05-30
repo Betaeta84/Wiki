@@ -1,16 +1,15 @@
-Your K40 has 2 motors and a laser, with a very low-powered microprocessor to control them - and the burden for turning your design into a laser burned objet-d'art falls upon the burn software, in this case MeerK40t. If you want to know all the technical details of how the laser works, there are several detailed descriptions in the Technical section of this Wiki, but since this is the beginners section you will be glad to know that we are **not** going into all of that here. 😃 
+The purpose of this Wiki page is to give you an idea of the many things that you can do with your K40 and MeerK40t, and we hope that this will help you get a better idea of the things you might need to do in MeerK40t to make your burn a success.
 
-The purpose of this Wiki page is to give you an idea of the many things that you can do with your K40 and MeerK40t, and whilst we are doing this we hope that you will get a better idea of the things you might need to do in MeerK40t to make your burn a success.
-
-If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, or haven't yet [installed MeerK40t]() we recommend that you go back a step or two and read them.
+If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, or haven't yet [installed MeerK40t](./Beginners:-2.-Installing-MeerK40t) we recommend that you go back a step or two and read them.
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
 ## Contents
 * [Vectors and Bitmaps](#vectors-and-bitmaps)
-* The 4 different types of burn
-* A brief physics lesson
-* Materials you can laser
+* [The 4 different types of burn](#4-different-types-of-burn)
+* [A brief physics lesson](#a-brief-physics-lesson)
+* [Health and Safety](#health-and-safety)
+* [Materials you can laser](#materials-you-can-laser)
 
 ## Vectors and Bitmaps
 The difference between Vectors and Bitmaps (or Rasters) is not difficult to understand:
@@ -62,19 +61,26 @@ Similarly if you stay on the beach too long each day, you will get sunburned, bu
 
 TODO: Short youtube video showing vector burns on cardboard or wood at different speeds and different powers.
 
-## Materials you can burn
-
-
 ## Health and Safety
 ### Fire
 ### Fumes
 ### Eyesight
 ### Burns
 
-## Next page
-Now that you are familiar with the types of Laser burns and the sorts of materials you can burn, the next step in the Beginners' Tutorial is to [understand the user interface](./Beginners:-4.-Loading-a-fileto-burn).
+## Materials you can burn
+* Wood
+* Paper & Cardboard
+* Leather
+* Acrylic
+* Ceramic Tiles
+* Slate
 
-If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, or haven't yet [installed MeerK40t]() we recommend that you go back a step or two and read them.
+TODO: This section needs a lot of expansion
+
+## Next page
+Now that you are familiar with the types of Laser burns and the sorts of materials you can burn, the next step in the Beginners' Tutorial is to [understand the user interface](./Beginners:-4.-Understanding-the-user-interface).
+
+If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, or haven't yet [installed MeerK40t](./Beginners:-2.-Installing-MeerK40t) we recommend that you go back a step or two and read them.
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
