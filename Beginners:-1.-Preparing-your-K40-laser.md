@@ -51,11 +51,17 @@ The supplied extractor fan is generally considered to be inadequate - and becaus
 The supplied plastic fume vent is generally considered to be somewhere between utterly useless. Considering an aluminium expanding one is only a few euros/dollars, it is not expensive to use something better.
 
 ### Cooling
-Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is **essential** that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), and because water expands when it freezes you need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
+Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. 
 
-Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the cooling water exit tube just outside the business end of the laser). I am not quite sure whether it is better to measure the output temperature (showing how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), or indeed how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe, but in the end I decided that this was probably a good enough indicator and didn't need enhancing.
+Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is **essential** that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), which means that you need to keep your cooling water cool, and because water expands when it freezes you also need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
 
-It is also essential that the water you use is non-conducting - and that means using deionised water. (We get ours in 5litre bottles from our local LIDL store at c. 70c per bottle. For a tank we use a  40l storage box with two holes drilled in the lid. We live in a warm climate, so freezing is not an issue - for cooling we use ice packs from our domestic freezer. But many people use technology to cool their water.) You may also need to add a non-conducting anti-algae chemical to the water.
+Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the cooling water exit tube just outside the business end of the laser). I am not quite sure whether it is better to measure the output temperature (showing how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), or indeed how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe, but in the end I decided that this was probably a good enough indicator and didn't need enhancing. I am, however, planning to add a cheap aquarium thermometer with a sucker to my water tank wall in order to have a better indicator of the reservoir temperature.
+
+Whilst it is unlikely that the pump will fail, some people route the tubing through a mechanical and/or electronic flow meter (which can also have a temperature gauge integrated).
+
+![image](https://user-images.githubusercontent.com/3001893/120121463-81667800-c19b-11eb-88e9-d4f3133e334e.png)
+
+It is also essential that the water you use is non-conducting - and that means using deionised water. (We get ours in 5litre bottles from our local LIDL store at c. 70c per bottle. For a tank we use a  40l storage box with two holes drilled in the lid. We live in a warm climate, so freezing is not an issue - for cooling we use ice packs from our domestic freezer. But many people use technology to cool their water. You may also need to add a non-conducting anti-algae chemical to the water.
 
 Finally, once you have your cooling water system working, you will need to tip your machine to get the air bubbles out of the laser tube - rotating the tube so that the water pipes are entering / leaving the laser at the top can also help avoid bubbles.
 
@@ -135,9 +141,9 @@ On the stock K40 there is a specific distance below the laser head where the las
 
 The height of the bed that your material sits on will obviously need to be lower than that distance by the thickness of the material you are working with - and if you use different materials of varying thickness, then the height of the bed needs to vary to match.
 
-To call the bed that comes with the K40 "useless" would be being kind. It is a fixed height bed (👎 for being fixed height) with a rectangular opening (👎 for this being much, much, much smaller than the laser area, 👎 for being able to drop materials through the hole), one side of which is a spring loaded clamp (👎 for the clamp being useless).
+To call the bed that comes with the K40 "useless" would be being kind. It is a fixed height bed (👎 for being fixed height) with a rectangular opening (👎 for this being much, much, much smaller than the laser area, 👎 for being able to drop materials through the hole), one side of which is a spring loaded clamp (👎 for the maximum clamp opening being even smaller than the opening, 👎 for the clamp not being flush with the rest of the table).
 
-TODO: Picture of stock bed here.
+![image](https://user-images.githubusercontent.com/3001893/120121012-13b94c80-c199-11eb-9296-f68bb4948329.png) ![image](https://user-images.githubusercontent.com/3001893/120121088-7579b680-c199-11eb-8eef-0b612e1e1bb7.png)
 
 Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a [variable height bed](#variable-height-bed) to achieve the same thing.
 
@@ -161,8 +167,7 @@ If you have small solid pieces of material to cut, I suppose it is just about po
 3. [Casters](#casters)
 4. [Analogue current meter](#analogue-current-meter)
 5. [Smoke and air assist](#smoke-and-air-assist)
-6. [Water flow indicator/meter](#water-flow-indicator-meter)
-7. [Camera](#camera)
+6. [Camera](#camera)
 
 ### Variable height bed
 I (@Sophist-UK) never bothered even to try using the standard bed, and replaced it with an adjustable height bed of my own design built using a few bearings and a 3d printer belt off the internet, a few 3D printed parts and some steel / aluminium (aluminum for our American cousins) profile from the local DIY superstore.
@@ -176,7 +181,11 @@ I discovered after the event that there is a largeish hole in the bottom of the 
 My K40 came with casters - which is IMO a pretty dumb thing to do with a piece of equipment like this that you really don't want rolling off the edge of the table it is sitting on. So the first thing I did was replace them with M10 furniture feet from my local DIY superstore.
 
 ### Analogue current meter
-Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. In order not to shorten the life of your laser you need to keep the current below xx mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
+Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. 
+
+![image](https://user-images.githubusercontent.com/3001893/120121536-f5a11b80-c19b-11eb-9199-bde4b5348402.png)
+
+In order not to shorten the life of your laser you need to keep the current below c. 15mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
 
 (I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
@@ -186,11 +195,6 @@ Smoke assist is a small air jet blowing air at the focal point of the laser to b
 Air assist is similar but broader jet of air designed to blow smoke away from the lens and mirrors towards the extraction vent, and reduce smoke staining on the material.
 
 TODO: Add further examples and links.
-
-### Water flow indicator/meter
-Water flow is essential to cool the laser tube and prevent failure due to overheating. Whilst it is unlikely that the pump will fail, some people route the tubing through a mechanical and/or electronic flow meter (which can also have a temperature gauge integrated).
-
-TODO: Example pic.
 
 ### Camera
 MeerK40t has the ability to use a camera installed in the lid of your K40 to help you position material in the right place to cut. 
