@@ -183,7 +183,7 @@ My K40 came with casters - which is IMO a pretty dumb thing to do with a piece o
 ### Analogue current meter
 Whilst we are talking about wiring, if you have a K40 with an analogue mA meter then great, but if not you should really consider buying one and wiring it in. 
 
-![image](https://user-images.githubusercontent.com/3001893/120121536-f5a11b80-c19b-11eb-9199-bde4b5348402.png)
+![image](https://user-images.githubusercontent.com/3001893/120121608-47e23c80-c19c-11eb-87b9-186417b41e02.png)
 
 In order not to shorten the life of your laser you need to keep the current below c. 15mA. However, the digital power display on those K40's that have it indicates a theoretical % of total power (the K40 laser is usually a 35W laser despite the name), and this % is extremely misleading as it bears little relationship to the laser power actually generated. Those people who have installed these alongside the digital display say that a power level of 30% on the digital display can reach this maximum current, and that higher levels can **substantially** shorten the life of your laser tube. So, if you don't have a mA meter to tell you the real power, then please do not use your K40 above (say) 30% unless you want to keep shelling out for a new laser tube.
 
