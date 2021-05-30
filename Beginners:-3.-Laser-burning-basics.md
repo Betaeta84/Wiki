@@ -19,8 +19,10 @@ The difference between Vectors and Bitmaps (or Rasters) is not difficult to unde
 
 ## 4 different types of burn
 In essence, there are two basic ways that your K40 can burn
+
 * [Vector burns](#vector-burns)
 * [Raster burns](#raster-burns)
+
 and there are two variants for each of these, giving us four possible burn *Operations*.
 
 ### Vector burns
