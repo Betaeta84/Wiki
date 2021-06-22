@@ -34,7 +34,7 @@ The 8051 processor has 128 bytes of memory. With 30 byte packets this is enough 
 |7|ACTIVE Port Tx||29|-
 |8|CH341, 4, DS#||30|CH341, 22, D7
 |9|CH341, 6, PEMP||31|CH341, 21, D6
-|10|CH341, 27, WT#||32|CH341, 20, D5
+|10|CH341, 27, WAIT#||32|CH341, 20, D5
 |11|CH341, 5, ERR#||33|CH341, 19, D4
 ||
 |12|-||34|CH341, 18, D3
