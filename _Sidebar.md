@@ -3,7 +3,7 @@
 1. [Preparing your K40 laser](./Beginners:-1.-Preparing-your-K40-laser)
 2. [Installing MeerK40t](./Beginners:-2.-Installing-MeerK40t)
 3. [Laser Burning Basics](./Beginners:-3.-Laser-Burning-Basics)
-4. [Understanding the User Interface](./Beginners:-4.-The-User-Interface)
+4. [Understanding the User Interface](./Beginners:-4.-Understanding-the-User-Interface)
 5. [Loading a file to burn](./Beginners:-5.-Loading-an-SVG-file-or-image)
 6. [Setting burn operations](./Beginners:-6.-Setting-burn-operations)
 7. [Aligning your material](./Beginners:-7.-Aligning-your-material)
