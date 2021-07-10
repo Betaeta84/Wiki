@@ -15,7 +15,7 @@ The purpose of the beginners Wiki pages are to help you with the very basics you
 
 The Beginners' Wiki Pages are as follows:
 
-* [Step 1: Safety Matters](./Beginners:-1.-Safety-matters) - **Do not skip this step**
+* [Step 1: Safety matters](./Beginners:-1.-Safety-matters) - **Do not skip this step**
 * [Step 2: Preparing your K40 laser](./Beginners:-2.-Preparing-your-K40-laser)
 * [Step 3: Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
 * [Step 4: Laser Burning Basics](./Beginners:-4.-Laser-burning-basics)
