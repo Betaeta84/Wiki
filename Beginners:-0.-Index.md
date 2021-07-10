@@ -15,17 +15,18 @@ The purpose of the beginners Wiki pages are to help you with the very basics you
 
 The Beginners' Wiki Pages are as follows:
 
-* [Step 1: Preparing your K40 laser](./Beginners:-1.-Preparing-your-K40-laser)
-* [Step 2: Installing MeerK40t](./Beginners:-2.-Installing-MeerK40t)
-* [Step 3: Laser Burning Basics](./Beginners:-3.-Laser-burning-basics)
-* [Step 4: Understanding the User Interface](./Beginners:-4.-The-User-Interface)
-* [Step 5: Loading a file to burn](./Beginners:-5.-Loading-an-SVG-file-or-image)
-* [Step 6: Setting burn operations](./Beginners:-6.-Setting-burn-operations)
-* [Step 7: Aligning your material](./Beginners:-7.-Aligning-your-material)
-* [Step 8: Executing a burn](./Beginners:-8.-Executing-a-burn)
-* [Step 9: Getting more help](./Beginners:-9.-Getting-more-help)
+* [Step 1: Safety Matters](./Beginners:-1.-Safety-matters) - **Do not skip this step**
+* [Step 2: Preparing your K40 laser](./Beginners:-2.-Preparing-your-K40-laser)
+* [Step 3: Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
+* [Step 4: Laser Burning Basics](./Beginners:-4.-Laser-burning-basics)
+* [Step 5: Understanding the User Interface](./Beginners:-5.-The-User-Interface)
+* [Step 6: Loading a file to burn](./Beginners:-6.-Loading-a-file-to-burn)
+* [Step 7: Setting burn operations](./Beginners:-7.-Setting-burn-operations)
+* [Step 8: Aligning your material](./Beginners:-8.-Aligning-your-material)
+* [Step 9: Executing a burn](./Beginners:-9.-Executing-a-burn)
+* [Step 10: Getting more help](./Beginners:-10.-Getting-more-help)
 
-Good luck. Click [here](./Beginners:-1.-Preparing-your-K40-laser) to go to step 1.
+Good luck. Click [here](./Beginners:-1.-Safety-matters) to go to step 1.
 ---
 ### Authors
 The MeerK40t team is grateful for the help from @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
