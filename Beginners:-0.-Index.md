@@ -1,5 +1,7 @@
 Congratulations on joining the elite group of makers and crafters, artists and technicians, who are the owners and operators of the K40 class of laser cutters/engravers. The MeerK40t community welcomes you and wishes you success and fun with your new tool / toy.
 
+What distinguishes the K40 class of laser is their use of a low-cost, low-powered Lhymicro controller board - and the MeerK40t software is specifically designed to drive this type of controller board and to deliver high quality results.
+
 We hope that the MeerK40t software will help you on your journey of learning how to use your K40 to create functional and / or artistic objects, and we hope that these Wiki pages will help you get up to speed with the MeerK40t software as quickly as possible.
 
 ## Gaining help and contributing back
@@ -8,7 +10,7 @@ The MeerK40t software and the Wiki pages are provided without charge and we hope
 ## Artistry and technicality
 Owning and using a K40 laser is (in our experience at least) a combination of both artistry and technicality - and you probably need a bit of both to get the most from your new tool. Assisting you with artistry is perhaps a bit beyond the capability of a Wiki, but we certainly hope to help you with the technicality.
 
-That said, this Wiki is primarily aimed at helping you use the MeerK40t software. Obviously we need to focus our primary efforts on MeerK40t, so whilst we hope to give you some steers about the basics of other aspects of using a K40 you will need to research the details of these other aspects elsewhere on the internet. (But do feel free to enhance the Wiki pages with your new knowledge by adding links etc. to where you found help elsewhere.)
+To get quality burns from a technical stand-point, both the hardware and software need to be setup correctly. Obviously we need to focus our primary efforts on MeerK40t, so this Wiki is primarily aimed at helping you use the MeerK40t software. That said, we do want to give you some steers about the hardware setup of a K40, but you will need to research the details of these other aspects elsewhere on the internet. (But do feel free to enhance the Wiki pages with your new knowledge by adding links etc. to where you found help elsewhere.) 
 
 # The Beginners' Wiki Pages
 The purpose of the beginners Wiki pages are to help you with the very basics you need to know to make your first burn with MeerK40t. They are the first big step on your learning curve - and hopefully the rest of the Wiki will then answer all the questions that you need help with after that.
@@ -16,7 +18,7 @@ The purpose of the beginners Wiki pages are to help you with the very basics you
 The Beginners' Wiki Pages are as follows:
 
 * [Step 1: Safety matters](./Beginners:-1.-Safety-matters) - **Do not skip this step**
-* [Step 2: Preparing your K40 laser](./Beginners:-2.-Preparing-your-K40-laser)
+* [Step 2: Preparing your K40 hardware](./Beginners:-2.-Preparing-your-K40-hardware)
 * [Step 3: Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
 * [Step 4: Laser Burning Basics](./Beginners:-4.-Laser-burning-basics)
 * [Step 5: Understanding the User Interface](./Beginners:-5.-The-User-Interface)
