@@ -13,6 +13,10 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 * [Charring](#charring)
 
 ## Safety matters
+Hopefully you will have already read the [Beginners Wiki page on Safety matters](./Beginners:-1.-Safety-matters) in order to get a basic understanding of the major areas of potential danger to your health when you use your K40.
+
+This section of this Wiki page is designed to give you information on how to check and / or modify your K40 hardware in order to mitigate these risks and so you can use your K40 safely.
+
 The build quality of K40s can be extremely variable, and some of the common issues with a newly unpacked K40 can be dangerous or even deadly.
 
 We cannot provide the answers to all the issues here - but we do want to give you at least a heads up on the things you need to do to stop your K40 from electrocuting you, burning out your eyes, damaging itself or just disappointing you with very poor results.
