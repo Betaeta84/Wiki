@@ -1,7 +1,7 @@
 ### [Introduction](./)
 ### [Beginners Help](./Beginners:-0.-Index)
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
-2. [Preparing your K40 laser](./Beginners:-2.-Preparing-your-K40-laser)
+2. [Preparing your K40 hardware](./Beginners:-2.-Preparing-your-K40-hardware)
 3. [Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
 4. [Laser Burning Basics](./Beginners:-4.-Laser-Burning-Basics)
 5. [Understanding the User Interface](./Beginners:-5.-Understanding-the-User-Interface)
