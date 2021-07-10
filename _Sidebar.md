@@ -3,8 +3,8 @@
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
 2. [Preparing your K40 laser](./Beginners:-2.-Preparing-your-K40-laser)
 3. [Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
-4. [Laser Burning Basics](./Beginners:-3.-Laser-Burning-Basics)
-5. [Understanding the User Interface](./Beginners:-4.-Understanding-the-User-Interface)
+4. [Laser Burning Basics](./Beginners:-4.-Laser-Burning-Basics)
+5. [Understanding the User Interface](./Beginners:-5.-Understanding-the-User-Interface)
 6. [Loading a file to burn](./Beginners:-6.-Loading-a-file-to-burn)
 7. [Setting burn operations](./Beginners:-6.-Setting-burn-operations)
 8. [Aligning your material](./Beginners:-7.-Aligning-your-material)
