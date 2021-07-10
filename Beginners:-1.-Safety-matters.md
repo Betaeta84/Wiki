@@ -2,7 +2,7 @@ Before you start doing **anything** with your K40 Laser, we strongly recommend t
 
 CO2 laser cutting machines can be extremely dangerous to your health if you are not careful. The laser tubes operate on extremely high voltages that can kill you outright. The laser beam can blind you almost instantly if the laser beam is reflected directly into your eye. Fumes from some materials can be highly poisonous.
 
-**BUT if you are careful** about how you commission it, how you maintain it and how you use it, it can be safely used as intended.
+**BUT if you are careful** about understanding the risks, about how you commission and maintain it and how you use it, your K40 can be safely used as intended.
 
 This wiki page has been written to give you a basic understanding of how your K40 could potentially harm you - as forewarned is forearmed.
 
