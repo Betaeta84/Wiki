@@ -28,7 +28,7 @@ Not quite so vital but still important, many people report that their K40 arrive
 However, providing that you ensure that you are careful when poking around in the wiring, and providing that you check that the wiring is safe, you can definitely ensure that your K40 is electrically safe.
 
 ## Protecting your eyes
-The CO2 laser tube in your K40 produces a very narrow laser beam of infra-red light which is normally completely reflected onto the work material by the three mirrors in your K40. However something interrupts this beam and reflects it into your eyes - or even if your material is shiny and reflects a part of the beam into your eye - you can be blinded almost instantly. If you want to see some examples of how short a pulse of laser light is needed to cause major damage, take a look at [this video](https://www.youtube.com/watch?v=-wXApAAh8xA).
+The CO2 laser tube in your K40 produces a very narrow laser beam of infra-red light which is normally completely reflected onto the work material by the three mirrors in your K40. However if something interrupts this beam and reflects it into your eyes - or even if your material is shiny and reflects only a part of the beam into your eye - you can be blinded almost instantly. If you want to see some examples of how short a pulse of laser light is needed to cause major damage, take a look at [this video](https://www.youtube.com/watch?v=-wXApAAh8xA).
 
 During operation the tube also produces non-laser light in other frequencies including ultra-violet which can shine out from the tube in many directions and also reflect off the laser mirrors.
 
@@ -41,10 +41,10 @@ Some materials can produce highly toxic fumes when you burn them with a laser.
 
 The extractor fan supplied with your K40 is generally considered to be inadequate - and the flimsy plastic exhaust tube to be so sub-standard as to be useless/potentially dangerous.
 
-But if you understand the materials you are burning and upgrade your exhaust extraction, your K40 can be used without risk of poisoning yourself (and without obnoxious but non-poisonous smells also).
+But if you understand the materials you are burning and upgrade your exhaust extraction from the poor quality exhaust system supplied with the K40, your K40 can be used without risk of poisoning yourself (and without obnoxious but non-poisonous smells also).
 
 ## Risk of fire
-The whole operation of the K40 is based on creating intense heat on a very small spot. If the laser is moving on to another spot, this is generally not enough to cause a fire, but if for any reason the stepper motors fail to move the laser beam, you can quite easily have a fire.
+The whole operation of the K40 is based on creating intense heat on a very small spot. If the laser is moving on to another spot, this is generally not enough to cause a fire, but if for any reason the stepper motors fail to move the laser beam, you can quite easily start a fire that can then spread to the rest of the building.
 
 But if you check the free movement of your rails, don't leave your machine unattended and have a fire extinguisher to hand, your K40 can be used without risk of a fire burning down your home.
 
