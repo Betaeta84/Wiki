@@ -49,7 +49,7 @@ The whole operation of the K40 is based on creating intense heat on a very small
 But if you check the free movement of your rails, don't leave your machine unattended and have a fire extinguisher to hand, your K40 can be used without risk of a fire burning down your home.
 
 ## Next page
-We hope that this has helped you understand the potential risks of using a CO2 laser like the K40. Now it is time to [prepare your K40 laser](./Beginners:-2.-Preparing-your-K40-laser) to ensure that it is safe to use and to help you get quality results from your usage.
+We hope that this has helped you understand the potential risks of using a CO2 laser like the K40. Now it is time to [prepare your K40 laser](./Beginners:-2.-Preparing-your-K40-hardware) to ensure that it is safe to use and to help you get quality results from your usage.
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
