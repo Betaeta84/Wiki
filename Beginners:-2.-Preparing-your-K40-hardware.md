@@ -227,7 +227,7 @@ TODO: Someone who has done this and who has the experience needs to write this s
 Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material. Damp material or even a thin sheen of water on the surface seems to have little effect on the laser strength but does massively reduce charring and/or flames.
 
 ## Next page
-We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](./Beginners:-2.-Installing-MeerK40t).
+We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](./Beginners:-3.-Installing-MeerK40t).
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
