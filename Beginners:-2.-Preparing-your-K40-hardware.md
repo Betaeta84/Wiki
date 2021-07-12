@@ -179,7 +179,11 @@ There are various ways to mitigate this:
 ### Reflection charring
 When you are cutting, once you have cut through the laser beam can reflect off the bed surface (grill, knife, etc.) back onto the underside of the material and char in those areas that are resting on the grill. This is particularly noticeable when cutting wood.
 
-I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
+I have bought a spray can of Matt Black Stove Paint and intend to paint my bed surface with this to see if it prevents these reflections.
+`Matt` means that it will not reflect laser light, `Black` means it will absorb the laser light instead, `Stove` means that it can survive high temperatures without burning or blistering etc. Doing this will have the added benefit of preventing reflections into your eyes from the laser hitting areas of the bed which are not covered by material.
+
+![image](https://user-images.githubusercontent.com/3001893/124183858-bc1c4280-dab0-11eb-8820-d30a1895927f.png)
+
 
 ## Enhancements
 If you have small solid pieces of material to cut, I suppose it is just about possible to use your K40 with just the addition of a cooling water reservoir, but most people decide to implement some of the following enhancements first.
