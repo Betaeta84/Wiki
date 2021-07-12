@@ -19,7 +19,9 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 * [Risk of fire](#risk-of-fire)
 
 ## Electrical Safety
-The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart - and the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. ***Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.***
+Whilst you may get a nasty shock from the mains voltage in your house (at 240V or 110V), providing that it is a short shock (e.g. where you jerk your hand away - rather than a continuous shock because e.g. you cannot let go of the wire) this is most unlikely to kill you, particularly if you have a Residual Current Circuit Breaker (RCD) in your mains installation.
+
+However, your K40 CO2 laser operates using **an ionising voltage of between 14,000 and 20,000 volts** and this is quite high enough to stop your heart and kill you if you get shocked by it. Furthermore, your K40 power supply has capacitors in it that can retain this high voltage for some hours after you turn it off / disconnect it from the mains, and before these have discharged you can still get a shock from a voltage high enough to kill you. So please be **very, very careful indeed** when you are approaching the high-voltage areas of the K40.
 
 It is also essential that the metal chassis of your K40 is properly earthed so that if the chassis somehow becomes connected to these extremely high voltages, you will not get a lethal shock simply by touching the chassis.
 
@@ -37,7 +39,7 @@ Depending on the strength of your burn and the material you are lasering, your b
 However, providing that you take proper precautions to protect your eyes, your K40 can be used safely without risking your vision.
 
 ## Fumes
-Some materials can produce highly toxic fumes when you burn them with a laser.
+Some materials burn with unpleasant fumes. Other materials can give off genuinely toxic fumes - so you should research your materials to make sure that you know the risks. Either way you do **not** want to be breathing these fumes.
 
 The extractor fan supplied with your K40 is generally considered to be inadequate - and the flimsy plastic exhaust tube to be so sub-standard as to be useless/potentially dangerous.
 
@@ -55,6 +57,13 @@ These risks can be mitigated by:
 * Keep a spray bottle of water to hand to supress small flames that may char your material (and which might grow into a major fire)
 
 With sensible precautions, your K40 can be used without risk of a fire burning down your home.
+
+## Burns
+Whilst being burned by your laser may instinctively seem to be a high risk (or perhaps the highest risk), a laser burn may be painful but is much less likely to create major long-lasting health issues or death. 
+
+Nevertheless, given that the light from your K40's laser tube is invisible infra-red light, you do need to be careful that your clothes or body parts do not interrupt the laser beam.
+
+With basic precautions (like ensuring that the lid is always closed) you should be able to use your K40 without risk of burns.
 
 ## Next page
 We hope that this has helped you understand the potential risks of using a CO2 laser like the K40. Now it is time to [prepare your K40 laser](./Beginners:-2.-Preparing-your-K40-hardware) to ensure that it is safe to use and to help you get quality results from your usage.
