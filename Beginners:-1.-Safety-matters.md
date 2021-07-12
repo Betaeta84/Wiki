@@ -44,9 +44,17 @@ The extractor fan supplied with your K40 is generally considered to be inadequat
 But if you understand the materials you are burning and upgrade your exhaust extraction from the poor quality exhaust system supplied with the K40, your K40 can be used without risk of poisoning yourself (and without obnoxious but non-poisonous smells also).
 
 ## Risk of fire
-The whole operation of the K40 is based on creating intense heat on a very small spot. If the laser is moving on to another spot, this is generally not enough to cause a fire, but if for any reason the stepper motors fail to move the laser beam, you can quite easily start a fire that can then spread to the rest of the building.
+Laser cutting/burning only works because the laser is hot enough to burn or melt/evaporate the material. Usually the exposure to the level of heat to do this is brief enough and local enough not to cause a major fire (though it is common to experience excessive charring from localised flames around the laser beam) - but clearly there is a risk that the material might get too hot and burst into flames. If for any reason your laser head stops moving whilst the laser continues to operate (because something jams or the stepper motors stop working), a fire can easily start which can then spread to the rest of your home. **The risk of fire** from a machine specifically designed to burn things should not be ignored.
 
-But if you check the free movement of your rails, don't leave your machine unattended and have a fire extinguisher to hand, your K40 can be used without risk of a fire burning down your home.
+These risks can be mitigated by:
+
+* Checking the free movement of your rails each time before powering on your K40.
+* Always remaining with your K40 whilst you have a burn in progress
+* Ensuring that your K40 has an Emergency Stop Button / Off switch and regularly test that it is working
+* Have a properly maintained CO2 fire extinguisher close at hand
+* Keep a spray bottle of water to hand to supress small flames that may char your material (and which might grow into a major fire)
+
+With sensible precautions, your K40 can be used without risk of a fire burning down your home.
 
 ## Next page
 We hope that this has helped you understand the potential risks of using a CO2 laser like the K40. Now it is time to [prepare your K40 laser](./Beginners:-2.-Preparing-your-K40-hardware) to ensure that it is safe to use and to help you get quality results from your usage.
