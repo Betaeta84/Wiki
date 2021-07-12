@@ -2,9 +2,9 @@ You can run MeerK40t either from a self contained executables (for Windows 32-bi
 
 Most people tend to run from a self-contained executable if there is one for their platform.
 
-Once you have read and digested this page, the next step in the Beginners' Tutorial is to [understand the MeerK40t user interface](./Beginners:-3.-The-User-Interface).
+Once you have read and digested this page, the next step in the Beginners' Tutorial is to [understand laser burning basics](./Beginners:-4.-Laser-Burning-Basics).
 
-If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, we recommend that you go back a step and read it.
+If you haven't already read the safety issues listed on the [Safety matters](./Beginners:-1.-Safety-matters) and checked the safety related hardware issues listed on the [preparing your K40 hardware](./Beginners:-2.-Preparing-your-K40-hardware) pages, we recommend that you go back and read these.
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
