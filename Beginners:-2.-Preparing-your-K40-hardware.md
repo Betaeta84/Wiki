@@ -30,49 +30,55 @@ We cannot provide the answers to all the issues here - but we do want to give yo
 
 ### Electrical Safety
 #### Laser voltages
-The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart - and the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. ***Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.***
+The CO2 lasers operate on **EXTREMELY** high voltages - voltages that are quite high enough to stop your heart - and the capacitors in the K40 power supply can retain a charge for quite a considerable time after you turn it off / disconnect it from the mains. ***Please exercise a great deal of caution when you are approaching the high voltage parts of the electronics.*** Leave the capacitors to discharge for several hours after you have disconnected your machine from the mains.
 
 #### Wiring connections
 People report that the wiring inside the K40 can be poorly connected - I certainly found several wires not properly tightened when I received mine. So before plugging it in, follow all the wires and ensure that all the terminals are securely tightened.
 
-Don't forget to check the wiring in the fan unit for proper connections.
+Don't forget also to check the wiring inside the fan unit for proper connections.
 
 #### Earthing
 It is **essential** that your K40 is earthed properly - both to avoid accidental electrocution if the metal chassis accidentally becomes connected to the mains or laser voltages, but also because the lifetime of your laser can be shortened considerably if it is not earthed properly.
 
 If you are using the K40 in a country where every plug has a properly grounded earth pin, that is usually quite sufficient as a basis - but if not (and if you have any doubts, get an electrician to check it) then you need to install an earth spike close to your K40 and connect it to the earth connection on the rear.
 
-And you should check that the earth connection on the rear has not been insulated from the chassis by paint - unscrew it, scrape off the paint around the hole and screw it back again.
+But most importantly you should check that the earth connection on the rear has not been insulated from the chassis by paint - unscrew it, scrape off the paint around the hole and screw it back on again. Check with an ohmmeter that the resistance between the chassis and the mains earth pin is 0.0 ohms.
 
 #### High voltage connections
-Please check the high voltage wires to the laser tube carefully - ours were fine, but many people have reported poor quality connections.
+Please check the high voltage wires to the laser tube carefully - ours were fine, but according to the internet many people have reported poor quality connections.
 
 ### Fumes
 The toxicity of the fumes from your K40 will depend on the material you are lasering, but some materials can be really quite toxic, whilst others are just unpleasant. There are few, if any, materials you can laser completely safely and pleasantly without having a means of extracting the fumes to where they can dissipate without you breathing them in.
 
 The supplied extractor fan is generally considered to be inadequate - and because it is fitted to the back of the laser, it creates positive pressure in the exhaust pipe to the outside and any leaks in that pipe will result in fumes entering your workroom. We added a second in-line fan at the far end of the exhaust tube to create negative pressure in the tube and prevent this, and used window/door gap insulating foam tape to fill the largeish gap between the standard fan and the case.
 
-The supplied plastic fume vent is generally considered to be somewhere between utterly useless. Considering an aluminium expanding one is only a few euros/dollars, it is not expensive to use something better.
+The supplied plastic fume vent is generally considered to be utterly useless. Considering an aluminium expanding one is only a few euros/dollars, it is not expensive to use something better.
 
 ### Cooling
 Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. 
 
-Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is **essential** that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), which means that you need to keep your cooling water cool, and because water expands when it freezes you also need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
+Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is important that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), which means that you need to keep your cooling water cool, and because water expands when it freezes you also need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
 
-Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the cooling water exit tube just outside the business end of the laser). I am not quite sure whether it is better to measure the output temperature (showing how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), or indeed how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe, but in the end I decided that this was probably a good enough indicator and didn't need enhancing. I am, however, planning to add a cheap aquarium thermometer with a sucker to my water tank wall in order to have a better indicator of the reservoir temperature.
+Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the **outside** of the cooling water exit tube just outside the business end of the laser). 
+
+I am also not quite sure whether it is better to measure the output temperature (giving an indication of how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), or indeed how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe (personally I doubt that this is really much good at measuring the output water temperature without being adversely affected by the ambient air temperature), but in the end I decided that this was probably a good enough indicator and didn't need enhancing. I am, however, planning to add a cheap aquarium thermometer with a sucker to my water tank wall in order to have a better indicator of the reservoir temperature.
 
 Whilst it is unlikely that the pump will fail, some people route the tubing through a mechanical and/or electronic flow meter (which can also have a temperature gauge integrated).
 
 ![image](https://user-images.githubusercontent.com/3001893/120121463-81667800-c19b-11eb-88e9-d4f3133e334e.png)
 
-It is also essential that the water you use is non-conducting - and that means using deionised water. (We get ours in 5litre bottles from our local LIDL store at c. 70c per bottle. For a tank we use a  40l storage box with two holes drilled in the lid. We live in a warm climate, so freezing is not an issue - for cooling we use ice packs from our domestic freezer. But many people use technology to cool their water. You may also need to add a non-conducting anti-algae chemical to the water.
+It is also essential that the water you use is non-conducting - and that means using deionised water. (We get ours in 5 litre bottles from our local LIDL store at c. 70c per bottle.) For a tank we use a  50l storage box with two holes drilled in the lid. We live in a warm climate, so freezing is not an issue. For cooling we use ice packs from our domestic freezer - but many people invest in technology to cool their water. You may also need to add a non-conducting anti-algae chemical to the water.
 
-Finally, once you have your cooling water system working, you will need to tip your machine to get the air bubbles out of the laser tube - rotating the tube so that the water pipes are entering / leaving the laser at the top can also help avoid bubbles.
+Finally, once you have your cooling water system working, you will need to tip your machine to get the air bubbles out of the laser tube. I also found that rotating the tube so that the water pipes are entering / leaving the laser at the top also helped to avoid bubbles.
 
 ### Protecting your eyes
-Depending on the strength of your burn and the material you are lasering, your burn will create a **bright** spot on the work. Even with the lid down and the "protective" window in the way, this bright spot can **still** damage your eyes. And this is **not** even the laser light itself, just light from the effect it is having on the material it is hitting. You certainly do NOT want to get the laser light itself shining into your eyes - even as a reflection - or to put your body parts in the way of the laser.
+Your K40 should have come with a red-tinted acrylic window in the lid. The acrylic stops the infra-red laser light, and the red-tinting is designed to filter out the other dangerous light frequencies (like ultra-violet) that the laser tube produces in normal (non-laser) radiant light. But this panel is not as dark as e.g. an arc-welding helmet, and is not sufficient to dim the bright light created when the laser burns some materials.
 
-So please, please, get some laser safety specs (suitable for CO2 lasers) and wear them when you are lasering.
+Depending on the strength of your burn and the material you are lasering, your burn will create a **bright** spot on the work. Even with the lid down and the "protective" window in the way, this bright spot can **still** damage your eyes.
+
+This is perhaps the aspect of your K40 that is potentially most hazardous to your health - and the easiest to get careless with when you use your K40 regularly. If you are not sure just how dangerous this can be, please watch [this video](https://www.youtube.com/watch?v=-wXApAAh8xA).
+
+So please, please, ensure that you keep your K40 lid down when burning, and get some laser safety specs (suitable for CO2 lasers) and wear them when you are looking through the window.
 
 ### Lid laser cut-off
 Some people add a protecting microswitch to the laser compartment lid, so that the laser is cut-off if you lift the lid, and that this is particularly pertinent if you have inquisitive children. Clearly if you cut off the laser mid-burn you may not be able to restart it at the appropriate point, and may instead have to start again from the beginning with new material. Personally I (@Sophist-UK) prefer not to have this switch for several reasons: 
@@ -81,10 +87,15 @@ Some people add a protecting microswitch to the laser compartment lid, so that t
 * Taking care for my eyesight, I often wish to lift the lid to see how the burn is progressing and check the quality
 * If I am trying to align material and e.g. want to make a short low-power burst burn with the test switch, it will be both inconvenient and more difficult to see where the laser hits if I have to lower the lid each time.
 
-However, I am careful and so far have not had any safety issues. For your own K40, the choice is yours to make.
+However, I try to be **very** careful and so far have not had any safety issues. For your own K40, the choice is yours to make.
 
 ### Risk of fire
-TODO
+The minimum precautions to take for fire are:
+
+* Stay with your K40 to monitor it for fire when it is working; and
+* Keep a CO2 fire extinguisher close to hand
+
+Some people also fit some sort of fire suppression inside their K40. **To do:** Research and links needed here.
 
 ## Burn quality
 The light as it exits from your laser is a very narrow and very, very straight beam of invisible light. It is reflected off 3 mirrors and goes through a lens to focus it before it hits the material in a tiny spot of concentrated light. There are quite a few things that can cause this to go awry:
@@ -98,11 +109,11 @@ The light as it exits from your laser is a very narrow and very, very straight b
 7. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
-When your K40 arrives, and before you align the mirrors, you should clean the three mirrors and the lens with rubbing alcohol or acetone - when my K40 arrived these were filthy and had obviously never been cleaned. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
+When your K40 arrives, it is quite likely that your mirrors and lenses will be quite dirty - certainly mine were absolutely filthy when it arrived. If you fire up your laser whilst these have dirt on them, the dirt will absorb laser energy where it hits the mirror / lens and can cause burnt spots at a minimum and possibly crack your lenses completely. 
 
-I have seen reports on the internet that dirty lenses can result in the laser heating the mirrors and creating burn spots and even cracking/shattering them.
+So before you align the mirrors, you should clean the three mirrors and the lens with rubbing alcohol or acetone. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
 
-The smoke from your burns can also make them become dirty again quite quickly - cleaning them needs to be a fairly regular activity, though this can be reduced by installing smoke/air assist.
+The smoke from your burns can also make both mirrors and lenses become dirty again quite quickly - cleaning them needs to be a fairly regular activity, though this can be reduced by installing smoke/air assist.
 
 ### Belt tension
 The laser head moves in both X- and Y-directions - and there are two stepper motors and 3 belts to achieve this.
@@ -114,14 +125,12 @@ The three belts and their adjustment access are as follows:
 * Y-belt 2: On the right side of the gantry. Adjusted through a hole in the back of the K40 case below the laser compartment.
 * X-belt: Under the X-axis bar. Turn off the machine and leave it to discharge. Open both the main and electronics lids. Move the X-bar so that it is opposite the hole between the two compartments. You should be able to see the adjustment screw. |
 
-You should tighten the belts so that they thrum when plucked. If in doubt a little more taught is better than too loose.
+You should tighten the belts so that they thrum when plucked. If in doubt a little too tight is better than a little too loose.
 
 ### Laser and Mirror alignment
 The idea is that regardless of where the laser head of your K40 goes to on the bed, the laser light should enter the head in exactly the same position and angle - and to do this you need to have the laser itself and the three mirrors aligned. Once you understand the procedure it is actually not that difficult, but it is an essential part of your laser setup.
 
-TODO: Research and add a link to the best instructions on the internet on aligning the laser / mirrors.
-
-If you are a visual learner, here is a video on youtube: [The Short K40 Laser Alignment Video](https://youtu.be/6Bcgo-CoBAs)
+There are several videos on how to do this on YouTube. One example is: [The Short K40 Laser Alignment Video](https://youtu.be/6Bcgo-CoBAs)
 
 In essence the steps are as follows:
 
@@ -152,14 +161,23 @@ To call the bed that comes with the K40 "useless" would be being kind. It is a f
 Some people have come up with elaborate means of varying the focal distance by mounting the lens in a moveable carrier. (TODO - add a link.) A lot of people use a [variable height bed](#variable-height-bed) to achieve the same thing.
 
 ### Smoke
-The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically string enough or even enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
+The extractor fan(s) will create some air flow across the bed front-to-back, but this is not typically strong enough or laminar enough to consistently and quickly remove smoke from the burn area (where it can disperse the laser beam) and keep it from dirtying your mirrors and lens. 
 
 You should consider installing [smoke assist and / or air assist](#smoke-and-air-assist), and possibly improving the default air flow front-to-back by enlarging the air openings in the front of the lid (or propping the lid slightly open) or even adding additional fans and air ducting inside the lid.
 
 TODO: Summary of options / advice / links on where / how to buy / make the best air/smoke assist. 
 
+### Burn charring
+When you are burning, rather than just burning particles away as tiny cinders, the laser beam can actually cause the material to catch fire where the laser beam is, giving a visible flame (like a candle flame) rather than just a bright spot.
+
+There are various ways to mitigate this:
+
+* Reduce power or increase laser movement speed - reducing the time that the material has to heat and catch light. However since the purpose of lasering is to burn, this is counter-productive.
+* Dampen the material - the laser is still powerful enough to burn where it hits even if it is damp, but the dampness in the surrounding material prevents that from catching light
+* Air-assist - a strong jet of air aimed at the point the laser hits effectively snuffs out the flame.
+
 ### Reflection charring
-When you are cutting, once you have cut through the laser beam can reflect off the bed surface (grill, knife, etc.) back onto the underside of the material and char in those areas that are resting on the grill.
+When you are cutting, once you have cut through the laser beam can reflect off the bed surface (grill, knife, etc.) back onto the underside of the material and char in those areas that are resting on the grill. This is particularly noticeable when cutting wood.
 
 I have bought some spray black stove enamel paint and intend to paint my bed surface with this to see if it prevents these reflections.
 
@@ -194,9 +212,9 @@ In order not to shorten the life of your laser you need to keep the current belo
 (I cannot say for certain whether this was the case for my own K40, but I was running in early days at 80% on the digital display, and I didn't get more than an hour's burn time before the tube failed - I cannot say whether these were related, but I did need to get a replacement laser tube under warranty.)
 
 ### Smoke and Air Assist
-Smoke assist is a small air jet blowing air at the focal point of the laser to blow away smoke and help the laser beam to hit the material cleanly without smoke either reducing the power or blurring and widening the laser spot size.
+Air assist is a small air jet blowing air at the focal point of the laser to blow away smoke and help the laser beam to hit the material cleanly without smoke either reducing the power or blurring and widening the laser spot size. It can also help snuff out any flames that cause charring. Air assist is provided either with a replacement head or a cap that fits over your existing head or a carefully positioned highly directional air jet fitted to the laser head.
 
-Air assist is similar but broader jet of air designed to blow smoke away from the lens and mirrors towards the extraction vent, and reduce smoke staining on the material.
+Smoke assist is similar but broader jet of air designed to blow smoke away from the lens and mirrors towards the extraction vent, and reduce smoke staining on the material. It is typically provided by additional fans fitted to the case (e.g. on the inside of the lid where the vent holes are provided) and / or or with a broader jet of air from a pipe fitted to the laser head.
 
 TODO: Add further examples and links.
 
@@ -206,7 +224,7 @@ MeerK40t has the ability to use a camera installed in the lid of your K40 to hel
 TODO: Someone who has done this and who has the experience needs to write this section.
 
 ## Charring
-Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material. A thin sheen of water seems to have little effect on the laser strength but does massively reduce charring and/or flames.
+Not so much an enhancement, but this seems to be a suitable place to mention that when lasering materials prone to charring - in my case plywood and leather - I have used a spray bottle to spray water onto the surface of the material. Damp material or even a thin sheen of water on the surface seems to have little effect on the laser strength but does massively reduce charring and/or flames.
 
 ## Next page
 We hope that this has helped you prepare your K40 hardware for your first burn. Now it is time to [install MeerK40t](./Beginners:-2.-Installing-MeerK40t).
