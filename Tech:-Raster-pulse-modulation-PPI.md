@@ -13,3 +13,10 @@ It’s kinda a game changer, but I also have a number of other advantages. And I
 Not only that but it actually works for rasters too. I had just done PPI from the vector shapes using PPI to then cycle the fire or not-fire pulses. But, it turns out that if you use the same thing with the rasters you can take the value of the pixel and use that just as easy. And carry the extra pulse data forward. So if it’s a 25% dark section rather than saying that’s actually 0% dark, draw no pixels. It says add 250 to the PPI counter. And when that adds up to more than 1000 fire the pulse. In a 25% dark section, it fires every 4th pulse. But, it can work even in complex data. And can modulate the larger pixel sections even in greyscale. So if the grey is 50% and the step is 4. It should actually do 0101 rather than 1111 or 0000 if the pixel is 80% grey it’ll do 0,1,1,1 (with 200 PPI left over).
 
 This requires more flickering from the laser and consequently can have code sets that can be executed before it reads new data. So even with a full buffer on the software side the controller can start bottoming out and doing a stop and start. Slowing down the raster speed will stall the operations some, and prevent this.
+
+# To Do
+In addition to the description above of how steps and grey-scale pulse modulation combine, it might be helpful to have a description of how the grey-scale pulse modulation and Operation PPI combine, and indeed how all three combine.
+
+---
+### Authors
+The MeerK40t team is grateful for the help from @tatarize in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
