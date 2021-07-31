@@ -31,4 +31,4 @@ The above explanation is unclear how darkness values and Operation property PPIs
 
 ---
 ### Authors
-The MeerK40t team is grateful for the help from @tatarize in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
+The MeerK40t team is grateful for the help from @tatarize and @Sophist in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
