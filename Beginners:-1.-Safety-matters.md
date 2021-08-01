@@ -48,9 +48,14 @@ But if you understand the materials you are burning and upgrade your exhaust ext
 ## Risk of fire
 Laser cutting/burning only works because the laser is hot enough to burn or melt/evaporate the material. Usually the exposure to the level of heat to do this is brief enough and local enough not to cause a major fire (though it is common to experience excessive charring from localised flames around the laser beam) - but clearly there is a risk that the material might get too hot and burst into flames. If for any reason your laser head stops moving whilst the laser continues to operate (because something jams or the stepper motors stop working), a fire can easily start which can then spread to the rest of your home. **The risk of fire** from a machine specifically designed to burn things should not be ignored.
 
+![image](https://user-images.githubusercontent.com/3001893/127776345-35740740-fcf6-4b00-bc83-db9469012b1a.png)
+
 These risks can be mitigated by:
 
-* Checking the free movement of your rails each time before powering on your K40.
+* Checking the free movement of your rails each time before powering on your K40
+* Fitting a fire suppression system inside your K40 (such as the [Blazecut T-series](https://blazecut.com/t-series))
+* Fitting an automated thermal electrical cut-off (see [WikiPedia](https://en.wikipedia.org/wiki/Thermal_cutoff))
+* Fitting a domestic smoke alarm above your K40
 * Always remaining with your K40 whilst you have a burn in progress
 * Ensuring that your K40 has an Emergency Stop Button / Off switch and regularly test that it is working
 * Have a properly maintained CO2 fire extinguisher close at hand
