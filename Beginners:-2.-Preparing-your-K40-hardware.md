@@ -57,21 +57,45 @@ The supplied plastic fume vent is generally considered to be utterly useless. Co
 The metal duct which goes from the back panel through to the bed area is generally considered to be less than optimal. It extends past the back edge of the gantry frame and can prevent you inserting materials which are the full depth of the gantry (even though the rear most part of this area is not reachable by the laser. Some people recommend removing this duct altogether in order to improve air-flow, but this the improved volume of air moved can be offset by air travelling around the sides of the gantry rather than across the laser bed. An alternative is to cut this back so that it does not protrude past the back edge of the gantry.
 
 ### Cooling
-Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. 
+Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. To avoid significantly shortening the lifespan of your laser tube, it is important that you keep your laser tube below 25°C during use (generally recommended between 5°C and 20°C), so whilst this section is not really a safety related item, creating a water reservoir and deciding how you will keep the water within the above temperature range is an essential part of commissioning your K40. 
 
-Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. It is important that you keep your laser tube reasonably cool during use (generally recommended between 5C and 20C), which means that you need to keep your cooling water cool, and because water expands when it freezes you also need to ensure that the water in your laser tube doesn't freeze or it will crack the glass.
+For a reservoir, I used a 50 litre plastic storage box like this:
 
-Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the **outside** of the cooling water exit tube just outside the business end of the laser). 
+![image](https://user-images.githubusercontent.com/3001893/127775469-04944050-076a-4864-a1d8-904f013b60e9.png)
 
-I am also not quite sure whether it is better to measure the output temperature (giving an indication of how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), or indeed how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe (personally I doubt that this is really much good at measuring the output water temperature without being adversely affected by the ambient air temperature), but in the end I decided that this was probably a good enough indicator and didn't need enhancing. I am, however, planning to add a cheap aquarium thermometer with a sucker to my water tank wall in order to have a better indicator of the reservoir temperature.
+I drilled two holes in one end of the lid for pipes to go through, with rubber washers on either side to form some sort of seal, and attached the pump to the inlet pipe and fitted heavy galvanised washers to the other (held on by more rubber washers) to weight the outlet and keep it under water and prevent air returning up the pipe when the pump was off.
+
+It is also essential that the water you use is non-conducting. The easiest way to achieve this is to use deionised water, (we get ours in 5 litre bottles from our local LIDL store at c. 0.70€ per bottle), but if your tap water is sufficiently soft or softened (and you may need to have the conductivity tested) that may also be suitable. You may need to add a non-conducting anti-algae chemical to the water.
+
+If you are located in a climate where you may find it difficult to keep the water temperature below 20°C-25°C, then you will need some form of cooling. For cooling we use ice packs from our domestic freezer - but many people invest in technology to cool their water. Here is a non-exhaustive list of possible solutions:
+
+* Add frozen water bottles to the bucket.
+* If your tap water is sufficiently soft and pure, run tap water into the bucket with an overflow to drain.
+* Re-purpose an office water-bottle style cooler.
+* Re-purpose a miniature refrigerator.
+* Use Peltier/electrothermal panels.
+* Use a computer CPU water-cooling radiator
+* Use a CW-3000 or CW-5200 “water chiller”.
+* Use an aquarium water chiller.
+* Scavenge a used window air conditioner.
+
+Because water expands when it freezes, if you live in a colder climate you also need to ensure that the water in your laser tube doesn't freeze or it will crack the glass. You can add non-conducting anti-freeze to the water reservoir, or drain the water out of your tube when there is any risk of freezing.
+
+Having a means of measuring the water temperature is useful to check that it is not going over 25°C. Our K40 came with a digital temperature display on the main panel (using a thermistor taped to the **outside** of the cooling water exit tube just outside the business end of the laser). 
+
+I am also not quite sure whether it is better to measure the output temperature (giving an indication of how hot it was in the laser tube) or the input temperature (which shows whether your cooling water is already too hot to be able to cool the laser enough), but in the end decided that output temperature was the one to watch. I was also unsure just how accurate the temperature measurement is when the thermistor is simply taped to the **outside** of the pipe - personally I doubt that this is really much good at measuring the output water temperature without being adversely affected by the ambient air temperature. 
+
+For some months I decided that an external thermistor taped to the outlet pipe was sufficient, however I subsequently decided to 3D print [this inline thermistor housing](https://www.thingiverse.com/thing:4565279), and found that this gave a significantly more accurate reading. 
+
+![image](https://user-images.githubusercontent.com/3001893/127776127-7d0c0c64-3fc9-4cb6-96b3-4c5d60a6889b.png)
+
+Another alternative I considered was a cheap aquarium thermometer with a sucker to stick it to the side of my water tank wall in order to have a better indicator of the reservoir temperature.
 
 Whilst it is unlikely that the pump will fail, some people route the tubing through a mechanical and/or electronic flow meter (which can also have a temperature gauge integrated).
 
 ![image](https://user-images.githubusercontent.com/3001893/120121463-81667800-c19b-11eb-88e9-d4f3133e334e.png)
 
-It is also essential that the water you use is non-conducting - and that means using deionised water. (We get ours in 5 litre bottles from our local LIDL store at c. 70c per bottle.) For a tank we use a  50l storage box with two holes drilled in the lid. We live in a warm climate, so freezing is not an issue. For cooling we use ice packs from our domestic freezer - but many people invest in technology to cool their water. You may also need to add a non-conducting anti-algae chemical to the water.
-
-Finally, once you have your cooling water system working, you will need to tip your machine to get the air bubbles out of the laser tube. I also found that rotating the tube so that the water pipes are entering / leaving the laser at the top also helped to avoid bubbles.
+Finally, once you have your cooling water system working, you will need to tip your machine to get the air bubbles out of the laser tube. I also found that rotating the tube (before mirror alignment) so that the water pipes are entering / leaving the laser at the top also helped to avoid bubbles.
 
 ### Protecting your eyes
 Your K40 should have come with a red-tinted acrylic window in the lid. The acrylic stops the infra-red laser light, and the red-tinting is designed to filter out the other dangerous light frequencies (like ultra-violet) that the laser tube produces in normal (non-laser) radiant light. But this panel is not as dark as e.g. an arc-welding helmet, and is not sufficient to dim the bright light created when the laser burns some materials.
