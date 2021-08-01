@@ -102,14 +102,15 @@ Some people also fit some sort of fire suppression inside their K40. **To do:** 
 ## Burn quality
 The light as it exits from your laser is a very narrow and very, very straight beam of invisible light. It is reflected off 3 mirrors and goes through a lens to focus it before it hits the material in a tiny spot of concentrated light. There are quite a few things that can cause this to go awry:
 
-1. [Mirror/lens cleanliness](#mirror-lens-cleanliness)
+1. [Mirror/lens cleanliness](#mirrorlens-cleanliness)
 2. [Belt tension](#belt-tension)
 3. [Gantry & Bed Alignment](#gantry--bed-alignment)
 4. [Laser and Mirror alignment](#laser-and-mirror-alignment)
 5. [Lens orientation](#lens-orientation)
 6. [Focus](#focus)
 7. [Smoke](#smoke)
-8. [Reflection charring](#reflection-charring)
+8. [Burn charring](#burn-charring)
+9. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
 When your K40 arrives, it is quite likely that your mirrors and lenses will be quite dirty - certainly mine were absolutely filthy when it arrived. If you fire up your laser whilst these have dirt on them, the dirt will absorb laser energy where it hits the mirror / lens and can cause burnt spots at a minimum and possibly crack your lenses completely. 
