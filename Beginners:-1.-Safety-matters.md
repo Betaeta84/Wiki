@@ -53,7 +53,7 @@ Laser cutting/burning only works because the laser is hot enough to burn or melt
 These risks can be mitigated by:
 
 * Checking the free movement of your rails each time before powering on your K40
-* Fitting a fire suppression system inside your K40 (such as the [Blazecut T-series](https://blazecut.com/t-series))
+* Fitting a fire suppression system inside your K40 (such as the [Kordo strips](https://www.amazon.com/dp/B086LKHCC4))
 * Fitting an automated thermal electrical cut-off (see [WikiPedia](https://en.wikipedia.org/wiki/Thermal_cutoff))
 * Fitting a domestic smoke alarm above your K40
 * Always remaining with your K40 whilst you have a burn in progress
