@@ -7,7 +7,7 @@ If you haven't read the earlier pages we recommend that you return to the [Begin
 ## Contents
 * [Introduction](#Introduction)
 * [Menus](#Menus)
-* [Panes & Windows](#Panes--Tools-Menus)
+* [Panes & Windows](#Panes--Tools-Menus--Ribbon)
 * 
 
 ## Introduction
@@ -131,6 +131,7 @@ As you can see from the above screenshot without a project loaded, the Tree has 
 * Operations - Elements are classified into burn Operations, and the Operations and the elements they contain are shown here. Elements can be contained in zero, one or many Operations.
 
 When you have a file loaded, the tree (when fully expanded) looks more like this:
+
 ![image](https://user-images.githubusercontent.com/3001893/127768240-6317b2b9-6094-46e7-8604-c6e1478420ac.png)
 
 When you click on items in the Tree, the equivalent elements will be selected in the "scene".
