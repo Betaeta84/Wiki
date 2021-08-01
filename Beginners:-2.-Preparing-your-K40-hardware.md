@@ -54,6 +54,8 @@ The supplied extractor fan is generally considered to be inadequate - and becaus
 
 The supplied plastic fume vent is generally considered to be utterly useless. Considering an aluminium expanding one is only a few euros/dollars, it is not expensive to use something better.
 
+The metal duct which goes from the back panel through to the bed area is generally considered to be less than optimal. It extends past the back edge of the gantry frame and can prevent you inserting materials which are the full depth of the gantry (even though the rear most part of this area is not reachable by the laser. Some people recommend removing this duct altogether in order to improve air-flow, but this the improved volume of air moved can be offset by air travelling around the sides of the gantry rather than across the laser bed. An alternative is to cut this back so that it does not protrude past the back edge of the gantry.
+
 ### Cooling
 Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. 
 
@@ -102,11 +104,12 @@ The light as it exits from your laser is a very narrow and very, very straight b
 
 1. [Mirror/lens cleanliness](#mirror-lens-cleanliness)
 2. [Belt tension](#belt-tension)
-3. [Laser and Mirror alignment](#laser-and-mirror-alignment)
-4. [Lens orientation](#lens-orientation)
-5. [Focus](#focus)
-6. [Smoke](#smoke)
-7. [Reflection charring](#reflection-charring)
+3. [Gantry & Bed Alignment](#gantry--bed-alignment)
+4. [Laser and Mirror alignment](#laser-and-mirror-alignment)
+5. [Lens orientation](#lens-orientation)
+6. [Focus](#focus)
+7. [Smoke](#smoke)
+8. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
 When your K40 arrives, it is quite likely that your mirrors and lenses will be quite dirty - certainly mine were absolutely filthy when it arrived. If you fire up your laser whilst these have dirt on them, the dirt will absorb laser energy where it hits the mirror / lens and can cause burnt spots at a minimum and possibly crack your lenses completely. 
@@ -127,8 +130,18 @@ The three belts and their adjustment access are as follows:
 
 You should tighten the belts so that they thrum when plucked. If in doubt a little too tight is better than a little too loose.
 
+### Gantry & Bed Alignment
+Accurate lasering requires the gantry to be square by which we mean:
+* Gantry frame having 90° angles between all 4 sides
+* X-gantry being square to the sides / parallel to the front/back rails - you may need to adjust the angle of the belt cams on the left/right belts to ensure this is the case
+* Laser head is at right angles to the x-gantry / mirror at exactly 45° so laser beam is exactly vertical (in both x & y directions)
+
+In addition the bed needs to be flat with relation to the gantry frame i.e. so that the distance between the laser head and the bed is the same at all points left-right and front-back.
+
 ### Laser and Mirror alignment
 The idea is that regardless of where the laser head of your K40 goes to on the bed, the laser light should enter the head in exactly the same position and angle - and to do this you need to have the laser itself and the three mirrors aligned. Once you understand the procedure it is actually not that difficult, but it is an essential part of your laser setup.
+
+Before you attempt to align laser & mirrors, you should undertake any activities which require you to remove the gantry from the case e.g. internal duct cutting, gantry alignment, belt tensioning because if you remove the gantry from the case you will need to realign the mirrors again.
 
 There are several videos on how to do this on YouTube. One example is: [The Short K40 Laser Alignment Video](https://youtu.be/6Bcgo-CoBAs)
 
