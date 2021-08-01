@@ -8,7 +8,7 @@ Meerk40t is a replacement for both the software supplied with the K40 and the K4
 
 So what makes MeerK40t different from the alternatives:
 
-#### Paths and images
+### Paths and images
 MeerK40t supports 4 types of burn operation:
 * Vector cuts / vector engraving - essentially the same, with the laser following the vector path, and differing only on the strength of the burn
 * Vector raster - burning all points inside a (closed) vector path
@@ -16,7 +16,7 @@ MeerK40t supports 4 types of burn operation:
 
 MeerK40t aims to fully support the SVG 1.1 standard (including specific extensions for the major editors where that makes sense).
 
-#### Power Control
+### Power Control
 With a K40, you can set the power of the laser when it is on from the front panel, but the controller board is only able to turn the laser on and off.
 
 Fortunately the controller can turn the laser on and off very fast indeed. In fact it can do this 1,000x per inch (or c. 400 per cm) which is enough to turn it on and off a couple of times in the width of the laser beam itself!!
@@ -27,13 +27,13 @@ MeerK40t uses this capability to vary the strength of the laser, either:
 
 Technical details of this [Pulse Modulation feature](./Tech:-Raster-pulse-modulation-PPI) can be found [here](./Tech:-Raster-pulse-modulation-PPI).
 
-#### Accuracy
+### Accuracy
 MeerK40t uses a special set of [Zingl-Bresham curve-plotting algorithms](./Tech:-Zingl-Bresenham-Curve-Plotting) to perfectly plot shapes. If your SVG has elliptical-arcs or Bezier-curves, by calculating these as curves rather than approximating them with many short straight lines, they will be plotted perfectly to the nearest 1/1000".
 
-#### Choice of Drivers
+### Choice of Drivers
 The MeerK40t driver interface uses either the LibUsb driver or the CH341DLL default windows driver. This means that MeerK40t can run alongside other laser software that uses either of these drivers.
 
-#### Command Line
+### Command Line
 MeerK40t has a comprehensive [command line interface](./Help:-Command-Line-Interface). If you want to integrate your K40 into an automated workflow or just prefer to use the command line, you should be able to execute most projects without using the GUI.
 
 MeerK40t also has an internal [Console command line](./Help:-Console-Commands) where more advanced functionality can be executed than available through the GUI.
