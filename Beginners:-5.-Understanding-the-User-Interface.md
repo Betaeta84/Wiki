@@ -83,30 +83,19 @@ Panes can be placed in the left, right, top or bottom Pane Bars, or be floating.
 The Ribbon is a specialised Pane, but there are also individual Toolbar Panes equivalent to each of the Toolbars in the Ribbon.
 
 The list of Panes & Windows is as follows:
-|Content|Pane|Window|Ribbon|
-|-|-|-|-|
-|[Tree](#Tree)|x| | |
-|[Navigation](#Navigation)|x|x|x|
-|[Position](#Position)|x| | |
-|[Ribbon](#Ribbon)|x| | |
-|[Toolbars](#Ribbon-Toolbars)|x| |x|
-|[Stop](#Stop-Pause-Home)|x| |x|
-|[Pause](#Stop-Pause-Home)(|x| |x|
-|[Home](#Stop-Pause-Home)|x| | |
-|[Notes](#Notes)|x|x|x|
-|[Spooler](#Spooler)|x|x|x|
-|[Console](#Console)|x|x|x|
-|[Devices](#Devices)|x|x|x|
-|[Camera](#Camera)|x|x|x|
-|[Execute Job](#Execute-Job)| |x|x|
-|[Simulate](#Simulate)| |x|x|
-|[RasterWizard](#Raster-Wizard)| |x|x|
-|[Controller](#Controller)||x|x|
-|[Config](#Config)||x|x|
-|[Settings](#Settings)||x|x|
-|[Keymap](#Keymap)||x|x|
-|[Rotary](#Rotary)||x|x|
-|[USB](#USB)||x||
+|Content|Pane|Window|Ribbon||Content|Pane|Window|Ribbon|
+|-|-|-|-|-|-|-|-|-|
+|[Tree](#Tree)|x| | ||[Devices](#Devices)|x|x|x|
+|[Navigation](#Navigation)|x|x|x||[Camera](#Camera)|x|x|x|
+|[Position](#Position)|x| | ||[Execute Job](#Execute-Job)| |x|x|
+|[Ribbon](#Ribbon)|x| | ||[Simulate](#Simulate)| |x|x|
+|[Toolbars](#Ribbon-Toolbars)|x| |x||[RasterWizard](#Raster-Wizard)| |x|x|
+|[Stop](#Stop-Pause-Home)|x| |x||[Controller](#Controller)||x|x|
+|[Pause](#Stop-Pause-Home)|x| |x||[Config](#Config)||x|x|
+|[Home](#Stop-Pause-Home)|x| | ||[Settings](#Settings)||x|x|
+|[Notes](#Notes)|x|x|x||[Keymap](#Keymap)||x|x|
+|[Spooler](#Spooler)|x|x|x||[Rotary](#Rotary)||x|x|
+|[Console](#Console)|x|x|x||[USB](#USB)||x||
 
 Each of the above functions is depicted and **very** briefly described in the [Functions](#Functions) sections below, the intention being to give you just sufficient information to get you started. Full, exhaustive detail is provided (or will be once it is written) in a Detailed Manual page.
 
@@ -134,6 +123,7 @@ If you would like to have MeerK40t in your native language or to contribute back
 ## Functions
 ### Tree
 ![image](https://user-images.githubusercontent.com/3001893/127768117-9b382747-85dd-47f1-833b-8318712d35fd.png)
+
 The **Tree** Pane is a vital pane when using MeerK40t interactively using the GUI - many of the burn controls you need are only available using the GUI from here, so it is unlikely that you would want to close this pane.
 
 As you can see from the above screenshot without a project loaded, the Tree has two main branches:
@@ -148,8 +138,6 @@ When you click on items in the Tree, the equivalent elements will be selected in
 There are many actions you can take by right clicking on either an item in the tree or on the selected item in the "scene" - the actions available to you will depend upon the type of the item you are right clicking against.
 
 ### Navigation
-
-
 
 ### Position
 ### Ribbon
