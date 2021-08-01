@@ -27,10 +27,10 @@ This screenshot was taken on Windows, but it should look pretty similar on other
 The Menu bar has the following menus:
 1. [File](#File-Menu) - Load & save files, exit MeerK40t
 2. [View](#View-Menu) - Control what is shown in the "scene"
-3. [Pane](#Panes--Tools-Menus) - Control what panes are shown as standard, unlock panes so you can move them around.
-4. [Tools](#Panes--Tools-Menus) - Open windows
+3. [Pane](#Panes--Tools-Menus--Ribbon) - Control what panes are shown as standard, unlock panes so you can move them around.
+4. [Tools](#Panes--Tools-Menus--Ribbon) - Open windows
 5. [Help](#Help-Menu) - Access various help and support web sites
-6. [Languages](#Languages) - Set the language you want to view the MeerK40t interface in.
+6. [Languages](#Languages-Menu) - Set the language you want to view the MeerK40t interface in.
 
 ### File Menu
 ![image](https://user-images.githubusercontent.com/3001893/127753386-5306bcd9-32ec-40d6-b646-5b275c0433f2.png)
@@ -111,7 +111,7 @@ The Help menu mainly provides browser links to a variety of different web resour
 * Makers Forum - A link to the [MeerK40t category on the Makers Forum](https://forum.makerforums.info/c/k40/meerk40t/120), a bulletin board for various types of craft technology including lasers, K40 lasers and software for K40 lasers. Another place to ask questions of other MeerK40t users.
 * IRC - A link to a web-based IRC client which will take you to the [#MeerK40t channel on the Libera.Chat IRC network](irc://irc.libera.chat:6665/#meerk40t), and where the MeerK40t developers and expert users hang out. If you cannot find help elsewhere, please drop by and ask for help here.
 
-### Languages
+### Languages Menu
 ![image](https://user-images.githubusercontent.com/3001893/127769144-e74c5205-51d6-43d3-ab87-4acbd0ccc930.png)
 
 This menu allows you to select a language that MeerK40t menus, etc. will be displayed in. MeerK40t is developed in English, but is fully enabled for other languages as and when translation files are provided for it.
