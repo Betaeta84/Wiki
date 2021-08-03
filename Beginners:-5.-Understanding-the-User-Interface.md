@@ -99,6 +99,10 @@ The list of Panes & Windows is as follows:
 
 Each of the above functions is depicted and **very** briefly described in the [Functions](#Functions) sections below, the intention being to give you just sufficient information to get you started. Full, exhaustive detail is provided (or will be once it is written) in a Detailed Manual page.
 
+I have a reasonable size display - so this is the layout I use...
+
+![image](https://user-images.githubusercontent.com/3001893/128029043-ff8d2ebe-b79f-4c4b-b5a4-8b5308875756.png)
+
 ### Help Menu
 ![image](https://user-images.githubusercontent.com/3001893/127768528-49451473-472b-4ba5-8151-8c427af0ca1a.png)
 
@@ -116,7 +120,7 @@ The Help menu mainly provides browser links to a variety of different web resour
 
 This menu allows you to select a language that MeerK40t menus, etc. will be displayed in. MeerK40t is developed in English, but is fully enabled for other languages as and when translation files are provided for it.
 
-The developers do **NOT** speak languages other than English, so it is up to users of MeerK40t to provide the text for other languages - but if you do so, then the developers will certainly include the translations in the next release.
+The developers do **NOT** speak languages other than English, so it is up to users of MeerK40t to provide the text for other languages - but if you do so, then the developers will certainly include the translations in the next release. Don't worry if the language you want to provide is not in the existing list - it can be added as soon as we have the translation files.
 
 If you would like to have MeerK40t in your native language or to contribute back as a thank you for the benefits you get from this free software, [instructions can be found here](./Tech:-Foreign-Language-Translations).
 
@@ -139,16 +143,35 @@ When you click on items in the Tree, the equivalent elements will be selected in
 There are many actions you can take by right clicking on either an item in the tree or on the selected item in the "scene" - the actions available to you will depend upon the type of the item you are right clicking against.
 
 ### Navigation
+![image](https://user-images.githubusercontent.com/3001893/128026103-cb3237d5-2a54-42f0-9a76-c115025b38f9.png) Panes
+
+![image](https://user-images.githubusercontent.com/3001893/128033291-9b66a376-59db-4745-9776-8bac05b996eb.png) Window
 
 ### Position
-### Ribbon
-### Toolbars
-### Stop
-### Pause
-### Home
+![image](https://user-images.githubusercontent.com/3001893/128028836-ebf3bd3b-d803-4967-8685-c056b337cfba.png) Pane
+
+### Ribbon & Toolbars
+![image](https://user-images.githubusercontent.com/3001893/128029362-f3bf532b-11ba-4f6b-a913-14171b9e2950.png) Ribbon Pane 
+
+![image](https://user-images.githubusercontent.com/3001893/128031827-f22de740-09e5-4fd7-a48d-7bec1d4f0f0d.png) Separate Panes 
+
+### Stop, Pause & Home
+![image](https://user-images.githubusercontent.com/3001893/128032119-8157c9e3-6b12-48b7-8a02-9e8d83bfb07e.png) Panes 
+
 ### Notes
+![image](https://user-images.githubusercontent.com/3001893/128032412-a91e645d-297d-447c-8520-b6f2fac4fd48.png) Pane
+
+![image](https://user-images.githubusercontent.com/3001893/128033871-40144341-1cf6-437a-958c-83eef1202fec.png) Window
+
 ### Spooler
+![image](https://user-images.githubusercontent.com/3001893/128034331-044f6d47-06de-4e4e-9359-3c9544569318.png) Pane
+
+![image](https://user-images.githubusercontent.com/3001893/128034488-2aab420e-f395-4782-8f93-79949df13d6f.png) Window
+
 ### Console
+
+
+
 ### Devices
 ### Camera
 ### Execute Job
