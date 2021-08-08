@@ -11,8 +11,8 @@ Each object within a project is classified in a two phase process. If an object 
 ### Fallback Phase
 The fallback phase is designed to handle any classifications above when an existing Operation to match does not exist - the objective being to ensure that all elements with either stroke or fill are added to at least one operation.
 1. Shapes with stroke colors will be added to a new Cut/Engrave operation that exactly matches that color.
-- If the stroke color is reddish, the created operation will be a Cut.
-- If the stroke color is *anything else*, the created operation will be an Engrave. If the stroke color is white, the created Engrave operation will be disabled.
+    - If the stroke color is reddish, the created operation will be a Cut.
+    - If the stroke color is *anything else*, the created operation will be an Engrave. If the stroke color is white, the created Engrave operation will be disabled.
 2. Shapes with fill (with opacity > 0) and shapes with a black stroke and no fill and text objects will be added to a new Black Raster operation.
 3. Dot objects will be added to a newly created Black Dot operation.
 4. Images will be added to a new Image Operation.
