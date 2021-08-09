@@ -1,3 +1,68 @@
+* [New proposal](#new-proposal)
+* [Existing proposal](#existing-proposal)
+
+# New proposal
+Each element within a project is classified into at least one Operation. We iterate through each element in the project and (with the exception of Shapes with no stroke and no fill) we ensure that all elements are classified into at least one operation, creating new operations as we undertake the classification.
+
+### Rules
+1. If the element is a Dot (a path with either M followed by Z or M followed by a zero length segment of any type) we treat it as a special case and not as a normal Shape, regardless of stroke and fill. Dots will be added to the first Dot operation, and one will be created if necessary.
+2. If the element is a Shape (but not a Dot) with no stroke and no fill, it is **not** classified.
+3. If the element is a Shape with no stroke but fill, we use the fill colour as the stroke colour.
+4. Shapes and Text elements are allocated first to Cut/Engrave/Raster Operations of the exact same colour that exist at the start of the classify. If this happens, then the following rules do not apply. The intent here is to respect change from one operation type to another for a specific colour previously made by the user.
+5. Shapes which have Black strokes and not classified under 4. will be treated as Raster objects and allocated to all existing Raster operations or to a new single Raster operation.
+6. Shapes which have Reddish strokes and not classified under 4. will be created as new Cut operations.
+7. Shapes which are neither Reddish nor Black and not classified under 4. will be created as Engrave operations.
+8. Shapes with fill which are not Black and not classified under 4. will be additionally be allocated to all Raster operations or to a new single Raster operation.
+9. Text elements not classified under 4. will be allocated to all existing Raster operations or to a new single Raster operation.
+9. A new Dot, Raster or Image operation will only be created if no operation of this type already exists.
+
+## Algorithm
+1. We iterate through the operations and look for the following matches:
+    1. Object is an SVGImage and the operation is *the first* Image operation - we add the object to the operation. We do not consider any further operations.
+    2. Object is a Dot and the operation is a Dot - we add the object to the operation. We do not consider any further operations.
+    3. Object is a Shape and the operation is an *existing* Cut/Engrave which exactly matches the element colour - we add the object to the operation.
+    4. Object is a Shape and the operation is an *existing* Raster operation which exactly matches the element colour - we add the object to the operation. This is done regardless of whether the Shape has a fill or not.
+    5. Object is a Text object and the operation is an *existing* Raster operation which exactly matches the element colour - we add the object to the operation.
+
+    Note 1: We test for whether the operation was existing at the start of the classification by maintaining a running list of new Cut/Engrave and Raster operations we have created during the classification, and an operation is only an *existing* one if it is not in these lists.
+
+    Note 2: As we iterate we create a list of Raster operations for use in step 3. below.
+
+    If the element was added to any operation in the above, we move to the next element.
+
+2. If element is Dot or Image, then create a Dot or Image operation, add the element to it and move to the next element.
+   1. If the object is a Dot, we create a Dot operation as the first operation in the list.
+   2. If the object is an Image, we add an Image operation after the last Dot operation in the list or at the beginning of the list if there is not a Dot operation.
+
+3. Element is a Shape with stroke except Black, iterate through the new Cut/Engrave operations. If the operation is a Cut/Engrave which exactly matches the element colour, add the element to the operation (there should only be one of these). If there are no matching operations, add a new operation as follows:
+   1. If the object is a Shape with Reddish stroke, we add a Cut operation of this colour.
+   2. If the object is a Shape with stroke except Redish or Black, we add an Engrave operation of this colour. If the colour is white we set this operation to Disabled.
+   Note: We maintain a list of these new Cut/Engrave operations for use in step 1. and this here.
+
+4. Element is a Shape with fill, or if the object is a Shape with a Black stroke, or if the object is a Text object, then:
+   1. If there are no Raster operations, add a Raster operation of colour Black and add the element to it.
+   2. Otherwise, iterate through the existing Raster operations and add the object to each Raster operation.
+   Note: We maintain a list of this new Raster operation for use in this step 1.
+
+### Priority
+The ideal priority of operations is as follows:
+
+1. Dot
+2. Image
+3. Raster
+4. Engrave
+5. Cut
+
+However:
+* the order of existing operations will be preserved (in case the user has manually sequenced the operations)
+* new operations of the same type as an existing operation will be inserted immediately after the last existing operation of that type in order to group similar operations together
+* new Dot, Image and Raster operations (which are only created by classify if an existing operation of this type doesn't already exist) will be inserted at the beginning of the list but respecting the above sequence
+
+Note: Sequencing functionality will be added as a separate PR once the proposed classification algorithm has been created.
+
+Cutcode, Lasercode, CommandOperations and other non-typical Operations are unranked and ignored. If no ranked operations exist, the newly created operation is appended to the end of the operation list.
+
+# Previous proposal
 Each object within a project is classified in a two phase process. If an object does not classify into the current operations these will be dealt with in the fallback phase. Classification color is based on stroke-color information *only*. The color of the fill does not matter, only whether a fill exists or does not exist. This is because stroke color has no effect on vector operations (Cut/Engrave). Fill has a direct impact on the rastering of that object.
 
 ### Prohibitions
