@@ -1,9 +1,11 @@
-* [New question](#new-question)
+* [New questions](#new-questions)
 * [New proposal](#new-proposal)
 * [Existing proposal](#existing-proposal)
 
-# New question
-Before we can finalise this, a new set of questions need answering relating to transparency values as part of the element and / or operation colours.
+# New questions
+Before we can finalise this, a couple of new (sets of) questions need answering.
+
+### Transparency 
 
 * The colour picker in Operation Properties does not allow you to create an Operation colour with anything other than 0% transparency.
 * Colours in elements can have non-zero transparency.
@@ -13,6 +15,10 @@ Questions:
 2. How should we handle transparency in colour comparisons between elements and operations? I think we should only compare RGB and not transparency.
 3. What does transparency in fill do during Raster? I would hope that it adjusts the PPI in addition to the fill colour.
 4. What does transparency in stroke do during Cut / Engrave? My vote is to use this for PPI (enabled by default but with an Operation Properties Advanced option to disable it).
+
+### Alternative non-fill / fill rastering special cases
+1. Non-fill - I assume we raster a black Shape with no fill as if it has black fill. Does this make sense, or should we use this as a way of rastering a path rather than engraving it or creating two paths with a fill between?
+2. Fill - If we have a stroke and fill of the same colour, the proposed algorithm below classifies the element to both Cut/Engrave and Raster operations. I propose that if the stroke and colour fills are the same then we only classify it to a Raster operation, and if the user wants it classified to both Cut/Engrave and Raster, then they need to change the stroke colour.
 
 # New proposal
 Each element within a project (with the exception of Shapes with no stroke and no fill) is classified into at least one Operation. We iterate through each element in the project and we ensure that all elements are classified into at least one operation, creating new operations as needed as we iterate through these elements.
