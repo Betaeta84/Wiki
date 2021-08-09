@@ -17,7 +17,7 @@ Questions:
 4. What does transparency in stroke do during Cut / Engrave? At the moment, I don't think this makes a difference, however my vote would be to use this for PPI (enabled by default but with an Operation Properties Advanced option to disable it).
 
 ### Alternative non-fill / fill rastering special cases
-1. Non-fill - I assume we raster a black Shape with no fill as if it has black fill. Does this make sense, or should we use this as a way of rastering a path rather than engraving it or creating two paths with a fill between?
+1. Non-fill - I assume we raster a black Shape with no fill as if it has black fill. Does this make sense, or should we use this as a way of rastering a path rather than engraving it (by rastering the stroke and not rastering the non-existent fill) or making the user create two paths with a fill between?
 2. Fill - If we have a stroke and fill of the same colour, the proposed algorithm below classifies the element to both Cut/Engrave and Raster operations. I propose that if the stroke and colour fills are the same then we only classify it to a Raster operation, and if the user wants it classified to both Cut/Engrave and Raster, then they need to change the stroke colour.
 
 # New proposal
