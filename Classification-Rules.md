@@ -1,23 +1,33 @@
-Each object within a project is classified in a two phase process. If an object does not classify into the current operations these will be dealt with in the fallback phase.
+Each object within a project is classified in a two phase process. If an object does not classify into the current operations these will be dealt with in the fallback phase. Classification color is based on stroke-color information *only*. The color of the fill does not matter, only whether a fill exists or does not exist. This is because stroke color has no effect on vector operations (Cut/Engrave). Fill has a direct impact on the rastering of that object.
+
+### Prohibitions
+1. Vector objects with a length greater than zero are never classified into Dots, even if the stroke-color matches.
+2. Text objects are never added to any non-raster operation, even if the stroke-color matches.
 
 ### Classify Phase
-1. Shapes that have strokes are added any Cut/Engrave operations that exactly match the color. If no Cut/Engrave exists of exact matching colour, one is created during the Fallback Phase.
-2. Shapes with any fill color (including white) and with opacity > 0 are added to all Raster operations with exactly matching color if at least one exists, otherwise are added to all raster operations that exist. If no Raster operations exists, then a black Raster operation is created in the Fallback Phase.
-3. Shapes with pure black strokes and no fill are treated as if they have a Black fill as above.
-4. Text objects (rather than Paths in the shape of letters) that have either stroke or fill or both are treated as above (using the stroke colour if there is no fill).
-5. Dots (Paths consisting of M followed by either Z or a zero length segment of any type) are classified to the first Dot operation.
-6. Any images are added to the first Image operation.
+1. Shapes that have stroke colors are added to all operations that exactly match that stroke color, except where prohibited.
+2. Shapes with any fill color are added to all Raster operations.
+3. Text objects (as opposed to Path in the shape of letters) are added to all raster operations.
+4. Dots (Paths consisting of Move, with or without a Close) are classified into stroke-color matching Dots operations.
+5. Any images are added into all ImageOp operation.
+6. Only objects that did not get classified by the above are sent to the Fallback Phase.
 
 ### Fallback Phase
-The fallback phase is designed to handle any classifications above when an existing Operation to match does not exist - the objective being to ensure that all elements with either stroke or fill are added to at least one operation.
-1. Shapes with stroke colors will be added to a new Cut/Engrave operation that exactly matches that color.
-    - If the stroke color is reddish, the created operation will be a Cut.
-    - If the stroke color is *anything else*, the created operation will be an Engrave. If the stroke color is white, the created Engrave operation will be disabled.
-2. Shapes with fill (with opacity > 0) and shapes with a black stroke and no fill and text objects will be added to a new Black Raster operation.
-3. Dot objects will be added to a newly created Black Dot operation.
-4. Images will be added to a new Image Operation.
+The fallback phase is designed to handle any classifications above, when an existing Operation to match does not exist - the objective being to ensure that all elements with either stroke or fill are added to at least one operation. Added operations are added immediately. Subsequent objects in the Classify Phase may get classified into the newly created operations.
 
-New Operations will be added immediately after the last Operation of the same type (if it exists), otherwise after the last Operation of a lower priority  Operation if it exists otherwise at the beginning of the list:
+1. Shapes with stroke colors will be added to a new operation that exactly matches that color.
+    - If the path is of zero length and contains a position the created operation will be a Dots operation.
+    - If the stroke color is reddish, the created operation will be a Cut.
+    - If the stroke color is black, the created operation will be a Raster.
+    - If the stroke color is white, the created Engrave operation will be disabled.
+    - If the stroke color is *anything else*, the created operation will be an Engrave.
+2. Shapes with fill colors and text objects will be added to a new black-stroke Raster operation.
+3. Images will be added to a new Image Operation.
+
+### Priority 
+New Operations will be added immediately after the last equal or higher priority operation:
+
+The order of existing operations will be preserved. New operations will be inserted at the an appropriate position to keep the grouped operations together as much possible.
 
 1. Dot
 2. Image
@@ -25,4 +35,4 @@ New Operations will be added immediately after the last Operation of the same ty
 4. Engrave
 5. Cut
 
-In other words, to avoid operations being created in the sequence that elements are processed resulting in a random sequence of operation types, the order of existing operations will be preserved but new operations will be inserted at the most appropriate point in order to try to keep the operations as much as possible grouped together in the above sequence.
+Cutcode, Lasercode, CommandOperations and other non-typical Operations are unranked and ignored. If no ranked operations exist, the newly created operation is appended to the end of the operation list.
