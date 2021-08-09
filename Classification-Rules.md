@@ -2,7 +2,7 @@
 * [Existing proposal](#existing-proposal)
 
 # New proposal
-Each element within a project is classified into at least one Operation. We iterate through each element in the project and (with the exception of Shapes with no stroke and no fill) we ensure that all elements are classified into at least one operation, creating new operations as we undertake the classification.
+Each element within a project (with the exception of Shapes with no stroke and no fill) is classified into at least one Operation. We iterate through each element in the project and we ensure that all elements are classified into at least one operation, creating new operations as needed as we iterate through these elements.
 
 ### Rules
 1. If the element is a Dot (a path with either M followed by Z or M followed by a zero length segment of any type) we treat it as a special case and not as a normal Shape, regardless of stroke and fill. Dots will be added to the first Dot operation, and one will be created if necessary.
