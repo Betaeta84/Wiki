@@ -58,7 +58,7 @@ However:
 * new operations of the same type as an existing operation will be inserted immediately after the last existing operation of that type in order to group similar operations together
 * new Dot, Image and Raster operations (which are only created by classify if an existing operation of this type doesn't already exist) will be inserted at the beginning of the list but respecting the above sequence
 
-Note: Sequencing functionality will be added as a separate PR once the proposed classification algorithm has been created.
+Note: It is proposed that a first PR addresses the classification into operations and that sequencing these operations as described here will be added as a second PR once the first one has been tested, accepted and merged.
 
 Cutcode, Lasercode, CommandOperations and other non-typical Operations are unranked and ignored. If no ranked operations exist, the newly created operation is appended to the end of the operation list.
 
