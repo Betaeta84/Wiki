@@ -5,7 +5,7 @@ Each object within a project is classified in a two phase process. If an object 
 2. Shapes with any fill color (including white) and with opacity > 0 are added to all Raster operations with exactly matching color if at least one exists, otherwise are added to all raster operations that exist. If no Raster operations exists, then a black Raster operation is created in the Fallback Phase.
 3. Shapes with pure black strokes and no fill are treated as if they have a Black fill as above.
 4. Text objects (rather than Paths in the shape of letters) that have either stroke or fill or both are treated as above (using the stroke colour if there is no fill).
-5. Dots (Paths consisting of M followed by Z or a zero length segment) are classified to the first Dot operation.
+5. Dots (Paths consisting of M followed by either Z or a zero length segment of any type) are classified to the first Dot operation.
 6. Any images are added to the first Image operation.
 
 ### Fallback Phase
