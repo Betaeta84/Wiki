@@ -11,10 +11,10 @@ Before we can finalise this, a couple of new (sets of) questions need answering.
 * Colours in elements can have non-zero transparency.
 
 Questions:
-1. Should we (programmatically) create Operations with non-zero transparency? I think we should always set transparency to 0.
+1. Should we (programmatically) create Operations with non-zero transparency? I think we should always set Operation transparency to 0.
 2. How should we handle transparency in colour comparisons between elements and operations? I think we should only compare RGB and not transparency.
 3. What does transparency in fill do during Raster? I would hope that it adjusts the PPI in addition to the fill colour.
-4. What does transparency in stroke do during Cut / Engrave? My vote is to use this for PPI (enabled by default but with an Operation Properties Advanced option to disable it).
+4. What does transparency in stroke do during Cut / Engrave? At the moment, I don't think this makes a difference, however my vote would be to use this for PPI (enabled by default but with an Operation Properties Advanced option to disable it).
 
 ### Alternative non-fill / fill rastering special cases
 1. Non-fill - I assume we raster a black Shape with no fill as if it has black fill. Does this make sense, or should we use this as a way of rastering a path rather than engraving it or creating two paths with a fill between?
