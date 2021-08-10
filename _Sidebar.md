@@ -28,6 +28,7 @@
 * [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
 * [Linux: Ubuntu](./Install:-Ubuntu-Linux)
 * [Linux: Ubuntu 18.04.03](./Install:-Ubuntu-18.04.3)
+* [Linux: Debian 8 Jessie](./Install:-Linux-Debian)
 * [Mac OSX](./Install:-Mac-OSX)
 * [Windows](./Install:-Windows)
 ### Technical information
