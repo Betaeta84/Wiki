@@ -5,15 +5,25 @@ Python3.4.2 installed by default:
 `apt-get install git, build-essential, libssl-dev, libffi-dev python-gtk3.0 libgtk-3-dev`
 
 `mkdir Build && cd Build`
+
 `wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz`
+
 `tar xvf openssl-1.0.2q.tar.gz`
+
 `sudo cp openssl-1.0.2q /usr/local/openssl`
+
 `cd /usr/local/openssl`
+
 `./config -fPIC -shared`
+
 `sudo make`
+
 `sudo make install`
+
 `sudo cp ./*.{so,so.1.0.0,a,pc} ./lib`
+
 `cd ~/Build`
+---
 
 `export LD_LIBRARY_PATH=/usr/local/openssl/lib:/usr/local/lib:$LD_LIBRARY_PATH`
 `wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz`
