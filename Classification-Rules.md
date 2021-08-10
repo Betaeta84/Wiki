@@ -20,6 +20,14 @@ Questions:
 1. Non-fill - I assume we raster a black Shape with no fill as if it has black fill. Does this make sense, or should we use this as a way of rastering a path rather than engraving it (by rastering the stroke and not rastering the non-existent fill) or making the user create two paths with a fill between?
 2. Fill - If we have a stroke and fill of the same colour, the proposed algorithm below classifies the element to both Cut/Engrave and Raster operations. I propose that if the stroke and colour fills are the same then we only classify it to a Raster operation, and if the user wants it classified to both Cut/Engrave and Raster, then they need to change the stroke colour.
 
+### Exact match Raster operations
+Should existing Raster operations that have had elements allocated to them due to an exact colour match **also** be used for any Raster elements that do not have an exact colour match?
+
+Supposing we assigned all elements to all existing operations with the exact same color first, including matching some elements to some Raster operations. When we look at the elements again which weren't matched by exact colour, should we try to avoid adding these raster elements to these same Raster operations that were previously matched or keep them separate? There are various use cases:
+1. There are one or more existing Raster operations at the end of the first iteration that have not had any elements allocated to them by exact color matches. In this event, we could allocated the remaining Raster elements only to the Raster operations that did not have exact colour matches. 
+2. There are no existing Raster operations that have not had any elements allocated to them by exact color matches. In this case we could either add remaining Raster elements to all the existing Raster operations in addition to the elements matched exactly by color, or we could add a new Raster operation to hold these left-over Raster elements. Would it make a difference if there was only one Raster operation which had exact matched colors?
+3. Whenever we have to create a Raster operation automatically during classification, we could give it a unique color to tag it as a default Raster operation, and only add the remaining Raster elements to Raster operations of this color, adding a new one if necessary.
+
 # New proposal
 Each element within a project (with the exception of Shapes with no stroke and no fill) is classified into at least one Operation. We iterate through each element in the project and we ensure that all elements are classified into at least one operation, creating new operations as needed as we iterate through these elements.
 
