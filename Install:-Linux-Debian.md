@@ -6,6 +6,9 @@ Python3.4.2 installed by default:
 
 `mkdir Build && cd Build`
 
+OpenSSL Build
+---
+
 `wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz`
 
 `tar xvf openssl-1.0.2q.tar.gz`
@@ -24,8 +27,11 @@ Python3.4.2 installed by default:
 
 `cd ~/Build`
 
+Python Build
+---
 
 `export LD_LIBRARY_PATH=/usr/local/openssl/lib:/usr/local/lib:$LD_LIBRARY_PATH`
+
 `wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz`
 
 `tar zxvf Python-3.9.6.tgz`
@@ -42,12 +48,17 @@ Python3.4.2 installed by default:
 
 `cd ..`
 
+PIP Requirements (broken down)
+---
 
 `pip3 install opencv-python-headless`       ---- gets numpy
 
 `pip3 install pyusb ezdxf`
 
 `pip3 install wxpython`                     ---- gets Pillow + six
+
+MeerK40t
+---
 
 `git clone https://github.com/meerk40t/meerk40t.git`
 
