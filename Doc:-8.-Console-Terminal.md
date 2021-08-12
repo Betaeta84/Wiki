@@ -1,10 +1,62 @@
-The MeerK40t console uses `pipelines` of `commands` where command output is used as the input of other commands. This permits context relevant usage as well as the linking different commands between different contexts.
+The MeerK40t console uses pipelines of commands where command output is used as the input of other commands. This permits context relevant usage as well as the linking different commands between different contexts. This also allows commands like `list` to have a dozen different and distinct contexts, being able to list spoolers, drivers, outputs, channels, inputs, ops, elements, clipboard, plans, etc. 
 
 Typing `help` or `?` will display the command list. Typing `help <command>` will provide extended help for that particular command.
 
+## Extended Help
+
+```
+ help halftone
+ 	Returns half-tone image for image.  The maximum output dot diameter is given by sample * scale (which is also the number of possible dot sizes). So sample=1 will preserve the original image resolution, but scale must be >1 to allow variation in dot size.
+ 
+ 
+ 	halftone <oversample:int> <sample:int> <angle:parse>
+ 	(image) -> halftone -> (image)
+ 	Argument: int 'oversample':
+ 		pixel oversample amount
+ 	Argument: int 'sample':
+ 		pixel sample size
+ 	Argument: parse 'angle':
+ 		half-tone angle
+ 	Option: int ('--scale', '-s'):
+ 		process scaling
+```
+
+This is the help for the halftone command. This is part of the `image` context. You would need to use an image context in order to use this command, for example `image halftone 2 10 22`. There is extended help that gives information about the command. The expected syntax: `halftone <oversample:int> <sample:int> <angle:parse>` which says oversample is an int sample is a int and angle is an Angle. Angles allow for the CSS angle syntax. So `90deg` `100grad` `0.25turn` `1.57079rad` would all refer to the same quarter circle angle.
+
+### Arguments
+
+If Arguments are omitted it depends on the command as to whether it executes or not. Some will, others will not. However, without all the arguments the next item in the command pipeline cannot be executed. So if you wanted save this image to disk after performing the halftoning. You would not be permitted to without giving all the arguments:
+
+```
+ 	save <filename:str>
+ 	(image) -> save -> (image)
+ 	Argument: str 'filename':
+ 		filename
+```
+
+### Options
+
+So `image halftone 2 10 22deg save myhalftonedimage.png` would work but `image halftone 2 10 save myhalftonedimage.png` would not because it lacks one of the required arguments. Options, however, can be inserted where-ever and are optional. So you could add in a `--scale 2` to the halftone command or neglect to do so, without any issues. 
+
+### Contexts
+
+``` 	(image) -> halftone -> (image)```
+
+In the Extended Help we see input context `image` and the output context `image` this means that we can apply the halftone command in a string of different commands which will execute in series.
+
+Some commands use all the data you give it, for example the `polygon` command:
+
+```
+ 	polygon 
+ 	(elements) -> polygon -> (None)
+```
+
+This command results in a output context of `None` this is because the requirements for the polygon is that it takes any number of points. `polygon 0 0 1000 1000 0 1000` makes a polygon of a triangle with 1 inch sides.
+
+
 # Plugins - Internal Use
 
-If you have the console open, you can see that many gui events actually use the internal console to perform many of the actions. Most windows are loaded through the console. When you click a button to open a window meerK40t calls a console command to open the window rather than opening the window in code. If you click the RasterWizard button you can see the console issues a command `window toggle RasterWizard` this toggles the RasterWizard window. You can type this yourself in console and it will open the same window. This is extremely useful if you are using a plugin or need want to use this internally. If we use the internal `timer` command to perform this command
+If you have the console open, you can see that many gui events actually use the internal console to perform many of the actions. Most windows are loaded through the console. When you click a button to open a window MeerK40t calls a console command to open the window rather than opening the window in code. If you click the RasterWizard button you can see the console issues a command `window toggle RasterWizard` this toggles the RasterWizard window. You can type this yourself in console and it will open the same window. This is extremely useful if you are using a plugin or need want to use this internally. If we use the internal `timer` command to perform this command
 
 ```
  help timer
@@ -53,6 +105,8 @@ The `loop` commands basically trigger this a given command every 50ms or so unti
 # Command List
 
 ## Base Commands
+Base commands are permitted to begin a new command. Some commands like `solarize` or `preopt` can't be called from a default context. They could only be called from a `image` or `plan` context respectively. Base commands are accepted as the first command in a pipeline. For example, to run the `lhyemulator` you would just type `lhyemulator` without any preceding commands. 
+
 ```
 --- Base Commands ---
 alias           alias <alias> <console commands[;console command]*>
@@ -162,6 +216,7 @@ window          Base window command
 ```
 
 ## Camera Commands
+Camera is for the camera add-on and are used to control the camera and set various settings. This includes starting and stopping the camera. Exporting an image to the scene, or setting the image to the background image, as well as setting the perspective and fisheye values. Additional commands like #385 suggestion would be added first into the camera context here.
 ```
 --- camera Commands ---
 background      set background image
@@ -173,6 +228,8 @@ stop            Stop Camera
 ```
 
 ## Channel Commands
+The channel commands manipulate the channels within the kernel. These provide extra information about the state of the various channels. This includes watching the channel and saving the channel to disk, printing to the stdout, etc.
+
 ```
 --- channel Commands ---
 close           stop watching this channel in the console
@@ -183,6 +240,8 @@ save            save this channel to disk
 ```
 
 ## Clipboard Commands
+
+Clipboard commands can be used to save, cut, and paste data. The command `clipboard` is used to introduce all of these commands. The `clipboard` command also accepts name for specifically referring another clipboard. `clipboard -n 2 cut` creates a clipboard called 2 and performs a cut.
 ```
 --- clipboard Commands ---
 clear           clipboard clear
@@ -194,6 +253,8 @@ paste           clipboard paste
 ```
 
 ## Device Commands
+Devices are accessed and manipulated with the device manager. These commands tend to list the devices as a whole. The devices are usually defined by chaining together different spoolers, drivers, and outputs. For example, the primary device is added with the command `spool0 -r driver -n lhystudios output -n lhystudios` and can be seen with `device list`
+
 ```
 --- device Commands ---
 activate        delegate commands to currently selected device
@@ -203,6 +264,7 @@ spool           spool<?> <command>
 ```
 
 ## Driver Commands
+The driver command is used as part of the devices string linking a particular driver with additional parts. Driver usually accepts a `--new` option which accepts a driver type: `... driver --new lhystudios` would append a driver to a given spooler. This hooks together the spooler -> driver -> output information. See spooler and output for more information.
 ```
 --- driver Commands ---
 list            driver<?> list
@@ -214,6 +276,7 @@ type            list driver types
 ```
 
 ## Elements Commands
+The elements context refers to the shapes and objects within the scenes. Specifically things like paths, rect, images, etc. These commands tend to either add additional elements or modify existing elements.
 ```
 --- elements Commands ---
 align           align elements
@@ -258,6 +321,7 @@ translate       translate <tx> <ty>
 ```
 
 ## Image-Array Commands
+The Image-array command only permits the image command to wrap the context. This context is the exported from the `camera export` command. This is needed if you needed to export a camera snapshop and manipulate it. For example `camera export image grayscale` would export an image from the camera and convert it into a grayscale image. (Testing did not produce the correct result though 8/12/21)
 ```
 --- image-array Commands ---
 image           image <operation>*
@@ -306,6 +370,8 @@ wizard          apply image wizard
 ```
 
 ## Inkscape Commands
+
+Inkscape commands are found in extra/inkscape.py and these tends to rely on inkscape. They do some limited loading and processing with inkscape. For example if you wanted to use inkscape to load a file and correct the text internally, you would do `inkscape locate input <filename> text2path load` which would use inkscape to process the file you gave it with the command line then load it with text2path.
 ```
 --- inkscape Commands ---
 image           image <operation>*
@@ -319,6 +385,8 @@ version         determine inkscape version
 ```
 
 ## Input Commands
+Input is like driver a part of the devices which serves as the data source. I am unsure if these actually work correctly currently.
+
 ```
 --- input Commands ---
 list            input<?> list, list current inputs
@@ -329,6 +397,7 @@ type            list input types
 ```
 
 ## Lhystudios Commands
+The Lhystudios commands are specifically for M2 Nano and other related devices. Many of these commands are not used or require other functionality for other controller boards. For example the command: `egv IPP$` would very specifically send the commands IPP to the laser controller which is the command for home the device. The `rapid_override` command would override the rapid movements to use alternative slower movements (useful for rotary) but would not be needed for a grbl device etc. These commands often are virtually delegated based on the currently selected device. They can be explicitly delegated with the `dev` command.
 ```
 --- lhystudios Commands ---
 abort           Abort Job
@@ -354,6 +423,7 @@ usb_disconnect  Disconnects USB
 ```
 
 ## Moshi Commands
+Moshi commands are moshi specific commands that only apply when a Moshiboard is currently connected.
 ```
 --- moshi Commands ---
 abort           Abort Job
@@ -367,6 +437,7 @@ usb_disconnect  Disconnect USB
 ```
 
 ## Ops Commands
+Ops commands refer to the operations located in the element tree. These commands are used to manipulate those values or send them to a spooler etc.
 ```
 --- ops Commands ---
 copy            duplicate elements
@@ -384,12 +455,14 @@ step            step <raster-step-size>
 
 ## Output Commands
 ```
+Output is part of the devices and usually `output -n lhystudios` is used as part of the device string. This results in creating a lhystudios controller for the selected device. 
 --- output Commands ---
 list            output<?> list, list current outputs
 type            list output types
 ```
 
 ## Plan Commands
+Plan commands refer to the job planner. This is what the ExecuteJob dialog does internally. This plans out the various stages and permits the conversion from operations into cutcode, and from cutcodes into cutcommands which are sent to a laser. These are the processing and preprocessing for the job being executed. If you run the command `plan copy preprocess validate blob preopt optimize spool` this would take the current job and send it directly to the laser without any GUI interactions. If you bound a command to this `bind control+g plan copy preprocess validate blob preopt optimize spool` you would have a hot key to simply run the current work.
 ```
 --- plan Commands ---
 append          plan<?> append <op>
@@ -411,9 +484,10 @@ validate        plan<?> validate
 ```
 
 ## Spooler Commands
+The spooler commands refer to the spooler which is a list of would-be executed objects. This is mostly going to cutcode but could include special commands like unlock the rail and or even execute some console commands. These are lists of elements which should be executed in order. Whether a driver or output exist is not relevant for a particular spooler. It's a location that data is sent. These can usually be selected in the JobSpooler window or in the ExecuteJob or Simulate windows. 
 ```
 --- spooler Commands ---
-lear           spooler<?> clear
+clear           spooler<?> clear
 down            cmd <amount>
 driver          driver<?> <command>
 home            home the laser
@@ -430,12 +504,15 @@ up              cmd <amount>
 ```
 
 ## Tcpout Commands
+The TCPout commands specifically reference the tcp device that should exist locally, there is only a single test command to set the current port.
 ```
 --- tcpout Commands ---
 port            change the port of the tcpdevice
 ```
 
 ## Window Commands
+Window commands are gui relevant to load, open, close, and toggle windows. The `open` and `toggle` command allows for three different options: `--driver` `--output` and `--input` these load the source specific windows. For example the Controller window you need to load depends on the type of output you have, so the command to load the window is `window toggle -o Controller` which toggles the Controller window but does so specific to the output of the current selected device. If you have a TCPout for your output it loads a TCPController. If you have a Moshi controller it will load the Moshi specific controller window. This also allows for some controller specific windows that do not exist for other devices for example: `window open --output AccelerationChart` loads a specific settings window (does not work) for Lhystudios boards but does nothing for any other output windows. There are specific controllers for tcp, file, lhystudios, and moshi board. If full ruida support was added these sort of context dependent windows would be needed for the board specific information.
+
 ```
 --- window Commands ---
 close           close the supplied window
