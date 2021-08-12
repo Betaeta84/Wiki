@@ -82,6 +82,13 @@ The Tech section of the Wiki also has other research on the K40 hardware, for ex
 ## SVG Namespace
 For saving files MeerK40t uses a modified form of SVG, for which the [Namespace specification is here](./Tech:-SVG-Namespace).
 
+# Acknowledgements
+
+* Primary author: Tatarize
+* Additional coding: JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan, 
+* Translations: Peter9811 (Spanish) 
+* Wiki: Tatarize, JoerLane, Sophist-UK
+
 ---
 ### Authors
 The MeerK40t team is grateful for the help from @taterize, @joerlane  & @Sophist-UK in creating this page. If **you** think it can be improved still further, please feel free to edit the page and add your userid to this list. 😃
