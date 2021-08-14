@@ -321,7 +321,7 @@ translate       translate <tx> <ty>
 ```
 
 ## Image-Array Commands
-The Image-array command only permits the image command to wrap the context. This context is the exported from the `camera export` command. This is needed if you needed to export a camera snapshop and manipulate it. For example `camera export image grayscale` would export an image from the camera and convert it into a grayscale image. (Testing did not produce the correct result though 8/12/21)
+The Image-array command only permits the image command to wrap the context. This context is the exported from the `camera export` command. This is needed if you needed to export a camera snapshop and manipulate it. For example `camera export image grayscale` would export an image from the camera and convert it into a grayscale image.
 ```
 --- image-array Commands ---
 image           image <operation>*
@@ -592,7 +592,7 @@ raster
 
 We see that raster accepts options rather than arguments. This means the `raster` command itself accept elements contexts, but and requires no arguments. But, we can set the various speeds and power amounts during the creation. If we wanted this with a step of 2 and speed of 99 mm/s. Our command would be `raster --step 2 --speed 99` but we could also do `raster -S 2 -s 99` or even `raster -Ss 2 99`. We then automatically put the newly created grid of circles within the newly created raster object.
 
-`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff grid 3 5 2in 2in raster -Ss 2 99` (this doesn't work because grid fails and raster fails 8/12/21).
+`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff grid 3 5 2in 2in raster -Ss 2 99`
 
 The raster command however changes our context. We were doing `elements` contexts strings but putting this into a raster gave us an operations context `ops`. 
 
