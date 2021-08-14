@@ -575,7 +575,7 @@ We also get an elements context as output. This means we can string to the end a
 * Color commands like `stroke` and `fill`.
 
 But, let's say we want want to apply another circle inside the current circle and add it to a 3x5 grid:
-`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill #ff00ff grid 3 5 1in 1in` Should create two circles with centers located at 3in 3in in the scene with two a red fill and another with half the radius and a magenta fill, these items should then be added to a grid (They aren't because of a bug currently 8/12/21). Our grid command `grid 3 5 1in 1in` would duplicate the current item 15 times and put those duplications 1 inch apart.
+`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff grid 3 5 1in 1in` Should create two circles with centers located at 3in 3in in the scene with two a red fill and another with half the radius and a magenta fill, these items should then be added to a grid. Our grid command `grid 3 5 1in 1in` would duplicate the current item 15 times and put those duplications 1 inch apart.
 
 Let's say we wanted to do something even more intricate and put these elements into a raster operation that we create.
 
@@ -592,7 +592,7 @@ raster
 
 We see that raster accepts options rather than arguments. This means the `raster` command itself accept elements contexts, but and requires no arguments. But, we can set the various speeds and power amounts during the creation. If we wanted this with a step of 2 and speed of 99 mm/s. Our command would be `raster --step 2 --speed 99` but we could also do `raster -S 2 -s 99` or even `raster -Ss 2 99`. We then automatically put the newly created grid of circles within the newly created raster object.
 
-`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill #ff00ff grid 3 5 1in 1in raster -Ss 2 99` (this doesn't work because grid fails and raster fails 8/12/21).
+`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff grid 3 5 2in 2in raster -Ss 2 99` (this doesn't work because grid fails and raster fails 8/12/21).
 
 The raster command however changes our context. We were doing `elements` contexts strings but putting this into a raster gave us an operations context `ops`. 
 
@@ -601,13 +601,13 @@ In help, we can see the list the given context, it accepts `copy`, `delete`, `li
 The plan command itself is a transition command. It mostly packages our `ops` data into the planner. It doesn't take any arguments or options. But, gives us access to plan context commands. These are the different stages, `copy`, `preprocess`, `validate`, `blob`, `preopt`, `optimize`, and `spool`. Because we transitioned from a `ops` context we basically already performed copy. The copy command moves data from the operations in the tree into the planner. The copy-selected does this only for the selected operations. We perform the other parts of the planning stages, doing `... raster -Ss 2 99 plan preprocess validate blob spool` we are skipping the pre-optimize and optimize stages.
 
 This gives us the command:
-`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill #ff00ff raster -Ss 2 99 plan raster -Ss 2 99 plan preprocess validate blob spool`
+`circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff raster -Ss 2 99 plan preprocess validate blob spool`
 
 Which creates two circles of different colors, puts them in a grid, puts that grid of commands into the planner and converts it to an image and sends it to the default spooler.
 
 Since we can call console commands from the commandline:
 
-`meerk40t -ze "circle 3in 3in 1in fill red circle 3in 3in 0.5in fill #ff00ff raster -Ss 2 99 plan preprocess validate blob spool"`
+`meerk40t -ze "circle 3in 3in 1in fill red circle 3in 3in 0.5in fill -f 1 #ff00ff raster -Ss 2 99 plan preprocess validate blob spool"`
 
 Could be used to perform this entire sequence and send it directly to the laser. This might not correctly quit the program after it's done. So we could add additional commands in the spooler to shutdown Meerk40t. We would do this with the `plan` context command of `append` specifically we would append a `shutdown` command.
 
