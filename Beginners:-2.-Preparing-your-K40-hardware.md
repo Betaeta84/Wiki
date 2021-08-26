@@ -1,8 +1,8 @@
 Once you have physically unpacked your K40, it may be tempting to plug it straight into the mains and get lasering - but for a raft of reasons this is not advisable.
 
-As you can see from the list below, the K40 does not exactly arrive ready for immediate use - and the level of technical skill needed to get it properly ready is non-trivial.
+As you can see from the lengthy list below, the K40 does not exactly arrive ready for immediate use - and the amount of time and level of technical skill needed to get it properly ready for use is non-trivial.
 
-Once you have read and digested this page, the next step in the Beginners Tutorial is to [install MeerK40t](./Beginners:-2.-Installing-MeerK40t).
+Once you have read and digested this page, and prepared your hardware, the next step in the Beginners Tutorial is to [install MeerK40t](./Beginners:-2.-Installing-MeerK40t).
 
 If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [here](./Beginners:-0.-Index).
 
@@ -129,13 +129,13 @@ This is not really a safety issue, but a logical place to mention it is before t
 
 Your K40 (and software like Meerk40t) needs to establish a known position of the head so that it can keep track as it moves and not try to move too far, hit the hard limits of the guide rails and start making a loud grinding noise and / or a bang. It is likely that this will happen to you at some point, and it sounds very worrying when it does. However, in most cases no permanent harm is caused, your K40 just losses position and future burns are made in the wrong place.
 
-It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has x & y end-stop sensors to tell it where to stop. These are often (but not always) optical sensors consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
+It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has x & y end-stop sensors to tell it where to stop. These are often (but not always) optical in nature, consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
 
 TODO: Add a couple of pictures of end-stops.
 
-It is not uncommon for your k40 to arrive with the metal step out of position, so that it doesn't interior the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud grinding noise.
+It is not uncommon for your K40 to arrive with the metal step out of position, so that it doesn't interrupt the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud and continuous grinding noise.
 
-To save yourself a fright, before you post on for the first time, check that the metal strip is not bent or of position and if it is adjust it.
+To save yourself a fright, before you power-on for the first time, check that the metal strip is not bent or out of position, and if it is adjust it.
 
 ## Burn quality
 The light as it exits from your laser is a very narrow and very, very straight beam of invisible light. It is reflected off 3 mirrors and goes through a lens to focus it before it hits the material in a tiny spot of concentrated light. There are quite a few things that can cause this to go awry:
