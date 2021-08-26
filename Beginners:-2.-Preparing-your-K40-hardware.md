@@ -127,9 +127,11 @@ Some people also fit some sort of fire suppression inside their K40. **To do:** 
 ## End stops
 This is not really a safety issue, but a logical place to mention it is before the section on gantry alignment.
 
-Your K40 (and software like Meerk40t) needs to establish a known position of the head so that it can keep track as it moves and not try to move too far, hit the hard limits of the guide rails and start making a loud grinding noise and / or a bang. (It is likely that this will happen to you at some point, and it sounds very worrying when it does. However, in most cases no permanent harm is caused, your k40 just losses position and future burns area made in the wrong place.) 
+Your K40 (and software like Meerk40t) needs to establish a known position of the head so that it can keep track as it moves and not try to move too far, hit the hard limits of the guide rails and start making a loud grinding noise and / or a bang. It is likely that this will happen to you at some point, and it sounds very worrying when it does. However, in most cases no permanent harm is caused, your K40 just losses position and future burns are made in the wrong place.
 
 It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has x & y end-stop sensors to tell it where to stop. These are often (but not always) optical sensors consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
+
+TODO: Add a couple of pictures of end-stops.
 
 It is not uncommon for your k40 to arrive with the metal step out of position, so that it doesn't interior the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud grinding noise.
 
