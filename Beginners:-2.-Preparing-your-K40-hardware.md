@@ -1,6 +1,8 @@
 Once you have physically unpacked your K40, it may be tempting to plug it straight into the mains and get lasering - but for a raft of reasons this is not advisable.
 
-As you can see from the lengthy list below, the K40 does not exactly arrive ready for immediate use - and the amount of time and level of technical skill needed to get it properly ready for use is non-trivial.
+As you can see from the lengthy list below, the K40 does not exactly arrive ready for immediate use - and the amount of time and level of technical skill needed to get it properly ready for use is non-trivial. 
+
+And because of the number of items here, we cannot really do much more than give you an overview, so you will need to research each item further yourself (otherwise we would never get around to talking about Meetk40t). (But if you find useful resources during your research, we would ask you to add links to this wiki page in order to help future readers save time on their own research.)
 
 Once you have read and digested this page, and prepared your hardware, the next step in the Beginners Tutorial is to [install MeerK40t](./Beginners:-2.-Installing-MeerK40t).
 
