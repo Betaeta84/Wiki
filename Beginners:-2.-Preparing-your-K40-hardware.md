@@ -58,7 +58,9 @@ The supplied plastic fume vent is generally considered to be utterly useless. Co
 The metal duct which goes from the back panel through to the bed area is generally considered to be less than optimal. It extends past the back edge of the gantry frame and can prevent you inserting materials which are the full depth of the gantry (even though the rear most part of this area is not reachable by the laser. Some people recommend removing this duct altogether in order to improve air-flow, but this the improved volume of air moved can be offset by air travelling around the sides of the gantry rather than across the laser bed. An alternative is to cut this back so that it does not protrude past the back edge of the gantry.
 
 ### Cooling
-Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. To avoid significantly shortening the lifespan of your laser tube, it is important that you keep your laser tube below 25°C during use (generally recommended between 15°C and 20°C), so whilst this section is not really a safety related item, creating a water reservoir and deciding how you will keep the water within the above temperature range is an essential part of commissioning your K40. 
+Your K40 laser tube is water cooled and water flow is **essential** to prevent failure due to overheating. I have never tried firing my K40 laser without water in the tube, but some people say that this can instantly kill your later tube. If your time has water in it but it is not following, it probably won't be instant death, but it will quickly overheat when used. 
+
+Most K40s come with water pipes and some form of water pump, but don't come with any water tank or means of cooling. To avoid significantly shortening the lifespan of your laser tube, it is important that you keep your laser tube below 25°C during use (generally recommended between 15°C and 20°C), so whilst this section is not really a safety related item, creating a water reservoir and deciding how you will keep the water within the above temperature range is an essential part of commissioning your K40. 
 
 For a reservoir, I used a 50 litre plastic storage box like this:
 
@@ -129,11 +131,11 @@ This is not really a safety issue, but a logical place to mention it is before t
 
 Your K40 (and software like Meerk40t) needs to establish a known position of the head so that it can keep track as it moves and not try to move too far, hit the hard limits of the guide rails and start making a loud grinding noise and / or a bang. It is likely that this will happen to you at some point, and it sounds very worrying when it does. However, in most cases no permanent harm is caused, your K40 just losses position and future burns are made in the wrong place.
 
-It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has x & y end-stop sensors to tell it where to stop. These are often (but not always) optical in nature, consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
+It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has two separate x & y end-stop sensors to tell it where / when to stop. These are often (but not always) optical in nature, consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
 
 TODO: Add a couple of pictures of end-stops.
 
-It is not uncommon for your K40 to arrive with the metal step out of position, so that it doesn't interrupt the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud and continuous grinding noise.
+It is not uncommon for your K40 to arrive with the metal strip out of position, so that it doesn't interrupt the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud and continuous grinding noise.
 
 To save yourself a fright, before you power-on for the first time, check that the metal strip is not bent or out of position, and if it is adjust it.
 
