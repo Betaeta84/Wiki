@@ -8,6 +8,7 @@ If you want to return to the [Beginners Index](./Beginners:-0.-Index) click [her
 
 ## Contents
 * [Safety matters](#safety-matters)
+* [End stops](#end-stops)
 * [Burn quality](#burn-quality)
 * [Enhancements](#enhancements)
 * [Charring](#charring)
@@ -123,6 +124,17 @@ The minimum precautions to take for fire are:
 
 Some people also fit some sort of fire suppression inside their K40. **To do:** Research and links needed here.
 
+## End stops
+This is not really a safety issue, but a logical place to mention it is before the section on gantry alignment.
+
+Your K40 (and software like Meerk40t) needs to establish a known position of the head so that it can keep track as it moves and not try to move too far, hit the hard limits of the guide rails and start making a loud grinding noise and / or a bang. (It is likely that this will happen to you at some point, and it sounds very worrying when it does. However, in most cases no permanent harm is caused, your k40 just losses position and future burns area made in the wrong place.) 
+
+It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has x & y end-stop sensors to tell it where to stop. These are often (but not always) optical sensors consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
+
+It is not uncommon for your k40 to arrive with the metal step out of position, so that it doesn't interior the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud grinding noise.
+
+To save yourself a fright, before you post on for the first time, check that the metal strip is not bent or of position and if it is adjust it.
+
 ## Burn quality
 The light as it exits from your laser is a very narrow and very, very straight beam of invisible light. It is reflected off 3 mirrors and goes through a lens to focus it before it hits the material in a tiny spot of concentrated light. There are quite a few things that can cause this to go awry:
 
@@ -137,9 +149,9 @@ The light as it exits from your laser is a very narrow and very, very straight b
 9. [Reflection charring](#reflection-charring)
 
 ### Mirror/lens cleanliness
-When your K40 arrives, it is quite likely that your mirrors and lenses will be quite dirty - certainly mine were absolutely filthy when it arrived. If you fire up your laser whilst these have dirt on them, the dirt will absorb laser energy where it hits the mirror / lens and can cause burnt spots at a minimum and possibly crack your lenses completely. 
+When your K40 arrives, it is quite likely that your mirrors and lenses will be quite dirty - certainly mine were absolutely filthy when it arrived. If you fire up your laser whilst these have dirt on them, the dirt will absorb laser energy where it hits the mirror / lens and can cause burnt spots at a minimum and possibly crack your mirror completely. 
 
-So before you align the mirrors, you should clean the three mirrors and the lens with rubbing alcohol or acetone. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
+So before you align thm, you should clean the three mirrors and the lens with rubbing alcohol or acetone. If you are doing this before aligning mirrors, you can unscrew the retaining rings and take the mirrors out to clean them fully. After alignment use a cotton bud to clean them.
 
 The smoke from your burns can also make both mirrors and lenses become dirty again quite quickly - cleaning them needs to be a fairly regular activity, though this can be reduced by installing smoke/air assist.
 
