@@ -248,7 +248,7 @@ Some codes are included in MeerK40t but are not part of Lhymicro-GL
 These are:
 * `\n`: carriage return means to pad the packet when you send it. Since it only processes complete packets.
 * `-`: carryout wait sequence where you wait for the P_EMP flag from the system to say the codeblock is empty.
-* `*`: abort. EVerything that sees this should flush their buffers, and do not process anything already located in their buffers.
+* `*`: abort. Everything that sees this should flush their buffers, and do not process anything already located in their buffers.
 * `&`: resume the controller.
 * `!`: pause the controller.
 
