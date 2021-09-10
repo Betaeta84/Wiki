@@ -1,4 +1,4 @@
-Meerk40t's native locale language is English. The UI can be displayed in other languages providing a translation of all the necessary strings has been provided. **If a translation is not available for your own language, or if you think the existing translation can be improved, we encourage you to contribute improvements by editing the existing messages.po file.**
+Meerk40t's native locale language is US English. The UI can be displayed in other languages providing a translation of all the necessary strings has been provided. **If a translation is not available for your own language, or if you think the existing translation can be improved, we encourage you to contribute improvements by editing the existing messages.po file.**
 
 ## Editing the language files
 The `messages.po` file is stored in [/locale/](https://github.com/meerk40t/meerk40t/blob/master/locale/) and inside that are `meerk40t.po` and `meerk40t.mo` files for the various languages..
