@@ -6,8 +6,7 @@ The `messages.po` file is stored in [/locale/](https://github.com/meerk40t/meerk
 You can either edit the file in the github download the [messages.po](https://github.com/meerk40t/meerk40t/blob/master/locale/messages.po) file or use any po editor. There is also an online project page at loco: https://localise.biz/tatarize/meerk40t
 
 ### Editing or translating the About message
-* When you translate the About message text, it is a legal licensing requirement that [icons8](https://icons8.com/) be thanked in there. ( https://icons8.com/license )
-* Also, thank yourself for doing the translation.
+When you translate the About message text, it is a [legal licensing requirement](https://icons8.com/license) that [icons8](https://icons8.com/) be thanked in there.
 
 ## Regenerating the message.po file
 Changes in gui, et al, will create new language strings and those new language strings will need translating. Generating a messages.po file is essential to this process. We use pybabel for this process. 
@@ -26,3 +25,6 @@ If your meerk40t.po is old you can use pybabel to update it:
 
 For Chinese (zh, use the correct locale) this would be:
 `pybabel update -l zh -i messages.po -o meerk40t.po`
+
+## Acknowledgements
+Please edit the Acknowledgements section of the Wiki home page and the About window /meerk40t/gui/about.py to add your name to the list of contributors.
