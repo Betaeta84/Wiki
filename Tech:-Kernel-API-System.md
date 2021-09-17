@@ -19,9 +19,6 @@ The Kernel serves as the central hub of communication between different aspects 
 * a list of [[devices| Tech: Devices]]
 * [[plugins|Tech: Plugins]] api
 
-## Modifiers
-Modifiers provide functionality for a particular context. The assumption is modifiers will alter the context or provide a link to the main code. For example `Spooler` provides .spooler at the given context as place to send cutcode. Modifiers also get called `boot()` when the kernel boots at start-up. These are always called the name of the modifier itself. So `modifier/Spooler` is opened as `modifier/Spooler`
-
 ## Channels
 Channels are dataflows within the kernel. For example the LhystudiosController accepts data through a channel. Likewise you send data to the controller from any registered code within MeerK40t. The LhystudiosController also sends data in a channel called `<context-path>/usb_send` which is the sets of packets the controller has sent. Channels are `.watch()` and `.unwatch()`.
 
