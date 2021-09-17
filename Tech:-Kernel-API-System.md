@@ -4,20 +4,20 @@ If you are going to write code either for your own purposes or for the community
 
 The Kernel serves as the central hub of communication between different aspects of the system. These are mapped to particular contexts that have path locations within the kernel. The contexts can have modules opened and modifiers applied to them.
 
-* manages overall program lifecycle processes.
-* a central dictionary of registered objects.
-* stores persistence values at a given contexts
-* context path locations for partitioning of information
-* provides for signals, listeners, partitioned at the context level
-* manages thread interactions and shutdown
-* provides a scheduler, jobs for the scheduler
-* general data channels
-* a command console, registered commands
-* execution and operation of modules, modifiers, devices, plugins
-* translation information and functionality
+* manages overall program [[lifecycle processes|Tech: Lifecycle]].
+* a central dictionary of [[registered objects|Tech: Registered Objects]].
+* stores [[persistence values|Tech: Persistence Settings]] at a given [[contexts|Tech: Contexts]].
+* [[context path|Tech: Contexts]] locations for partitioning of information
+* provides for [[signals, listeners|Tech: Signals]], partitioned at the context level
+* manages [[thread interactions|Tech: Threading]] and [[shutdown|Tech: Shutdown]]
+* provides a [[schedulear, jobs for the scheduler|Tech: Scheduler]]
+* general data [[channels|Tech: Channels]]
+* a command [[console, registered commands|Tech: Console]]
+* execution and operation of [[modules|Tech: Modules]], [[modifiers|Tech: Modifiers]], [[devices| Tech: Devices]], [[plugins|Tech: Plugins]]
+* [[translation information and functionality|Tech: Translations]]
 * run_later operations for moving operations to a gui or other main thread
-* a list of devices
-* plugins api
+* a list of [[devices| Tech: Devices]]
+* [[plugins|Tech: Plugins]] api
 
 ## Lifecycle
 Plugins are registered both internally and from registered plugins. This is either a list of added values in `main.py` or entry points found in `meerk40t.plugins`. Regardless whether the plugins are internal or dynamic they work the same way through a series of lifecycle events. These are performed by the typical execution of the code calling `kernel.bootstrap(<event>)` at various parts doing program execution.
