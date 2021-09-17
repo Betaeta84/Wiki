@@ -1,23 +1,80 @@
-If you are going to write code either for your own purposes or for the community at large you need to understand the kernel.
-
-The Kernel/Context API system started in MeerK40t 0.3.0, and underwent several major revision on 0.7.0.
+If you are going to write code either for your own purposes or for the community at large you need to understand the underlying architecture.
 
 # Kernel
 
-The Kernel serves as the central hub of communication between different objects within the system. These are mapped to particular contexts that have locations within the kernel. The contexts can have modules opened and modifiers applied to them. The kernel serves to store the location of registered objects, as well as providing a scheduler, signals, channels, and a command console to be used by the modules, modifiers, devices, plugins, and other objects.
+The Kernel serves as the central hub of communication between different aspects of the system. These are mapped to particular contexts that have path locations within the kernel. The contexts can have modules opened and modifiers applied to them.
 
-The Kernel stores a persistence object, thread interactions, contexts, a translation routine, a run_later operation, jobs for the scheduler, listeners for signals, channels of dataflow, a list of devices, registered commands, plugins, a central dictionary of registered objects.
+* manages overall program lifecycle processes.
+* a central dictionary of registered objects.
+* stores persistence values at a given contexts
+* context path locations for partitioning of information
+* provides for signals, listeners, partitioned at the context level
+* manages thread interactions and shutdown
+* provides a scheduler, jobs for the scheduler
+* general data channels
+* a command console, registered commands
+* execution and operation of modules, modifiers, devices, plugins
+* translation information and functionality
+* run_later operations for moving operations to a gui or other main thread
+* a list of devices
+* plugins api
+
+## Lifecycle
+Plugins are registered both internally and from registered plugins. This is either a list of added values in `main.py` or entry points found in `meerk40t.plugins`. Regardless whether the plugins are internal or dynamic they work the same way through a series of lifecycle events. These are performed by the typical execution of the code calling `kernel.bootstrap(<event>)` at various parts doing program execution.
+
+There is no expectation that these lifecycle events will be the exhaustive and if some code must at a certain point, it is acceptable to add in lifecycle events. 
+
+All registered plugins both internal and dynamic call `def plugin(kernel, lifecycle)` this is called with the kernel object and the current lifecycle. This is done for each lifecycle event. Plugins are required to use these to register and execute themselves at the appropriate time within the overall program's lifecycle.
+
+### console
+Console occurs if there is to be no gui before pre-register.
+
+The `wxmeerk40t` plugin uses `console` to register a `gui` command to launch the main window. So if the `-z` flag for no-gui is used rather than `-Z` to fully suppress the gui, this permits launching the gui from console.
+
+### gui
+Gui occurs if there is a to be a gui before pre-register
+
+### preregister
+Preregister is the first lifecycle step, before most data is registered in the kernel.
+
+The `wxmeerk40t` plugin uses `preregister` to register the wx.App and the open this at the context `'/'`, and to ensure that `renderer.make_raster` code exists at kernel registered location `render-op/make_raster` as this code can be used (if it exists) in the planner.
+
+### register
+Register is the step when all plugins are expected to register their functionality in the kernel.
+
+Many modules call this to register their code in the kernel. For example, `elements.py` calls `kernel.register("modifier/Elemental", Elemental)`. Some modules simply register console commands or other bits of code at this phase. 
+
+### configure
+Configure is after the registrations occur, when various processes need to occur but before booting.
+
+### shutdown
+Shutdown happens during program shutdown. The expectations is most things should have stopped ended by this point in the lifecycle.
+
+### boot
+Boot occurs after the start of the scheduler, and registration of the kernel-console commands.
+
+Many modules use this to call activate and attach various modules registered during the register lifecycle phase.
+
+### ready
+Ready is post boot after everything should be loaded, registered, and booted.
+
+### mainloop
+Mainloop is a thread capturing lifecycle operation. In many gui startup routines the gui captures and uses the mainthread through the gui lifecycle process. This should occur during mainloop. There is no assurance that of the order of the plugins so this could occur either before the gui or after the gui for any particular plugin. Depending on the order the gui plugin.
+
+The `wxmeerk40t` plugin uses this to start the meerk40tgui and execute `MainLoop()`.
 
 
 ## Registration
-A main dictionary of various keys to functions, data, modules, console commands etc. 
+A main dictionary of various keys to functions, data, modules, console commands etc.
 
 Objects are registered in the kernel, not instances of the object but references to that object. All objects that are registered attempt to call static sub_register(kernel) to register additional elements that object may want added. This builds the registered tree of objects that are available. These are references to the classes, small bits of data, and static information and many things that are expected to be reusable such as devices, modules, and modifiers.
 
 ## Context
-Locations within the kernel space at specific paths. For example, the camera add-on stores camera settings in `camera/0` through `camera/5` and these settings are independent of each other.
+Locations within the kernel space at specific paths. For example, the camera add-on stores camera settings in `camera/0` through `camera/5` and these settings are independent of each other and thus can use the same namespace within that context.
 
-Contexts serve as path relevant snapshots of the kernel. These are the primary interaction between the modules and the kernel. They permit getting other contexts of the kernel as well. This should serve as the primary interface code between the kernel and the modules. All contexts have delegated access to the kernel functions, several of these are path relative. The same key location at two different contexts refer to two different bits of data.
+Contexts serve as path relevant snapshots of the kernel. These are the primary interaction between the modules and the kernel. They permit getting other contexts of the kernel as well. This should serve as the primary interface code between the kernel and the modules. All contexts have delegated access to the kernel functions, some of these are path relative. The same key location at two different contexts refer to two different bits of data.
+
+For example the Camera plugin may register itself at `camera/0` for the 0th camera interface. And the BindAlias internal plugin may register itself at `/` root context. This means that if you wanted to to access the keymap data within BindAlias you could do `context.get_path('/')` which does the same as `context.root` and access the `.keymap` values which map the key values to console commands. Assuming that BindAlias exists and is loaded. If you attempt to access this data prior to the `boot` lifecycle event this data may not have been registered yet as BindAlias attaches the modifier at `boot`.
 
 ### Preferences
 
