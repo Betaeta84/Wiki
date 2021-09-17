@@ -19,22 +19,6 @@ The Kernel serves as the central hub of communication between different aspects 
 * a list of [[devices| Tech: Devices]]
 * [[plugins|Tech: Plugins]] api
 
-
-### Preferences
-
-Contexts serve as to store persistent information. These are derived from the kernel preference, when the device is loaded.
-
-Preferences are expected to be checked for existence prior to use. The `setting()` command provides a setting_type, a key, and a default value. Once called, `.key` is the preferred access method.
-
-```python
-self.context.setting(int, 'my_data', 0)
-if my_data == 0:
-     channel(_("Default Data Was Found.")
-```
-
-
-In the example, it is entirely possible that `my_data` is loaded from the persistent setting and has a non-zero value. These values are flushed during shutdown. This is the case for any variable that does not start with `_` and which is a `int`, `float`, `str`, or `bool`.
-
 ## Modifiers
 Modifiers provide functionality for a particular context. The assumption is modifiers will alter the context or provide a link to the main code. For example `Spooler` provides .spooler at the given context as place to send cutcode. Modifiers also get called `boot()` when the kernel boots at start-up. These are always called the name of the modifier itself. So `modifier/Spooler` is opened as `modifier/Spooler`
 
