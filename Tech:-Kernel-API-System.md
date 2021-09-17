@@ -4,20 +4,20 @@ If you are going to write code either for your own purposes or for the community
 
 The Kernel serves as the central hub of communication between different aspects of the system. These are mapped to particular contexts that have path locations within the kernel. The contexts can have modules opened and modifiers applied to them.
 
-* manages overall program [[lifecycle processes|Tech: Lifecycle]].
-* a central dictionary of [[registered objects|Tech: Registered Objects]].
-* stores [[persistence values|Tech: Persistence Settings]] at a given [[contexts|Tech: Contexts]].
+* manages overall program [[lifecycle processes|Tech:-Lifecycle]].
+* a central dictionary of [[registered objects|Tech:-Registered-Objects]].
+* stores [[persistence values|Tech: Persistence Settings]] at a given [[contexts|Tech:-Contexts]].
 * [[context path|Tech: Contexts]] locations for partitioning of information
 * provides for [[signals, listeners|Tech: Signals]], partitioned at the context level
-* manages [[thread interactions|Tech: Threading]] and [[shutdown|Tech: Shutdown]]
-* provides a [[schedulear, jobs for the scheduler|Tech: Scheduler]]
-* general data [[channels|Tech: Channels]]
-* a command [[console, registered commands|Tech: Console]]
-* execution and operation of [[modules|Tech: Modules]], [[modifiers|Tech: Modifiers]], [[devices| Tech: Devices]], [[plugins|Tech: Plugins]]
-* [[translation information and functionality|Tech: Translations]]
+* manages [[thread interactions|Tech: Threading]] and [[shutdown|Tech:-Shutdown]]
+* provides a [[schedulear, jobs for the scheduler|Tech:-Scheduler]]
+* general data [[channels|Tech:-Channels]]
+* a command [[console, registered commands|Tech:-Console]]
+* execution and operation of [[modules|Tech:-Modules]], [[modifiers|Tech:-Modifiers]], [[devices|Tech:-Devices]], [[plugins|Tech:-Plugins]]
+* [[translation information and functionality|Tech:-Translations]]
 * run_later operations for moving operations to a gui or other main thread
-* a list of [[devices| Tech: Devices]]
-* [[plugins|Tech: Plugins]] api
+* a list of [[devices|Tech:-Devices]]
+* [[plugins|Tech:-Plugins]] api
 
 ## Console
 Commands are sent to the console and parsed to execute commands. These are generally modelled after command-line functions. They are registered in the kernel at `command/<command>`.
@@ -25,13 +25,6 @@ Commands are sent to the console and parsed to execute commands. These are gener
 We are addressing the console commands with regard to the Kernel. For general MeerK40t Console See: [[Help: Console Commands]].
 
 To write and register commands your own commands within a module for MeerK40t or plugin. See: [[Tech: Console Command API]]. These as highly expressive as most modern CLI system but include some extended functionality like command chaining based on data context. The theory behind this is borrowed from [vpype](https://github.com/abey79/vpype) in part and [click](https://click.palletsprojects.com/en/7.x/) and other advanced systems to provide the Kernel API a very robust internal command system.
-
-## Signaler
-Signals are a different dataflow metric within the kernel. However, unlike Channels if a signal is called many times very rapidly it will result in a single trigger of the signal. You are not guaranteed to see every packet, you only get to see the last everything listening is notified on an update to a particular signal.
-
-The signaler schedules itself within the Scheduler, and provides functionality for `listen()`, `unlisten()` and `signal()`. This allows non-duplicating signals to sent, so other instances within the kernel ecosystem know they should update, if they listened for a specific signal. The signaler does not force every message to be delivered, only the last message. When a listener is attached initially, it will get the last message for that signal if it exists. Using these for GUI fields will then give the last message sent, even if the GUI window was launched after that signal was initially sent.
-
-Signals are context dependent.
 
 
 ## Threads
