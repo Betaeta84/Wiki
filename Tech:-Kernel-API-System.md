@@ -19,13 +19,6 @@ The Kernel serves as the central hub of communication between different aspects 
 * a list of [[devices| Tech: Devices]]
 * [[plugins|Tech: Plugins]] api
 
-## Channels
-Channels are dataflows within the kernel. For example the LhystudiosController accepts data through a channel. Likewise you send data to the controller from any registered code within MeerK40t. The LhystudiosController also sends data in a channel called `<context-path>/usb_send` which is the sets of packets the controller has sent. Channels are `.watch()` and `.unwatch()`.
-
-The channels are an aspect of the Kernel. These allow channels to be opened and watched. These will convey every message sent to any watchers observing that channel. There does not need to be an open channel for that channel to be watched. Or a watcher for that channel to be opened. These provide streams of information while being agnostic as to where the information will end up. A channel may be assigned a greet for an initial watcher these can also be opened with a buffer which will be sent to any dialog when connecting to a particular channel. For example, the `usb` channel for the `LhystudiosDevice` is opened with a buffer, so any watchers connecting, such as the `USBConnect` window will be provided that buffer, even if that data happened before the channel was opened.
-
-Channels are context dependent.
-
 ## Console
 Commands are sent to the console and parsed to execute commands. These are generally modelled after command-line functions. They are registered in the kernel at `command/<command>`.
 
