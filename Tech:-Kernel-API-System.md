@@ -20,11 +20,6 @@ The Kernel serves as the central hub of communication between different aspects 
 * [[plugins|Tech:-Plugins]] api
 
 
-## Threads
-Threads are registered in the kernel and executed like most all multi-threaded operations. These are tracked and viewed with the `thread` channel for diagnostic purposes. And are required to complete for kernel shutdown.
-
-***
-
 # MeerK40t Specific API
 
 Often it may be essential to extend MeerK40t in a more specific fashion. Add in a new window, provide a new filetype, edit the tree menu options, or add a function to the system menubar, or define webhelp.
