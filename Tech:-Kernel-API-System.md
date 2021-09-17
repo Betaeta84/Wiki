@@ -13,9 +13,8 @@ The Kernel serves as the central hub of communication between different aspects 
 * provides a [[scheduler, jobs for the scheduler|Tech:-Scheduler]]
 * general data [[channels|Tech:-Channels]]
 * a command [[console, registered commands|Tech:-Console]]
-* execution and operation of [[modules|Tech:-Modules]], [[modifiers|Tech:-Modifiers]], [[devices|Tech:-Devices]], [[plugins|Tech:-Plugins]]
+* execution and operation of [[modules|Tech:-Modules]], [[modifiers|Tech:-Modifiers]], [[plugins|Tech:-Plugins]]
 * [[translation information and functionality|Tech:-Translations]]
 * run_later operations for moving operations to a gui or other main thread
-* a list of [[devices|Tech:-Devices]]
 * [[plugins|Tech:-Plugins]] api
 * hooks for [[MeerK40t Specific api elements|Tech:-MeerK40t-Specific-API]]
