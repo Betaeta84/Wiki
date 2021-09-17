@@ -1,0 +1,1 @@
+The shutdown process is a lifecycle event within the kernel to terminate the threads, detach the [[modules|Tech:-Modules]], deactivate the [[modifiers|Tech:-Modifiers]]
