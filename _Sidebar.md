@@ -31,7 +31,7 @@
 * [Linux: Debian 8 Jessie](./Install:-Linux-Debian)
 * [Mac OSX](./Install:-Mac-OSX)
 * [Windows](./Install:-Windows)
-### Technical information
+### [[Technical information|Technical information: 0. Index]]
 (for developers)
 
 
