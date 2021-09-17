@@ -10,7 +10,7 @@ The Kernel serves as the central hub of communication between different aspects 
 * [[context path|Tech: Contexts]] locations for partitioning of information
 * provides for [[signals, listeners|Tech: Signals]], partitioned at the context level
 * manages [[thread interactions|Tech: Threading]] and [[shutdown|Tech:-Shutdown]]
-* provides a [[schedulear, jobs for the scheduler|Tech:-Scheduler]]
+* provides a [[scheduler, jobs for the scheduler|Tech:-Scheduler]]
 * general data [[channels|Tech:-Channels]]
 * a command [[console, registered commands|Tech:-Console]]
 * execution and operation of [[modules|Tech:-Modules]], [[modifiers|Tech:-Modifiers]], [[devices|Tech:-Devices]], [[plugins|Tech:-Plugins]]
@@ -18,13 +18,6 @@ The Kernel serves as the central hub of communication between different aspects 
 * run_later operations for moving operations to a gui or other main thread
 * a list of [[devices|Tech:-Devices]]
 * [[plugins|Tech:-Plugins]] api
-
-## Console
-Commands are sent to the console and parsed to execute commands. These are generally modelled after command-line functions. They are registered in the kernel at `command/<command>`.
-
-We are addressing the console commands with regard to the Kernel. For general MeerK40t Console See: [[Help: Console Commands]].
-
-To write and register commands your own commands within a module for MeerK40t or plugin. See: [[Tech: Console Command API]]. These as highly expressive as most modern CLI system but include some extended functionality like command chaining based on data context. The theory behind this is borrowed from [vpype](https://github.com/abey79/vpype) in part and [click](https://click.palletsprojects.com/en/7.x/) and other advanced systems to provide the Kernel API a very robust internal command system.
 
 
 ## Threads
