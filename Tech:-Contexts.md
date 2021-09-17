@@ -1,0 +1,6 @@
+# Context
+Locations within the kernel space at specific paths. For example, the camera add-on stores camera settings in `camera/0` through `camera/5` and these settings are independent of each other and thus can use the same namespace within that context.
+
+Contexts serve as path relevant snapshots of the kernel. These are the primary interaction between the modules and the kernel. They permit getting other contexts of the kernel as well. This should serve as the primary interface code between the kernel and the modules. All contexts have delegated access to the kernel functions, some of these are path relative. The same key location at two different contexts refer to two different bits of data.
+
+For example the Camera plugin may register itself at `camera/0` for the 0th camera interface. And the BindAlias internal plugin may register itself at `/` root context. This means that if you wanted to to access the keymap data within BindAlias you could do `context.get_path('/')` which does the same as `context.root` and access the `.keymap` values which map the key values to console commands. Assuming that BindAlias exists and is loaded. If you attempt to access this data prior to the `boot` lifecycle event this data may not have been registered yet as BindAlias attaches the modifier at `boot`.
