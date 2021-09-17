@@ -22,11 +22,6 @@ The Kernel serves as the central hub of communication between different aspects 
 ## Modifiers
 Modifiers provide functionality for a particular context. The assumption is modifiers will alter the context or provide a link to the main code. For example `Spooler` provides .spooler at the given context as place to send cutcode. Modifiers also get called `boot()` when the kernel boots at start-up. These are always called the name of the modifier itself. So `modifier/Spooler` is opened as `modifier/Spooler`
 
-## Modules
-Modules are assumed to be allow many copies of the same class. These are opened at the context and stored in the `.opened` dictionary. These are given a name which can be dynamically assigned. They are not expected to change the context at which they are opened. 
-
-Modules are opened classes. They should be registered in the `module/<module-name>` path in the kernel. These are opened and attached to devices. Sometimes they are registered in other specialty directories like `window` if they are GUI windows and are of little use otherwise. These are opened using the `open()` function on devices and kernels. If this module is already opened. The opened module is returned and any initialization parameters are called on the `restore()` function on the given module.
-
 ## Channels
 Channels are dataflows within the kernel. For example the LhystudiosController accepts data through a channel. Likewise you send data to the controller from any registered code within MeerK40t. The LhystudiosController also sends data in a channel called `<context-path>/usb_send` which is the sets of packets the controller has sent. Channels are `.watch()` and `.unwatch()`.
 
