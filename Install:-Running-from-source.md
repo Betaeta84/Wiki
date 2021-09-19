@@ -58,6 +58,7 @@ If you are writing a module for MeerK40t you should feel free to include externa
 
    * Windows - Create a shortcut as follows: Start-in: the Scripts directory of your virtual environment. Target: `pythonw.exe` followed by the full path/name of the meerk40t.py file in the root directory of the source you downloaded. Change icon: the meerk40t.ico file in the root directory of the source you downloaded.
    * Linux - TODO
+   * macOS - Create a shortcut using [pyshortcuts](https://github.com/newville/pyshortcuts). 
 
 ### Troubleshooting Install
 
