@@ -1,4 +1,8 @@
-If you are going to write code either for your own purposes or for the community at large you need to understand at least some of the underlying architecture. Or help in [[other ways...|https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted]]
+If you are going to write code either for your own purposes or for the community at large or help in [[other ways|https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted]], you may need to understand at least some of the underlying architecture. 
+
+First the the wiki is not the primary source for this information, the primary source is the source primarily, not simply comments in the source code but also the readmes that are part of most of the directories within the source code.
+
+Secondly assuming we have done our jobs well there should be a community of people involved with this project, currently the considerable discussion goes on in the irc channel [irc.libera.chat #MeerK40t](irc://irc.libera.chat#meerk40t). 
 
 # Kernel
 
@@ -18,6 +22,8 @@ The Kernel serves as the central hub of communication between different aspects 
 * run_later operations for moving operations to a gui or other main thread
 * [[plugins|Tech:-Plugins]] api
 * hooks for [[MeerK40t Specific api elements|Tech:-MeerK40t-Specific-API]]
+
+ There is a minor goal to make the kernel independent of the MeerK40t code. It serves as the central hub for MeerK40t but it *should* be able to serve as the central hub for any other program.
 
 # Hardware
 Understanding the hardware we are trying to drive is a very important step in understanding how we must do what we want to do.
