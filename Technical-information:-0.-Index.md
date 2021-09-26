@@ -1,4 +1,4 @@
-If you are going to write code either for your own purposes or for the community at large you need to understand at least some of the underlying architecture.
+If you are going to write code either for your own purposes or for the community at large you need to understand at least some of the underlying architecture. Or help in [[other ways...|https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted]]
 
 # Kernel
 
@@ -30,11 +30,12 @@ Understanding the hardware we are trying to drive is a very important step in un
 # GUI
 The core Meerk40t gui is called wxMeerK40t and is written in wxPython. This is designed specifically to be interchangeable or able to be omitted. Specifically we use AUI within wxPython. There's considerable amounts of information on how these work so familiarizing yourself on them does not need to be covered here. 
 
-# Algorithms
+# Algorithms and Methods
 Some algorithms being used by MeerK40t are extremely useful but not well known.
 
 * [[Zingl-Bresenham Curve Plotting Algorithm|Tech:-Zingl-Bresenham-Curve-Plotting]]
+* [[Internal Laser Commands|Tech: Internal Laser Commands]]
 
 # Extras
 Other articles have been written from time to time and are not specifically covered or needed by the rest of this technical documentation.
-* [[What exactly is the laserhead animating?|Tech:-What-exactly-is-the-laserhead-animation-animating%3F]]
+* [[What exactly is the laserhead animating?|Tech:-What-exactly-is-the-laserhead-animation-animating?]]
