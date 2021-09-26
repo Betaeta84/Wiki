@@ -48,13 +48,20 @@ Our aim is to have a comprehensive set of documentation covering:
 However we are still a long way from achieving this, so any help you can give in improving our documentation would be very welcome.
 
 ## Help Wanted
-@Sophist points out that whilst @taterize (David Olsen - the author) is doing a great job in creating this useful tool, there is always more work to do than he can handle alone. So, if you benefit from using this **free** software, please, please show your appreciation by contributing something back and helping him out. 
+Code is a huge part of a computer program, but a small part of a community.
 
-If you are worried that you will be unable to contribute because you can't write Python code, then let me reassure you that there are many other ways you can contribute:
-* [Updating and enhancing these Wiki pages](./Tech:-Creating-a-wiki-page) to pass on your experiences to others
-* [Translating the application strings into other languages](./Tech:-Foreign-Language-Translations) (please only do this for languages you are fluent in)
-* Raising [Github issues](/meerk40t/meerk40t/issues) when things don't work as you think they should or suggesting ideas for other improvements
-* Testing out new beta functionality on your machine or helping research the capabilities / speeds etc. of the controller board
+If you are worried that you will be unable to contribute because you can't write Python code; don't. There are many other ways you can contribute:
+* [Updating and enhancing these Wiki pages](./Tech:-Creating-a-wiki-page) to pass on your experiences to others.
+* Writing your own or enhancing other documentation to help others at all levels of understanding.
+* Thinking about and organizing longer term priorities.
+* Learning and sharing new information.
+* Raising, filing, discussing [Github issues](/meerk40t/meerk40t/issues). When things don't work as you think they should or suggest ideas for improvements. Test, address and amplify the issues of others. 
+* Upskilling new contributors
+* Helping users, not just here but in the broader community. Bigger communities are more robust higher achieving.
+* Automating workflows and defining workflows. 
+* [Translating the application strings into other languages](./Tech:-Foreign-Language-Translations) (this tends to require not just fluency but being fluent in laser jargon)
+
+* Testing out new experimental functionality on your machine or helping research the capabilities / speeds etc. of the controller board, or other controller boards we might want to support
 
 See [Tech: Help Wanted](https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted) for more details.
 
@@ -86,7 +93,7 @@ For saving files MeerK40t uses a modified form of SVG, for which the [Namespace 
 
 * Primary author: Tatarize
 * Additional coding: JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan, 
-* Translations: Peter9811 (Spanish) 
+* Translations: Peter9811 (Spanish), 
 * Wiki: Tatarize, JoerLane (M2-Nano Guru), Tiger12506, Olivier33m, Sophist-UK
 
 ---
