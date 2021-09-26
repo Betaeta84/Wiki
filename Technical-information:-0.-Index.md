@@ -22,6 +22,6 @@ The Kernel serves as the central hub of communication between different aspects 
 # Hardware
 Understanding the hardware we are trying to drive is a very important step in understanding how we must do what we want to do.
 
-## M2 Nano
+## Lhystudios M2 Nano
 * [[M2 Nano Communication Protocols|Tech:-Lhymicro-Control-Protocols]]
 * [[M2 Nano Hardware Information|Tech:-Lhymicro-M2-Nano-Hardware]]
