@@ -115,6 +115,8 @@ Calling `S1P` triggers instant execution ignoring any commands that occur after 
 * `E`: Triggers F ability of compact mode. Without an E the F will not trigger. Without a second E after the F the mode will not engage. The F is held until the second E command.
 * `S0`: Unknown. Seen in chinese software retrace feature: `IV2282554G000G001R|nS0B|nEaD|kUrDrU070DrU` (400mm/s). Usually homes the device when attempted manually.
 
+Note: `IBTBTBTBTBTBTBTBTBTBTBTBTBTBBaS1P$` actually trigger the B and T for each of these events. This is determined by checking the signal processing on the board itself.
+
 ![nano](https://user-images.githubusercontent.com/3302478/75086288-62346180-54e7-11ea-92df-6642bcb3e2df.png)
 
 ### Speed Codes
