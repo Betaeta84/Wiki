@@ -25,3 +25,4 @@ Understanding the hardware we are trying to drive is a very important step in un
 ## Lhystudios M2 Nano
 * [[M2 Nano Communication Protocols|Tech:-Lhymicro-Control-Protocols]]
 * [[M2 Nano Hardware Information|Tech:-Lhymicro-M2-Nano-Hardware]]
+* [[M2 Nano Speed Research|Tech:-Physical-Speed-Measurements]]
