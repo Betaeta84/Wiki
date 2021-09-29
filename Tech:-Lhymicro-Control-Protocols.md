@@ -108,6 +108,7 @@ Calling `S1P` triggers instant execution ignoring any commands that occur after 
 * `F`: Finishes. In compact, requires we exit `N` then call `SE` to take effect. Then the device waits until all tasks are complete then signals a status with PEMP flag set, meaning the queue is empty this is usually 236.
 * `N`: Executes in default mode, in compact mode, causes the mode to end. We can then issue rapid moves and return to compact mode with `S1E`. Without a reset, we could exit compact mode but without clearing the speed `V` or `G` or `C` values, thing could go weird.
 * `S1`: Triggers Compact Mode.
+* `S0P`: Homes then executes the commands. `IBzzzzzzzzRzzzzzzzS0P$` would home the machine then move to that location.
 * `S1P`: Executes command, ignores rest of packet. Locks rail.
 * `S2P`: Works like S1P but does not lock the rail.
 * `PP`: If within the same packet, causes the device to rehome and all states are defaulted.
