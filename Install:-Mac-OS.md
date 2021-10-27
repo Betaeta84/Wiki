@@ -43,7 +43,7 @@ To launch MeerK40t terminal command: "meerk40t"
 
 
 ### Advanced:
-openssl from github is required if you want to compile python yourself: https://github.com/openssl/openssl Python compile may require ./configure --enable_framework for some use cases on MacOS.
+openssl from github is required if you want to compile python yourself: https://github.com/openssl/openssl Python compile may require ./configure --enable-framework for some use cases on MacOS.
 
 On macOS 11+ Big Sur; numpy and wxPython would need to be installed from source as well. 
 
