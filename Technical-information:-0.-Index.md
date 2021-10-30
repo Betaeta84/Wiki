@@ -12,6 +12,7 @@ The Kernel serves as the central hub of communication between different aspects 
 * a central dictionary of [[registered objects|Tech:-Registered-Objects]].
 * stores [[persistence values|Tech: Persistence Settings]] at a given [[contexts|Tech:-Contexts]].
 * [[context path|Tech: Contexts]] locations for partitioning of information
+* stores [[choices|Tech: Choices]] values for presenting united settings values
 * provides for [[signals, listeners|Tech: Signals]], partitioned at the context level
 * manages [[thread interactions|Tech: Threading]] and [[shutdown|Tech:-Shutdown]]
 * provides a [[scheduler, jobs for the scheduler|Tech:-Scheduler]]
