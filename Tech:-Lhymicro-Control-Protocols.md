@@ -416,5 +416,8 @@ Then it sends a quick jog a little away from the edge:
 0030   46 46 46 46 46 46 46 46 46 46 46 a6 70            FFFFFFFFFFF.p
 ```
 
+The code on the board and the code send to the board are different. I tried testing this in software:
+52 84 04 7F 4F FB 4E 04 82 4A 2F D1 D1 F0 CD 62 ---- pure zeros.
+97 EF 50 CB 90 49 96 32 B3 50 2C E9 A7 52 1B 93 --- zeros ends with 1
 
-
+So a difference of 1 value caused it to radically change. And the conversion between board number and result can be literally anything.
