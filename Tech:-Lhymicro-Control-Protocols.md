@@ -351,9 +351,9 @@ e.g. IV2240983G000G001BS0RERzzzvLzzzvRzzzvLzzzvFNSE-$
 * If you keep waiting this becomes 236
 * If you send IPP$ this will respond with a 207 state.
 
-### Packet Unknown Sniffed.
+### Challenge Code
 
-Dimsum labs did some analysis, of their packet sniffed logs there are two exchanges that are unknown.
+Dimsum labs did some analysis, of their packet sniffed logs there are two exchanges which were not previously seen.
 
 https://github.com/dimsumlabs/lasercutter/tree/master/protocol
 ```
@@ -381,9 +381,20 @@ And again:
 
 Sent the "AK0" like it was a command the device would know. Here K0 might be a command. Or it could be a different A command being executed on 4b 30.
 
-## Challenge Code
+### Challenge
 
-The M2 Nano has a serial number but it doesn't read it out, but rather checks whether that serial number is valid. This is what the unknown sniffed packet does.
+The code on the board and the code send to the board are different.
+
+```
+52 84 04 7F 4F FB 4E 04 82 4A 2F D1 D1 F0 CD 62 --- pure zeros.
+97 EF 50 CB 90 49 96 32 B3 50 2C E9 A7 52 1B 93 --- zeros ends with 1
+```
+
+This is the serial number as a challenge code. The serial number is written on the card so if your serial number is E8CF835E06EB918F then your hex challenge code is "c36be245d0a1c09ce6be2454ffb005b8" which is sent in pure byte binary after an A command.
+
+This is the MD5 hash of the actual string in uppercase letters no spaces.
+
+The M2 Nano has a serial number but it doesn't read it out, but rather checks whether that serial number is valid.
 
 ```
 0000   a6 00 41 b0 7f 3b a1 75 2c df 58 83 1f 04 4d cb   ..A..;.u,.X...M.
@@ -391,34 +402,7 @@ The M2 Nano has a serial number but it doesn't read it out, but rather checks wh
 0020   a6 15                                             ..
 ```
 
-Which if the 16 bytes there is the serial number, note these are always correct.
-```
-0000   1b 00 60 5c 19 12 80 fa ff ff 00 00 00 00 09 00   ..`\............
-0010   01 05 00 03 00 82 03 06 00 00 00 ff cc 6f 0c 12   .............o..
-0020   00                                                .
-```
-We get a response code that is has cc for the value, 204. 
+We get a response code 0xCC (204) if the code matches.
 
-The system then sends a home command software->board
-```
-0000   1b 00 f0 57 c4 10 80 fa ff ff 00 00 00 00 09 00   ...W............
-0010   00 05 00 03 00 02 03 22 00 00 00 a6 00 49 50 50   .......".....IPP
-0020   46 46 46 46 46 46 46 46 46 46 46 46 46 46 46 46   FFFFFFFFFFFFFFFF
-0030   46 46 46 46 46 46 46 46 46 46 46 a6 e4            FFFFFFFFFFF..
-```
-Which then shows up as busy because it's homing. (238) For a bit.
+The software needs to send home "IPP" because there's no other method of getting out of 204.
 
-Then it sends a quick jog a little away from the edge:
-```
-0000   1b 00 50 79 92 12 80 fa ff ff 00 00 00 00 09 00   ..Py............
-0010   00 05 00 03 00 02 03 22 00 00 00 a6 00 52 7c 6e   .......".....R|n
-0020   42 7a 31 33 36 53 31 50 46 46 46 46 46 46 46 46   Bz136S1PFFFFFFFF
-0030   46 46 46 46 46 46 46 46 46 46 46 a6 70            FFFFFFFFFFF.p
-```
-
-The code on the board and the code send to the board are different. I tried testing this in software:
-```
-52 84 04 7F 4F FB 4E 04 82 4A 2F D1 D1 F0 CD 62 ---- pure zeros.
-97 EF 50 CB 90 49 96 32 B3 50 2C E9 A7 52 1B 93 --- zeros ends with 1
-```
-So a difference of 1 value caused it to radically change. And the conversion between board number and result can be literally anything.
