@@ -380,3 +380,41 @@ And again:
 ```
 
 Sent the "AK0" like it was a command the device would know. Here K0 might be a command. Or it could be a different A command being executed on 4b 30.
+
+## Challenge Code
+
+The M2 Nano has a serial number but it doesn't read it out, but rather checks whether that serial number is valid. This is what the unknown sniffed packet does.
+
+```
+0000   a6 00 41 b0 7f 3b a1 75 2c df 58 83 1f 04 4d cb   ..A..;.u,.X...M.
+0010   7c 64 65 46 46 46 46 46 46 46 46 46 46 46 46 46   |deFFFFFFFFFFFFF
+0020   a6 15                                             ..
+```
+
+Which if the 16 bytes there is the serial number, note these are always correct.
+```
+0000   1b 00 60 5c 19 12 80 fa ff ff 00 00 00 00 09 00   ..`\............
+0010   01 05 00 03 00 82 03 06 00 00 00 ff cc 6f 0c 12   .............o..
+0020   00                                                .
+```
+We get a response code that is has cc for the value, 204. 
+
+The system then sends a home command software->board
+```
+0000   1b 00 f0 57 c4 10 80 fa ff ff 00 00 00 00 09 00   ...W............
+0010   00 05 00 03 00 02 03 22 00 00 00 a6 00 49 50 50   .......".....IPP
+0020   46 46 46 46 46 46 46 46 46 46 46 46 46 46 46 46   FFFFFFFFFFFFFFFF
+0030   46 46 46 46 46 46 46 46 46 46 46 a6 e4            FFFFFFFFFFF..
+```
+Which then shows up as busy because it's homing. (238) For a bit.
+
+Then it sends a quick jog a little away from the edge:
+```
+0000   1b 00 50 79 92 12 80 fa ff ff 00 00 00 00 09 00   ..Py............
+0010   00 05 00 03 00 02 03 22 00 00 00 a6 00 52 7c 6e   .......".....R|n
+0020   42 7a 31 33 36 53 31 50 46 46 46 46 46 46 46 46   Bz136S1PFFFFFFFF
+0030   46 46 46 46 46 46 46 46 46 46 46 a6 70            FFFFFFFFFFF.p
+```
+
+
+
