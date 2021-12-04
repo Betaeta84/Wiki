@@ -13,7 +13,7 @@
 ### [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
 ###### to be written
 1. [The User Interface](./Doc:-1.-User-Interface)
-2. [Configuring your K40](./Doc:-2.-Configuring-your-K40)
+2. [Configuring Meerk40t](./Doc:-2.-Configuring-Meerk40t)
 3. [Opening and Saving files](./Doc:-3.-Opening-and-Saving-Files)
 4. [Operations and their Settings](./Doc:-4.-Operations-and-their-settings)
 5. [Raster Wizards and Scripts](./Doc:-5.-Raster-wizards-and-scripts)
