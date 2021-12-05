@@ -2,7 +2,7 @@ Meerk40t now has an updater to help you keep your copy of Meerk40t up-to-date. T
 
 ## Frequently Asked Questions
 
-### How are the 4 ways of running Meerk40t handled by the updater
+### How are the 4 ways of running Meerk40t handled by the updater?
 Meerk40t can be run in four different ways:
 1. Using an executable
 2. From a copy of the source code downloaded from Github (using a Zip or Tar file) and unpacked into a directory structure.
@@ -13,12 +13,12 @@ The updater attempts to identify the way that you are running Meerk40t, and give
 
 For executables / source code, Meerk40t offers either to download the new version for you, or open a browser window to download the file to the directory and filename of your choice.
 
-### How can you run the update checker
+### How can you run the update checker?
 * From the GUI Help Menu - Check for Updates
 * From the console using the Check_for_Updates command
 * On a regular basis when you start Meerk40t - if Meerk40t tells you about an update but you decide not to upgrade, you will only receive occasional reminders every so often rather than being nagged every time you start Meerk40t.
 
-### Why are updates to executable versions different in Windows
+### Why are updates to executable versions different in Windows?
 If you are running from an executable or from a downloaded copy of the source code, then the updater will try to replace the existing version with the new one so that you will run the new version automatically when you next start Meerk40t.
 
 If you are running from an executable on any operating system other than Windows, the updater is able to update the current files with new ones even though Meerk40t is currently running.
