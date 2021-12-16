@@ -99,9 +99,12 @@ Given the EGV commands
 * C2) egv ICV2000003006000205NRBS1EzzNSEzzFNSE-$
 * C3) egv ICV2000004006000205NRBS1EzzNSEzzFNSE-$ 
 
+---
 
 * 1C: y = 922.8430804863926x + 267.9231325998842 for period in ms and code.
 * 1 -> y = 11062.906724511931x + 5367.062906724512
+* 3 -> y = 11612.021857923497x + 4150.207650273224
+* 4 -> y = 11169.51379763469x + 6342.04467805519
 
 * 1C -> y = −0.39984319874559x + 2029.0546844374755 for steps/second converted to speedcode. Since these would be the closest the natural units. It's noteworthy that we get really close to -.4 and 2029.
 * 1 -> y = −3.3723350629067093x + 18604.937093275446
