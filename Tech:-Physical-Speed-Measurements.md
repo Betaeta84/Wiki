@@ -62,11 +62,41 @@ This research shows that the effective speeds given by the original chinese soft
 Inpain hooked this stuff directly to a logical analyzer.
 
 
-| SpeedCode | Value | Positive | pulse period (µs) | average pulse period (ms) | average tick period (ms) | pulse freq | speed | calculated speed |
-|-|-|-|-|-|-|-|-|-|
-| 255 000C |  65025 |  511 |  65.700µs to 66.000µs |  0.06585 ms | 0.2634 |  15.221kHz to 15.152kHz | 96.65335 mm/s to 96.2152 mm/s |  95.14758064516128 mm/s|
-| 254 000C | 64770 | 766 | 134.800µs to 135.100µs | 0.13495 ms | 0.5398 ms |  7.418kHz to 7.402kHz | 47.1043 mm/s to 47.0027 mm/s | 46.81865079365079 mm/s|
-| 250 000C | 63750 | 1786 | 411.100µs to 411.400µs | 0.41125 ms | 1.645 ms| 2.432kHz to 2.431kHz | 15.4432 mm/s to 15.43685 mm/s |  15.442801047120417 mm/s|
+| SpeedCode | Value | Positive | pulse period (µs) | average pulse period (ms) | average tick period (ms) | pulse freq | speed mm/s | speed step/s | calculated speed (mm/s) |
+|-|-|-|-|-|-|-|-|-|-|
+| 255 000 1C |  65025 |  511 |  65.700µs to 66.000µs |  0.06585 ms | 0.2634 |  15.221kHz to 15.152kHz | 96.65335 mm/s to 96.2152 mm/s |  95.14758064516128 mm/s|
+| 254 000 1C | 64770 | 766 | 134.800µs to 135.100µs | 0.13495 ms | 0.5398 ms |  7.418kHz to 7.402kHz | 47.1043 mm/s to 47.0027 mm/s | 46.81865079365079 mm/s|
+| 250 000 1C | 63750 | 1786 | 411.100µs to 411.400µs | 0.41125 ms | 1.645 ms| 2.432kHz to 2.431kHz | 15.4432 mm/s to 15.43685 mm/s |  15.442801047120417 mm/s|
+| 220 000 1 | 56100 | 9436 | 91.90-92.00µs | 0.09195 ms | 0.3678 ms | 10.876 kHz |  |  |
+| 220 000 3 | 56100 | 9436 | 81.70-81.9µs | 0.0818 ms | 0.3272 ms | 12.225 kHz |  |  |
+| 220 000 4 | 56100 | 9436 | 69.2-69.3µs | 0.06925 ms | 0.277 ms | 14.440 kHz |  |  |
+| 210 000 1 | 53550 | 11986 | 149.7-149.5µs | 0.1496 ms | 0.5984 ms | 6.685 kHz |  |  |
+| 210 000 3 | 53550 | 11986 | 168.60-168.80µs | 0.1687 ms | 0.6748 ms | 5.928 kHz |  |  |
+| 210 000 4 | 53550 | 11986 | 126.7-126.9µs | 0.1268 ms | 0.5072 ms | 1.972 kHz |  |  |
+| 200 000 1 | 51000 | 14536 | 207.1-207.3µs | 0.2072 ms | 0.8288 ms | 1.207 kHz |  |  |
+| 200 000 3 | 51000 | 14536 | 223.7-223.5µs | 0.2236 ms | 0.8944 ms | 1.118 kHz |  |  |
+| 200 000 4 | 51000 | 14536 | 183.2-183.4µs | 0.1834 ms | 0.7336 ms | 1.363 kHz |  |  |
+
+* A1) 91.90-92.00
+* A2) 81.70-81.9
+* A3) 69.2-69.3
+* B1) 149.7-149.5µs
+* B2) mostly 168.60-1.68.80; but I found a 168.90 at least
+* B3) 126.7-126.9
+* C1)207.1-207.3
+* C2) 223.7-223.5
+* C3) 183.2-183.4
+
+A1) egv ICV2200001006000205NRBS1EzzNSEzzFNSE-$
+A2) egv ICV2200003006000205NRBS1EzzNSEzzFNSE-$
+A3) egv ICV2200004006000205NRBS1EzzNSEzzFNSE-$
+B1) egv ICV2100001006000205NRBS1EzzNSEzzFNSE-$
+B2) egv ICV2100003006000205NRBS1EzzNSEzzFNSE-$
+B3) egv ICV2100004006000205NRBS1EzzNSEzzFNSE-$
+C1) egv ICV2000001006000205NRBS1EzzNSEzzFNSE-$
+C2) egv ICV2000003006000205NRBS1EzzNSEzzFNSE-$
+C3) egv ICV2000004006000205NRBS1EzzNSEzzFNSE-$ 
+
 
 This gives is a well attested formula of y = 922.8430804863926x + 267.9231325998842 for the speed. In the typical method I was using.
 
