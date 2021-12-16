@@ -63,7 +63,7 @@ Inpain hooked this stuff directly to a logical analyzer.
 
 
 | SpeedCode | Value | Positive | pulse period (µs) | average pulse period (ms) | average tick period (ms) | pulse freq | speed mm/s | speed step/s | calculated speed (mm/s) |
-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|
 | 255 000 1C |  65025 |  511 |  65.700µs to 66.000µs |  0.06585 ms | 0.2634 |  15.221kHz to 15.152kHz | 96.65335 mm/s to 96.2152 mm/s | 3805.25 | 95.14758064516128 mm/s|
 | 254 000 1C | 64770 | 766 | 134.800µs to 135.100µs | 0.13495 ms | 0.5398 ms |  7.418kHz to 7.402kHz | 47.1043 mm/s to 47.0027 mm/s | | 46.81865079365079 mm/s |
 | 250 000 1C | 63750 | 1786 | 411.100µs to 411.400µs | 0.41125 ms | 1.645 ms| 2.432kHz to 2.431kHz | 15.4432 mm/s to 15.43685 mm/s | |  15.442801047120417 mm/s|
