@@ -62,11 +62,20 @@ This research shows that the effective speeds given by the original chinese soft
 Inpain hooked this stuff directly to a logical analyzer.
 
 Speedcode -- analysis -- speed range -- calculated speed by laserspeed.
-* 255 000C - 65025 - 511 - 65.700µs to 66.000µs - 15.221kHz to 15.152kHz" -  96.65335 mm/s to 96.2152 mm/s - 95.14758064516128 mm/s
-* 254 000C - 64770 - 766 - 134.800µs to 135.100µs - 7.418kHz to 7.402kHz" - 47.1043 mm/s to 47.0027 mm/s - 46.81865079365079 mm/s
-* 250 000C - 63750 - 1786 - 411.100µs to 411.400µs - 2.432kHz to 2.431kHz" - 15.4432 mm/s to 15.43685 mm/s -  15.442801047120417 mm/s
+
+| SpeedCode | Value | Positive | pulse period (µs) | average tick period (ms) | pulse freq | speed | calculated speed |
+|-|-|-|-|-|-|-|-|
+| 255 000C |  65025 |  511 |  65.700µs to 66.000µs |  0.06585 ms |  15.221kHz to 15.152kHz | 96.65335 mm/s to 96.2152 mm/s |  95.14758064516128 mm/s|
+| 254 000C | 64770 | 766 | 134.800µs to 135.100µs | 0.13495 ms | 7.418kHz to 7.402kHz | 47.1043 mm/s to 47.0027 mm/s | 46.81865079365079 mm/s|
+| 250 000C | 63750 | 1786 | 411.100µs to 411.400µs | 0.41125 ms | 2.432kHz to 2.431kHz | 15.4432 mm/s to 15.43685 mm/s |  15.442801047120417 mm/s|
+
+Note these timing are the pulse groups. It takes 4 pulses to equal a tick. So .13495ms between pulses means there's 0.5398ms between each tick.
 
 These are testing speeds in speed accel-1 with suffix-C set.
+
+***
+
+Raster Stepping speed happens at the same time as the x-speed.
 
 ***
 
