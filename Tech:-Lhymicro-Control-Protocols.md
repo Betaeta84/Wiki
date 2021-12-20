@@ -406,3 +406,13 @@ We get a response code 0xCC (204) if the code matches.
 
 The software needs to send home "IPP" because there's no other method of getting out of 204.
 
+## Raster Direction
+
+If you raster horizontally putting a T or B value in the second directionality. Then any directionality that is not T or B when going into the turn around value either by switching T to B or by applying an NSE cycle will cause the X/Y directional change in the middle of accel/decel switch.
+
+Rastering when done with a logical analyzer looks like this. Where 5 is the Y-axis and 0 is the directionality and 12 is the X axis and 10 the X-directionality.
+![correct-direction-rastering](https://user-images.githubusercontent.com/3302478/146706162-2fa8dd96-ffe4-4383-b558-c2d2f67a2818.png)
+
+Here the rastering is switched in the wrong directionality which causes half the twitch to apply to the Y and the other half to apply to the X. This causes the X axis to instantly be clunked up to speed and apply directionality wrongly which causes the position of the laser to be lost. As it cannot return to the same point correctly.
+![bad-direction-rastering](https://user-images.githubusercontent.com/3302478/146706169-a26e182a-78c8-4cbd-8258-143e39f8bb9e.png)
+
