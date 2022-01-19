@@ -1,11 +1,11 @@
 This is a work in progress.
-Instructions from December 2019.
+Instructions from December 2019 (tested @Dec 2021 on Ubuntu 20.04 LTS )
 Trying a bunch of stuff on a clean install to see what works, even if it's lost in the woods nonsense.
 
-* wget http://github.com/meerk40t/meerk40t/archive/master.zip
-* unzip master.zip
-* cd meerk40t-master
-* python3 MeerK40t.py
+* from https://github.com/meerk40t/meerk40t/releases - choose newest stable version and download from assets: MeerK40t-Linux file 
+* move file to desired location like Desktop 
+* set properties - Execute: Allow execute file as program
+* double click and wait 
 
 Should load up out of the box.
 
@@ -50,9 +50,11 @@ sudo pip install pyusb
 
 Your OS does not give you permissions to access USB.
 ---
+This error is visible clearly in Controller panel - it is displayed bellow Connect button.
+You have to edit permissions for USB device (idVendor and idProduct  can be verified using 'lsusb'  command - search for CH341 device.
 
 * sudo su
 * cd /etc/udev/rules.d
-* echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1a86\", ATTRS{idProduct}==\"5512\", MODE=\"0666\"" > 90-K40.laser.CH341.rules
+* echo 'SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1a86\", ATTRS{idProduct}==\"5512\", MODE=\"0666\"' > 90-K40.laser.CH341.rules
 * sudo udevadm control --reload-rules
 * Unplug and replug K40 usb connection
