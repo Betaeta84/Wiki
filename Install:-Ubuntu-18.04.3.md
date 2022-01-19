@@ -1,5 +1,5 @@
 This is a work in progress.
-Instructions from December 2019 (tested @Dec 2021 on Ubuntu 20.04 LTS )
+Instructions from December 2019 (tested @Dec 2021 on Ubuntu 20.04 LTS)
 Trying a bunch of stuff on a clean install to see what works, even if it's lost in the woods nonsense.
 
 * from https://github.com/meerk40t/meerk40t/releases - choose newest stable version and download from assets: MeerK40t-Linux file 
