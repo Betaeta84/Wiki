@@ -29,6 +29,7 @@ If you are writing a module for MeerK40t you should feel free to include externa
 ### Installing Essential Prerequisites
 
 1. Download the version of Python for your O/S from the [Python web site](https://www.python.org/downloads/) and run the executable to install.
+   * Windows - At the time of writing there is no preinstalled wheel for wxPython (see below), so the most recent version you may want to use Python 3.9 
 
 2. PIP should come pre-installed with Python 2.7.9+ and Python 3.4+. Check whether it is installed by running `pip help`. If it is not installed, then install PIP as follows:
 
