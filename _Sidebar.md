@@ -60,7 +60,7 @@ How some Meerk40t internals work for developers.
 * [Lhymicro control protocols](./Tech:-Lhymicro-control-protocols)
 * [Lhymicro M2-Nano hardware](./Tech:-Lhymicro-M2-Nano-hardware)
 * [Lhymicro M2 Nano speeds](./Tech:-Lhymicro-M2-Nano-speeds)
-* [Lifecycle](./Tech: Lifecycle)
+* [Lifecycle](./Tech:-Lifecycle)
 * [Meerk40t specific API](./Tech:-Meerk40t-specific-API)
 * [Modifiers](./Tech:-Modifiers)
 * [Modules](./Tech:-Modules)
@@ -75,6 +75,6 @@ How some Meerk40t internals work for developers.
 * [Threading](./Tech:-Threading)
 * [UI Design Guide](./Tech:-UI-Design-Guide)
 * [Updater FAQs](./Tech:-Updater-FAQs)
-* [Zingl-Bresenham curve plotting[(./Tech:-Zingl-Bresenham-Curve-Plotting)
+* [Zingl-Bresenham curve plotting](./Tech:-Zingl-Bresenham-Curve-Plotting)
 
 ###### [Wiki change log](./_history)
