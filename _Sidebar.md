@@ -28,7 +28,7 @@ Definitive guides to general laser activities.
 (To be written)
 * [Air assist](./Help:-Air-assist)
 * [Definitive Guide to Alignment](./Help:-Alignment)
-* [Laser power control - PWM/PPI)(./Help: Laser power control)
+* [Laser power control - PWM/PPI](./Help:-Laser-power-control)
 * [Materials](./Help:-Materials)
 * [Mirrors & Lenses](./Help:-Mirrors-Lenses)
 
