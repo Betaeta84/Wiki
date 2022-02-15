@@ -10,6 +10,7 @@
 8. [Aligning your material](./Beginners:-7.-Aligning-your-material)
 9. [Executing a burn](./Beginners:-8.-Executing-a-burn)
 10. [Getting more help](./Beginners:-9.-Getting-more-help)
+
 ### [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
 ###### to be written
 1. [The User Interface](./Doc:-1.-User-Interface)
@@ -20,9 +21,15 @@
 6. [Navigation](./Doc:-6.-Navigation)
 7. [Executing a burn](./Doc:-7.-Executing-a-burn)
 8. [Console Terminal](./Doc:-8.-Console-Terminal)
-9. [Command Line, no GUI](./Doc:-9.-Command-Line)
+9. [Command Line options](./Doc:-9.-Command-Line)
 
 ### Ad-hoc help
+###### to be written
+* [Definitive Guide to Alignment](./Alignment)
+* [Mirrors & Lenses](./Mirrors-Lenses)
+* [Air assist](./Air-assist)
+* [Materials](./Materials)
+
 ### Installation Guides
 * [Linux: Mint](./Install:-Linux-Mint)
 * [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
