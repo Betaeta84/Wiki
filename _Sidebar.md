@@ -1,5 +1,5 @@
-### [Introduction](./)
-### [Beginners Help](./Beginners:-0.-Index)
+# [Introduction](./)
+## [Beginners Help](./Beginners:-0.-Index)
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
 2. [Preparing your K40 hardware](./Beginners:-2.-Preparing-your-K40-hardware)
 3. [Installing MeerK40t](./Beginners:-3.-Installing-MeerK40t)
@@ -11,7 +11,7 @@
 9. [Executing a burn](./Beginners:-8.-Executing-a-burn)
 10. [Getting more help](./Beginners:-9.-Getting-more-help)
 
-### [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
+## [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
 A definitive manual on using Meerk40t. (To be written)
 1. [The User Interface](./Doc:-1.-User-Interface)
 2. [Configuring Meerk40t](./Doc:-2.-Configuring-Meerk40t)
@@ -23,7 +23,7 @@ A definitive manual on using Meerk40t. (To be written)
 8. [Console Terminal](./Doc:-8.-Console-Terminal)
 9. [Command Line options](./Doc:-9.-Command-Line)
 
-### Ad-hoc help
+## Ad-hoc help
 Definitive guides to general laser activities.
 (To be written)
 * [Air assist](./Help:-Air-assist)
@@ -32,7 +32,7 @@ Definitive guides to general laser activities.
 * [Materials](./Help:-Materials)
 * [Mirrors & Lenses](./Help:-Mirrors-Lenses)
 
-### Installation Guides
+## Installation Guides
 How to install Meerk40t
 * [Linux: Mint](./Install:-Linux-Mint)
 * [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
