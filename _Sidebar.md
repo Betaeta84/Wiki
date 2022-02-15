@@ -49,7 +49,7 @@ We would welcome your help to deliver an even better experience.
 * [Foreign language translations](./Proffer:-Foreign-language-translations)
 * [Your development environment](./Proffer:-Development-environment)
 
-### [Technical information](Tech: 0. Index)
+### [[Technical information|Tech: 0. Index]]
 How some Meerk40t internals work for developers.
 * [Channels](./Tech:-Channels)
 * [Choices](./Tech:-Choices)
