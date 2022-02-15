@@ -42,14 +42,14 @@ How to install Meerk40t
 * [Mac OS](./Install:-Mac-OS)
 * [Windows](./Install:-Windows)
 
-### Proffer help
+## Proffer help
 We would welcome your help to deliver an even better experience.
 * [So you want to contribute](./Proffer:-Help-wanted)
 * [Helping with the Wiki](./Proffer:-Creating-a-wiki-page)
 * [Foreign language translations](./Proffer:-Foreign-language-translations)
 * [Your development environment](./Proffer:-Development-environment)
 
-### Technical information
+## Technical information
 How some Meerk40t internals work for developers.
 * [Channels](./Tech:-Channels)
 * [Choices](./Tech:-Choices)
