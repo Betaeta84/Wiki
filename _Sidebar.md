@@ -12,7 +12,7 @@
 10. [Getting more help](./Beginners:-9.-Getting-more-help)
 
 ### [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
-###### to be written
+A definitive manual on using Meerk40t. (To be written)
 1. [The User Interface](./Doc:-1.-User-Interface)
 2. [Configuring Meerk40t](./Doc:-2.-Configuring-Meerk40t)
 3. [Opening and Saving files](./Doc:-3.-Opening-and-Saving-Files)
@@ -24,13 +24,16 @@
 9. [Command Line options](./Doc:-9.-Command-Line)
 
 ### Ad-hoc help
-###### to be written
-* [Definitive Guide to Alignment](./Alignment)
-* [Mirrors & Lenses](./Mirrors-Lenses)
-* [Air assist](./Air-assist)
-* [Materials](./Materials)
+Definitive guides to general laser activities.
+(To be written)
+* [Air assist](./Help:-Air-assist)
+* [Definitive Guide to Alignment](./Help:-Alignment)
+* [Laser power control - PWM/PPI)(./Help: Laser power control)
+* [Materials](./Help:-Materials)
+* [Mirrors & Lenses](./Help:-Mirrors-Lenses)
 
 ### Installation Guides
+How to install Meerk40t
 * [Linux: Mint](./Install:-Linux-Mint)
 * [Linux: Raspberry Pi](./Install:-Raspberry-Pi)
 * [Linux: Ubuntu](./Install:-Ubuntu-Linux)
@@ -38,8 +41,40 @@
 * [Linux: Debian 8 Jessie](./Install:-Linux-Debian)
 * [Mac OS](./Install:-Mac-OS)
 * [Windows](./Install:-Windows)
-### [[Technical information|Technical information: 0. Index]]
-(for developers)
 
+### Proffer help
+We would welcome your help to deliver an even better experience.
+* [So you want to contribute](./Proffer:-Help-wanted)
+* [Helping with the Wiki](./Proffer:-Creating-a-wiki-page)
+* [Foreign language translations](./Proffer:-Foreign-language-translations)
+* [Your development environment](./Proffer:-Development-environment)
+
+### [Technical information](Tech: 0. Index)
+How some Meerk40t internals work for developers.
+* [Channels](./Tech:-Channels)
+* [Choices](./Tech:-Choices)
+* [Contexts](./Tech:-Contexts)
+* [Generating executables](./Tech:-Generating-executables)
+* [Internal laser commands](./Tech:-Internal-laser-commands)
+* [Kernel APIs](./Tech:-Kernel-APIs)
+* [Lhymicro control protocols](./Tech:-Lhymicro-control-protocols)
+* [Lhymicro M2-Nano hardware](./Tech:-Lhymicro-M2-Nano-hardware)
+* [Lhymicro M2 Nano speeds](./Tech:-Lhymicro-M2-Nano-speeds)
+* [Lifecycle](./Tech: Lifecycle)
+* [Meerk40t specific API](./Tech:-Meerk40t-specific-API)
+* [Modifiers](./Tech:-Modifiers)
+* [Modules](./Tech:-Modules)
+* [Persistent settings](./Tech:-Persistent-settings)
+* [Plugins](./Tech:-Plugins)
+* [Plugin API examples](./Tech:-Plugin-API-examples)
+* [Registered objects](./Tech:-Registered-objects)
+* [Scheduler](./Tech:-Scheduler)
+* [Shutdown](./Tech:-Shutdown)
+* [Signals](./Tech:-Signals)
+* [SVG namespace](./Tech:-SVG-namespace)
+* [Threading](./Tech:-Threading)
+* [UI Design Guide](./Tech:-UI-Design-Guide)
+* [Updater FAQs](./Tech:-Updater-FAQs)
+* [Zingl-Bresenham curve plotting[(./Tech:-Zingl-Bresenham-Curve-Plotting)
 
 ###### [Wiki change log](./_history)
