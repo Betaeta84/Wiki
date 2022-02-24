@@ -94,8 +94,8 @@ For saving files MeerK40t uses a modified form of SVG, for which the [Namespace 
 # Acknowledgements
 
 * Primary author: Tatarize
-* Additional coding: JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan, 
-* Translations: Peter9811 (Spanish), 
+* Additional coding: JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan, jpirnay,
+* Translations: Peter9811 (Spanish), jpirnay (German)
 * Wiki: Tatarize, JoerLane (M2-Nano Guru), Tiger12506, Olivier33m, Sophist-UK
 
 If you have contributed, please edit this page and add your name to the above list.
