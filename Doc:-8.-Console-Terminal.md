@@ -276,7 +276,7 @@ type            list driver types
 ```
 
 ## Elements Commands
-The elements context refers to the shapes and objects within the scenes. Specifically things like paths, rect, images, etc. These commands tend to either add additional elements or modify existing elements.
+The elements context refers to the shapes and objects within the scenes. Specifically things like paths, rect, images, etc. These commands tend to either add additional elements or modify existing elements. You will find a more detailed description of the individual commands in [Element Generation and Manipulation](/Doc:-9.Element-Generation-and-Manipulation)
 ```
 --- elements Commands ---
 align           align elements
