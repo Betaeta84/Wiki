@@ -21,8 +21,8 @@ A definitive manual on using Meerk40t. (To be written)
 6. [Navigation](./Doc:-6.-Navigation)
 7. [Executing a burn](./Doc:-7.-Executing-a-burn)
 8. [Console Terminal](./Doc:-8.-Console-Terminal)
-9. [Element-Generation]
-10. [Command Line options](./Doc:-9.-Command-Line)
+9. [Element-Generation](./Doc:-9.Element-Generation-and-Manipulation)
+10. [Command Line options](./Doc:-10.-Command-Line)
 
 ## Ad-hoc help
 Definitive guides to general laser activities.
