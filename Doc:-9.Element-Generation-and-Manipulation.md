@@ -58,6 +58,7 @@ Please note that these **may** give some nice stars if the values for corners an
 
 
 ## Element Duplication
+
 ### The grid -command 
 The grid command takes at least two parameters to create a full grid of copies of the selected element(s):
 ```
@@ -77,7 +78,7 @@ grid ... --origin ox,oy    or       grid ... -o ox,oy
 ````
 so e.g. 
 ````
-grid  3 3 -o "2,2"
+grid  3 3 -o 2,2
 ````
 will create a 3x3 grid with the original elements right in the middle.
 <img width="631" alt="image" src="https://user-images.githubusercontent.com/2670784/157057752-2c42df58-376b-4c1d-aa75-8ca346e023ad.png">
@@ -94,19 +95,19 @@ The optional parameters can be provided like:
 Notabene: normally you will equally distribute the amount of copies between startangle and endangle. If you omit the endangle and provide the optional _deltaangle_, then the amount of copies will be created starting from the _startangle_ every one _deltaangle_ apart:
 ![grafik](https://user-images.githubusercontent.com/2670784/157075081-24466851-7c48-4813-880b-adf4ff0be136.png)
 
-### The circ_array - command
+### The radial - command
 takes some parameters to create (potentially rotated) copies on a circular arc with the orginal element(s) being one of these
 ```
-circ_array <copies> <radius> [ <startangle> <endangle> <rotate> <deltaangle> ]
+radial <repeats> <radius> [ <startangle> <endangle> <rotate> <deltaangle> ]
 ```
 The optional parameters can be provided like:
 --rotate --startangle 0deg etc.
 <img width="287" alt="image" src="https://user-images.githubusercontent.com/2670784/157231020-90bd23b6-755c-43be-a41b-0988a2941bff.png">
-Notabene: While circ_copy is creating copies around the original elements, circ_array is creating all the copies around a center just -1*radius to the left. So the original elements will be part of the circle.
+Notabene: While circ_copy is creating copies around the original elements, radial is creating all the copies around a center just -1*radius to the left. So the original elements will be part of the circle.
 
 # Element Manipulation
+copy
 align           align elements
-copy            duplicate elements
 delete          delete elements
 fill            fill <svg color>
 matrix          matrix <sx> <kx> <sy> <ky> <tx> <ty>
