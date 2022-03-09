@@ -15,36 +15,37 @@ Whilst there are graphical tools in existence / in prepation to create elements 
 ### text            text <text>
 
 ## Advanced Shapes
-### The polyshape - command
-takes some parameters to create a [regular polygon](https://en.wikipedia.org/wiki/Regular_polygon)
-<img width="443" alt="Polyshapes" src="https://user-images.githubusercontent.com/2670784/156363092-5d81b7c8-884d-4b00-8ec7-87fc3cc6e3a5.png">
+### The shape - command
+takes some parameters to create a [regular polygon](https://en.wikipedia.org/wiki/Regular_polygon) or regular star polygons (see below)
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/2670784/157543255-3f740ba4-9a72-4d14-9483-d345a7695ab0.png">
+
 ```
-polyshape <corners> <x> <y> <radius> <startangle> <inscribe>
+shape <corners> <x> <y> <radius> <startangle> <inscribed>
 ```
 - \<corners\> defines the amount of vertices of the polygon. 
 These lie all on a circle around _x_, _y_  with radius _radius_ (see also _inscribe_ below)
-- \<startangle\> (optional) defines where to start with the polygon: <br><img width="307" alt="Polyshape startangle" src="https://user-images.githubusercontent.com/2670784/156363262-c588b32f-1584-4679-9f76-cd78c1df6d35.png">
-- \<inscribe\> (optional) as indicated above the vertices lie on a circumscribing circle of the polygon. If you want to have the polygon outside of the inscribing circle you can use the _inscribe_ parameter :
+- \<startangle\> (optional) defines where to start with the polygon: <br>
+<img width="381" alt="image" src="https://user-images.githubusercontent.com/2670784/157543827-66ed5b5a-de82-4d01-bd28-eeb275b55960.png">
+
+- \<inscribed\> (optional) as indicated above the vertices lie on a circumscribing circle of the polygon. If you want to have the polygon outside of the inscribing circle you can use the _inscribed_ parameter :
 ````
-polyshape 3 2in 2in 1in --inscribe
+shape 3 2in 2in 1in --inscribed
 ````
-<img width="248" alt="Circumscribing vs inscribing circle" src="https://user-images.githubusercontent.com/2670784/156576709-5cc53393-9e6f-4182-95ed-03b8e89b99c4.png">
+<img width="323" alt="image" src="https://user-images.githubusercontent.com/2670784/157544641-4106aa99-5a5d-4c50-b87e-8c5ab6a2708c.png">
 
 If you do provide the additional parameter "_radius_inner_" then every other point will lie on the inner circle providing a more star-like figure:
 ```
-polyshape 8 5cm 2cm 1cm --radius_inner 50%
+shape 8 5cm 2cm 1cm --radius_inner 50%
 ````
 ![grafik](https://user-images.githubusercontent.com/2670784/157079311-3ee8eec5-4aa3-44eb-bc30-2be8ade1db0c.png)
 You may specify actually the alternating sequence with the _alternate_seq_ option in conjunction with the aforementioned  _radius_inner_ option. This will create somewhat gear-like shapes:
-![grafik](https://user-images.githubusercontent.com/2670784/157080432-4be6e4cf-52d0-4a58-83c5-22383982fb07.png)
+<img width="386" alt="Gears" src="https://user-images.githubusercontent.com/2670784/157545282-cb92b724-d45d-4c90-a1f1-adfdf737cae4.png">
 
-
-### The star - command
-takes some parameters to create a [regular star polygon](https://en.wikipedia.org/wiki/Star_polygon) 
+If you provide the optional parameter "--density" then you will create a [regular star polygon](https://en.wikipedia.org/wiki/Star_polygon) 
 ```
-star <corners> <density> <x> <y> <radius> [ <startangle> ]
+shape <corners> <x> <y> <radius> [ <startangle> ] --density num
 ```
-<img width="483" alt="star" src="https://user-images.githubusercontent.com/2670784/156431877-4885a29e-1a74-48f1-9e3b-2830e71ab3e7.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/2670784/157546288-e25480e0-9c7e-41f9-8840-4be32e7cfae8.png">
 
 - \<corners\> defines the amount of vertices of the polygon. 
 - \<density\> define the line to draw from one vertice to the one \<density\> points away.
@@ -52,7 +53,13 @@ star <corners> <density> <x> <y> <radius> [ <startangle> ]
 - \<startangle\> (optional) defines where to start with the polygon
 
 Please note that these **may** give some nice stars if the values for corners and density are an odd/even combination (if you want to know more read the wikipedia article linked above about those two numbers supposed to be coprimes). Meerk40t will provide some feedback if the chosen parameters are suboptimal:
-<img src="https://user-images.githubusercontent.com/2670784/157040044-c433ae29-7564-4672-85bd-05f8f6cf2a9d.png">
+<img width="416" alt="density" src="https://user-images.githubusercontent.com/2670784/157542101-d507a104-bed6-4c2f-89ae-ae64a8cff902.png">
+
+You can combine and experiment with all parameters to get some nice looking polygons, i.e.
+<img width="265" alt="image" src="https://user-images.githubusercontent.com/2670784/157542754-5d56f65b-1a2b-4110-947e-0988706c9df4.png">
+
+NB: you may invoke shape with 1 corner and 2 corners as well: these will result in 1 single point, a line with length _radius_ respectively
+<img src="https://user-images.githubusercontent.com/2670784/157540787-a6641f08-9fe7-4d42-8e04-d7a69ad63ea4.png" >
 
 ### outline         outline the current selected elements
 
@@ -68,7 +75,7 @@ will create a grid with 3 columns and 4 rows of the same element(s):
 
 ![grafik](https://user-images.githubusercontent.com/2670784/157295043-7360958b-220d-4c24-8c6f-d61e63813979.png)
 
-By default these copies will be place immediately to the right / to the bottom of the original. If you want to space the copies apart you cann add two additional parameters to indicate the distance of one copy to another:
+By default these copies will be placed immediately to the right / to the bottom of the original. If you want to space the copies apart you can add two additional parameters to indicate the distance of one copy to another:
 
 ![grafik](https://user-images.githubusercontent.com/2670784/157295394-9fe1f638-ed26-46ae-8553-0e16443672d2.png)
 
@@ -102,7 +109,8 @@ radial <repeats> <radius> [ <startangle> <endangle> <rotate> <deltaangle> ]
 ```
 The optional parameters can be provided like:
 --rotate --startangle 0deg etc.
-<img width="287" alt="image" src="https://user-images.githubusercontent.com/2670784/157231020-90bd23b6-755c-43be-a41b-0988a2941bff.png">
+<img width="395" alt="image" src="https://user-images.githubusercontent.com/2670784/157548376-7087cd96-c26e-4ddb-b880-7ebf306b6a7b.png">
+
 Notabene: While circ_copy is creating copies around the original elements, radial is creating all the copies around a center just -1*radius to the left. So the original elements will be part of the circle.
 
 # Element Manipulation
