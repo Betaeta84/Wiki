@@ -10,3 +10,8 @@ Find the desired icon and download in 50x50. We use the free license.
 * Using Local Terminal, with wxPython installed.
 * `img2py -a icons8-icon-name-50.png icons.py`
 * Paste the icon8_icon_name PyEmbeddedImage() block into icons.py
+
+
+----
+
+Other graphic assets are also fine and should be placed in an assets.py file. This would be non-icons, mouse cursors, something drawn on screen, or in the scene rather than for buttons where icons are typically and currently used. These should not have dark mode issues.
