@@ -43,6 +43,12 @@ How to install Meerk40t
 * [Mac OS](./Install:-Mac-OS)
 * [Windows](./Install:-Windows)
 
+## 0.8 Pre-Relase
+Incomplete Documentation about the new release of meerk40t with some insights about the new functionalities
+* [Laser-Features](./V0.8-Laser-Features)
+* [The new GUI](./V0.8-New-GUI)
+* [New GUI-Features](./V0.8-New-Features)
+
 ## Proffer aid
 We would welcome your help to deliver an even better experience.
 * [So you want to contribute](./Proffer:-Help-wanted)
