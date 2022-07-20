@@ -416,3 +416,47 @@ Rastering when done with a logical analyzer looks like this. Where 5 is the Y-ax
 Here the rastering is switched in the wrong directionality which causes half the twitch to apply to the Y and the other half to apply to the X. This causes the X axis to instantly be clunked up to speed and apply directionality wrongly which causes the position of the laser to be lost. As it cannot return to the same point correctly.
 ![bad-direction-rastering](https://user-images.githubusercontent.com/3302478/146706169-a26e182a-78c8-4cbd-8258-143e39f8bb9e.png)
 
+## Acceleration Tick Count for Cut and Engrave.
+
+Acceleration tick counts in cut/engrave: Acceleration 1 Step=512, 2=512, 3=1024, 4=1536 ... d=0.768"
+Acceleration tick counts in raster: Acceleration 1 Step=512, 2=1024, 3=1536, 4=1792 ... d=0.896"
+
+Four step ticks will move 1 mil distance. Acceleration and deceleration (braking) happen in the same amount of distance, so Accel 1-2 would be 512 steps / 4 = 128 * 2 (for both acceleration and braking) for a total of 256 mil distance for ramping up to speed and slowing down after.
+
+Default speed is 380µs=18.2mm/s.
+
+Raster step period to speed conversions (acceleration time):
+70µs=100mm/s (57.333ms)
+35µs=200mm/s (57.661ms)
+24µs=300mm/s (57.325ms)
+18µs=400mm/s (45.559ms)
+14µs=500mm/s (45.593ms)
+12µs=600mm/s (48.682ms)
+11µs=625mm/s (47.848ms)
+11µs=650mm/s (47.064ms)
+10µs=675mm/s (46.441ms)
+10µs=700mm/s
+
+---
+
+egv IBzzzzRzzzzS1P$ Period 91-92µs, Frequency 10.87-10.99kHz (for each stepper) since it’s diagonal.
+
+691µs/1.45kHz=10mm/s
+345µs/2.90kHz=20mm/s
+230µs/4.35kHz=30mm/s
+173µs/5.78kHz=40mm/s
+138µs/7.25kHz=50mm/s
+115µs/8.70kHz=60mm/s
+99µs/10.10kHz=70mm/s
+86µs/11.63kHz=80mm/s
+77µs/12.99kHz=90mm/s
+69µs/14.49kHz=100mm/s
+63µs/15.87kHz=110mm/s
+57µs/17.54kHz=120mm/s
+53µs/18.87kHz=130mm/s
+50µs/20kHz=140mm/s
+46µs/21.74kHz=150mm/s
+
+---
+
+45.6µs 21.93kHz for the rapid. Which charts to 150 but the chart is in unfixed speeds which are off by 8% or so and should be multiplied by 0.919 to get the real speed. This means our 150 is 150 * 0.919 = 137.85 which is the same as the rapid speed going by the frequency of the ticks. 4 ticks per rotation.
