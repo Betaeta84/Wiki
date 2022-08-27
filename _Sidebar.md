@@ -78,7 +78,7 @@ How some Meerk40t internals work for developers.
 * [Scheduler](./Tech:-Scheduler)
 * [Shutdown](./Tech:-Shutdown)
 * [Signals](./Tech:-Signals)
-* [SVG namespace](./Tech:-SVG-namespace)
+* [SVG namespace](./Namespace)
 * [Threading](./Tech:-Threading)
 * [UI Design Guide](./Tech:-UI-Design-Guide)
 * [Updater FAQs](./Tech:-Updater-FAQs)
