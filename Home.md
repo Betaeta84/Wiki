@@ -89,7 +89,7 @@ There are specific pages for the [Lhymicro M2-Nano Hardware](./Tech:-Lhymicro-M2
 The Tech section of the Wiki also has other research on the K40 hardware, for example [Physical Speed Measurements](./Tech:-Physical-Speed-Measurements)
 
 ## SVG Namespace
-For saving files MeerK40t uses a modified form of SVG, for which the [Namespace specification is here](./Tech:-SVG-Namespace).
+For saving files MeerK40t uses a modified form of SVG, for which the [Namespace specification is here](./Namespace).
 
 # Acknowledgements
 
