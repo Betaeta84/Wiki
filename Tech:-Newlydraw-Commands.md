@@ -150,9 +150,9 @@ Raster command. This is followed by 0x00 then the length in bits of the relevant
 8. ZZZFile0;RS;ZED;
 9. (disabled) -- Expected ZZZFile;CV10;CR1;ZED;
 10. (disabled) -- Expected ZZZFile;CV10;CR-1;ZED;
-11. (disabled) -- Expected ZZZFile;CV10;WU10;ZED
-12: ZZZFile0;ZH1;ZED;
-13: ZZZFile0;ZG1;ZED;
+11. (disabled) -- Expected ZZZFile;CV10;WU10;ZED;
+12. ZZZFile0;ZH1;ZED;
+13. ZZZFile0;ZG1;ZED;
 14. ZZZFile0;ZG;ZED;
 15. ZZZFile0;ZK1;ZED;
 16. ZZZFile0;ZT;ZED;
