@@ -139,6 +139,31 @@ Unknown
 ## YF/YZ
 Raster command. This is followed by 0x00 then the length in bits of the relevant data to follow and then a string of bytes zero-padded to the nearest full byte.
 
+# Captures
+1. ZZZFile0;UL;ZED;
+2. ZZZFile0;VP100;VK100;SP2;VQ15;VJ5;VS5;PR;PU-394,0;ZED;
+3. ZZZFile0;ZQ;ZED
+4. ZZZFile0;VP100;VK100;SP2;VQ15;VJ5;VS5;PR;PU0,396;ZED;
+5. ZZZFile0;VP100;VK100;SP2;VQ15;VJ5;VS5;PR;PU394,0;ZED;
+6. ZZZFile0;VP100;VK100;SP2;VQ15;VJ5;VS5;PR;PU0,-396;ZED;
+7. ZZZFile0;VP100;VK100;SP2;VQ15;VJ5;VS5;PA;PU3957,19705;ZED;
+8. ZZZFile0;RS;ZED;
+9. (disabled) -- Expected ZZZFile;CV10;CR1;ZED;
+10. (disabled) -- Expected ZZZFile;CV10;CR-1;ZED;
+11. (disabled) -- Expected ZZZFile;CV10;WU10;ZED
+12: ZZZFile0;ZH1;ZED;
+13: ZZZFile0;ZG1;ZED;
+14. ZZZFile0;ZG;ZED;
+15. ZZZFile0;ZK1;ZED;
+16. ZZZFile0;ZT;ZED;
+17. ZZZFile0;ZQ;ZED
+18. ZZZFile0;PL2;DA60;TO50;ZED;
+19. ZZZFile0;WV10;WR400;ZED;
+20. ZZZFile0;WV10;WR-400;ZED;
+21. ZZZFile0;WV10;WU400;ZED;
+
+<img width="485" alt="secondsequence" src="https://user-images.githubusercontent.com/3302478/220779531-921628da-0209-4087-9892-78ae55d33293.png">
+
 
 # External Links and Resources
 * https://github.com/lynxis/laserusb
