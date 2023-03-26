@@ -134,6 +134,23 @@ VS is common in regular HPGL however rather than convey a direct velocity the G3
 * Speeds less than 15mm/s (but greater than 5mm/s) are increments of 0.5mm/s starting at 147 (5mm/s) and ending at 162 (15mm/s).
 * Speeds less than 100mm/s (but greater than 15mm/s) are increments of 1mm/s from 162 (15mm/s) and ending at 255 (93 mm/s)?
 
+
+Directly Measured values:
+* 1mm/s: VS137
+* 2mm/s: VS142
+* 3mm/s: VS147
+* 4mm/s. VS152
+* 5mm/s: VS157
+* 7mm/s: VS161
+* 9mm/s: VS165
+* 11mm/s: VS169
+* 13mm/s: VS173
+* 15mm/s: VS177
+* 25mm/s: VS187
+* 35mm/s: VS197
+* 45mm/s: VS207
+* 55mm/s: VS217
+
 So for example, a speed of 18 mm/s would be between 15 and 100mm/s so it would be 147 + 18 = 165.
 
 #### `VP` - Cut DC
