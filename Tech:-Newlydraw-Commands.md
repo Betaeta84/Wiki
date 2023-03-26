@@ -347,6 +347,6 @@ The lasers which use this underlying controller board are as follows:
 
 # Links
 
-## Reverse engineering resources. ==
+## Reverse engineering resources.
 * [https://github.com/lynxis/laserusb Lynxis LaserUsb] First known attempt to reverse engineer the device.
 * [https://edutechwiki.unige.ch/en/G3Version8 Edutech documentation] Edutech documentation on the format.
