@@ -150,6 +150,9 @@ Directly Measured values:
 * 35mm/s: VS197
 * 45mm/s: VS207
 * 55mm/s: VS217
+* 85mm/s VS9
+* 93mm/s VS9
+* 94mm/s VS9
 
 So for example, a speed of 18 mm/s would be between 15 and 100mm/s so it would be 162 + (18 * (1.0)) = 180.
 <img width="1108" alt="speeds" src="https://user-images.githubusercontent.com/3302478/227758597-8f18c28e-1480-4281-9062-00e0562114cf.png">
@@ -187,8 +190,9 @@ This controls the steps taken per bit of a `YF` or `YZ` command.
 
 This controls the steps taken per bit of the `XF` or `XZ` command.
 
-#### `BT` - Raster Unknown
-Unknown raster-only setting value.
+#### `BT` - Raster BitDepth
+
+This is 1 for black/white images and is 8 for grayscale images. Where 8 bits gives the overall powerlevel.
 
 
 
@@ -210,9 +214,9 @@ The BD modifier means each bit counts as the specified number of steps. BD8 for 
 
 The BC modifier means each bit along the XF and XZ directions counts as the specified number of steps.
 
-#### `BT` Unknown
+#### `BT` Raster Bitdepth
 
-BT is only seen in rasters and usually has a value of 1 but is not specifically known at this time.
+BT is only seen in rasters and usually has a value of 1, this means it's a black/white. With a bitdepth of 8 it encodes full grayscale image.
 
 #### `YZ` Raster Right
 
