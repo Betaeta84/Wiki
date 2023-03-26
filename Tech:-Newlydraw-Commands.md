@@ -151,7 +151,11 @@ Directly Measured values:
 * 45mm/s: VS207
 * 55mm/s: VS217
 
-So for example, a speed of 18 mm/s would be between 15 and 100mm/s so it would be 147 + 18 = 165.
+So for example, a speed of 18 mm/s would be between 15 and 100mm/s so it would be 162 + (18 * (1.0)) = 180.
+<img width="1108" alt="speeds" src="https://user-images.githubusercontent.com/3302478/227758597-8f18c28e-1480-4281-9062-00e0562114cf.png">
+
+
+
 
 #### `VP` - Cut DC
 Unlike most laser systems the G3V8 can specify the current to the stepper motors during a cut.
