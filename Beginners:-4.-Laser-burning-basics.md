@@ -89,7 +89,7 @@ We are not going to repeat the information from the [Safety matters](./Beginners
 ### Slate
 
 ## Next page
-Now that you are familiar with the types of Laser burns and the sorts of materials you can burn, the next step in the Beginners' Tutorial is to [understand the user interface](./Beginners:-4.-Understanding-the-user-interface).
+Now that you are familiar with the types of Laser burns and the sorts of materials you can burn, the next step in the Beginners' Tutorial is to [understand the user interface](./Beginners:-5.-Understanding-the-user-interface).
 
 If you haven't already read the safety issues listed on the [Preparing you K40 Laser](./Beginners:-1.-Preparing-your-K40-laser) page, or haven't yet [installed MeerK40t](./Beginners:-2.-Installing-MeerK40t) we recommend that you go back a step or two and read them.
 
