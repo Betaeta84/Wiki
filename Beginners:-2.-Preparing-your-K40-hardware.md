@@ -136,6 +136,7 @@ Your K40 (and software like Meerk40t) needs to establish a known position of the
 It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has two separate x & y end-stop sensors to tell it where / when to stop. These are often (but not always) optical in nature, consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
 
 Optical end stops:
+https://photos.app.goo.gl/myYUWPrMWwCTenoM7
 ![Y end stop](https://photos.app.goo.gl/41e7fScxkRe3zyN49)
 ![X and Y end stops](https://photos.app.goo.gl/XemKbkZZAG4WzjgM6)
 
