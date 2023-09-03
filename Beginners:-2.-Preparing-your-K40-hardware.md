@@ -136,9 +136,8 @@ Your K40 (and software like Meerk40t) needs to establish a known position of the
 It establishes a position by "homing" - by which I mean it moves to one corner of the bed (for most K40s the top-left corner) where it has two separate x & y end-stop sensors to tell it where / when to stop. These are often (but not always) optical in nature, consisting of a u-shaped plastic electronic sensor in a fixed position at the end of the axis and a metal strip to break the light beam.
 
 Optical end stops:
-https://photos.app.goo.gl/myYUWPrMWwCTenoM7
-![Y end stop](https://photos.app.goo.gl/41e7fScxkRe3zyN49)
-![X and Y end stops](https://photos.app.goo.gl/XemKbkZZAG4WzjgM6)
+![Y end stop](https://lh3.googleusercontent.com/pw/AIL4fc-3R58LSWHXHz8BN-GPk6IR1j5WpgMB__L6_rgexAzvOCbBIBv4GaqoE6wfZvjRckv-gVu3xELx7rEoqayYrNEGzJkyxUsXg4Or_145TLRbWCx1sds_J6mF3zMYybB_qARYA1j5LOz_F-Mashu6m-5x=w919-h1236-s-no?authuser=0)
+![X and Y end stops](https://lh3.googleusercontent.com/pw/AIL4fc8qEMTHBa_6Zu2z4a8dXgi-Zm1KoL7TI54-PbbLBl0we5lrgpbCkGwO8LOOb4FrKXiuIb-hycUdm332dVfCmueSpKBvzK3DN8t4LaO_wUpKZHjVotGc8mHpcE-WrN5fmOE3T2qUXRWkVvLfyJHAwdMr=w1745-h1236-s-no?authuser=0)
 
 It is not uncommon for your K40 to arrive with the metal strip out of position, so that it doesn't interrupt the light beam. If that is the case (as it was with my own K40) then the very first time you power it on, you panic and turn off the machine in a hurry when you hear this loud and continuous grinding noise.
 
