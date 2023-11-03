@@ -1,3 +1,6 @@
+
+# Pre-MeerK40t
+
 Tatarize, first author.
 
 Early on after my brother bought a K40 laser, the best and first open source solution was K40 Whisperer which was and still is quite nice for it's simplicity. I was not very enamored of some of the code in it, as I wanted to write some base-level code for the M2 Nano with python and it didn't support the basic plotter like functions that I would expect of a library but it had enough basic understanding and work that I started my first major project, tearing apart the core part of the whisperer.
@@ -12,28 +15,48 @@ So I decided to set out on my own and write my bit of code from scratch to licen
 
 # MeerK40t
 
-About July 20th, 2019 I started the meerk40t github.
+About July 20th, 2019 Tatarize started the meerk40t github.
 
 The first version was released Sep 23, 2019.
 
+## 0.1 
 Sep 23, 2019. 0.1 --- Completed Phase 0. We could load something and send it to the laser, and it sort of worked. "Before perfect it should be competent enough to let reasonably competent users test some stuff." See issue #20 ( https://github.com/meerk40t/meerk40t/issues/20 )
 
 Around this time laser gods did a write-up ( https://lasergods.com/meerk40t-stock-k40-software/ ).
 https://www.youtube.com/watch?v=-d9hD4O9KGk
 
-# SVGElements
+![image](https://github.com/meerk40t/meerk40t/assets/3302478/e30f35a2-e442-47c5-8c40-45fc44170a39)
 
-After that it basically went dead until Dec. 2019. Largely because I realized there was a real need for robust SVG loading. And the couple things of feedback I got was only going to get worse unless svg loading was treated with respect it required.
 
+## SVGElements
+
+After that, the main project basically went dead until Dec. 2019. Largely because I realized there was a real need for robust SVG loading. And the couple things of feedback I got was only going to get worse unless svg loading was treated with respect it required. This largely spawned the first major spinoff of meerk40t.
+
+## 0. 2
 Dec 26, 2019. 0.2 --- Added in SVGElements. This was a large amount of work between October and December of 2019, a general census showed that the typical methods of loading things weren't very good and a lot of very intricate work mapping out a lot of SVG was needed in order to correctly load svgs for use in plotter based devices.
 
-Shortly after this Inpain/Paiin came aboard late Dec 2019. He started pointing out issues with other OSes, and started releasing some of these pre-built setups by Jan. Channel #meerk40t on Freenode was opened Jan 17th 2020. Tiger joined nearly a year later on  Jan 8th 2021. Sophist started raising Issues by Feb 7th, 2021.
+## 0.3
+Jan 17, 2020, 0.3 --- Added the kernel with some understandings of lifecycle, added in things like signals so that windows could be allowed to update fairly well. It was clear that without a central hub of how things should interact and the required protocols that the project would quickly become unwieldy. Every part of the program would need to know all the other parts of the programs. Unless something was done to mitigate that would-be complexity and deal with each of the parts in a 1:1 fashion.
 
-Jan 170.3 --- Added the kernel with some understandings of lifecycle, added in things like signals so that windows could be allowed to update fairly well.
-
+## 0.4
 0.4 --- Was never published but was part of the major breaking changes included in 0.5.
 
+## 0.5
 Feb 18, 2020 - 0.5 ---- This largely was due to the addition of dual drivers, where you could potentially point the backend towards several different outputs. At this time the typical relationship, was that you could stack drivers with a spooler, controller, and output. The idea was you could redirect the output to like a file or whatever else you needed.
+
+## 0.6
 
 Jun 23, 2020, 0.6.0 --- Major revision added in Kernel / Device as basically both able to boot where the kernel would control the booting of the different Devices. The devices could run on their own. And you could in theory have multiple devices though it would almost always require two different main windows. This basically had devices like their own mini-kernels.
 Added in the scene and widget system.
+
+## 0.7
+
+## 0.8
+
+## 0.9
+
+The big change for 0.9 was the use of geomstr as the core geometry primative.
+
+# IRC
+
+Paiin started out the #meerk40t channel on the largest and one of the oldest most stable irc networks for free software: freenode. Channel #meerk40t on Freenode was opened Jan 17th 2020, with myself and Paiin being founding members. Tiger joined nearly a year later on  Jan 8th 2021. Sophist started raising Issues by Feb 7th, 2021, and joined the chat May 16, 2021. Sophist alerted us that there was some drama with freenode around May 23 or so, and founded #meerk40t on libera.chat on spec. It blew up Jun 16, 2021.
