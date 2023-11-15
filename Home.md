@@ -94,8 +94,8 @@ For saving files MeerK40t uses a modified form of SVG, for which the [Namespace 
 # Acknowledgements
 
 * Primary author: Tatarize
-* Additional coding: JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan, jpirnay,
-* Translations: Peter9811 (Spanish), jpirnay (German)
+* Additional coding: jpirnay, JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan ([Details](https://github.com/meerk40t/meerk40t/graphs/contributors)) 
+* Translations: Peter9811 (Spanish), jpirnay (German), betaeta (Italian)
 * Wiki: Tatarize, JoerLane (M2-Nano Guru), Tiger12506, Olivier33m, Sophist-UK
 
 If you have contributed, please edit this page and add your name to the above list.
