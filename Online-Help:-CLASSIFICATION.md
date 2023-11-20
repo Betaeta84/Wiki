@@ -22,6 +22,7 @@ A simplified version of this logic:
 You can influence this behaviour by a couple of options, set in Preferences.
 
 <img src="https://github.com/meerk40t/meerk40t/assets/2670784/ce5b00ab-6af6-4e1d-8ee5-2353a9cf8208" width="300">
+
 - Classify Reverse: Classify elements into operations in reverse order e.g. to match Inkscape's Object List 
 - Fuzzy color-logic: Unticked: Classify elements into operations with an *exact* color match, Ticked: Allow a certain color-distance for classification.
 - Treat "Black" as raster: Ticked: Classify will assign black elements to a raster operation, Unticked: Classify will assign black elements to an engrave operation
