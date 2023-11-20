@@ -17,6 +17,12 @@ Optimisations: If you click on the button with the Arrow left indicator (<img sr
 
 ### Expert Tips:
 (I hope you know what you are doing ;-) )
-Right click on the scene to get a context menu.
+- Right click on the scene to get a context menu.
 ![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/e5070d2c-9bbf-4574-8619-8df0f306c348)
 You can intentionally drop all lasercommands before / after the currently displayed execution step - this is helpful if you need to restart a job and don't want to do all the things until the point you needed to interrupt (intentionally stopped) again. Go to this point (or as close as you can get) and delete the cuts before.
+- If you fold out the optimisation menu at the right hand side you have two more tabs, that could be interesting:
+   - Operations: This a list of all the cutcode groups that MeerK40t creates under the hood. You can add additional instructions like a command to interrupt the burn and wait for a user command, and many more.
+NB: Normally you would want to add special operations in the operation part of the tree (see operations), but this is an expert tool to change behaviour at a core level.
+![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/c17848e6-e6cb-4da9-be16-127fc6780d52)
+
+   - Cutcode: if you select an operation in the previous tab, you can then see (and influence) the detailed laserinstructions.
