@@ -29,6 +29,9 @@ You can influence this behaviour by a couple of options, set in Preferences.
 if you want to defer this to apply manual assignment, then untick this option.
 - Classify after color-change: Whenever you change an elements color (stroke or fill), MeerK40t will then reclassify this element. You can turn this feature off by disabling this option.
 - Don't autoload operations on empty set: MeerK40t feelds uncomfortable, if you don't have any operations defined (as this will not allow any elements to be burned). So it tries to come up with a default set of basic operations, if it recognises no operations. You can turn this feature off by ticking this box.
+- Autogenerate Operations: If classification did not find a match, either with color matching (exact or fuzzy, see above) or by assigning to a default operation, then MeerK40t will create a matching operation for you, if you have this option set.
+- Autogenerate both  for fill and stroke: Active: for both stroke and fill we look for a corresponding hit, if none was found we generate a matching operation.
+Inactive: one hit of either stroke or fill is enough to prevent autogeneration
 
 ### Details
 
