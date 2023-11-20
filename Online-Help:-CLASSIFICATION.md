@@ -13,6 +13,9 @@ You can assign an element manually to an operation if you drag that element and 
 Alternatively you can let MeerK40t do the assignment for you: this is done by looking at the color of the stroke and the fill of the element.
 
 ## Automatic classification
+MeerK40t can assign an element to an operation based on the element type and the color of elements stroke and fill. You can influence this behaviour by a couple of options, set in Preferences.
+![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/ce5b00ab-6af6-4e1d-8ee5-2353a9cf8208)
+
 
 ### Details
 
