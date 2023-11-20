@@ -1,8 +1,18 @@
 # Operations
 Operations are fundamental concept MeerK40t is using to translate geometric shapes on the scene into laser burn instructions.
 In essence MeerK40t distinguishes two classes of operations:
-- Basic burn operations - that will take shapes and burn these with some given parameters like speed and power
+- Burn operations - that will take shapes and burn these with some given parameters like speed and power
 - Special operations - that will issue certain commands to the laser or the infrastructure around it, interacting with the user etc.
+
+The assignment which element will 'belong' to which operation, ie will be burnt how, is called Classification and deserves a chapter of its own.
+
+## Vectors and Bitmaps
+
+Before we enter the realms of the individual operations, let's make sure we understand the two fundamental burn types: Vectors and Bitmaps (or Rasters):
+
+- A vector is essentially a very thin line - it can be straight or it can be curved, but it is VERY thin - in theory it has infinitely small width, but in the case of lasering it is the width of the laser dot, which is a tiny faction of an inch or centimetre. For example, you would use a vector to describe the edge of the leather design you are going to cut out, or perhaps the edges of the letters you are going to burn onto the material. In the case of letters, the vectors would normally be one or more closed loops, and in this case the vectors might have a fill colour or gradient of colours.
+
+- A bitmap is a 2-dimensional matrix of equal sized dots - and each dot can be any colour (or for lasering grey dots of varying darkness / brightness). Sometimes we constrain these dots to be either black or white rather than shades of grey. Photographs are held in a computer as bitmaps (in a variety of file formats), and sometimes diagrams which could be described using vectors are provided in image form as well.
 
 ## Burn Operations
 ### Engrave
