@@ -20,8 +20,15 @@ A simplified version of this logic:
 - All images will be assigned to the same image operation
 
 You can influence this behaviour by a couple of options, set in Preferences.
-<img src="https://github.com/meerk40t/meerk40t/assets/2670784/ce5b00ab-6af6-4e1d-8ee5-2353a9cf8208" width="300">
 
+<img src="https://github.com/meerk40t/meerk40t/assets/2670784/ce5b00ab-6af6-4e1d-8ee5-2353a9cf8208" width="300">
+- Classify Reverse: Classify elements into operations in reverse order e.g. to match Inkscape's Object List 
+- Fuzzy color-logic: Unticked: Classify elements into operations with an *exact* color match, Ticked: Allow a certain color-distance for classification.
+- Treat "Black" as raster: Ticked: Classify will assign black elements to a raster operation, Unticked: Classify will assign black elements to an engrave operation
+- Classify elements after creation: MeerK40t will immediately try to classify (automatically assign) an element as soon as it is created,
+if you want to defer this to apply manual assignment, then untick this option.
+- Classify after color-change: Whenever you change an elements color (stroke or fill), MeerK40t will then reclassify this element. You can turn this feature off by disabling this option.
+- Don't autoload operations on empty set: MeerK40t feelds uncomfortable, if you don't have any operations defined (as this will not allow any elements to be burned). So it tries to come up with a default set of basic operations, if it recognises no operations. You can turn this feature off by ticking this box.
 
 ### Details
 
