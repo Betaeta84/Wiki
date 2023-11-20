@@ -13,15 +13,21 @@ You can assign an element manually to an operation if you drag that element and 
 Alternatively you can let MeerK40t do the assignment for you: this is done by looking at the color of the stroke and the fill of the element.
 
 ## Automatic classification
-MeerK40t can assign an element to an operation based on the element type and the color of elements stroke and fill. You can influence this behaviour by a couple of options, set in Preferences.
+MeerK40t can assign an element to an operation based on the element type and the color of elements stroke and fill.
+A simplified version of tis logic:
+- Elements that have a stroke color will be assigned to an engrave or cut operation of the same color.
+- Elements that have a solid fill will be assigned to a raster operation that has the same color as the fill of the element. (Unless they are pure white then the will be joining the black elements - this allows white 'overpainting')
+- All images will be assigned to the same image operation
+
+You can influence this behaviour by a couple of options, set in Preferences.
 ![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/ce5b00ab-6af6-4e1d-8ee5-2353a9cf8208)
 
 
 ### Details
 
-Don't read on, if you get easily confused or bored, MeerK40t does normally a great job classifying elements.
+Don't read on, if you get easily confused or bored, MeerK40t does normally a great job of classifying elements.
 
-![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/8e0c2bdd-65a3-46b0-ba09-94300bcf39c9)
+<img src="https://github.com/meerk40t/meerk40t/assets/2670784/8e0c2bdd-65a3-46b0-ba09-94300bcf39c9" width="300">
 
 The classification logic is as follows:
 
