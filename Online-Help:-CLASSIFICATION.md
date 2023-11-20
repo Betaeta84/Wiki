@@ -14,15 +14,24 @@ Alternatively you can let MeerK40t do the assignment for you: this is done by lo
 
 Options:
 
-Details:
+### Details:
+Don't read on, if you get easily confused or bored, MeerK40t does normally a great job classifying elements.
+![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/8e0c2bdd-65a3-46b0-ba09-94300bcf39c9)
+
 The classification logic is as follows:
-A given element will be handed over all operations in the tree (from top to bottom) who will decide if they will be able to classify it:
-a) is it the right type (eg an image op will only accept images while a cut op will refuse such a thing)
-b) if the checkmarks for stroke / color are set then it will compare it's own color to the stroke / fill of the node. If they match it will classify it
-c) if there aren't any marks set, then it will accept such a node regardless of it's color
-if there was no matching operation the it will look for all operations defined in the _default operations list (the one at the bottom of the screen) and will use one of them
-if again such an op couldn't be found it will create a cut op if the elements stroke is red (with the color red and the checkmark for stroke set, so it will accept only similar colored elements), an engrave for all other colors (with the color of the element and the checkmark for stroke set, so it will only accept similar colored elements) and will look as well for a fill. If a fill is present then it will create a default raster op with the color "black"and no checkmarks set, so this raster will accept all elements with a fill.
-Currently you would have for a rectangle with stroke blue and fill cyan two operations created:
-an engrave with a blue color
-a raster with a black color
+
+1. A given element will be handed over all operations in the tree (from top to bottom) who will decide if they will be able to classify it:
+  1. is it the right type (eg an image op will only accept images while a cut op will refuse such a thing)
+  2. if the checkmarks for stroke / color are set then it will compare it's own color to the stroke / fill of the node. If they match it will classify it   
+  3. if there aren't any marks set, then it will accept such a node regardless of it's color
+2. If there was no matching operation then it will look for all operations defined in the _default operations list (the one at the bottom of the screen) and will use one of them
+3. If again such an op couldn't be found it will create a cut op if the elements stroke is red (with the color red and the checkmark for stroke set, so it will accept only similar colored elements), an engrave for all other colors (with the color of the element and the checkmark for stroke set, so it will only accept similar colored elements) and will look as well for a fill. If a fill is present then it will create a default raster op with the color "black" and no checkmarks set, so this raster will accept all elements with a fill.
+
+So you would have for a rectangle with stroke blue and fill cyan two operations created:
+- an engrave with a blue color
+- a raster with a black color
 If you don't want to have this then your shapes need to have no stroke color = transparent 
+
+Additionally:
+- Any succesful classification for one op will not prevent more operations to classify the very same element too, this is very much intended (eg a pattern fill plus an outer engrave) - unless the "Stop" checkmark is set for the operation. This will prevent further classification.
+- There is another checkmark: Default. If the first pass to find matching operations failed (no matching colors found), then in a second pass the operations with the default flag active will be used for classification. This step will be done before a check with the default material list would be done, so between 2. and 3. above.
