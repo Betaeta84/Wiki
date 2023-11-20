@@ -12,10 +12,12 @@ You can assign an element manually to an operation if you drag that element and 
 
 Alternatively you can let MeerK40t do the assignment for you: this is done by looking at the color of the stroke and the fill of the element.
 
-Options:
+## Automatic classification
 
-### Details:
+### Details
+
 Don't read on, if you get easily confused or bored, MeerK40t does normally a great job classifying elements.
+
 ![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/8e0c2bdd-65a3-46b0-ba09-94300bcf39c9)
 
 The classification logic is as follows:
