@@ -24,3 +24,31 @@ if you set the 'Unsupported feature' option you can either ask at load time how 
 - Export: Export the current settings to a different location (create a backup of your config) - highly recommended
 - Import: Import a previously saved setting file
 
+## Classification
+see: [Classification](https://github.com/meerk40t/meerk40t/wiki/Online-Help:-CLASSIFICATION)
+
+## GUI
+This section allows to influence the look and feel of the user interface.
+![image](https://github.com/meerk40t/meerk40t/assets/2670784/39f6a942-6bd3-4864-8ace-34434dbbd8fe)
+
+### Appearance
+- Icon size:
+- Mini icon in tree:
+- Color entries in tree:
+  - Active: the complete node in the tree will be displayed according to the elements color: 
+![image](https://github.com/meerk40t/meerk40t/assets/2670784/8eb1aacb-b8bb-4d4c-a8f4-992f29b57ea7)
+  - Inactive: Standard colors are used: 
+<img width="89" alt="image" src="https://github.com/meerk40t/meerk40t/assets/2670784/1f889f04-a6c2-4a5c-bfad-f481af2e5f7d">
+
+
+- Show the ribbon labels:
+  - Active: Show the labels for ribbonbar.
+  - Inactive: Hide the ribbon labels.
+
+### General
+
+### Misc
+
+### Zoom
+
+
