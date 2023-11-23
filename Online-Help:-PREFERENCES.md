@@ -4,6 +4,7 @@
 
 - Units: Define the standard units for MeerK40t to use (imperial/metric)
 - Language: Sets the user interface language 
+### Input/Output
 - SVG Pixel: Select the Pixels Per Inch to use when loading an SVG file
 - SVG Viewport is bed: SVG files can be saved without real physical units. This setting uses the SVG viewport dimensions to scale the rest of the elements in the file.
 - Image DPI Scaling:
@@ -12,14 +13,14 @@
 - Create a file-node for imported image:
   - Unset: Attach the image directly to elements.
   - Set: Put the image under a file-node created for it.
-
-
-MeerK40ts standard to load / save data is the svg-Format (supported by many tools like [Inkscape](https://inkscape.org/)). While it is supporting most of SVG functionalities, there are still some unsupported features (most notably advanced text effect, clips and gradients).
+- DXF Center and Fit: Fit (scale down if necessary) and center a DXF file within the bed
+- Inkscape-path: Path to inkscape-executable. Leave empty to let Meerk40t establish standard locations.
+- Unsupported elements: MeerK40ts standard to load / save data is the svg-Format (supported by many tools like [Inkscape](https://inkscape.org/)). While it is supporting most of SVG functionalities, there are still some unsupported features (most notably advanced text effect, clips and gradients).
 To overcome that limitation MeerK40t can automatically convert these features with the help of inkscape:
 if you set the 'Unsupported feature' option you can either ask at load time how to proceed or let inkscape perform the conversion automatically. Please note that this conversion might not really needed most of the times, so the recommendation is to use the 'Ask at load time' option.
 
 ![image](https://github.com/meerk40t/meerk40t/assets/2670784/741b4d31-2169-4dc7-93cc-818ed55e3eba)
-
-
-
+- Save: MeerK40t will save the settings at the end of the session when shutting down, you can immediately save the settings to disk with this button
+- Export: Export the current settings to a different location (create a backup of your config) - highly recommended
+- Import: Import a previously saved setting file
 
