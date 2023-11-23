@@ -29,16 +29,15 @@ see: [Classification](https://github.com/meerk40t/meerk40t/wiki/Online-Help:-CLA
 
 ## GUI
 This section allows to influence the look and feel of the user interface.
+
 ![image](https://github.com/meerk40t/meerk40t/assets/2670784/39f6a942-6bd3-4864-8ace-34434dbbd8fe)
 
 ### Appearance
 - Icon size:
 - Mini icon in tree:
 - Color entries in tree:
-  - Active: the complete node in the tree will be displayed according to the elements color: 
-![image](https://github.com/meerk40t/meerk40t/assets/2670784/8eb1aacb-b8bb-4d4c-a8f4-992f29b57ea7)
-  - Inactive: Standard colors are used: 
-<img width="89" alt="image" src="https://github.com/meerk40t/meerk40t/assets/2670784/1f889f04-a6c2-4a5c-bfad-f481af2e5f7d">
+  - Active: the complete node in the tree will be displayed according to the elements color: <img height="30" src="https://github.com/meerk40t/meerk40t/assets/2670784/e0a6ce7e-4f93-4867-8349-7ff2ad0fc2a2">
+  - Inactive: Standard colors are used: <img height="30" src="https://github.com/meerk40t/meerk40t/assets/2670784/1f889f04-a6c2-4a5c-bfad-f481af2e5f7d">
 
 
 - Show the ribbon labels:
