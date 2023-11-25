@@ -18,8 +18,10 @@ The top node of operations has a special context menu, that does allow to access
 - Disable all operations: this disables all operations, so they __will not be used__ for burning
 - Toggle all operations: toggles the enabled state, so all previously enabled operations will become disabled, all previously disabled operations will become enabled
 - Classification - Refresh classification for all: one option to do that and create new operations if no matching ops could be found, the other will just use the existing set
-- 
-
+- Load operations: Loads a previously saved set of operations
+- Save operations: Saves the set of defined operations for later retrieval and reuse
+- Append operation: Will add a basic operation to the operation set (Image, Raster, Engrave, Cut...)
+- Append special operation: appends a control operation to the operation set, so one that does not take elements and determines how to burn them, but ops that do control the job behaviour.
 
 ## Elements
 
