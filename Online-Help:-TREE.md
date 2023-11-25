@@ -24,5 +24,9 @@ The top node of operations has a special context menu, that does allow to access
 - Append special operation: appends a control operation to the operation set, so one that does not take elements and determines how to burn them, but ops that do control the job behaviour.
 
 ## Elements
+TODO
 
 ## Regmarks
+MeerK40t has regmarks, a specical category of elements, that will not be burned but will act as kind of visual guideline for object placement.
+You can move elements in out of the regmark zone by dragging them into or out tof the regmark area in the tree.
+Elements in the regmark area are acting as a background, you can no longer directly interact with them on the Scene.
