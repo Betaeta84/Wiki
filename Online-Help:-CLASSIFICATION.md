@@ -56,3 +56,14 @@ If you don't want to have this then your shapes need to have no stroke color = t
 Additionally:
 - Any successful classification for one op will not prevent more operations to classify the very same element too, this is very much intended (eg a pattern fill plus an outer engrave) - unless the "Stop" checkmark is set for the operation. This will prevent further classification.
 - There is another checkmark: Default. If the first pass to find matching operations failed (no matching colors found), then in a second pass the operations with the default flag active will be used for classification. This step will be done before a check with the default material list would be done, so between 2. and 3. above.
+
+Let's take this file:
+![classification_test](https://github.com/meerk40t/meerk40t/assets/2670784/bc59c297-a476-41f8-ad01-e0e961f8be90)
+
+It contains three raster operations marked yellow, cyan and black:
+![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/e32c4f18-e6b5-4137-8cb9-acfd85f1b03e)
+
+Both the yellow and the cyan raster have 'fill' and 'stop' set:
+![grafik](https://github.com/meerk40t/meerk40t/assets/2670784/c30b87bf-1802-4d4f-9e74-d9aff225c283)
+
+That assigns the elements with a yellow fill to the yellow raster, the cyan ones to the cyan op and all others to the black one (as no color flag was set, which acts as an accept-all operation).
