@@ -10,6 +10,8 @@ Run: MeerK40t.exe
 
 MeerK40t is compiled as a portable application. It doesn't need to install or do anything.
 
+If you want to use MeerK40t for a fiber laser and you used EZCad2 before, you probably need to change de USB driver. Install [zadig](https://zadig.akeo.ie/), launch it. Go to options, check "List all devices", and change the driver for device USBLMCV4 to libusbK. You should be able to connect to your laser.
+
 
 ## Run Batch File to Python.
 
