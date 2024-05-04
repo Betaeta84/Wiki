@@ -20,6 +20,17 @@ pip3 install meerk40t[all]
 ~/.local/bin/meerk40t
 
 ```
+### Archman based distributions (e.g. Manjero) [Draft]
+You need to use ``pamac`` to install the gtk libraries that are required to build wxpython:
+```
+sudo pamac install gtk3 base-devel
+```
+Additionally you need to create a dedicated virtual environment for python:
+```
+python -m venv ~/mk
+~/mk/bin/pip3 install meerk40t[all]
+~/mk/bin/python3 meerk40t.py
+```
 
 # Notes
 * Installing numpy on windows 7 requires installing numpy==1.23.5. `pip install numpy==1.23.5` if you're using 32 bit python.
