@@ -1,5 +1,5 @@
 # [Other languages](./)
-## [![italy](https://github.com/user-attachments/assets/a5043471-cf65-4650-80e6-7f4afb343923 =32x32)Introduzione](./Introduzione:-0.-Index)
+## [<img src="https://github.com/user-attachments/assets/a5043471-cf65-4650-80e6-7f4afb343923">Introduzione](./Introduzione:-0.-Index)
 # [Introduction](./)
 ## [Beginners Help](./Beginners:-0.-Index)
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
