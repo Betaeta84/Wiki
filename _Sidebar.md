@@ -1,5 +1,5 @@
 # [Other languages](./)
-## [Introduzione](./Introduzione:-0.-Index)
+## [![italy](https://github.com/user-attachments/assets/a5043471-cf65-4650-80e6-7f4afb343923)Introduzione =32x32](./Introduzione:-0.-Index)
 # [Introduction](./)
 ## [Beginners Help](./Beginners:-0.-Index)
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
@@ -12,7 +12,6 @@
 8. [Aligning your material](./Beginners:-7.-Aligning-your-material)
 9. [Executing a burn](./Beginners:-8.-Executing-a-burn)
 10. [Getting more help](./Beginners:-9.-Getting-more-help)
-
 ## [Detailed Manual (v0.7.0)](./Doc:-0.-Index)
 A definitive manual on using Meerk40t. (To be written)
 1. [The User Interface](./Doc:-1.-User-Interface)
