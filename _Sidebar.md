@@ -73,6 +73,7 @@ How some Meerk40t internals work for developers.
 * [Meerk40t specific API](./Tech:-Meerk40t-specific-API)
 * [Modifiers](./Tech:-Modifiers)
 * [Modules](./Tech:-Modules)
+* [Newlydraw Commands](./Tech:-Newlydraw-Commands)
 * [Persistent settings](./Tech:-Persistent-settings)
 * [Plugins](./Tech:-Plugins)
 * [Plugin API examples](./Tech:-Plugin-API-examples)
