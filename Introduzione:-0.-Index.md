@@ -10,4 +10,23 @@ MeerK40t è in grado di sostituire il software fornito con i laser K40 come pure
 Ci auguriamo che Meerk40t sia un software migliore delle alternative disponibili per la serie di macchine K40 e che vi permetta di ottenere di più senza dover spendere tempo e fatica **e, soprattutto** senza costringervi a spese ulteriori, oltre la macchina in se, per aggiornare il controller e acquistare Lightburn.
 
 Cosa rende MeerK40t diverso dalle alternative?
+### Percorsi e immagini
+MeerK40t supporta 4 tipi di lavorazioni:
+* Tagli vettoriali / incisioni vettoriali - essenzialmente la stessa cosa. Il laser segue il percorso vettoriale, la differenzia sta solo nell'intensità della "bruciatura"
+* Raster vettoriale - Il laser "brucia" tutti i punti all'interno di un percorso vettoriale (chiuso).
+* Immagine raster - La lavorazione di un'immagine raster avviene utilizzando i singoli pixel.
+
+MeerK40t mira a supportare pienamente lo standard SVG 1.1 (comprese le estensioni specifiche per i principali editor, laddove ciò abbia senso).
+
+### Controllo dell'alimentazione
+Con la macchine K40 è possibile impostare la potenza del laser dal pannello frontale, ma la scheda controller è in grado solo di accendere e spegnere il laser.
+
+Fortunatamente il controller può accendere e spegnere il laser molto velocemente. Infatti può farlo 1.000 volte per pollice (circa 400 per cm), il che è sufficiente per accendere e spegnere il laser più volte nell'ampiezza del diametro del raggio laser stesso.
+
+MeerK40t utilizza questa capacità per variare l'intensità del laser:
+* Costantemente ogni 2 o 3 o ... 1/1000 di pollice; oppure
+* Per i raster, in modo variabile a seconda del livello di scala di grigio dei pixel.
+
+I dettagli tecnici di questa [funzione di modulazione degli impulsi](./Tech:-Raster-pulse-modulation-PPI) sono disponibili [qui](./Tech:-Raster-pulse-modulation-PPI).
+
 
