@@ -42,8 +42,8 @@ MeerK40t dispone anche di una [Linea di comando della console](./Help:-Console-C
 ## Documentazione
 Il nostro obiettivo è quello di avere una documentazione completa che copra:
 * [Principianti](./Beginners:-0.-Index) - Guida alla configurazione dell'hardware, all'installazione di MeerK40t e alla realizzazione del primo lavoro.
-* Manuale dettagliato](./Doc:-0.-Index) - Un insieme dettagliato di pagine indicizzate e strutturate gerarchicamente che descrivono in dettaglio tutte le funzionalità del MeerK40t.
-* [Further Help]() - Aiuto aggiuntivo su aree specifiche.
+* [Manuale dettagliato](./Doc:-0.-Index) - Un insieme dettagliato di pagine indicizzate e strutturate gerarchicamente che descrivono in dettaglio tutte le funzionalità del MeerK40t.
+* [Ulteriore aiuto]() - Additional - Aiuto aggiuntivo su aree specifiche.
 * [Installazione](./Beginners:-2.-Installing-MeerK40t) - Una pagina che fornisce i link alle istruzioni dettagliate per l'installazione di MeerK40t sulle principali piattaforme.
 
 Tuttavia siamo ancora lontani dal raggiungere questo obiettivo, quindi qualsiasi aiuto possiate dare per migliorare la nostra documentazione sarà molto gradito.
