@@ -29,4 +29,11 @@ MeerK40t utilizza questa capacità per variare l'intensità del laser:
 
 I dettagli tecnici di questa [funzione di modulazione degli impulsi](./Tech:-Raster-pulse-modulation-PPI) sono disponibili [qui](./Tech:-Raster-pulse-modulation-PPI).
 
+### Precisione
+MeerK40t utilizza una serie speciale di [algoritmi di tracciatura delle curve di Zingl-Bresham](./Tech:-Zingl-Bresenham-Curve-Plotting) per definire perfettamente le forme. Se il vostro file SVG ha percorsi curvi (che tecnicamente sono archi ellittici o curve di Bezier), una tracciatura   precisa delle forme produrrà un risultato migliore di una approssimazione con una serie di corte linee rette. Il livello di di precisione di Meerk40t è di 1/1000.
 
+### Scelta dei driver
+MeerK40t utilizza il driver LibUsb o il driver predefinito di Windows CH341DLL. Ciò significa che MeerK40t può funzionare insieme ad altri software laser che utilizzano uno di questi driver.
+
+### Linea di comando
+MeerK40t dispone di una completa [interfaccia a riga di comando] (./Help:-Interfaccia a riga di comando). Se si desidera integrare con la macchina laser con un flusso di lavoro automatizzato o semplicemente si preferisce utilizzare la riga di comando, si dovrebbe essere in grado di eseguire la maggior parte dei progetti senza utilizzare l'interfaccia grafica.
