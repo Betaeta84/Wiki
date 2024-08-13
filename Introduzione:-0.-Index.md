@@ -36,4 +36,4 @@ MeerK40t utilizza una serie speciale di [algoritmi di tracciatura delle curve di
 MeerK40t utilizza il driver LibUsb o il driver predefinito di Windows CH341DLL. Ciò significa che MeerK40t può funzionare insieme ad altri software laser che utilizzano uno di questi driver.
 
 ### Linea di comando
-MeerK40t dispone di una completa [interfaccia a riga di comando] (./Help:-Command-Line-Interface). Se si desidera integrare con la macchina laser con un flusso di lavoro automatizzato o semplicemente si preferisce utilizzare la riga di comando, si dovrebbe essere in grado di eseguire la maggior parte dei progetti senza utilizzare l'interfaccia grafica.
+MeerK40t dispone di una completa [interfaccia a riga di comando](./Help:-Command-Line-Interface). Se si desidera integrare con la macchina laser con un flusso di lavoro automatizzato o semplicemente si preferisce utilizzare la riga di comando, si dovrebbe essere in grado di eseguire la maggior parte dei progetti senza utilizzare l'interfaccia grafica.
