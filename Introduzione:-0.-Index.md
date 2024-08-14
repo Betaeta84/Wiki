@@ -56,7 +56,7 @@ Se siete preoccupati di non essere in grado di contribuire perché non sapete sc
 * Scrivere la documentazione o migliorarla per aiutare gli altri, nella comprensione, a tutti i livelli.
 * Pensare e organizzare le priorità a lungo termine.
 * Imparare e condividere nuove informazioni.
-* Chiedere, schedare e discutere [Github issues](/meerk40t/meerk40t/issues), sia quando le cose non funzionano come si pensa dovrebbero, sia quando si hanno idee per migliorare. Testare, affrontare e analizzare i problemi degli altri. 
+* Chiedere, schedare e discutere [Github issues](/meerk40t/meerk40t/issues), anonmalie e funzionamenti inattesi o suggerire nuove funzioni o migliorie. Testare, affrontare e analizzare i problemi degli altri. 
 * Aggiornare i nuovi collaboratori
 * Aiutare gli utenti, non solo qui ma anche nella comunità più ampia. Le comunità più grandi sono più solide e ottengono risultati migliori.
 * Automatizzare i flussi di lavoro e/o definire i flussi di lavoro. 
