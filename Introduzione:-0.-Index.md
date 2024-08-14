@@ -5,7 +5,7 @@ Stiamo lavorando per renderlo ancora più semplice e intuitivo, e migliorare la 
 **Congratulazioni per aver trovato MeerK40t.** Forse avete iniziato a lavorare con il software fornito con il vostro laser K40, o avete provato prima K40 Whisperer, o forse la notizia del nostro programma si sta diffondendo e su questo intendete migrare o iniziare. 
 Magari avrete sentito parlare del software Lightburn, leader del settore, che è lo standard a cui aspirare, ma che non è in grado di pilotare il K40. Indipendentemente da come siete arrivati qui, un GRANDE benvenuto.
 
-MeerK40t è in grado di sostituire il software fornito con i laser K40 come pure il software K40 Whisperer. È stato progettato specificamente per pilotare la popolare classe di macchine laser K40 (costruite in Cina) che hanno una scheda controller Lhymicro. Sebbene MeerK40t aspiri ad essere in grado di pilotare altre schede di controllo (ad esempio quelle basate su Gerbil), questi driver devono essere ancora essere scritti, ma se avete una scheda di controllo diversa, vi ringraziamo per essere passati di qui, ma vi consigliamo di controllare di tanto in tanto se la vostra scheda è nel frattempo entrata nella lista di quelle supportate.
+MeerK40t è in grado di sostituire il software fornito con i laser K40 come pure il software K40 Whisperer. È stato progettato specificamente per pilotare la popolare classe di macchine laser K40 (costruite in Cina) che hanno una scheda controller Lhymicro. Sebbene MeerK40t aspiri ad essere in grado di pilotare altre schede di controllo (ad esempio quelle basate su Gerbil), questi driver devono essere ancora essere scritti, ma se avete una scheda di controllo diversa, vi ringraziamo per essere passati di qui, ma vi consigliamo di controllare di tanto in tanto se la vostra scheda è nel frattempo entrata nella [lista](https://github.com/meerk40t/meerk40t?tab=readme-ov-file#supported-devices) di quelle supportate.
 
 Ci auguriamo che Meerk40t sia un software migliore delle alternative disponibili per la serie di macchine K40 e che vi permetta di ottenere di più senza dover spendere tempo e fatica **e, soprattutto** senza costringervi a spese ulteriori, oltre la macchina in se, per aggiornare il controller e acquistare Lightburn.
 
@@ -24,8 +24,8 @@ Con la macchine K40 è possibile impostare la potenza del laser dal pannello fro
 Fortunatamente il controller può accendere e spegnere il laser molto velocemente. Infatti può farlo 1.000 volte per pollice (circa 400 per cm), il che è sufficiente per accendere e spegnere il laser più volte nell'ampiezza del diametro del raggio laser stesso.
 
 MeerK40t utilizza questa capacità per variare l'intensità del laser:
-* Costantemente ogni 2 o 3 o ... 1/1000 di pollice; oppure
-* Per i raster, in modo variabile a seconda del livello di scala di grigio dei pixel.
+* Costantemente ogni 2 o 3 o ... 1/1000 di pollice
+* Per i raster, in modo variabile a seconda del livello di scala di grigio dei pixel
 
 I dettagli tecnici di questa [funzione di modulazione degli impulsi](./Tech:-Raster-pulse-modulation-PPI) sono disponibili [qui](./Tech:-Raster-pulse-modulation-PPI).
 
@@ -47,3 +47,18 @@ Il nostro obiettivo è quello di avere una documentazione completa che copra:
 * [Installazione](./Beginners:-2.-Installing-MeerK40t) - Una pagina che fornisce i link alle istruzioni dettagliate per l'installazione di MeerK40t sulle principali piattaforme.
 
 Tuttavia siamo ancora lontani dal raggiungere questo obiettivo, quindi qualsiasi aiuto possiate dare per migliorare la nostra documentazione sarà molto gradito.
+
+## Cercasi aiuto
+Il codice è una parte enorme di un programma informatico, ma una piccola parte di una comunità.
+
+Se siete preoccupati di non essere in grado di contribuire perché non sapete scrivere codice Python, non dovreste farlo perché ci sono molti altri modi per contribuire:
+* Aggiornare e migliorare queste pagine del [Wiki](./Tech:-Creating-a-wiki-page) per trasmettere le vostre esperienze ad altri.
+* Scrivere la documentazione o migliorarla per aiutare gli altri, nella comprensione, a tutti i livelli.
+* Pensare e organizzare le priorità a lungo termine.
+* Imparare e condividere nuove informazioni.
+* Chiedere, schedare e discutere [Github issues](/meerk40t/meerk40t/issues), sia quando le cose non funzionano come si pensa dovrebbero, sia quando si hanno idee per migliorare. Testare, affrontare e analizzare i problemi degli altri. 
+* Aggiornare i nuovi collaboratori
+* Aiutare gli utenti, non solo qui ma anche nella comunità più ampia. Le comunità più grandi sono più solide e ottengono risultati migliori.
+* Automatizzare i flussi di lavoro e/o definire i flussi di lavoro. 
+* Tradurre le stringhe dell'applicazione in altre [lingue](./Tech:-Foreign-Language-Translations) (ciò richiedere non solo una certa fluidità, ma anche una buona conoscenza del gergo laser).
+* Testare nuove funzionalità sperimentali sulla tua macchina o aiutare a ricercare le caratteristiche/velocità ecc. della scheda controller o di altre schede controller che potremmo voler supportare
