@@ -112,3 +112,16 @@ We'd probably go to 0.10.0 before 1.0.0. I had brought it up after the huge amou
 * On March 17th, 2022 Tatarize was given full control over the server.
 * Sophist resigned from the main group May 22, 2022 due to perceived biased towards and bullying by Paiin. He still (11/2023) does a fantastic amount of the bug checking and feature suggestions.
 * Jpirnay does an absolutely heroic amount of coding going from around May 2022.
+
+# And then something unexpected happened...
+jpirnay secondary author
+
+![david](https://github.com/user-attachments/assets/0e5d52fb-b11e-43fb-af2b-088fe86167ae)
+MeerK40t is the result of an incredible piece of work by David Olsen aka Tatarize.
+He created this program over 4 years allowing users across the world to get the best out of their K40 equipment (and additional lasertypes).
+
+Despite having no risk factors for getting cancer, he developed a tumor on his tongue that metastasized into his lungs before the doctors could stop it and passed away on July 26, 2024.
+- He was a mentor, an inspiration and a friend - David you will be missed but you won't be forgotten.
+- Please join the fight against cancer and consider donating to one of the many research and charity organisations across the world.
+
+David passed on the baton for the development of MeerK40t to us, so this story, his heritage will continue. We want to use this moment though to encourage people to help and participate in this journey. So if you are interested have a look at [Assisting the project](https://github.com/meerk40t/meerk40t/wiki#help-wanted) and reach out to us - we would be delighted to hear from you.
