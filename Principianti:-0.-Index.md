@@ -28,7 +28,7 @@ Gli argomenti trattati sono:
 * [Passo 9: Esecuzione di una lavorazione](./Principianti:-9.-Esecuzione-una-lavorazione)
 * [Fase 10: Ottenere più aiuto](./Principianti:-10.-ottenere-più-aiuto)
 
-## Buona fortuna. Fai click [qui](./Principianti:-1.-Safety-matters) per andare al passo 1.
+## Buona fortuna. Fai click [qui](./Principianti:-1.-Questioni-di-Sicurezza) per andare al passo 1.
 
 ---
 ### Autori
