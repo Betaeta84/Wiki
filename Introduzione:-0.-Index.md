@@ -62,3 +62,44 @@ Se siete preoccupati di non essere in grado di contribuire perché non sapete sc
 * Automatizzare i flussi di lavoro e/o definire i flussi di lavoro. 
 * Tradurre le stringhe dell'applicazione in altre [lingue](./Tech:-Foreign-Language-Translations) (ciò richiedere non solo una certa fluidità, ma anche una buona conoscenza del gergo laser).
 * Testare nuove funzionalità sperimentali sulla tua macchina o aiutare a ricercare le caratteristiche/velocità ecc. della scheda controller o di altre schede controller che potremmo voler supportare
+
+Per maggiori dettagli si veda [Tech: Help Wanted](https://github.com/meerk40t/meerk40t/wiki/Tech:-Help-wanted).
+
+Infine, se state usando MeerK40t per scopi commerciali (il programma viene fornito gratuitamente, indipendentemente dal fatto che siate hobbisti o professionisti), e non siete in grado di contribuire, donando un po' del vostro tempo a una qualsiasi delle attività di cui sopra, prendete in considerazione l'idea di [sponsorizzare economicamente @tatarize](/sponsors/tatarize). Un modo per ringraziarlo per tutti i suoi sforzi e per contribuire a pagare le spese che il progetto comporta (come i certificati del codice o l'hardware di ricerca e sviluppo). 
+
+**Nota:** l'uso di questo software è libero e non ci sono termini di licenza o legali che vi obblighino a ricompensare @tararize in questo modo. _La scelta è vostra_, ma ci sembra _etico_ condividere con lui una piccola parte dei vostri profitti quando beneficiate _economicamente dei suoi sforzi_.
+
+### Codifica
+Se si desidera scrivere un modulo per uso pubblico o privato:
+
+* Vedere la documentazione del [Kernel API System](https://github.com/meerk40t/meerk40t/wiki/Tech:-Kernel-API-System).
+
+Se si desidera scrivere un'interfaccia grafica per i propri moduli, potrebbe essere necessario aggiungere delle icone.
+
+* [Aggiunta di icone a MeerK40t](https://github.com/meerk40t/meerk40t/wiki/Tech:-Adding-Icons-to-a-MeerK40t-Module)
+
+* [Guida alla progettazione di UI e UX](https://github.com/meerk40t/meerk40t/wiki/Tech:-UI-and-UX-Design-Guide)
+
+## Documentazione dettagliata per la scheda di controllo.
+
+Se si desidera una documentazione dettagliata per la scheda di controllo, le ricerche che abbiamo intrapreso per comprendere l'hardware si possono trovare in questo wiki.
+
+Ci sono pagine specifiche per il [Lhymicro M2-Nano Hardware](./Tech:-Lhymicro-M2-Nano-Hardware) e i [Lhymicro Control Protocols](./Tech:-Lhymicro-Control-Protocols) usati da software come MeerK40t per controllare il K40.
+
+La sezione Tech del Wiki contiene anche altre ricerche sull'hardware del K40, ad esempio [Physical Speed Measurements](./Tech:-Physical-Speed-Measurements)
+
+## Spazio dei nomi SVG
+Per il salvataggio dei file, MeerK40t, utilizza una forma modificata di SVG. Qui le specifiche [Namespace](./Namespace).
+
+# Riconoscimenti
+
+* Autore primario: Tatarize
+* Codifica aggiuntiva: jpirnay, JKRamarz, MartonMiklos, Jaredly, FrogMaster, Sophist-UK, GSBoylan ([Dettagli](https://github.com/meerk40t/meerk40t/graphs/contributors)) 
+* Traduzioni: Peter9811 (spagnolo), jpirnay (tedesco), betaeta (italiano)
+* Wiki: Tatarize, JoerLane (guru di M2-Nano), Tiger12506, Olivier33m, Sophist-UK
+
+Se hai contribuito, per favore modifica questa pagina e aggiungi il tuo nome alla lista di cui sopra.
+
+---
+### Autori
+Il team di MeerK40t è grato per l'aiuto di @taterize, @joerlane e @Sophist-UK nella creazione di questa pagina. Se **tu** pensi che possa essere ulteriormente migliorata, sentiti libero di modificare la pagina e di aggiungere il tuo userid a questo elenco. 😃
