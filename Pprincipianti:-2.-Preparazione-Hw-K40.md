@@ -10,7 +10,7 @@ Se si desidera tornare all'[indice della sezione principianti](./Principianti:-0
 
 ## Contenuti
 * [Questioni di sicurezza](#safety-matters)
-* [Fine corsa](#fine corsa)
+* [Fine corsa](#fine-corsa)
 * [Qualità della combustione](#qualitàdellacombustione)
 * [Miglioramenti](#enhancements)
 * [Carbonizzazione](#charring)
@@ -49,6 +49,15 @@ Non dimenticare di controllare anche il cablaggio all'interno dell'unità di ven
 
 Se si utilizza il K40 in un paese in cui tutte le spine sono dotate di una messa a terra adeguata, di solito è sufficiente come base; in caso contrario (e se avete dei dubbi, fatelo controllare da un elettricista), è necessario installare un picchetto di terra vicino al K40 e collegarlo alla connessione di terra sul retro.
 
-Ma la cosa più importante è verificare che il collegamento a terra sul retro non sia stato isolato dal telaio con la vernice: svitatelo, raschiate la vernice intorno al foro e riavvitatelo. Verificare con un ohmmetro che la resistenza tra il telaio e il pin della messa a terra della rete sia di 0,0 ohm.
+Ma la cosa più importante è verificare che il collegamento a terra sul retro non sia stato isolato dal telaio con la vernice. Svitatelo, raschiate la vernice intorno al foro e riavvitatelo. Verificare con un ohmmetro che la resistenza tra il telaio e il pin della messa a terra della rete sia di 0,0 ohm.
 
+#### Collegamenti ad alta tensione
+Controllate con attenzione i cavi dell'alta tensione che collegano il tubo laser - (sempre dalla versione inglese: "_i nostri erano a posto_"), ma secondo internet molte persone hanno segnalato connessioni di scarsa qualità.
+
+### Fumi
+La tossicità dei fumi di una lavorazione laser dipende dal materiale che si sta lavorando. Alcuni materiali possono essere davvero molto tossici, mentre altri producono solo odori sgradevoli. Sono pochi, se non addirittura nessuno, i materiali che si possono lavorati in modo completamente sicuro e privi di odori senza il bisogno avere un sistema di estrazione dei fumi.
+
+La ventola di aspirazione in dotazione è generalmente considerata inadeguata; inoltre, essendo montata sul retro del laser, crea una pressione positiva nel tubo di scarico verso l'esterno e qualsiasi perdita in tale tubo provocherà l'ingresso dei fumi nella stanza di lavoro. Consigliamo pertanto l'aggiunta di una seconda ventola in linea all'estremità del tubo di scarico per creare una pressione negativa nel tubo ed evitare questo problema. Si consiglia inoltre di usare del nastro isolante in schiuma per sigillare le varie aperture della macchina e per riempire l'ampio spazio tra la ventola standard e il telaio.
+
+Il tubo in plastica fornito è generalmente considerato del tutto inutile. Considerando che uno in alluminio espandibile costa solo pochi euro/dollari, è sicuramente una situazione migliore e fortemente consigliato
 
