@@ -28,4 +28,8 @@ Gli argomenti trattati sono:
 * [Passo 9: Esecuzione di una lavorazione](./Principianti:-9.-Esecuzione-una-lavorazione)
 * [Fase 10: Ottenere più aiuto](./Principianti:-10.-ottenere-più-aiuto)
 
-Buona fortuna. Fare clic su [qui](./Principianti:-1.-Safety-matters) per andare al passo 1.
+## Buona fortuna. Fare clic su [qui](./Principianti:-1.-Safety-matters) per andare al passo 1.
+
+---
+### Autori
+Il team di MeerK40t è grato per l'aiuto di @Sophist-UK nella creazione di questa pagina. Se **tu** pensi che possa essere migliorata ulteriormente, sentiti libero di modificare la pagina e di aggiungere il tuo userid a questo elenco. 😃
