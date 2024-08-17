@@ -10,4 +10,21 @@ Una volta letta e assimilata questa sezione, quella successiva vi mostrerà come
 
 Si consiglia vivamente di **NON UTILIZZARE MACCHINE LASER** prima di aver compreso questa bene queste pagine e di aver effettuato tutti i controlli di sicurezza che vi verranno indicati.
 
-Per tornare all'indice dei [Aiuto ai principianti](./Principianti:-0.-Index) click [qui](./Principianti:-0.-Index)
+Per tornare all'indice di [Aiuto ai principianti](./Principianti:-0.-Index) click [qui](./Principianti:-0.-Index)
+
+## Contenuti
+* [Sicurezza elettrica](#sicurezza-elettrica)
+* [Protezione degli occhi](#proteggere-gli-occhi)
+* [Fumi](#fumi)
+* [Rischio di incendio](#rischio-di-incendio)
+
+## Sicurezza elettrica
+Sebbene si possa prendere una brutta scossa dalla tensione della rete di casa (240V), a condizione che si tratti di una scossa breve (ad esempio, quando si ha contatto rapido, fugace, piuttosto che una scossa continuativa e di lunga durata, ad esempio, quando non si riesce a lasciare il cavo a causa delle contrazioni muscolari), è molto improbabile che si possa morire, in particolare se si dispone di un interruttore differenziale nell'impianto di rete.
+
+Tuttavia, i laser CO2 funzionano con **una tensione di ionizzante compresa tra 14.000 e 20.000 volt**, abbastanza elevata da fermare il cuore e uccidere in caso di scossa. Inoltre, l'alimentatore del laser è dotato di condensatori che possono mantenere questa alta tensione per alcune ore dopo lo spegnimento o lo scollegamento dalla rete elettrica, e prima che questi si siano scaricati si può ancora prendere una scossa ad una tensione abbastanza alta da uccidere. Pertanto, fate **massima attenzione** quando vi avvicinate alle aree ad alta tensione del laser.
+
+È inoltre essenziale che il telaio metallico della macchina laser sia adeguatamente collegato a terra, in modo che eventuali dispersioni o contatti accidentali, delle parti in alta tensione sul telaio, non costituiscano un pericolo mortale in caso di contatto dell'operatore con il telaio della macchina laser.
+
+Non proprio di vitale importanza, ma comunque importante. Molti riferiscono che la loro K40 è arrivata con il cablaggio interno mal eseguito. Uno sguardo attento, un controllo generale dello stato della macchina e in particolare dei cablaggi elettrici è consigliabile. Serrate tutti i morsetti, controllate i collegamenti e le giunture.
+
+Insomma un attento controllo al cablaggio elettrico vi mette al riparo da possibili rischi (e guasti) e vi assicura che la vostra K40 (ma vale anche per altri prodotti) sia sicura dal punto di vista elettrico.
