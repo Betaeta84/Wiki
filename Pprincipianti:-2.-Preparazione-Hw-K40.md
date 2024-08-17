@@ -34,9 +34,7 @@ Non possiamo fornire qui le risposte a tutti i problemi, ma vogliamo darvi almen
 ### Sicurezza elettrica
 #### Tensioni del laser
 I laser CO2 funzionano a tensioni **estremamente** elevate, tali da fermare il cuore, e i condensatori dell'alimentatore K40 possono mantenere una carica per un periodo di tempo considerevole dopo lo spegnimento o la disconnessione dalla rete elettrica. 
-
 ***Si prega di prestare molta attenzione quando ci si avvicina alle parti ad alta tensione dell'elettronica.*** 
-
 Lasciare che i condensatori si scarichino per diverse ore dopo aver scollegato l'apparecchio dalla rete elettrica.
 
 #### Collegamenti elettrici
