@@ -1,7 +1,7 @@
 # [Other languages](./)
 ## [<img src="https://github.com/user-attachments/assets/a5043471-cf65-4650-80e6-7f4afb343923" height="32">Introduzione](./Introduzione:-0.-Index)
 ## [Aiuto ai principianti](./Principianti:-0.-Index)
-1. [**La sicurezza è importante**](./Principianti:-1.-La sicurezza è importante) - **Non saltate questo passaggio**
+1. [La sicurezza è importante](./Principianti:-1.-Questioni-di-Sicurezza) - **Non saltare questo passaggio**
 # [Introduction](./)
 ## [Beginners Help](./Beginners:-0.-Index)
 1. [**Safety matters**](./Beginners:-1.-Safety-matters) - **Do not skip this**
