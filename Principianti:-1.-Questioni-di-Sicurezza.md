@@ -15,8 +15,8 @@ Per tornare all'indice di [Aiuto ai principianti](./Principianti:-0.-Index) clic
 ## Contenuti
 * [Sicurezza elettrica](#sicurezza-elettrica)
 * [Protezione degli occhi](#Protezione-degli-occhi)
-* [Fumi](#fumi)
-* [Rischio di incendio](#rischio-di-incendio)
+* [Fumi](#Fumi)
+* [Rischio di incendio](#Rischio-di-incendio)
 
 ## Sicurezza elettrica
 Sebbene si possa prendere una brutta scossa dalla tensione della rete di casa (240V), a condizione che si tratti di una scossa breve (ad esempio, quando si ha contatto rapido, fugace, piuttosto che una scossa continuativa e di lunga durata, ad esempio, quando non si riesce a lasciare il cavo a causa delle contrazioni muscolari), è molto improbabile che si possa morire, in particolare se si dispone di un interruttore differenziale nell'impianto di rete.
@@ -39,3 +39,10 @@ Durante il funzionamento, il tubo produce anche luce non laser in altre frequenz
 A seconda dell'intensità del fascio e del materiale che si sta lavorando, la bruciatura creerà un punto **luminoso** sul materiale. Anche con il coperchio abbassato e guardando attraverso la finestra “protettiva”, questo punto estremamente luminoso **può danneggiare** gli occhi. E **non** si tratta nemmeno della luce laser in sé, ma solo dell'effetto che essa ha sul materiale che colpisce. L'intensa luce insomma! 
 
 Tuttavia, se si prendono le dovute precauzioni per proteggere gli occhi, Una CNC laser può essere utilizzato in modo sicuro senza alcun rischio per la vista.
+
+## Fumi
+Alcuni materiali bruciano con fumi sgradevoli. Altri materiali possono emettere fumi veramente tossici, per cui è necessario documentarsi sui materiali in uso per essere certi di conoscerne i rischi. In ogni caso, non devi respirare questi fumi.
+
+La ventola di aspirazione fornita con la K40 (e con altre macchine laser, si questa stessa fascia di prezzo) è generalmente considerata inadeguata, il tubo di scarico in plastica è fragile e talmente scadente da essere inutile e/o potenzialmente pericoloso.
+
+Tuttavia, se si conoscono i materiali che si stanno bruciando e si migliora l'estrazione dei fumi, la macchina laser (k40 o altro) può essere utilizzata senza il rischio di intossicarsi e senza la diffusione di odori sgradevoli anche se non velenosi.
