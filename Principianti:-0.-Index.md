@@ -19,7 +19,7 @@ Gli argomenti trattati sono:
 
 * [Passo 1: La sicurezza è importante](./Principianti:-1.-Questioni-di-Sicurezza) - **Non saltare questo passaggio**
 * [Fase 2: Preparazione dell'hardware del K40](./Pprincipianti:-2.-Preparazione-Hw-K40)
-* [Passo 3: Installazione di MeerK40t](./Principianti:-3.-Installazione-MeerK40t)
+* [Passo 3: Installazione di MeerK40t](./Pprincipianti:-3.-Installazione-MeerK40t)
 * [Fase 4: Nozioni di base per le lavorazioni laser](./Principianti:-4.-Basi-lavorazioni-laser)
 * [Fase 5: Comprendere l'interfaccia utente](./Principianti:-5.-Interfaccia-utente)
 * [Passo 6: Caricare un file](./Principianti:-6.-Caricare-un-file)
