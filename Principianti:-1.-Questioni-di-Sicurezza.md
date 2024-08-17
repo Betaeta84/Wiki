@@ -56,11 +56,27 @@ Questi rischi possono essere mitigati da:
 
 * Controllare ogni volta il libero movimento delle guide prima di accendere la CNC laser.
 * Installare un sistema di soppressione degli incendi all'interno della macchina (come le [strisce Kordo](https://www.amazon.com/dp/B086LKHCC4))
-* Installazione di un interruttore elettrico termico automatico (vedi [WikiPedia](https://en.wikipedia.org/wiki/Thermal_cutoff))
+* Installazione di un termofusibile (vedi [WikiPedia](https://it.wikipedia.org/wiki/Termofusibile))
 * Installazione di un rilevatore di fumo domestico al di sopra la macchina.
 * Essere presenti per l'intero periodo della lavorazione/funzionamento
 * Assicurarsi che la macchina sia dotato di un pulsante di arresto di emergenza/interruttore di spegnimento e verificarne regolarmente il funzionamento.
 * Tenere a portata di mano un estintore a CO2 in buono stato di manutenzione.
 * Tenere a portata di mano un flacone d'acqua (consiglio un nebulizzatore) per soffocare le piccole fiamme che possono carbonizzare il materiale (e che potrebbero trasformarsi in un incendio di grandi dimensioni).
 
-Con le dovute precauzioni, una CNC laser può essere utilizzato senza rischiare di bruciare la casa. ;-)
+Con le dovute precauzioni, una CNC laser può essere utilizzato senza rischiare di bruciare la casa. 😉
+
+## Ustioni
+Sebbene l'ustione da laser possa sembrare istintivamente un rischio elevato (o forse il rischio più elevato), un'ustione da laser può essere dolorosa ma è molto meno probabile che crei gravi problemi di salute di lunga durata o la morte. 
+
+Tuttavia, dato che la luce del tubo laser di una macchina CNC è una luce infrarossa invisibile, è necessario fare attenzione che i vestiti o le parti del corpo non interrompano il raggio laser.
+
+Con le precauzioni di base (come assicurarsi che il coperchio sia sempre chiuso) si dovrebbe essere in grado di utilizzare la macchina senza rischi di ustioni.
+
+## Pagina successiva
+Ci auguriamo che questo vi abbia aiutato a comprendere i rischi potenziali dell'uso di un laser CO2 come il K40. Ora è il momento di [preparare il laser K40](./Pprincipianti:-2.-Preparazione-Hw-K40) per garantire che sia sicuro da usare e per aiutarvi a ottenere risultati di qualità.
+
+Se si desidera tornare all'[indice della sezione principianti](./Principianti:-0.-Index) fare clic su [qui](./Principianti:-0.-Index).
+
+---
+### Autori
+Il team di MeerK40t è grato per l'aiuto di @Sophist-UK nella creazione di questa pagina. Se **tu** pensi che possa essere ulteriormente migliorata, sentiti libero di modificare la pagina e di aggiungere il tuo userid a questo elenco. 😃
