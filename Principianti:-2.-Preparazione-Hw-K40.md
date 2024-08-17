@@ -73,21 +73,39 @@ Come serbatoio si può utilizzare un contenitore di plastica da 50 litri come qu
 Praticando due fori su un'estremità del coperchio per far passare i tubi, con rondelle di gomma su entrambi i lati per formare una sorta di guarnizione, quindi attaccare la pompa al tubo di ingresso e montare pesanti rondelle zincate sull'altro (tenute da altre rondelle di gomma) per appesantire l'uscita e tenerla sotto l'acqua ed evitare che l'aria risalga nel tubo quando la pompa è spenta.
 
 È inoltre essenziale che l'acqua utilizzata sia non conduttiva. Il modo più semplice per ottenere questo risultato è utilizzare acqua deionizzata (acquistabile in bottiglie da 5 litri presso negozi e supermercati - presso il LIDL è reperibile circa 0,70 € a bottiglia). In alternativa si può usare acqua distillata o osmotizzata con conducibilità < 5-10 microSiemens. 
-Se l'acqua del rubinetto è sufficientemente dolce o addolcita potrebbe essere adatta anche quella (è tuttavia consigliabile un test di conducibilità). Potrebbe essere necessario aggiungere all'acqua un prodotto chimico [[antialghe|#Come antialghe]] non conduttivo, ma il cambio periodico dell'acqua, consigliato, riduce al minimo questo problema.
+Se l'acqua del rubinetto è sufficientemente dolce o addolcita potrebbe essere adatta anche quella (è tuttavia consigliabile un test di conducibilità). Potrebbe essere necessario aggiungere all'acqua un prodotto chimico [antialghe](#Nota) non conduttivo, ma il cambio periodico dell'acqua, consigliato, riduce al minimo questo problema.
 
 Qualora vi trovate in un clima in cui è difficile mantenere la temperatura dell'acqua al di sotto dei 20°C-25°C, avrete bisogno di una qualche forma di raffreddamento. Per raffreddare l'acqua possiamo usiamo i pacchetti di ghiaccio del nostro congelatore domestico, ma molte persone investono in tecnologia per raffreddare l'acqua. Ecco un elenco non esaustivo di possibili soluzioni:
 
-* Aggiungere al secchio bottiglie d'acqua congelate.
+* Aggiungere al serbatoio bottiglie d'acqua congelate.
 * Se l'acqua del rubinetto è sufficientemente dolce e pura, fatela scorrere nel secchio e aggiungete un tubo di troppo pieno.
 * Riciclate un refrigeratore per dispenser d'acqua da ufficio.
 * Riciclate un frigorifero in miniatura.
-* Utilizzare pannelli Peltier/elettrotermici (Ho provato ma per laser da una 50W i risultati sono inconsistenti).
+* Utilizzare pannelli Peltier/elettrotermici (Ho provato ma per laser da qualche decina di watt i risultati sono inconsistenti).
 * Utilizzare un radiatore per il raffreddamento ad acqua della CPU del computer.
-* Utilizzare un “refrigeratore d'acqua” CW-3000 (scambio aria-aria, limitata efficienza in caso di temperature ambientali sostenute) o CW-5200 (sicuramente più efficiente, dotato di sistema di refrigerazione autonomo) .
+* Utilizzare un “refrigeratore d'acqua” CW-3000 (refrigeratore con scambio aria-aria. Limitata efficienza in caso di temperature ambientali sostenute) o CW-5200 (sicuramente più efficiente, dotato di sistema di refrigerazione autonomo).
 * Usare un refrigeratore d'acqua per acquari.
 * Riciclare un condizionatore d'aria da finestra.
 
 Poiché l'acqua si espande quando si congela, se vivete in un clima più freddo dovete anche assicurarvi che l'acqua nel tubo laser non si congeli, altrimenti si romperà il vetro. È possibile aggiungere un antigelo non conduttivo al serbatoio dell'acqua o scaricare l'acqua dal tubo quando c'è il rischio di congelamento.
 
+### Nota
 Come antialghe e anticongelante si può aggiungere il 10-20% di PURO glicole etilenico o glicole propilenico. Non utilizzare fluidi per automobili o simili in quanto additivati con sostanze elettricamente conduttive. Cambiare l’acqua periodicamente. L’inevitabile aumento della conduttività peggiora le prestazioni dell’alimentatore, soprattutto quando opera a bassa potenza o a impulsi (es. incisione e marcatura)
 
+È utile disporre di un termometro per misurare la temperatura dell'acqua e verificare che non superi i 25°C. Il laser K40 è dotato di un display digitale della temperatura sul pannello principale (utilizzando un termistore fissato con nastro adesivo al **fuori** del tubo di uscita dell'acqua di raffreddamento, appena fuori dall'estremità del laser). 
+
+Nella versione inglese si fanno le seguenti considerazioni: Non sono sicuro se sia meglio misurare la temperatura di uscita (che fornisce un'indicazione di quanto sia caldo il tubo del laser) o la temperatura di ingresso (che indica se l'acqua di raffreddamento è già troppo calda per poter raffreddare il laser a sufficienza), ma alla fine ho deciso che la temperatura di uscita era quella da controllare. Inoltre, non ero sicuro dell'accuratezza della misurazione della temperatura quando il termistore è semplicemente fissato con del nastro adesivo all'**esterno** del tubo: personalmente dubito che sia molto utile per misurare la temperatura dell'acqua in uscita senza essere influenzata dalla temperatura dell'aria ambiente. 
+
+Tuttavia consiglio di mettere un pezzo di tubo metallico (ottimo conduttore termico che assicura una significativa lettura della temperatura dell'acqua) sulla linea di uscita "spezzando" di fatto il tubo in gomma o silicone, quindi fissare con nastro o fascette il termistore saldamente al tubo e quindi isolare il tutto con del neoprene o altro materiale isolante
+
+Sicuramente il fissaggio con del nastro del termistore al tubo di uscita non fosse un metodo efficiente così, l'utente @Sophist in seguito ho deciso di stampare in 3D [questo alloggiamento per termistore in linea](https://www.thingiverse.com/thing:4565279) rilevando misurazioni di temperature significativamente più precise. 
+
+![image](https://user-images.githubusercontent.com/3001893/127776127-7d0c0c64-3fc9-4cb6-96b3-4c5d60a6889b.png)
+
+Un'altra miglioria potrebbe essere aggiungere un termometro (economico) per acquari con una ventosa da attaccare al lato della parete del mio serbatoio d'acqua per avere anche un riscontro della temperatura del serbatoio.
+
+Sebbene sia improbabile che la pompa si guasti, alcune persone fanno passare il tubo attraverso un misuratore di portata meccanico e/o elettronico (che può anche avere un indicatore di temperatura integrato). Spesso le pompe per acquario in dotazione, piuttosto economiche, con gli anni hanno problemi di cristallizzazione della plastica e conseguente rottura delle palette. Questo ha portato alla rottura del tubo di cui parlavo. quindi meglio prevenire e pianificare, se non subito, uno di questi dispositivi.
+
+![image](https://user-images.githubusercontent.com/3001893/120121463-81667800-c19b-11eb-88e9-d4f3133e334e.png)
+
+Infine, una volta che il sistema di raffreddamento ad acqua funziona, è necessario inclinare la macchina per far uscire le bolle d'aria dal tubo del laser. Tuttavia se si ha sufficiente pratica e un po' di tempo per la taratura degli specchi, conviene ruotare il tubo (prima dell'allineamento degli specchi) in modo che i tubi dell'acqua entrino o escano dal laser dalla parte superiore, questo accorgimento aiuta a evitare le bolle.
