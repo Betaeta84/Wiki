@@ -14,7 +14,7 @@ Per tornare all'indice di [Aiuto ai principianti](./Principianti:-0.-Index) clic
 
 ## Contenuti
 * [Sicurezza elettrica](#sicurezza-elettrica)
-* [Protezione degli occhi](#proteggere-gli-occhi)
+* [Protezione degli occhi](#Protezione-degli-occhi)
 * [Fumi](#fumi)
 * [Rischio di incendio](#rischio-di-incendio)
 
@@ -28,3 +28,14 @@ Tuttavia, i laser CO2 funzionano con **una tensione di ionizzante compresa tra 1
 Non proprio di vitale importanza, ma comunque importante. Molti riferiscono che la loro K40 è arrivata con il cablaggio interno mal eseguito. Uno sguardo attento, un controllo generale dello stato della macchina e in particolare dei cablaggi elettrici è consigliabile. Serrate tutti i morsetti, controllate i collegamenti e le giunture.
 
 Insomma un attento controllo al cablaggio elettrico vi mette al riparo da possibili rischi (e guasti) e vi assicura che la vostra K40 (ma vale anche per altri prodotti) sia sicura dal punto di vista elettrico.
+
+## Protezione degli occhi
+Un tubo laser CO2 produce un raggio molto stretto di luce infrarossa che normalmente viene completamente riflesso dagli specchi (3 o 4 a seconda delle configurazioni) della macchina. Tuttavia, se qualcosa interrompe questo fascio, il materiale riflettente è danneggiato, l'allineamento degli specchi non corretto, allora anche se una piccola parte del fascio laser finisce negli occhi può risultare dannosa. Si può rimanere accecati quasi istantaneamente e in modo permanente. Se volete vedere alcuni esempi di quanto breve sia l'impulso di luce laser necessario per causare danni gravi, date un'occhiata a [questo video](https://www.youtube.com/watch?v=-wXApAAh8xA).
+
+Durante il funzionamento, il tubo produce anche luce non laser in altre frequenze, tra cui l'ultravioletto, che può uscire dal tubo in molte direzioni e riflettersi sugli specchi laser.
+
+**Nota:** _un altro elemento che rende pericoloso e molto insidioso il fascio di un tubo laser CO2 risiede nella lunghezza d'onda della luce prodotta (sia primaria che secondaria), che risulta invisibile ai nostri occhi._
+
+A seconda dell'intensità del fascio e del materiale che si sta lavorando, la bruciatura creerà un punto **luminoso** sul materiale. Anche con il coperchio abbassato e guardando attraverso la finestra “protettiva”, questo punto estremamente luminoso **può danneggiare** gli occhi. E **non** si tratta nemmeno della luce laser in sé, ma solo dell'effetto che essa ha sul materiale che colpisce. L'intensa luce insomma! 
+
+Tuttavia, se si prendono le dovute precauzioni per proteggere gli occhi, Una CNC laser può essere utilizzato in modo sicuro senza alcun rischio per la vista.
