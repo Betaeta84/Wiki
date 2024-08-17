@@ -63,7 +63,7 @@ Questi rischi possono essere mitigati da:
 * Tenere a portata di mano un estintore a CO2 in buono stato di manutenzione.
 * Tenere a portata di mano un flacone d'acqua (consiglio un nebulizzatore) per soffocare le piccole fiamme che possono carbonizzare il materiale (e che potrebbero trasformarsi in un incendio di grandi dimensioni).
 
-Con le dovute precauzioni, una CNC laser può essere utilizzato senza rischiare di bruciare la casa. 😉
+Con le dovute precauzioni, una CNC laser può essere utilizzata senza rischiare di bruciare la casa. 😉
 
 ## Ustioni
 Sebbene l'ustione da laser possa sembrare istintivamente un rischio elevato (o forse il rischio più elevato), un'ustione da laser può essere dolorosa ma è molto meno probabile che crei gravi problemi di salute di lunga durata o la morte. 
