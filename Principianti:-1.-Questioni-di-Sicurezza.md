@@ -46,3 +46,21 @@ Alcuni materiali bruciano con fumi sgradevoli. Altri materiali possono emettere 
 La ventola di aspirazione fornita con la K40 (e con altre macchine laser, si questa stessa fascia di prezzo) è generalmente considerata inadeguata, il tubo di scarico in plastica è fragile e talmente scadente da essere inutile e/o potenzialmente pericoloso.
 
 Tuttavia, se si conoscono i materiali che si stanno bruciando e si migliora l'estrazione dei fumi, la macchina laser (k40 o altro) può essere utilizzata senza il rischio di intossicarsi e senza la diffusione di odori sgradevoli anche se non velenosi.
+
+## Rischio di incendio
+La lavorazione laser (taglio, incisione, raster) funziona solo perché il raggio laser è sufficientemente caldo da bruciare o fondere/evaporare il materiale. Di solito l'esposizione al livello di calore necessario per ottenere questo risultato è sufficientemente breve e locale da non provocare un incendio grave (anche se è frequente che si verifichi un'eccessiva carbonizzazione a causa di fiamme localizzate intorno al raggio laser), ma è chiaro che esiste il rischio che il materiale si scaldi troppo e prenda fuoco. Se per qualsiasi motivo la testa del laser smette di muoversi mentre il laser continua a funzionare (perché qualcosa si inceppa o perché i motori passo-passo smettono di funzionare), è facile che si sviluppi un incendio che può poi diffondersi al resto della casa. **Il rischio di incendio** di una macchina _specificamente progettata_ per **bruciare non deve essere ignorato**.
+
+![image](https://user-images.githubusercontent.com/3001893/127776345-35740740-fcf6-4b00-bc83-db9469012b1a.png)
+
+Questi rischi possono essere mitigati da:
+
+* Controllare ogni volta il libero movimento delle guide prima di accendere la CNC laser.
+* Installare un sistema di soppressione degli incendi all'interno della macchina (come le [strisce Kordo](https://www.amazon.com/dp/B086LKHCC4))
+* Installazione di un interruttore elettrico termico automatico (vedi [WikiPedia](https://en.wikipedia.org/wiki/Thermal_cutoff))
+* Installazione di un rilevatore di fumo domestico al di sopra la macchina.
+* Essere presenti per l'intero periodo della lavorazione/funzionamento
+* Assicurarsi che la macchina sia dotato di un pulsante di arresto di emergenza/interruttore di spegnimento e verificarne regolarmente il funzionamento.
+* Tenere a portata di mano un estintore a CO2 in buono stato di manutenzione.
+* Tenere a portata di mano un flacone d'acqua (consiglio un nebulizzatore) per soffocare le piccole fiamme che possono carbonizzare il materiale (e che potrebbero trasformarsi in un incendio di grandi dimensioni).
+
+Con le dovute precauzioni, una CNC laser può essere utilizzato senza rischiare di bruciare la casa. ;-)
