@@ -238,7 +238,7 @@ Definire “inutile” il piano di lavoro fornito con la K40 (ma anche altre mac
 
 ![image](https://user-images.githubusercontent.com/3001893/120121012-13b94c80-c199-11eb-9296-f68bb4948329.png) ![image](https://user-images.githubusercontent.com/3001893/120121088-7579b680-c199-11eb-8eef-0b612e1e1bb7.png)
 
-Alcune persone hanno escogitato metodi elaborati per variare la distanza focale montando l'obiettivo in un supporto mobile. (Molti usano un [letto ad altezza variabile] (#letto-ad-altezza-variabile) per ottenere lo stesso risultato.
+Alcune persone hanno escogitato metodi elaborati per variare la distanza focale montando l'obiettivo in un supporto mobile. (Molti usano un [letto ad altezza variabile](#letto-ad-altezza-variabile) per ottenere lo stesso risultato.
 
 ## Fumo
 L'aspiratore (o gli aspiratori) creeranno un certo flusso d'aria attraverso il letto, ma in genere non è abbastanza forte o lamellare per rimuovere costantemente e rapidamente il fumo dall'area di combustione (dove può disperdere il fascio laser) ed evitare che sporchi gli specchi e le lenti. 
