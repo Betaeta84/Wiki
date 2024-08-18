@@ -59,7 +59,7 @@ La ventola di aspirazione in dotazione è generalmente inadeguata; inoltre, esse
 
 Il tubo di scarico, in plastica, fornito in dotazione è generalmente di scarsa qualità e abbastanza inutile. Considerando che uno in alluminio espandibile costa solo pochi euro/dollari, è sicuramente una miglioria  fortemente consigliata
 
-Il condotto metallico che va dal pannello posteriore all'area del letto è generalmente considerato non ottimale. Si estende oltre il bordo posteriore del telaio e può impedire l'inserimento di materiali che occupano l'intera profondità dell'area (anche se la parte posteriore di quest'area non è raggiungibile dal laser). Alcuni consigliano di rimuovere completamente questo condotto per migliorare il flusso d'aria, ma il maggior volume d'aria movimentato può essere compensato dal fatto che l'aria viaggia intorno ai lati del telaio anziché attraverso il letto del laser. Un'alternativa è tagliare questo condotto in modo che non sporga oltre il bordo posteriore del telaio.
+Il condotto metallico che va dal pannello posteriore all'area del letto è generalmente considerato non ottimale. Si estende oltre il bordo posteriore del sistema di traslazione e può impedire l'inserimento di materiali che occupano l'intera profondità dell'area (anche se la parte posteriore di quest'area non è raggiungibile dal laser). Alcuni consigliano di rimuovere completamente questo condotto per migliorare il flusso d'aria, ma il maggior volume d'aria movimentato può essere compensato dal fatto che l'aria viaggia intorno ai lati del sistema di traslazione anziché attraverso il letto del laser. Un'alternativa è tagliare questo condotto in modo che non sporga oltre il bordo posteriore del sistema di traslazione.
 
 ### Raffreddamento
 Il tubo laser del K40 (e di altri laser a CO2) è raffreddato ad acqua, flusso del liquido è **essenziale** per evitare guasti dovuti al surriscaldamento. La completa assenza dell'acqua o l'assenza di un flusso di ricircolo o dell'acqua troppo calda porta ad danneggiamento o addirittura alla **rottura** del tubo. 
@@ -137,11 +137,14 @@ Le precauzioni minime da adottare in caso di incendio sono:
 Alcuni montano anche una sorta di soppressore d'incendio all'interno del proprio macchina. **Da fare: ** Ricerca e link necessari qui.
 
 ## Fine corsa
-Non si tratta di un vero e proprio problema di sicurezza, ma è logico che venga menzionato prima della sezione sull'allineamento del telaio.
+Non si tratta di un vero e proprio problema di sicurezza, ma è logico che venga menzionato prima della sezione sull'allineamento del sistema di traslazione.
 
 Le CNC laser (e i software come Meerk40t) devono stabilire una posizione nota della "testa" (laser) in modo da poter tenere traccia dei vari spostamenti evitando collisioni con i bordi. Non è improbabile che questo accada prima o poi. Un colto, un urto seguito poi da un rumore ritmico. Nella maggior parte dei casi non si verificano danni permanenti La macchina ha semplicemente perso la posizione e le future lavorazioni avvengono in punti sbagliati.
 
-Per stabilire la corretta posizione si deve fare “homing”, ovvero si sposta la testa nell'angolo in alto a sinistra del letto (maggior parte dei K40 e delle macchine laser economiche questa è la home) dove ci sono due sensori di fine corsa x e y separati che gli indicano alla scheda dove e quando fermarsi. Spesso (ma non sempre) si tratta di sensori ottici, costituiti da un sensore opto-elettronico di plastica a forma di U in posizione fissa. Mentre all'altra estremità, quella mobile una striscia metallica o plastica, intrando nella U  interrompe la comunicazione luminosa fra i due bracci della U del sensore.
+Per stabilire la corretta posizione si deve fare “homing”, ovvero si sposta la testa nell'angolo in alto a sinistra del letto (maggior parte dei K40 e delle macchine laser economiche questa è la home) dove ci sono due sensori di fine corsa x e y separati che gli indicano alla scheda dove e quando fermarsi. Spesso (ma non sempre) si tratta di sensori ottici, costituiti da un sensore opto-elettronico di plastica a forma di U in posizione fissa. Mentre all'altra estremità, quella mobile una striscia metallica o plastica, entrando nella U  interrompe la comunicazione luminosa fra i due bracci della U del sensore.
+
+** Nota **
+Problemi simili al non corretto funzionamento dei fine corsa o del non corretto "homing" possono verificarsi nel corso del funzionamento se si impostano velocità troppo alte per il tipo di motori passo-passo o per problemi al controller. A causa di una "perdita del passo" insomma la macchina non ha più la situazione della reale posizione. Tal caso, se le lavorazioni sono vicino ai bordi è possibile percepire i rumori descritti sopra, altrimenti si avrà una deformazione, più o meno evidente a seconda della "perdita di passo", della lavorazione. Questo implica la perdita del lavoro fatto e la correzione dell'errore.
 
 Fine corsa ottici:
 ![Fine corsa Y](https://lh3.googleusercontent.com/pw/AIL4fc-3R58LSWHXHz8BN-GPk6IR1j5WpgMB__L6_rgexAzvOCbBIBv4GaqoE6wfZvjRckv-gVu3xELx7rEoqayYrNEGzJkyxUsXg4Or_145TLRbWCx1sds_J6mF3zMYybB_qARYA1j5LOz_F-Mashu6m-5x=w919-h1236-s-no?authuser=0)
@@ -154,12 +157,71 @@ Per evitare tutto questo, prima di accendere la macchina dopo averla tolta dall'
 ## Qualità del taglio/incisione
 Il raggio che esce dal laser è un fascio di luce invisibile molto stretto e molto, molto dritto. Viene riflesso da tre/quattro (dipende dalle configurazioni/macchine) specchi e passa attraverso una lente che lo mette a fuoco prima di colpire il materiale in un piccolo, piccolissimo punto. Ci sono diversi fattori che possono causare un problemi:
 
-1. [Pulizia degli specchi e delle lenti](#pulizia degli specchi e delle lenti)
-2. [Tensione della cinghia](#tensione della cinghia)
-3. [Allineamento del telaio e del letto](#allineamento del telaio e del letto)
+1. [Pulizia degli specchi e delle lenti](#pulizia-degli-specchi-e-delle-lenti)
+2. [Tensione della cinghia](#tensione-della-cinghia)
+3. [Allineamento del sistema di traslazione e del letto](#allineamento-del-sistema-di-traslazione-e-del-letto)
 4. [Allineamento laser e specchio](#laser-and-mirror-alignment)
 5. [Orientamento lenti](#lens-orientation)
 6. [Messa a fuoco](#focus)
 7. [Fumo](#fumo)
 8. [Bruciatura carbonizzazione](#bruciatura-carbonizzazione)
 9. [Riflesso carbonizzato](#riflessione-caratterizzazione)
+
+### Pulizia degli specchietti e delle lenti
+All'arrivo della macchina laser, è molto probabile che gli specchi e le lenti siano piuttosto sporchi. Se si accende il laser con gli specchi sporchi, la sporcizia presente sulla superficie assorbe l'energia del laser nel punto in cui colpisce lo specchio/lente e può causare, come minimo, macchie di bruciatura ma si può arrivare persino alla rottura completa dello specchio/lente. 
+
+Pertanto, prima di allinearli, è necessario pulire gli specchi e la lente con alcol o acetone (controllare che non vi siano aloni. Meglio sarebbe usare alcol isopropilico o alcol non denaturato. Per esegue questa operazione prima di allineare gli specchi, è necessario svitare gli anelli di fissaggio ed estrarre gli specchi per pulirli completamente. Dopo l'allineamento, si utilizzare un cotton fioc per pulirli in sede. Tuttavia avendo manualità e attenzione una pulizia come descritto sopra sarebbe auspicabile
+
+Anche il fumo della combustione delle lavorazioni fa sì che gli specchi e le lenti si sporchino di abbastanza rapidamente con l'uso. La pulizia deve essere un'attività abbastanza regolare. Per ridurre la frequenza di pulizia della lente (più esposta ai fumi) si può installare un dispositivo di assistenza ad l'aria. Un flusso d'aria che protegge la lente dalla risalita del fumo, verso la lente stessa.
+
+### Tensione della cinghia
+La testa del laser si muove in entrambe le direzioni X e Y, con due motori passo-passo e da 3 cinghie.
+
+Per garantire l'accuratezza della posizione e per evitare che le cinghie scivolino sulle ruote dentate dei motori passo-passo, le cinghie devono essere ragionevolmente tese. In teoria questo può essere fatto con un cacciavite a croce abbastanza lungo, ma se si hanno difficoltà, potrebbe essere necessario rimuovere completamente il sistema di traslazione per meglio raggiungere la vite. Per questo motivo, il serraggio di queste cinghie dovrebbe essere effettuato **prima** dell'allineamento del laser, in quanto se si è già allineato il laser, sarà necessario rifarlo dopo aver rimosso e ripristinato il sistema di traslazione, perché è altamente improbabile che si trovi **esattamente** nella stessa posizione quando lo si è ripristinato. 
+
+**Le indicazioni come detto fanno prevalentemente riferimento alla K40, ma non tutte le macchine della famiglia K40 sono identiche e le differenze possono accentuarsi con altre macchine laser. \Si consiglia sempre di fare ricerche specifiche**
+
+Le tre cinghie e i relativi accessi di regolazione sono i seguenti:
+* Cinghia a Y 1: sul lato sinistro del portello. Si regola attraverso un foro sul retro del sistema di traslazione del K40, sotto il vano del laser.
+* Cinghia a Y 2: sul lato destro del portello. Regolata attraverso un foro sul retro del sistema di traslazione del K40, sotto lo scomparto del laser.
+* Cinghia X: Sotto la barra dell'asse X. Spegnere la macchina e lasciarla scaricare. Aprire il coperchio principale e quello dell'elettronica. Spostare la barra X in modo che sia opposta al foro tra i due scomparti. Dovrebbe essere possibile vedere la vite di regolazione. 
+
+Le cinghie devono essere strette in modo da farle vibrare quando vengono pizzicate. In caso di dubbio, un po' più tirate o è meglio di un po' troppo lente.
+
+### Allineamento del sistema di traslazione e del letto
+Per una un movimento accurato e quindi un lavoro preciso è necessario che il sistema di traslazione sia in squadro.
+* sistema di traslazione deve avere tutti e 4 gli angoli a 90°
+* Il sistema di traslazione-x deve essere in squadro rispetto ai lati e parallelo alle guide anteriori e posteriori - potrebbe essere necessario regolare l'angolo delle camme dei nastri a sinistra e a destra per garantire che ciò avvenga 
+* La testa del laser è ad angolo retto rispetto al sistema di traslazione-x / lo specchio è esattamente a 45°, quindi il raggio laser è esattamente verticale (in entrambe le direzioni x e y).
+
+Inoltre, il letto deve essere piatto rispetto al sistema di traslazione, in modo che la distanza tra la testa del laser e il letto sia la stessa in tutti i punti a sinistra-destra e davanti-indietro.
+
+### Allineamento di laser e specchi
+L'idea è che, indipendentemente dalla posizione della testa del laser sul piano di lavoro, la luce laser deve entrare nella testa esattamente nella stessa posizione e con lo stesso angolo. Per far questo è necessario che il laser e gli specchi siano allineati. Una volta compresa la procedura, non è poi così difficile, ma è una parte essenziale della configurazione del laser.
+
+Prima di tentare di allineare il laser e gli specchi, è necessario intraprendere qualsiasi attività che richieda la rimozione del sistema di traslazione, ad esempio il taglio del condotto interno, l'allineamento del sistema di traslazione, la tensione della cinghia, perché se si rimuove il sistema di traslazione dalla sede sarà necessario riallineare nuovamente gli specchi.
+
+Su YouTube sono disponibili diversi video su come eseguire questa operazione. Un esempio è: [Il breve video sull'allineamento del laser K40](https://youtu.be/6Bcgo-CoBAs)
+
+In sostanza, i passaggi sono i seguenti:
+
+a. Applicare del nastro adesivo (meglio nastro carta, tenendo conto che il nastro bruciando sporca la lente, è consigliabile frapporre fra specchio e nastro una monetina da un centesimo di € che si adatta perfettamente al foro sulla ghiera di fissaggio) sul primo specchio vicino all'estremità del laser, dopo un primo rapido "impulso" molto breve a bassa potenza, giusto a segnare il nastro regolare lo specchi in modo che al successivo impulso colpisca perfettamente il centro dello specchio.
+
+b. Applicare un nastro adesivo sul 2° specchio (vale lo stesso consiglio di cui sopra) che si muove avanti e indietro sul sistema di traslazione. Posizionare lo specchio 2 vicino allo 1° specchio 1° regolare la posizione del 1° in modo che il fascio colpisca il 2° spazio al centro, quindi spostare il portale il 2° specchio nella posizione più lontana dal 1° controllando se il punto di bruciatura si sposta. (si consiglia degli spostamenti intermedi con altrettanti impulsi. Una leggere disallineamento può proiettare il fascio fuori dallo specchio e colpire oggetti nella stanza o noi che siamo intenti nella regolazione. Un metodo per incrementare la sicurezza è porre un pannello di cartone o altro dietro lo specco 2 come uno scudo).
+Regolare se necessario del 1° specchio sia in orizzontale che in verticale in modo che il punto rimanga nella stessa posizione centrale. Il centro deve essere mantenuto sempre lungo l'intero percorso.
+Ci si augura di trovare il centro del 2° specchio, ma potrebbe essere necessario regolare la posizione del laser, la base di montaggio del 1° specchio o la base di montaggio del 2° specchio per far sì che fascio rimanga invariato e si trovi approssimativamente al centro del 2° specchio.
+
+c. Applicare del nastro adesivo sull'apertura della testa mobile in cui entrerà il raggio laser (si consiglia di rimuovere la lente e lo specchio per evitare di sporcarla con residui di combustione). Regolare l'angolo del 2° specchio sia in orizzontale che in verticale in modo che il punto rimanga nella stessa posizione. La regolazione va effettuata in modo che si mantenga il centro per l'intero percorso. Se il punto non si trova al centro dell'apertura, potrebbe essere necessario regolare la posizione della testa sul sistema di traslazione o del 1°/2° specchio o del laser per renderlo approssimativamente centrale.
+
+d. Il 3° specchio (agganciato alla testa stessa) di solito non è regolabile.
+
+e. La lente nella parte inferiore della testa non è regolabile (la lente va posizionata con la parte convessa verso l'alto. nella direzione del fascio
+
+L'immagine è tratta dal [blog](http://dck40.blogspot.com/2013/02/post-by-nycon-how-to-adjust-mirrors-for.html)
+
+![3 1](https://github.com/user-attachments/assets/cafde7e9-85bd-43ec-b004-bd342634b9f5)
+![3 2](https://github.com/user-attachments/assets/65259acf-7b1f-4fcb-b4d0-33b83f86a9b0)
+
+[Qui](https://modicographics.it/wp-content/uploads/2022/06/Modico_Ovili_Calibrazione-Specchi-1.pdf) una completa guida alla regolazione degli specchi
+
+
