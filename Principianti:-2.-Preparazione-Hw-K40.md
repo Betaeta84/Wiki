@@ -179,7 +179,7 @@ La testa del laser si muove in entrambe le direzioni X e Y, con due motori passo
 
 Per garantire l'accuratezza della posizione e per evitare che le cinghie scivolino sulle ruote dentate dei motori passo-passo, le cinghie devono essere ragionevolmente tese. In teoria questo può essere fatto con un cacciavite a croce abbastanza lungo, ma se si hanno difficoltà, potrebbe essere necessario rimuovere completamente il sistema di traslazione per meglio raggiungere la vite. Per questo motivo, il serraggio di queste cinghie dovrebbe essere effettuato **prima** dell'allineamento del laser, in quanto se si è già allineato il laser, sarà necessario rifarlo dopo aver rimosso e ripristinato il sistema di traslazione, perché è altamente improbabile che si trovi **esattamente** nella stessa posizione quando lo si è ripristinato. 
 
-**Le indicazioni come detto fanno prevalentemente riferimento alla K40, ma non tutte le macchine della famiglia K40 sono identiche e le differenze possono accentuarsi con altre macchine laser. \Si consiglia sempre di fare ricerche specifiche**
+**Le indicazioni come detto fanno prevalentemente riferimento alla K40, ma non tutte le macchine della famiglia K40 sono identiche e le differenze possono accentuarsi con altre macchine laser. Si consiglia sempre di fare ricerche specifiche**
 
 Le tre cinghie e i relativi accessi di regolazione sono i seguenti:
 * Cinghia a Y 1: sul lato sinistro del portello. Si regola attraverso un foro sul retro del sistema di traslazione del K40, sotto il vano del laser.
