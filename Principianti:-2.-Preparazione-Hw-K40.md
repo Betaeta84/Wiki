@@ -31,7 +31,7 @@ Non possiamo fornire qui le risposte a tutti i problemi, ma vogliamo darvi almen
 5. [Taglio laser delle palpebre](#lid-laser-cut-off)
 6. [Rischio di incendio](#rischio-di-incendio)
 
-### Sicurezza elettrica
+## Sicurezza elettrica
 #### Tensioni del laser
 I laser CO2 funzionano a tensioni **estremamente** elevate, tali da fermare il cuore, e i condensatori dell'alimentatore K40 possono mantenere una carica per un periodo di tempo considerevole dopo lo spegnimento o la disconnessione dalla rete elettrica. 
 ***Si prega di prestare molta attenzione quando ci si avvicina alle parti ad alta tensione dell'elettronica.*** 
@@ -52,7 +52,7 @@ Ma la cosa più importante è verificare che il collegamento a terra sul retro n
 #### Collegamenti ad alta tensione
 Controllate con attenzione i cavi dell'alta tensione che collegano il tubo laser. Varie persone in Internet hanno segnalato connessioni di scarsa qualità, comunque sia è sempre bene effettuare un controllo attento. Si tratta di **alta tensione** 
 
-### Fumi
+## Fumi
 La tossicità dei fumi di una lavorazione laser dipende dal materiale che si sta usando. Alcuni materiali possono essere davvero molto tossici, mentre altri producono solo odori sgradevoli. Sono pochi, se non addirittura nessuno, i materiali che possono lavorati in modo completamente sicuro e privi di odori senza il bisogno avere un sistema di estrazione dei fumi.
 
 La ventola di aspirazione in dotazione è generalmente inadeguata; inoltre, essendo montata sul retro del laser, crea una pressione positiva nel tubo di scarico verso l'esterno e qualsiasi perdita in tale tubo immetterà dei fumi nella stanza dove si sta lavorando. Si consiglia pertanto l'aggiunta di una seconda ventola all'estremità del tubo di scarico per creare una pressione negativa nel tubo ed evitare questo problema. Usare, poi, del nastro isolante in schiuma per sigillare le varie aperture della macchina e per riempire l'ampio spazio tra la ventola (in dotazione) standard e il telaio, consente di migliorare il contenimento ed estrazione dei fumi.
@@ -61,7 +61,7 @@ Il tubo di scarico, in plastica, fornito in dotazione è generalmente di scarsa 
 
 Il condotto metallico che va dal pannello posteriore all'area del letto è generalmente considerato non ottimale. Si estende oltre il bordo posteriore del sistema di traslazione e può impedire l'inserimento di materiali che occupano l'intera profondità dell'area (anche se la parte posteriore di quest'area non è raggiungibile dal laser). Alcuni consigliano di rimuovere completamente questo condotto per migliorare il flusso d'aria, ma il maggior volume d'aria movimentato può essere compensato dal fatto che l'aria viaggia intorno ai lati del sistema di traslazione anziché attraverso il letto del laser. Un'alternativa è tagliare questo condotto in modo che non sporga oltre il bordo posteriore del sistema di traslazione.
 
-### Raffreddamento
+## Raffreddamento
 Il tubo laser del K40 (e di altri laser a CO2) è raffreddato ad acqua, flusso del liquido è **essenziale** per evitare guasti dovuti al surriscaldamento. La completa assenza dell'acqua o l'assenza di un flusso di ricircolo o dell'acqua troppo calda porta ad danneggiamento o addirittura alla **rottura** del tubo. 
 Se il tubo raggiunge temperature troppo elevate, dapprima c'è un calo delle prestazioni, quindi un danneggiamento permanente del tubo stesso che ne accorcia la vita media e nei casi peggiori la rottura fisica del tubo con fuoriuscita del gas.
 
@@ -90,7 +90,7 @@ Qualora vi troviate in un clima in cui è difficile mantenere la temperatura del
 
 Poiché l'acqua si espande quando si congela, se vivete in un clima più freddo dovete anche assicurarvi che l'acqua nel tubo laser non si congeli, causando la rottura del tubo laser. È possibile aggiungere un antigelo non conduttivo al serbatoio dell'acqua o scaricare l'acqua dal tubo quando si presenta il rischio di congelamento.
 
-### Nota
+** Nota **
 Come antialghe e anticongelante si può aggiungere il 10-20% di PURO glicole etilenico o glicole propilenico. Non utilizzare fluidi per automobili o simili in quanto additivati con sostanze elettricamente conduttive. Cambiare l’acqua periodicamente. L’inevitabile aumento della conduttività peggiora le prestazioni dell’alimentatore, soprattutto quando opera a bassa potenza o a impulsi (es. incisione e marcatura)
 
 È utile disporre di un termometro per misurare la temperatura dell'acqua e verificare che non superi i 25°C. Il laser K40 è dotato di un display digitale della temperatura sul pannello principale (utilizza un termistore fissato al tubo di uscita dell'acqua di raffreddamento, appena fuori dall'estremità del laser). 
@@ -108,7 +108,7 @@ Tuttavia, le pompe per acquario in dotazione, piuttosto economiche, con gli anni
 
 Infine, una volta che il sistema di raffreddamento ad acqua funziona, si consiglia di verificare che nel tubo non vi siano bolle d'aria, se necessario si può inclinare la macchina per far uscire le bolle d'aria dal tubo del laser. L'alternativa, se si ha sufficiente pratica e un po' di tempo per la taratura degli specchi, conviene ruotare il tubo in modo che i tubi dell'acqua entrino o escano dal laser dalla parte superiore, questo accorgimento aiuta a evitare le bolle, quindi procedere all'allineamento degli specchi.
 
-### Proteggere gli occhi
+## Proteggere gli occhi
 Le macchine laser dovrebbe essere dotate di una finestra acrilica colorata di rosso sul coperchio. L'acrilico blocca la luce laser a infrarossi e la colorazione rossa è progettata per filtrare le altre frequenze di luce pericolose (come gli ultravioletti) che il tubo laser produce, della normale luce radiante (non laser). Tuttavia, questo pannello non è così scuro come, ad esempio, un casco per la saldatura ad arco e non è sufficiente ad attenuare la luce intensa che si crea quando il laser brucia alcuni materiali.
 
 A seconda dell'intensità della bruciatura e del materiale che si sta lavorando, la bruciatura creerà un punto **luminoso** sul lavoro. Anche con il coperchio abbassato, attraverso la finestra “protettiva”, questo punto luminoso può **danneggiare gli occhi.
@@ -117,7 +117,7 @@ Questo è forse l'aspetto delle macchine laser potenzialmente più pericoloso pe
 
 Quindi, per favore, assicuratevi di tenere il coperchio del vostro laser abbassato quando lavorate qualche materiale, e procuratevi degli occhiali di sicurezza laser (adatti ai laser CO2) e indossateli quando guardate attraverso la finestra.
 
-### Taglio laser del coperchio
+## Taglio laser del coperchio
 Alcuni aggiungono un microinterruttore di protezione al coperchio del vano laser, in modo che il laser si spenga se si solleva il coperchio, e questo è particolarmente importante se si hanno bambini curiosi. È chiaro che se si interrompe il laser a metà della combustione si rischia di non riprendere il lavoro da quel punto e di dover ricominciare dall'inizio con nuovo materiale. 
 Tuttavia c'è chi preferisce non avere questo tipo di protezione. 
 I motivi possono essere: 
@@ -128,7 +128,7 @@ I motivi possono essere:
 
 Cercate di essere attenti, di prestare molta attenzione. Noi possiamo solo indirizzarvi, suggerire soluzioni, fornirvi consigli, ma il compito si gestire in sicurezza la vostra attività sta nelle vostre mani. 
 
-### Rischio di incendio
+## Rischio di incendio
 Le precauzioni minime da adottare in caso di incendio sono:
 
 * Rimanere con nella stanza della macchina laser per controllare che non si verifichi un incendio quando è in funzione.
@@ -160,21 +160,21 @@ Il raggio che esce dal laser è un fascio di luce invisibile molto stretto e mol
 1. [Pulizia degli specchi e delle lenti](#pulizia-degli-specchi-e-delle-lenti)
 2. [Tensione della cinghia](#tensione-della-cinghia)
 3. [Allineamento del sistema di traslazione e del letto](#allineamento-del-sistema-di-traslazione-e-del-letto)
-4. [Allineamento laser e specchio](#Allineamento-laser-e-specchio)
+4. [Allineamento di laser e specchi](#Allineamento-di-laser-e-specchi)
 5. [Orientamento lenti](#Orientamento-lente)
 6. [Messa a fuoco](#Messa-a-fuoco)
 7. [Fumo](#fumo)
 8. [Bruciatura carbonizzazione](#bruciatura-carbonizzazione)
 9. [Riflesso carbonizzato](#riflessione-caratterizzazione)
 
-### Pulizia degli specchietti e delle lenti
+## Pulizia degli specchietti e delle lenti
 All'arrivo della macchina laser, è molto probabile che gli specchi e le lenti siano piuttosto sporchi. Se si accende il laser con gli specchi sporchi, la sporcizia presente sulla superficie assorbe l'energia del laser nel punto in cui colpisce lo specchio/lente e può causare, come minimo, macchie di bruciatura ma si può arrivare persino alla rottura completa dello specchio/lente. 
 
-Pertanto, prima di allinearli, è necessario pulire gli specchi e la lente con alcol o acetone (controllare che non vi siano aloni. Meglio sarebbe usare alcol isopropilico o alcol non denaturato. Per esegue questa operazione prima di allineare gli specchi, è necessario svitare gli anelli di fissaggio ed estrarre gli specchi per pulirli completamente. Dopo l'allineamento, si utilizzare un cotton fioc per pulirli in sede. Tuttavia avendo manualità e attenzione una pulizia come descritto sopra sarebbe auspicabile
+Pertanto, prima di allinearli, è necessario pulire gli specchi e la lente con alcol o acetone (controllare che non vi siano aloni. Meglio sarebbe usare alcol isopropilico o alcol non denaturato. Per esegue questa operazione prima di allineare gli specchi, è necessario svitare gli anelli di fissaggio ed estrarre gli specchi per pulirli completamente. Dopo l'allineamento, si utilizzare un Cotton Fioc per pulirli in sede. Tuttavia avendo manualità e attenzione una pulizia come descritto sopra sarebbe auspicabile
 
 Anche il fumo della combustione delle lavorazioni fa sì che gli specchi e le lenti si sporchino di abbastanza rapidamente con l'uso. La pulizia deve essere un'attività abbastanza regolare. Per ridurre la frequenza di pulizia della lente (più esposta ai fumi) si può installare un dispositivo di assistenza ad l'aria. Un flusso d'aria che protegge la lente dalla risalita del fumo, verso la lente stessa.
 
-### Tensione della cinghia
+## Tensione della cinghia
 La testa del laser si muove in entrambe le direzioni X e Y, con due motori passo-passo e da 3 cinghie.
 
 Per garantire l'accuratezza della posizione e per evitare che le cinghie scivolino sulle ruote dentate dei motori passo-passo, le cinghie devono essere ragionevolmente tese. In teoria questo può essere fatto con un cacciavite a croce abbastanza lungo, ma se si hanno difficoltà, potrebbe essere necessario rimuovere completamente il sistema di traslazione per meglio raggiungere la vite. Per questo motivo, il serraggio di queste cinghie dovrebbe essere effettuato **prima** dell'allineamento del laser, in quanto se si è già allineato il laser, sarà necessario rifarlo dopo aver rimosso e ripristinato il sistema di traslazione, perché è altamente improbabile che si trovi **esattamente** nella stessa posizione quando lo si è ripristinato. 
@@ -188,7 +188,7 @@ Le tre cinghie e i relativi accessi di regolazione sono i seguenti:
 
 Le cinghie devono essere strette in modo da farle vibrare quando vengono pizzicate. In caso di dubbio, un po' più tirate o è meglio di un po' troppo lente.
 
-### Allineamento-del-sistema-di-traslazione-e-del-letto
+## Allineamento del sistema di traslazione e del letto
 Per una un movimento accurato e quindi un lavoro preciso è necessario che il sistema di traslazione sia in squadro.
 * sistema di traslazione deve avere tutti e 4 gli angoli a 90°
 * Il sistema di traslazione-x deve essere in squadro rispetto ai lati e parallelo alle guide anteriori e posteriori - potrebbe essere necessario regolare l'angolo delle camme dei nastri a sinistra e a destra per garantire che ciò avvenga 
@@ -196,7 +196,7 @@ Per una un movimento accurato e quindi un lavoro preciso è necessario che il si
 
 Inoltre, il letto deve essere piatto rispetto al sistema di traslazione, in modo che la distanza tra la testa del laser e il letto sia la stessa in tutti i punti a sinistra-destra e davanti-indietro.
 
-### Allineamento di laser e specchi
+## Allineamento di laser e specchi
 L'idea è che, indipendentemente dalla posizione della testa del laser sul piano di lavoro, la luce laser deve entrare nella testa esattamente nella stessa posizione e con lo stesso angolo. Per far questo è necessario che il laser e gli specchi siano allineati. Una volta compresa la procedura, non è poi così difficile, ma è una parte essenziale della configurazione del laser.
 
 Prima di tentare di allineare il laser e gli specchi, è necessario intraprendere qualsiasi attività che richieda la rimozione del sistema di traslazione, ad esempio il taglio del condotto interno, l'allineamento del sistema di traslazione, la tensione della cinghia, perché se si rimuove il sistema di traslazione dalla sede sarà necessario riallineare nuovamente gli specchi.
@@ -215,7 +215,7 @@ c. Applicare del nastro adesivo sull'apertura della testa mobile in cui entrerà
 
 d. Il 3° specchio (agganciato alla testa stessa) di solito non è regolabile.
 
-e. La lente nella parte inferiore della testa non è regolabile (la lente va posizionata con la parte convessa verso l'alto. nella direzione del fascio
+e. La lente nella parte inferiore della testa non è regolabile 
 
 L'immagine è tratta dal [blog](http://dck40.blogspot.com/2013/02/post-by-nycon-how-to-adjust-mirrors-for.html)
 
@@ -223,5 +223,39 @@ L'immagine è tratta dal [blog](http://dck40.blogspot.com/2013/02/post-by-nycon-
 ![3 2](https://github.com/user-attachments/assets/65259acf-7b1f-4fcb-b4d0-33b83f86a9b0)
 
 [Qui](https://modicographics.it/wp-content/uploads/2022/12/Modico_Ovili_Calibrazione-Specchi.pdf) una completa guida alla regolazione degli specchi
+
+## Orientamento della lente
+La lente di focalizzazione delle macchi laser di cui trattiamo su un lato è piatta d'altro convesso. La direzione in cui **deve essere montata** all'interno della testa del laser con la **parte convessa verso l'alto**. nella direzione del fascio.
+
+## Messa a fuoco
+Sebbene il fascio laser sia un fascio di luce parallelo e stretto (cioè rimane della stessa larghezza mentre si allontana dal laser), non è abbastanza piccolo per bruciare il materiale in modo davvero efficace. Per questo motivo, le macchine laser sono dotato di una lente nella parte inferiore della testa per mettere a fuoco il raggio laser in un punto ancora più piccolo.
+
+Su una macchina laser c'è una distanza specifica sotto la testa del laser in cui il laser è finemente focalizzato in un piccolo punto. Al di sopra o al di sotto di questa distanza, il punto sarà più grande e meno concentrato.
+
+L'altezza del piano su cui si appoggia il materiale dovrà ovviamente essere inferiore a tale distanza in base allo spessore del materiale che si sta lavorando e se si utilizzano materiali diversi di spessore diverso, l'altezza del piano dovrà variare di conseguenza.
+
+Definire “inutile” il piano di lavoro fornito con la K40 (ma anche altre macchine) sarebbe riduttivo. Si tratta di un piano ad altezza fissa con un'apertura rettangolare molto, molto più piccola dell'area del sistema di traslazione del laser.
+
+![image](https://user-images.githubusercontent.com/3001893/120121012-13b94c80-c199-11eb-9296-f68bb4948329.png) ![image](https://user-images.githubusercontent.com/3001893/120121088-7579b680-c199-11eb-8eef-0b612e1e1bb7.png)
+
+Alcune persone hanno escogitato metodi elaborati per variare la distanza focale montando l'obiettivo in un supporto mobile. (Molti usano un [letto ad altezza variabile] (#letto-ad-altezza-variabile) per ottenere lo stesso risultato.
+
+## Fumo
+L'aspiratore (o gli aspiratori) creeranno un certo flusso d'aria attraverso il letto, ma in genere non è abbastanza forte o lamellare per rimuovere costantemente e rapidamente il fumo dall'area di combustione (dove può disperdere il fascio laser) ed evitare che sporchi gli specchi e le lenti. 
+
+Si dovrebbe prendere in considerazione l'installazione di [smoke assist e/o air assist](#smoke-and-air-assist), e possibilmente migliorare il flusso d'aria predefinito allargando le aperture per l'aria nella parte anteriore del coperchio (o mantenendo il coperchio leggermente aperto) o anche aggiungendo ulteriori ventole e condotti d'aria all'interno del coperchio.
+
+La modifica dei flussi d'aria, le migliorie da apportare in genere alla rimozione dei fumi, sono da analizzare e perfezionare macchina a macchina anche all'interno della famiglia K40, a maggior ragione per le altre macchine supportate da Meerk40t.
+Un manuale completo ed esaustivo sarebbe piuttosto difficile da realizzare, anche se _non impossibile con il contributo di tutti._
+
+### Bruciatura con carbonizzazione
+Quando si lavora, invece di bruciare le particelle sotto forma di piccole ceneri, il raggio laser può far sì che il materiale prenda fuoco nel punto in cui si trova il raggio laser, dando origine a una fiamma visibile (come quella di una candela) anziché a un semplice punto luminoso.
+
+Esistono vari modi per attenuare questo fenomeno:
+
+* Ridurre la potenza o aumentare la velocità di movimento del laser per ridurre il tempo necessario al materiale per riscaldarsi e prendere fuoco. Tuttavia, poiché lo scopo del laser è quello di bruciare, questo è controproducente.
+* Inumidire il materiale - il laser è ancora abbastanza potente da bruciare il punto in cui viene colpito anche se è umido, ma l'umidità del materiale circostante gli impedisce di catturare la luce.
+* Un forte getto d'aria diretto verso il punto in cui il laser colpisce spegne efficacemente la fiamma.
+
 
 
