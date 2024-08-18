@@ -5,7 +5,7 @@
 ## [Introduzione](./Introduzione:-0.-Index)
 ## [Aiuto ai principianti](./Principianti:-0.-Index)
 1. [La sicurezza è importante](./Principianti:-1.-Questioni-di-Sicurezza) - **Non saltare questo passaggio**
-2. [Preparazione dell'hardware del K40](./Principianti:-2.-Preparazione-Hw-K40)
+2. [Preparazione dell'hardware del K40](./Principianti:-2.-Preparazione-Hw-K40 (e non solo))
 
 </details>
 
