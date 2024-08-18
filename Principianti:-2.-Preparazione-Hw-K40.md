@@ -147,7 +147,8 @@ Per stabilire la corretta posizione si deve fare “homing”, ovvero si sposta 
 Problemi simili al non corretto funzionamento dei fine corsa o del non corretto "homing" possono verificarsi nel corso del funzionamento se si impostano velocità troppo alte per il tipo di motori passo-passo o per problemi al controller. A causa di una "perdita del passo" insomma la macchina non ha più la situazione della reale posizione. Tal caso, se le lavorazioni sono vicino ai bordi è possibile percepire i rumori descritti sopra, altrimenti si avrà una deformazione, più o meno evidente a seconda della "perdita di passo", della lavorazione. Questo implica la perdita del lavoro fatto e la correzione dell'errore.
 
 Fine corsa ottici:
-![Fine corsa Y](https://lh3.googleusercontent.com/pw/AIL4fc-3R58LSWHXHz8BN-GPk6IR1j5WpgMB__L6_rgexAzvOCbBIBv4GaqoE6wfZvjRckv-gVu3xELx7rEoqayYrNEGzJkyxUsXg4Or_145TLRbWCx1sds_J6mF3zMYybB_qARYA1j5LOz_F-Mashu6m-5x=w919-h1236-s-no?authuser=0)
+![Fine corsa Y](https://lh3.googleusercontent.com/pw/AIL4fc-3R58LSWHXHz8BN-GPk6IR1j5WpgMB__L6_rgexAzvOCbBIBv4GaqoE6wfZvjRckv-gVu3xELx7rEoqayYrNEGzJkyxUsXg4Or_145TLRbWCx1sds_J6mF3zMYybB_qARYA1j5LOz_F-Mashu6m-5x=w919-h1236-s-no?authuser=0|50px)
+
 ![fine corsa X e Y](https://lh3.googleusercontent.com/pw/AIL4fc8qEMTHBa_6Zu2z4a8dXgi-Zm1KoL7TI54-PbbLBl0we5lrgpbCkGwO8LOOb4FrKXiuIb-hycUdm332dVfCmueSpKBvzK3DN8t4LaO_wUpKZHjVotGc8mHpcE-WrN5fmOE3T2qUXRWkVvLfyJHAwdMr=w1745-h1236-s-no?authuser=0)
 
 Non è raro che il le macchine K40 arrivino con una o entrambe le strisce metalliche fuori posizione, in modo da non interrompere il fascio di luce. Se questa situazione è il vostro caso, la prima volta che la si accende si può andare nel panico a causa del colpo metallico che si sente seguito da una specie ci mitragliata
