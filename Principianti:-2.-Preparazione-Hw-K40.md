@@ -107,3 +107,59 @@ Tuttavia, le pompe per acquario in dotazione, piuttosto economiche, con gli anni
 ![image](https://user-images.githubusercontent.com/3001893/120121463-81667800-c19b-11eb-88e9-d4f3133e334e.png)
 
 Infine, una volta che il sistema di raffreddamento ad acqua funziona, si consiglia di verificare che nel tubo non vi siano bolle d'aria, se necessario si può inclinare la macchina per far uscire le bolle d'aria dal tubo del laser. L'alternativa, se si ha sufficiente pratica e un po' di tempo per la taratura degli specchi, conviene ruotare il tubo in modo che i tubi dell'acqua entrino o escano dal laser dalla parte superiore, questo accorgimento aiuta a evitare le bolle, quindi procedere all'allineamento degli specchi.
+
+### Proteggere gli occhi
+Le macchine laser dovrebbe essere dotate di una finestra acrilica colorata di rosso sul coperchio. L'acrilico blocca la luce laser a infrarossi e la colorazione rossa è progettata per filtrare le altre frequenze di luce pericolose (come gli ultravioletti) che il tubo laser produce, della normale luce radiante (non laser). Tuttavia, questo pannello non è così scuro come, ad esempio, un casco per la saldatura ad arco e non è sufficiente ad attenuare la luce intensa che si crea quando il laser brucia alcuni materiali.
+
+A seconda dell'intensità della bruciatura e del materiale che si sta lavorando, la bruciatura creerà un punto **luminoso** sul lavoro. Anche con il coperchio abbassato, attraverso la finestra “protettiva”, questo punto luminoso può **danneggiare gli occhi.
+
+Questo è forse l'aspetto delle macchine laser potenzialmente più pericoloso per la salute e il più facile da gestire quando si usa regolarmente una CNC laser. Se non siete sicuri di quanto possa essere pericoloso, guardate [questo video] (https://www.youtube.com/watch?v=-wXApAAh8xA).
+
+Quindi, per favore, assicuratevi di tenere il coperchio del vostro laser abbassato quando lavorate qualche materiale, e procuratevi degli occhiali di sicurezza laser (adatti ai laser CO2) e indossateli quando guardate attraverso la finestra.
+
+### Taglio laser del coperchio
+Alcuni aggiungono un microinterruttore di protezione al coperchio del vano laser, in modo che il laser si spenga se si solleva il coperchio, e questo è particolarmente importante se si hanno bambini curiosi. È chiaro che se si interrompe il laser a metà della combustione si rischia di non riprendere il lavoro da quel punto e di dover ricominciare dall'inizio con nuovo materiale. 
+Tuttavia c'è chi preferisce non avere questo tipo di protezione. 
+I motivi possono essere: 
+* non ci sono bambini per casa che possano sollevare il coperchio
+* Il coperchio leggermente aperto, può favorire un flusso d'aria laminare sul letto.
+* Avendo cura della vista, può esservi la necessità di controllare come procede la lavorazione e verificare la qualità
+* Se si sta cercando di allineare il materiale e, ad esempio, si vuole eseguire una breve incisione a bassa potenza con l'interruttore di sicurezza, sarà scomodo e più difficile vedere dove il laser colpisce e quindi eseguire agevolmente l'allineamento. 
+
+Cercate di essere attenti, di prestare molta attenzione. Noi possiamo solo indirizzarvi, suggerire soluzioni, fornirvi consigli, ma il compito si gestire in sicurezza la vostra attività sta nelle vostre mani. 
+
+### Rischio di incendio
+Le precauzioni minime da adottare in caso di incendio sono:
+
+* Rimanere con nella stanza della macchina laser per controllare che non si verifichi un incendio quando è in funzione.
+* Tenere un estintore a CO2 a portata di mano.
+
+Alcuni montano anche una sorta di soppressore d'incendio all'interno del proprio macchina. **Da fare: ** Ricerca e link necessari qui.
+
+## Fine corsa
+Non si tratta di un vero e proprio problema di sicurezza, ma è logico che venga menzionato prima della sezione sull'allineamento del telaio.
+
+Le CNC laser (e i software come Meerk40t) devono stabilire una posizione nota della "testa" (laser) in modo da poter tenere traccia dei vari spostamenti evitando collisioni con i bordi. Non è improbabile che questo accada prima o poi. Un colto, un urto seguito poi da un rumore ritmico. Nella maggior parte dei casi non si verificano danni permanenti La macchina ha semplicemente perso la posizione e le future lavorazioni avvengono in punti sbagliati.
+
+Per stabilire la corretta posizione si deve fare “homing”, ovvero si sposta la testa nell'angolo in alto a sinistra del letto (maggior parte dei K40 e delle macchine laser economiche questa è la home) dove ci sono due sensori di fine corsa x e y separati che gli indicano alla scheda dove e quando fermarsi. Spesso (ma non sempre) si tratta di sensori ottici, costituiti da un sensore opto-elettronico di plastica a forma di U in posizione fissa. Mentre all'altra estremità, quella mobile una striscia metallica o plastica, intrando nella U  interrompe la comunicazione luminosa fra i due bracci della U del sensore.
+
+Fine corsa ottici:
+![Fine corsa Y](https://lh3.googleusercontent.com/pw/AIL4fc-3R58LSWHXHz8BN-GPk6IR1j5WpgMB__L6_rgexAzvOCbBIBv4GaqoE6wfZvjRckv-gVu3xELx7rEoqayYrNEGzJkyxUsXg4Or_145TLRbWCx1sds_J6mF3zMYybB_qARYA1j5LOz_F-Mashu6m-5x=w919-h1236-s-no?authuser=0)
+![fine corsa X e Y](https://lh3.googleusercontent.com/pw/AIL4fc8qEMTHBa_6Zu2z4a8dXgi-Zm1KoL7TI54-PbbLBl0we5lrgpbCkGwO8LOOb4FrKXiuIb-hycUdm332dVfCmueSpKBvzK3DN8t4LaO_wUpKZHjVotGc8mHpcE-WrN5fmOE3T2qUXRWkVvLfyJHAwdMr=w1745-h1236-s-no?authuser=0)
+
+Non è raro che il le macchine K40 arrivino con una o entrambe le strisce metalliche fuori posizione, in modo da non interrompere il fascio di luce. Se questa situazione è il vostro caso, la prima volta che la si accende si può andare nel panico a causa del colpo metallico che si sente seguito da una specie ci mitragliata
+
+Per evitare tutto questo, prima di accendere la macchina dopo averla tolta dall'imballo, controllate che la striscia metallica non sia piegata o fuori posizione e, se lo è, sistematela nella posizione corretta.
+
+## Qualità del taglio/incisione
+Il raggio che esce dal laser è un fascio di luce invisibile molto stretto e molto, molto dritto. Viene riflesso da tre/quattro (dipende dalle configurazioni/macchine) specchi e passa attraverso una lente che lo mette a fuoco prima di colpire il materiale in un piccolo, piccolissimo punto. Ci sono diversi fattori che possono causare un problemi:
+
+1. [Pulizia degli specchi e delle lenti](#pulizia degli specchi e delle lenti)
+2. [Tensione della cinghia](#tensione della cinghia)
+3. [Allineamento del telaio e del letto](#allineamento del telaio e del letto)
+4. [Allineamento laser e specchio](#laser-and-mirror-alignment)
+5. [Orientamento lenti](#lens-orientation)
+6. [Messa a fuoco](#focus)
+7. [Fumo](#fumo)
+8. [Bruciatura carbonizzazione](#bruciatura-carbonizzazione)
+9. [Riflesso carbonizzato](#riflessione-caratterizzazione)
