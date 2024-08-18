@@ -160,9 +160,9 @@ Il raggio che esce dal laser è un fascio di luce invisibile molto stretto e mol
 1. [Pulizia degli specchi e delle lenti](#pulizia-degli-specchi-e-delle-lenti)
 2. [Tensione della cinghia](#tensione-della-cinghia)
 3. [Allineamento del sistema di traslazione e del letto](#allineamento-del-sistema-di-traslazione-e-del-letto)
-4. [Allineamento laser e specchio](#laser-and-mirror-alignment)
-5. [Orientamento lenti](#lens-orientation)
-6. [Messa a fuoco](#focus)
+4. [Allineamento laser e specchio](#Allineamento-laser-e-specchio)
+5. [Orientamento lenti](#Orientamento-lente)
+6. [Messa a fuoco](#Messa-a-fuoco)
 7. [Fumo](#fumo)
 8. [Bruciatura carbonizzazione](#bruciatura-carbonizzazione)
 9. [Riflesso carbonizzato](#riflessione-caratterizzazione)
@@ -188,7 +188,7 @@ Le tre cinghie e i relativi accessi di regolazione sono i seguenti:
 
 Le cinghie devono essere strette in modo da farle vibrare quando vengono pizzicate. In caso di dubbio, un po' più tirate o è meglio di un po' troppo lente.
 
-### Allineamento del sistema di traslazione e del letto
+### Allineamento-del-sistema-di-traslazione-e-del-letto
 Per una un movimento accurato e quindi un lavoro preciso è necessario che il sistema di traslazione sia in squadro.
 * sistema di traslazione deve avere tutti e 4 gli angoli a 90°
 * Il sistema di traslazione-x deve essere in squadro rispetto ai lati e parallelo alle guide anteriori e posteriori - potrebbe essere necessario regolare l'angolo delle camme dei nastri a sinistra e a destra per garantire che ciò avvenga 
@@ -207,7 +207,7 @@ In sostanza, i passaggi sono i seguenti:
 
 a. Applicare del nastro adesivo (meglio nastro carta, tenendo conto che il nastro bruciando sporca la lente, è consigliabile frapporre fra specchio e nastro una monetina da un centesimo di € che si adatta perfettamente al foro sulla ghiera di fissaggio) sul primo specchio vicino all'estremità del laser, dopo un primo rapido "impulso" molto breve a bassa potenza, giusto a segnare il nastro regolare lo specchi in modo che al successivo impulso colpisca perfettamente il centro dello specchio.
 
-b. Applicare un nastro adesivo sul 2° specchio (vale lo stesso consiglio di cui sopra) che si muove avanti e indietro sul sistema di traslazione. Posizionare lo specchio 2 vicino allo 1° specchio 1° regolare la posizione del 1° in modo che il fascio colpisca il 2° spazio al centro, quindi spostare il portale il 2° specchio nella posizione più lontana dal 1° controllando se il punto di bruciatura si sposta. (si consiglia degli spostamenti intermedi con altrettanti impulsi. Una leggere disallineamento può proiettare il fascio fuori dallo specchio e colpire oggetti nella stanza o noi che siamo intenti nella regolazione. Un metodo per incrementare la sicurezza è porre un pannello di cartone o altro dietro lo specco 2 come uno scudo).
+b. Applicare un nastro adesivo sul 2° specchio (vale lo stesso consiglio di cui sopra) che si muove avanti e indietro sul sistema di traslazione. Posizionare lo specchio 2 vicino allo 1° specchio 1° regolare la posizione del 1° in modo che il fascio colpisca il 2° spazio al centro, quindi spostare il portale il 2° specchio nella posizione più lontana dal 1° controllando se il punto di bruciatura si sposta. (si consiglia degli spostamenti intermedi con altrettanti impulsi. Una leggere disallineamento può proiettare il fascio fuori dallo specchio e colpire oggetti nella stanza o noi che siamo intenti nella regolazione. Un metodo per incrementare la sicurezza è porre un pannello di cartone o altro dietro lo specchio 2 come uno scudo).
 Regolare se necessario del 1° specchio sia in orizzontale che in verticale in modo che il punto rimanga nella stessa posizione centrale. Il centro deve essere mantenuto sempre lungo l'intero percorso.
 Ci si augura di trovare il centro del 2° specchio, ma potrebbe essere necessario regolare la posizione del laser, la base di montaggio del 1° specchio o la base di montaggio del 2° specchio per far sì che fascio rimanga invariato e si trovi approssimativamente al centro del 2° specchio.
 
@@ -222,6 +222,6 @@ L'immagine è tratta dal [blog](http://dck40.blogspot.com/2013/02/post-by-nycon-
 ![3 1](https://github.com/user-attachments/assets/cafde7e9-85bd-43ec-b004-bd342634b9f5)
 ![3 2](https://github.com/user-attachments/assets/65259acf-7b1f-4fcb-b4d0-33b83f86a9b0)
 
-[Qui](https://modicographics.it/wp-content/uploads/2022/06/Modico_Ovili_Calibrazione-Specchi-1.pdf) una completa guida alla regolazione degli specchi
+[Qui](https://modicographics.it/wp-content/uploads/2022/12/Modico_Ovili_Calibrazione-Specchi.pdf) una completa guida alla regolazione degli specchi
 
 
